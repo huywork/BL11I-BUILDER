@@ -1,1 +1,4 @@
-# Place any example specific dependencies here
+FIREWIREDCAM=   $(SUPPORT)/firewireDCAM/1-8-1
+FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/1-2-2
+
+

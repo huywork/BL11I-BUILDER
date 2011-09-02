@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-03" name="CSIOC3"/>
+	<asyn.AsynIP name="DIIOCport" port="localhost:7006"/>
+	<procServControl.procServControl P="BL11I-DI-IOC-01" PORT="DIIOCport" name="DIIOC1"/>
+</components>

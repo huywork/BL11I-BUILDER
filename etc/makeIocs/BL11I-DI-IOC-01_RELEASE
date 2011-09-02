@@ -1,4 +1,4 @@
-FIREWIREDCAM=   $(SUPPORT)/firewireDCAM/1-8-2
-FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/1-2-3
+FIREWIREDCAM=   $(SUPPORT)/firewireDCAM/1-8-3
+FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/1-4
 
 

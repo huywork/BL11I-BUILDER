@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-05" name="CSIOC5"/>
+	<asyn.AsynIP name="nx100p" port="172.23.111.165:80"/>
+	<motomanNX100.nx100 EIST="TABLEOUT" ELST="" FFST="" FRST="PLACED" FTST="" FVST="GRIPO" NIST="UNLOAD" ONST="PICKC" P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SVST="TABLEIN" SXST="GRIPC" TEST="" THST="PICKD" TTST="" TVST="" TWST="PLACEC" ZRST="RECOVER" gda_desc="Robot Controller" gda_name="ROBOT.ROBOT"/>
+	<motomanNX100.nx100pvar P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN="1 second" VAR="010"/>
+	<motomanNX100.nx100dvar P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="010"/>
+	<motomanNX100.nx100dvar P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="011"/>
+	<motomanNX100.nx100dvar P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="012"/>
+	<motomanNX100.auto_nx100io DESC0="Gripper" DESC1="VA Spare" DESC2="Table X- allowed" DESC3="Spinner Braked" DESC4="Table Out Req" DESC5="Carousel Advance Req" DESC6="Carousel Reset Req" DESC7="" P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="10020"/>
+	<motomanNX100.auto_nx100io DESC0="Open" DESC1="Close" DESC2="Cube Override" DESC3="Table is Out" DESC4="Carousel DMOV" DESC5="Table DMOV" DESC6="" DESC7="Flat Plate" P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="00010"/>
+	<motomanNX100.auto_nx100io DESC0="Sample in Jaws" DESC1="" DESC2="" DESC3="" DESC4="" DESC5="" DESC6="" DESC7="" P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="00020"/>
+	<motomanNX100.auto_BL11I_robot_interlocks DIFF="BL11I-MO-DIFF-01" ROBOT="BL11I-EA-ROBOT-01"/>
+</components>

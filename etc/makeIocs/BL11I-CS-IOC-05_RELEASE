@@ -1,0 +1,3 @@
+BUSY=           $(SUPPORT)/busy/1-3dls3
+STREAMDEVICE=   $(SUPPORT)/streamDevice/2-4dls5
+MOTOMANNX100=   $(SUPPORT)/motomanNX100/1-11

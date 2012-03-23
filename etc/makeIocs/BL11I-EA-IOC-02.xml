@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<mar345.mar345Template AUTOSAVEPATH="/dls_sw/i11/epics/autosave" HTTP_PORT="8081" IOCNAME="BL11I-EA-IOC-02" NELEMENTS="11902500" PORTNAME="MAR345DET" PREFIX="BL11I-EA-DET-02" XSIZE="3450" YSIZE="3450"/>
+</components>

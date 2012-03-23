@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<components arch="vxWorks-ppc604_long">
+	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="300000"/>
+	<devIocStats.ioc IOCNAME="BL11I-MO-IOC-02" name="MOIOC2"/>
+	<ipac.Hy8002 name="CARD5" slot="5"/>
+	<Hy8401ip-asyn.Hy8401Asyn carrier="CARD5" ipslot="2" name="ADC52"/>
+	<Hy8401ip-asyn.Hy8401Asyn carrier="CARD5" fastADC="0" ipslot="3" name="ADC53"/>
+	<Hy8401ipTemplates.Hy8401AsynControl AVERAGE="5001" CLOCKRATE="11" P="BL11I-OP-DCM-01:FB:ADC" PORT="ADC52" SAMPLES="5001" name="ADC"/>
+	<Hy8401ipTemplates.Hy8401AsynControl CLOCKRATE="9" P="BL11I-MO-IOC-02:ADC2" PORT="ADC53" name="ADC2"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="0" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:01:AVG" name="DCM.FP.MOD_RBV"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:02:AVG" name="IC4.I_RBV"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-DI-IONC-04" PORT="ADC52" Q=":PHD1:I" SCAN=".1 second" name="IC4.I"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="2" P="BL11I-EA-PE-01" PORT="ADC52" Q=":HV:RBV" SCAN=".1 second" name="PE.HV_RBV"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="3" P="BL11I-EA-PE-01" PORT="ADC52" Q=":EL:RBV" SCAN=".1 second" name="PE.EL_RBV"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="4" P="BL11I-EA-PE-01" PORT="ADC52" Q=":TRIG:RBV" SCAN=".1 second" name="PE.TRIG_RBV"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="3" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":XP:I" SCAN=".1 second" name="S4.XP.I"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":XM:I" SCAN=".1 second" name="S4.XM.I"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="0" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":YP:I" SCAN=".1 second" name="S4.YP.I"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="2" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":YM:I" SCAN=".1 second" name="S4.YM.I"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="4" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I1" SCAN=".1 second" name="QBPM3.I1"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="5" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I2" SCAN=".1 second" name="QBPM3.I2"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="6" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I3" SCAN=".1 second" name="QBPM3.I3"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="7" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I4" SCAN=".1 second" name="QBPM3.I4"/>
+	<Hy8401ip-asyn.Channel_waveform CHAN="0" NELM="5000" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:01" name="DCM.FP.MOD_ARBV"/>
+	<Hy8401ip-asyn.Channel_waveform CHAN="1" NELM="5000" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:02" name="IC4.I_ARBV"/>
+	<Hy8401ip-asyn.Channel_waveform CHAN="2" NELM="5000" P="BL11I-EA-PE-01" PORT="ADC52" Q=":HV:ARBV" name="PE.HV_ARBV"/>
+	<Hy8401ip-asyn.Channel_waveform CHAN="3" NELM="5000" P="BL11I-EA-PE-01" PORT="ADC52" Q=":EL:ARBV" name="PE.EL_ARBV"/>
+	<Hy8401ip-asyn.Channel_waveform CHAN="4" NELM="5000" P="BL11I-EA-PE-01" PORT="ADC52" Q=":TRIG:ARBV" name="PE.TRIG_ARBV"/>
+	<SigProc.fftWaveform INP="BL11I-OP-DCM-01:FB:ADC:01 CP" NELM="2500" P="BL11I-OP-DCM-01:FB:ADC:01:FFT" name="DCM.FP.MOD_FFT"/>
+	<SigProc.fftWaveform INP="BL11I-OP-DCM-01:FB:ADC:02 CP" NELM="2500" P="BL11I-OP-DCM-01:FB:ADC:02:FFT" name="IC4.I_FFT"/>
+	<BLfeedback.beamPositionCalc ADCPORT="ADC53" C1="3" C2="1" C3="0" C4="2" name="S4BPC"/>
+	<BLfeedback.beamPositionCalc ADCPORT="ADC53" C1="4" C2="5" C3="6" C4="7" geometry="1" name="QBPM3BPC"/>
+	<userIO.ai DTYP="asynInt32" EGU="V" EGUF="10" EGUL="-10" INP="@asyn(S4BPC 0)RAW_XDATA" LINR="LINEAR" P="BL11I-AL-SLITS-04" PREC="3" R=":X:POS" SCAN=".1 second" name="S4.XPOS"/>
+	<userIO.ai DTYP="asynInt32" EGU="V" EGUF="10" EGUL="-10" INP="@asyn(S4BPC 0)RAW_YDATA" LINR="LINEAR" P="BL11I-AL-SLITS-04" PREC="3" R=":Y:POS" SCAN=".1 second" name="S4.YPOS"/>
+	<userIO.ai DTYP="asynInt32" EGU="V" EGUF="10" EGUL="-10" INP="@asyn(QBPM3BPC 0)RAW_XDATA" LINR="LINEAR" P="BL11I-DI-QBPM-03" PREC="3" R=":X:POS" SCAN=".1 second" name="QBPM3.XPOS"/>
+	<userIO.ai DTYP="asynInt32" EGU="V" EGUF="10" EGUL="-10" INP="@asyn(QBPM3BPC 0)RAW_YDATA" LINR="LINEAR" P="BL11I-DI-QBPM-03" PREC="3" R=":Y:POS" SCAN=".1 second" name="QBPM3.YPOS"/>
+	<Hy8402ip.Hy8402 carrier="CARD5" clockRate="11" doram="1" ipslot="0" name="DAC50"/>
+	<Hy8402ip.Hy8402 carrier="CARD5" clockRate="11" ipslot="1" name="DAC51"/>
+	<Hy8402ipTemplates.funcRecord C="50" CLKRATE="5 kHz" MALM="5000" P="BL11I-OP-DCM-01:FB" name="DCM.FP.MOD"/>
+	<userIO.ao DRVH="10" DRVL="-10" DTYP="asynInt32" EGU="V" EGUF="10" EGUL="-10" LINR="LINEAR" OUT="@asyn(DAC51 0 1)DATA" P="BL11I-OP-DCM-01" PREC="3" R=":FB:DAC:02" SCAN="Passive" name="DCM.FP.DC"/>
+	<userIO.ao DRVH="10" DRVL="-10" DTYP="asynInt32" EGU="V" EGUF="10" EGUL="-10" LINR="LINEAR" OUT="@asyn(DAC51 1 1)DATA" P="BL11I-OP-DCM-01" PREC="3" R=":FR" SCAN="Passive" name="DCM.FR.DC"/>
+	<BLfeedback.modulationFeedback AMPL="0.05" DCDAC="BL11I-OP-DCM-01:FB:DAC:02" DRVL="-10" FBSIGADC="BL11I-OP-DCM-01:FB:ADC:02" FREQ="111" FUNC="BL11I-OP-DCM-01:FB:FUNC" IOC="BL11I-MO-IOC-02" MAXAMPL="2" MAXFREQ="500" MINFREQ="0.1" MODADC="BL11I-OP-DCM-01:FB:ADC:01" P="BL11I-OP-DCM-01" PREC="4" R=":FB" name="DCM.FP.MFB"/>
+	<BLfeedback.fast_feedback AUTOPV="BL11I-PS-SHTR-01:STA" AUTOPV2="" DRVH="65023" DRVL="512" DT="0.03" HOPR="1000000" ICHAN="0" INPUT="S4BPC" INPUT_DATA="YDATA" INPUT_INTERVAL="SCAN_PERIOD" KD="0" KI="150" KP="0.01" LOPR="-1000000" OCHAN="0" OUTPUT="DAC51" OUTPUT_DATA="DOUBLE_DATA" P="BL11I-OP-DCM-01" PID=":FP:S4FB" PREC="4" SCAN=".1 second" name="DCM.FP.S4FB"/>
+	<BLfeedback.fast_feedback AUTOPV="BL11I-PS-SHTR-01:STA" AUTOPV2="" DRVH="65023" DRVL="512" DT="0.03" HOPR="1000000" ICHAN="0" INPUT="QBPM3BPC" INPUT_DATA="YDATA" INPUT_INTERVAL="SCAN_PERIOD" KD="0" KI="150" KP="0.01" LOPR="-1000000" OCHAN="0" OUTPUT="DAC51" OUTPUT_DATA="DOUBLE_DATA" P="BL11I-OP-DCM-01" PID=":FP:QBPM3FB" PREC="4" SCAN=".1 second" name="DCM.FP.QBPM3FB"/>
+	<BLfeedback.fast_feedback AUTOPV="BL11I-PS-SHTR-01:STA" AUTOPV2="" DRVH="65023" DRVL="512" DT="0.03" HOPR="1000000" ICHAN="0" INPUT="S4BPC" INPUT_DATA="XDATA" INPUT_INTERVAL="SCAN_PERIOD" KD="0" KI="150" KP="0.01" LOPR="-1000000" OCHAN="1" OUTPUT="DAC51" OUTPUT_DATA="DOUBLE_DATA" P="BL11I-OP-DCM-01" PID=":FR:S4FB" PREC="4" SCAN=".1 second" name="DCM.FR.S4FB"/>
+	<BLfeedback.fast_feedback AUTOPV="BL11I-PS-SHTR-01:STA" AUTOPV2="" DRVH="65023" DRVL="512" DT="0.03" HOPR="1000000" ICHAN="0" INPUT="QBPM3BPC" INPUT_DATA="XDATA" INPUT_INTERVAL="SCAN_PERIOD" KD="0" KI="150" KP="0.01" LOPR="-1000000" OCHAN="1" OUTPUT="DAC51" OUTPUT_DATA="DOUBLE_DATA" P="BL11I-OP-DCM-01" PID=":FR:QBPM3FB" PREC="4" SCAN=".1 second" name="DCM.FR.QBPM3FB"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-DCM-01:FB:PID.KP&quot;, &quot;0.05&quot;)" post_init="True"/>
+</components>

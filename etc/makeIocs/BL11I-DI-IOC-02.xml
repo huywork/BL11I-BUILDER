@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<devIocStats.ioc IOCNAME="BL11I-DI-IOC-02" name="DIIOC2"/>
+	<asyn.AsynIP name="TS_32" port="172.23.111.5:7032"/>
+	<fzoom.fzoom P="BL11I-DI-OAV-01" R=":ZOOM" SCAN="1 second" name="OAV.ZOOM" port="TS_32"/>
+	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44" ID="Allied Vision Technologies-50-0503325723" P="BL11I-DI-OAV-01" PORT="OAV.CAM" R=":CAM:" TIMEOUT="1"/>
+	<ffmpegServer.diagnosticPlugins CAM="OAV.CAM" HTTP_PORT="8081" P="BL11I-DI-OAV-01" PORTPREFIX="OAV"/>
+	<EPICS_BASE.StartupCommand command="dbpf BL11I-DI-OAV-01:CAM:AcquireTime 0.1" post_init="True"/>
+</components>

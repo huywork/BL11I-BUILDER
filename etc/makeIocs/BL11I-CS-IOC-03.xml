@@ -1,6 +1,8 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86">
 	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-03" name="CSIOC3"/>
-	<asyn.AsynIP name="DIIOCport" port="localhost:7006"/>
-	<procServControl.procServControl P="BL11I-DI-IOC-01" PORT="DIIOCport" name="DIIOC1"/>
+	<asyn.AsynIP name="DIIOC1port" port="localhost:7006"/>
+	<asyn.AsynIP name="DIIOC2port" port="localhost:7008"/>
+	<procServControl.procServControl P="BL11I-DI-IOC-01" PORT="DIIOC1port" name="DIIOC1"/>
+	<procServControl.procServControl P="BL11I-DI-IOC-02" PORT="DIIOC2port" name="DIIOC2"/>
 </components>

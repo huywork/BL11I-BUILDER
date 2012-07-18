@@ -1,0 +1,4 @@
+FFMPEGSERVER=$(SUPPORT)/ffmpegServer/1-9
+ARAVISGIGE=$(SUPPORT)/aravisGigE/0-1-10dls4
+DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls3
+FZOOM=$(WORK)/fzoom

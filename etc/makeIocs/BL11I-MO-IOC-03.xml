@@ -3,7 +3,7 @@
 	<devIocStats.ioc IOCNAME="BL11I-MO-IOC-03" name="BL11I-MO-IOC-03.IOC"/>
 	<utility.pingWait ip="172.23.111.211"/>
 	<utility.pingWait ip="172.23.111.212"/>
-	<autosave.Autosave iocName="BL11I-MO-IOC-03" name="BL11I-MO-IOC-03.AS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
+	<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-03" name="BL11I-MO-IOC-03.AS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
 	<tpmac.pmacAsynIPPort IP="172.23.111.211" name="BRICK5port" simulation="localhost:9200"/>
 	<tpmac.pmacAsynIPPort IP="172.23.111.212" name="BRICK6port" simulation="localhost:9201"/>
 	<tpmac.GeoBrick Port="BRICK5port" name="BRICK5"/>

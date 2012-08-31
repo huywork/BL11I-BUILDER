@@ -1,4 +1,4 @@
-DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-2dls3
-PROCSERVCONTROL=   $(SUPPORT)/procServControl/1-0
+DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls4
+PROCSERVCONTROL=   $(SUPPORT)/procServControl/1-1-1
 
 

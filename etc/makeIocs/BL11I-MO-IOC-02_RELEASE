@@ -1,12 +1,13 @@
-DEVIOCSTATS=     $(SUPPORT)/devIocStats/3-1-5dls2
+DEVIOCSTATS=     $(SUPPORT)/devIocStats/3-1-5dls4
 IPAC=            $(SUPPORT)/ipac/2-8dls4-8
+FEMTO=           $(SUPPORT)/femto/3-6
 ASYN=            $(SUPPORT)/asyn/4-17
 BUSY=            $(SUPPORT)/busy/1-3dls5
 HY8401_ASYN=     $(SUPPORT)/Hy8401ip-asyn/1-9dls8
-HY8401TEMPLATES= $(SUPPORT)/Hy8401ipTemplates/2-6
+HY8401TEMPLATES= $(SUPPORT)/Hy8401ipTemplates/2-6-1
 HY8402IP=        $(SUPPORT)/Hy8402ip/4-5-1
 HY8402TEMPLATES= $(SUPPORT)/Hy8402ipTemplates/2-4-1
 BLFEEDBACK=      $(SUPPORT)/BLfeedback/2-7
-SIGPROC=         $(SUPPORT)/SigProc/1-0
+SIGPROC=         $(SUPPORT)/SigProc/1-1
 USERIO=          $(SUPPORT)/userIO/2-13
 MCA=             $(SUPPORT)/mca/7-1dls1

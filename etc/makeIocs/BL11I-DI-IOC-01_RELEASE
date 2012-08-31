@@ -1,5 +1,5 @@
-DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-2dls3
-FIREWIREDCAM=   $(SUPPORT)/firewireDCAM/1-8-3
-FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/1-4
+DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls4
+FIREWIREDCAM=   $(SUPPORT)/firewireDCAM/1-11-1
+FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/1-11
 
 

@@ -1,4 +1,4 @@
 DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls4
 BUSY=           $(SUPPORT)/busy/1-3dls5
 STREAMDEVICE=   $(SUPPORT)/streamDevice/2-5
-MOTOMANNX100=   $(SUPPORT)/motomanNX100/1-11
+MOTOMANNX100=   $(SUPPORT)/motomanNX100/1-12

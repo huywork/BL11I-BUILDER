@@ -34,7 +34,7 @@
 	<!--RGA PC-->
 	<DLS8515.DLS8515channel baud="57600" card="CARD41" channel="6"/>
 	<!--MKS gauge controllers-->
-	<DLS8515.DLS8515channel card="CARD40" channel="4" parity="E"/>
+	<DLS8515.DLS8515channel card="CARD40" channel="4" parity="N"/>
 	<DLS8515.DLS8515channel card="CARD40" channel="5" parity="E"/>
 	<DLS8515.DLS8515channel card="CARD41" channel="4" parity="E"/>
 	<DLS8515.DLS8515channel card="CARD41" channel="5" parity="E"/>
@@ -98,22 +98,24 @@
 	<water.flow C="60" DESC="Flow 1" LOLO="BL11I-VA-VLVCC-01:INT1:ILK4" P="BL11I-OP-DCM-01" Q=":WFS1" S="36" gda_desc="DCM Flow 1" gda_name="DCM.WFS1" name="DCM.OB1"/>
 	<vacuumValve.vacuumValveRead device="BL11I-VA-VLVCC-01" name="VLVCC1" port="ty_40_3"/>
 	<vacuumValve.vacuumValveRead device="BL11I-VA-VLVCC-02" name="VLVCC2" port="ty_41_3"/>
-	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-VA-VALVE-01" gda_desc="Gate Valve" gda_name="GV1" ilk0="Air press. OK" ilk1="IMG1 Healthy" ilk10="unused" ilk11="unused" ilk12="unused" ilk13="unused" ilk14="unused" ilk15="Valve Fault" ilk2="IMG2 Healthy" ilk3="IMG3 Healthy" ilk4="PIRG2 Healthy" ilk5="PIRG3 Healthy" ilk6="FE ABSB Open" ilk7="unused" ilk8="unused" ilk9="unused" name="GV1" valve="01"/>
-	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-VA-VALVE-02" gda_desc="Gate Valve" gda_name="GV2" ilk0="Air press. OK" ilk1="IMG3 Healthy" ilk10="unused" ilk11="unused" ilk12="unused" ilk13="unused" ilk14="unused" ilk15="Valve Fault" ilk2="IMG4 Healthy" ilk3="PIRG3 Healthy" ilk4="PIRG4 Healthy" ilk5="FE ABSB Open" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" name="GV2" valve="02"/>
-	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-VA-VALVE-03" gda_desc="Gate Valve" gda_name="GV3" ilk0="Air press. OK" ilk1="IMG4 Healthy" ilk10="unused" ilk11="unused" ilk12="unused" ilk13="unused" ilk14="unused" ilk15="Valve Fault" ilk2="IMG5 Healthy" ilk3="PIRG4 Healthy" ilk4="PIRG5 Healthy" ilk5="FE ABSB Open" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" name="GV3" valve="04"/>
-	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-VA-VALVE-04" gda_desc="Gate Valve" gda_name="GV4" ilk0="Air press. OK" ilk1="IMG5 Healthy" ilk10="unused" ilk11="unused" ilk12="unused" ilk13="unused" ilk14="unused" ilk15="Valve Fault" ilk2="IMG6 Healthy" ilk3="PIRG5 Healthy" ilk4="PIRG6 Healthy" ilk5="FE ABSB Open" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" name="GV4" valve="05"/>
-	<vacuumValve.vacuumValve_callback crate="VLVCC2" device="BL11I-VA-VALVE-05" gda_desc="Gate Valve" gda_name="GV5" ilk0="Air press. OK" ilk1="IMG6 Healthy" ilk10="unused" ilk11="unused" ilk12="unused" ilk13="unused" ilk14="unused" ilk15="Valve Fault" ilk2="IMG7 Healthy" ilk3="PIRG6 Healthy" ilk4="PIRG7 Healthy" ilk5="SHTR1 Open" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" name="GV5" valve="02"/>
-	<vacuumValve.vacuumValve_callback crate="VLVCC2" device="BL11I-VA-VALVE-06" gda_desc="Gate Valve" gda_name="GV6" ilk0="Air press. OK" ilk1="IMG7 Healthy" ilk10="unused" ilk11="unused" ilk12="unused" ilk13="unused" ilk14="unused" ilk15="Valve Fault" ilk2="IMG8 Healthy" ilk3="PIRG7 Healthy" ilk4="PIRG8 Healthy" ilk5="SHTR1 Open" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" name="GV6" valve="03"/>
-	<vacuumValve.vacuumValve_callback crate="VLVCC2" device="BL11I-PS-SHTR-01" gda_desc="Experimental Shutter" gda_name="SHTR1" ilk0="Air press. OK" ilk1="Guardline A" ilk10="unused" ilk11="unused" ilk12="unused" ilk13="unused" ilk14="unused" ilk15="Valve Fault" ilk2="Guardline B" ilk3="V5 Open" ilk4="V6 Open" ilk5="Beamstop On" ilk6="Real Beamstp" ilk7="unused" ilk8="unused" ilk9="unused" name="SHTR1" tclose_hhsv="MAJOR" tclose_high="3.0" tclose_hihi="5.0" tclose_hsv="MINOR" valve="01"/>
-	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-DI-PHDGN-02" gda_desc="Fluorescent Screen" gda_name="D2.SCREEN" ilk0="unused" ilk1="unused" ilk10="unused" ilk11="unused" ilk12="unused" ilk13="unused" ilk14="unused" ilk15="Valve Fault" ilk2="unused" ilk3="unused" ilk4="unused" ilk5="unused" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" name="D2" valve="03"/>
-	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-DI-PHDGN-03" gda_desc="Fluorescent Screen" gda_name="D3.SCREEN" ilk0="unused" ilk1="unused" ilk10="unused" ilk11="unused" ilk12="unused" ilk13="unused" ilk14="unused" ilk15="Valve Fault" ilk2="unused" ilk3="unused" ilk4="unused" ilk5="unused" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" name="D3" valve="06"/>
-	<vacuumValve.vacuumValve_callback crate="VLVCC2" device="BL11I-DI-PHDGN-04" gda_desc="Fluorescent Screen" gda_name="D4.SCREEN" ilk0="unused" ilk1="unused" ilk10="unused" ilk11="unused" ilk12="unused" ilk13="unused" ilk14="unused" ilk15="Valve Fault" ilk2="unused" ilk3="unused" ilk4="unused" ilk5="unused" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" name="D4" valve="04"/>
-	<interlock.interlock addr="07" desc="Waterflow Interlocks" device="BL11I-VA-VLVCC-01" ilk0="GBC Water" ilk1="S1 Water 1" ilk2="S1 Water 2" ilk3="D1 Water" ilk4="DCM Water" ilk5="unused" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" ilkA="unused" ilkB="unused" ilkC="unused" ilkD="unused" ilkE="unused" ilkF="unused" interlock=":INT1" name="ILK1" port="ty_40_3"/>
-	<interlock.interlock addr="09" desc="Front End Permit" device="BL11I-VA-VLVCC-01" ilk0="Water OK" ilk1="Valve 1 Open" ilk2="Vacuum OK" ilk3="Cryo running" ilk4="GBC Temps OK" ilk5="S1 Temps OK" ilk6="D1, GBS Temps OK" ilk7="DCM Temps OK" ilk8="Laser Out" ilk9="V2 Open" ilkA="V3 Open" ilkB="V4 Open" ilkC="unused" ilkD="unused" ilkE="unused" ilkF="unused" interlock=":INT2" name="ILK2" port="ty_40_3"/>
-	<interlock.interlock addr="01" desc="Temperatures Zone 1" device="BL11I-VA-TMPCC-01" ilk0="GBC Temp 1" ilk1="GBC Temp 2" ilk2="GBC Temp 3" ilk3="GBC Temp 4" ilk4="unused" ilk5="unused" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" ilkA="unused" ilkB="unused" ilkC="unused" ilkD="unused" ilkE="unused" ilkF="unused" interlock=":INT1" name="ILK3" port="ty_40_2"/>
-	<interlock.interlock addr="02" desc="Temperatures Zone 2" device="BL11I-VA-TMPCC-01" ilk0="S1 ApA Temp 1" ilk1="S1 ApA Temp 2" ilk2="S1 ApA Temp 3" ilk3="S1 ApA Temp 4" ilk4="S1 ApB Temp 1" ilk5="S1 ApB Temp 2" ilk6="S1 ApB Temp 3" ilk7="S1 ApB Temp 4" ilk8="unused" ilk9="unused" ilkA="unused" ilkB="unused" ilkC="unused" ilkD="unused" ilkE="unused" ilkF="unused" interlock=":INT2" name="ILK4" port="ty_40_2"/>
-	<interlock.interlock addr="03" desc="Temperatures Zone 3" device="BL11I-VA-TMPCC-01" ilk0="D1 Temp" ilk1="Spare" ilk2="GBS Temp" ilk3="unused" ilk4="unused" ilk5="unused" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" ilkA="unused" ilkB="unused" ilkC="unused" ilkD="unused" ilkE="unused" ilkF="unused" interlock=":INT3" name="ILK5" port="ty_40_2"/>
-	<interlock.interlock addr="04" desc="Temperatures Zone 4" device="BL11I-VA-TMPCC-01" ilk0="Xtal1 Inboard" ilk1="Xtal1 Outboard" ilk2="Xtal2 Inboard" ilk3="Xtal2 Outboard" ilk4="White Beam Absorber" ilk5="unused" ilk6="unused" ilk7="unused" ilk8="unused" ilk9="unused" ilkA="unused" ilkB="unused" ilkC="unused" ilkD="unused" ilkE="unused" ilkF="unused" interlock=":INT4" name="ILK6" port="ty_40_2"/>
+	<vacuumValve.auto_vacuumValveReadExtra B1="39" B2="40" B3="41" N="5" device="BL11I-VA-VLVCC-01" port="ty_40_3"/>
+	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-VA-VALVE-01" gda_desc="Gate Valve" gda_name="GV1" gilk0="Gauge01" gilk1="Gauge02" gilk2="Gauge03" gilk3="Gauge04" ilk0="Air press. OK" ilk1="Initial/Run(IMG1,2&amp;3)" ilk15="Valve Fault" ilk2="PIRG2 Healthy" ilk3="PIRG3 Healthy" ilk4="(Can't shut: beam on)" name="GV1" valve="01"/>
+	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-VA-VALVE-02" gda_desc="Gate Valve" gda_name="GV2" gilk0="Gauge01" gilk1="Gauge02" gilk2="Gauge03" gilk3="Gauge04" ilk0="Air press. OK" ilk1="IMG3 Healthy" ilk15="Valve Fault" ilk2="IMG4 Healthy" ilk3="PIRG3 Healthy" ilk4="PIRG4 Healthy" ilk5="FE ABSB Open" name="GV2" valve="02"/>
+	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-VA-VALVE-03" gda_desc="Gate Valve" gda_name="GV3" gilk0="Gauge01" gilk1="Gauge02" gilk2="Gauge03" gilk3="Gauge04" ilk0="Air press. OK" ilk1="IMG4 Healthy" ilk15="Valve Fault" ilk2="IMG5 Healthy" ilk3="PIRG4 Healthy" ilk4="PIRG5 Healthy" ilk5="FE ABSB Open" name="GV3" valve="04"/>
+	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-VA-VALVE-04" gda_desc="Gate Valve" gda_name="GV4" ilk0="Air press. OK" ilk1="IMG5 Healthy" ilk15="Valve Fault" ilk2="IMG6 Healthy" ilk3="PIRG5 Healthy" ilk4="PIRG6 Healthy" ilk5="FE ABSB Open" name="GV4" valve="05"/>
+	<vacuumValve.vacuumValve_callback crate="VLVCC2" device="BL11I-VA-VALVE-05" gda_desc="Gate Valve" gda_name="GV5" ilk0="Air press. OK" ilk1="IMG6 Healthy" ilk15="Valve Fault" ilk2="IMG7 Healthy" ilk3="PIRG6 Healthy" ilk4="PIRG7 Healthy" ilk5="SHTR1 Open" name="GV5" valve="02"/>
+	<vacuumValve.vacuumValve_callback crate="VLVCC2" device="BL11I-VA-VALVE-06" gda_desc="Gate Valve" gda_name="GV6" ilk0="Air press. OK" ilk1="IMG7 Healthy" ilk15="Valve Fault" ilk2="IMG8 Healthy" ilk3="PIRG7 Healthy" ilk4="PIRG8 Healthy" ilk5="SHTR1 Open" name="GV6" valve="03"/>
+	<vacuumValve.vacuumValve_callback crate="VLVCC2" device="BL11I-PS-SHTR-01" gda_desc="Experimental Shutter" gda_name="SHTR1" ilk0="Air press. OK" ilk1="Guardline A" ilk15="Valve Fault" ilk2="Guardline B" ilk3="V5 Open" ilk4="V6 Open" ilk5="Beamstop On" ilk6="Real Beamstp" name="SHTR1" tclose_hhsv="MAJOR" tclose_high="3.0" tclose_hihi="5.0" tclose_hsv="MINOR" valve="01"/>
+	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-DI-PHDGN-02" gda_desc="Fluorescent Screen" gda_name="D2.SCREEN" ilk15="Valve Fault" name="D2" valve="03"/>
+	<vacuumValve.vacuumValve_callback crate="VLVCC1" device="BL11I-DI-PHDGN-03" gda_desc="Fluorescent Screen" gda_name="D3.SCREEN" ilk15="Valve Fault" name="D3" valve="06"/>
+	<vacuumValve.vacuumValve_callback crate="VLVCC2" device="BL11I-DI-PHDGN-04" gda_desc="Fluorescent Screen" gda_name="D4.SCREEN" ilk15="Valve Fault" name="D4" valve="04"/>
+	<interlock.interlock addr="07" desc="Waterflow Interlocks" device="BL11I-VA-VLVCC-01" ilk0="GBC Water" ilk1="S1 Water 1" ilk2="S1 Water 2" ilk3="D1 Water" ilk4="DCM Water" interlock=":INT1" name="ILK1" port="ty_40_3"/>
+	<interlock.interlock addr="09" desc="Front End Absorber" device="BL11I-VA-VLVCC-01" ilk0="Water OK" ilk1="Valve 1 Open" ilk2="IMG01" ilk3="IMG02 - MPS" ilk4="IMG03 / IonP03" ilk5="Cryo running" ilk6="GBC Temps OK" ilk7="S1 Temps OK" ilk8="D1, GBS Temps OK" ilk9="DCM Temps OK" ilkA="Laser Out" ilkB="V2 Open" ilkC="V3 Open" ilkD="V4 Open" ilkE="V1-4 Air T/2 OK" interlock=":INT2" name="ILK2" port="ty_40_3"/>
+	<interlock.interlock addr="01" desc="Temperatures Zone 1" device="BL11I-VA-TMPCC-01" ilk0="GBC Temp 1" ilk1="GBC Temp 2" ilk2="GBC Temp 3" ilk3="GBC Temp 4" interlock=":INT1" name="ILK3" port="ty_40_2"/>
+	<interlock.interlock addr="02" desc="Temperatures Zone 2" device="BL11I-VA-TMPCC-01" ilk0="S1 ApA Temp 1" ilk1="S1 ApA Temp 2" ilk2="S1 ApA Temp 3" ilk3="S1 ApA Temp 4" ilk4="S1 ApB Temp 1" ilk5="S1 ApB Temp 2" ilk6="S1 ApB Temp 3" ilk7="S1 ApB Temp 4" interlock=":INT2" name="ILK4" port="ty_40_2"/>
+	<interlock.interlock addr="03" desc="Temperatures Zone 3" device="BL11I-VA-TMPCC-01" ilk0="D1 Temp" ilk1="Spare" ilk2="GBS Temp" interlock=":INT3" name="ILK5" port="ty_40_2"/>
+	<interlock.interlock addr="04" desc="Temperatures Zone 4" device="BL11I-VA-TMPCC-01" ilk0="Xtal1 Inboard" ilk1="Xtal1 Outboard" ilk2="Xtal2 Inboard" ilk3="Xtal2 Outboard" ilk4="White Beam Absorber" interlock=":INT4" name="ILK6" port="ty_40_2"/>
+	<interlock.interlock addr="39" desc="Machine Beam Critical" device="BL11I-VA-VLVCC-01" ilk0="Valve1 Open" ilk1="IMG01 / IMG02" interlock=":INT3" name="ILK7" port="ty_40_3"/>
 	<digitelMpc.digitelMpc device="BL11I-VA-MPC-01" name="IONPC1" port="ty_40_0" unit="01"/>
 	<digitelMpc.digitelMpc device="BL11I-VA-MPC-02" name="IONPC2" port="ty_40_1" unit="01"/>
 	<digitelMpc.digitelMpc device="BL11I-VA-MPC-03" name="IONPC3" port="ty_41_0" unit="01"/>
@@ -129,41 +131,65 @@
 	<digitelMpc.digitelMpcIonp MPC="IONPC4" device="BL11I-VA-IONP-08" name="IONP8" pump="2" size="150" spoff="0" spon="0"/>
 	<digitelMpc.digitelMpcIonp MPC="IONPC5" device="BL11I-VA-IONP-09" name="IONP9" pump="1" size="150" spoff="0" spon="0"/>
 	<digitelMpc.digitelMpcIonp MPC="IONPC5" device="BL11I-VA-IONP-10" name="IONP10" pump="2" size="150" spoff="0" spon="0"/>
-	<mks937a.mks937a device="BL11I-VA-GCTLR-01" name="GCTLR-01" port="ty_40_4"/>
+	<mks937b.mks937b address="001" device="BL11I-VA-GCTLR-01" name="GCTLR-01" port="ty_40_4"/>
+	<!--<mks937a.mks937a device="BL11I-VA-GCTLR-01" name="GCTLR-01" port="ty_40_4"/>-->
 	<mks937a.mks937a device="BL11I-VA-GCTLR-02" name="GCTLR-02" port="ty_40_5"/>
 	<mks937a.mks937a device="BL11I-VA-GCTLR-03" name="GCTLR-03" port="ty_41_4"/>
 	<mks937a.mks937a device="BL11I-VA-GCTLR-04" name="GCTLR-04" port="ty_41_5"/>
-	<mks937a.mks937aImg GCTLR="GCTLR-01" channel="1" device="BL11I-VA-IMG-01" name="IMG01" offwarn="1"/>
-	<mks937a.mks937aImg GCTLR="GCTLR-01" channel="2" device="BL11I-VA-IMG-02" name="IMG02" offwarn="1"/>
+	<mks937b.mks937bImg GCTLR="GCTLR-01" channel="1" device="BL11I-VA-IMG-01" name="IMG01" offwarn="1"/>
+	<mks937b.mks937bImg GCTLR="GCTLR-01" channel="3" ctl_channel="1" device="BL11I-VA-IMG-02" name="IMG02" offwarn="1"/>
+	<!--<mks937a.mks937aImg GCTLR="GCTLR-01" channel="1" device="BL11I-VA-IMG-01" name="IMG01" offwarn="1"/>-->
+	<!--<mks937a.mks937aImg GCTLR="GCTLR-01" channel="2" device="BL11I-VA-IMG-02" name="IMG02" offwarn="1"/>-->
 	<mks937a.mks937aImg GCTLR="GCTLR-02" channel="1" device="BL11I-VA-IMG-03" name="IMG03" offwarn="1"/>
 	<mks937a.mks937aImg GCTLR="GCTLR-02" channel="2" device="BL11I-VA-IMG-04" name="IMG04"/>
 	<mks937a.mks937aImg GCTLR="GCTLR-03" channel="1" device="BL11I-VA-IMG-05" name="IMG05"/>
 	<mks937a.mks937aImg GCTLR="GCTLR-03" channel="2" device="BL11I-VA-IMG-06" name="IMG06"/>
 	<mks937a.mks937aImg GCTLR="GCTLR-04" channel="1" device="BL11I-VA-IMG-07" name="IMG07"/>
 	<mks937a.mks937aImg GCTLR="GCTLR-04" channel="2" device="BL11I-VA-IMG-08" name="IMG08"/>
-	<mks937a.mks937aPirg GCTLR="GCTLR-01" channel="4" device="BL11I-VA-PIRG-01" name="PIRG01"/>
-	<mks937a.mks937aPirg GCTLR="GCTLR-01" channel="5" device="BL11I-VA-PIRG-02" name="PIRG02"/>
+	<mks937b.mks937bPirg GCTLR="GCTLR-01" channel="5" device="BL11I-VA-PIRG-01" name="PIRG01"/>
+	<mks937b.mks937bPirg GCTLR="GCTLR-01" channel="6" device="BL11I-VA-PIRG-02" name="PIRG02"/>
+	<!--<mks937a.mks937aPirg GCTLR="GCTLR-01" channel="4" device="BL11I-VA-PIRG-01" name="PIRG01"/>-->
+	<!--<mks937a.mks937aPirg GCTLR="GCTLR-01" channel="5" device="BL11I-VA-PIRG-02" name="PIRG02"/>-->
 	<mks937a.mks937aPirg GCTLR="GCTLR-02" channel="4" device="BL11I-VA-PIRG-03" name="PIRG03"/>
 	<mks937a.mks937aPirg GCTLR="GCTLR-02" channel="5" device="BL11I-VA-PIRG-04" name="PIRG04"/>
 	<mks937a.mks937aPirg GCTLR="GCTLR-03" channel="4" device="BL11I-VA-PIRG-05" name="PIRG05"/>
 	<mks937a.mks937aPirg GCTLR="GCTLR-03" channel="5" device="BL11I-VA-PIRG-06" name="PIRG06"/>
 	<mks937a.mks937aPirg GCTLR="GCTLR-04" channel="4" device="BL11I-VA-PIRG-07" name="PIRG07"/>
 	<mks937a.mks937aPirg GCTLR="GCTLR-04" channel="5" device="BL11I-VA-PIRG-08" name="PIRG08"/>
-	<mks937a.mks937aGauge c="50" dom="BL11I" id="01" name="GAUGE1" s="0"/>
-	<mks937a.mks937aGauge c="50" dom="BL11I" id="02" name="GAUGE2" s="1"/>
+	<mks937b.mks937bGauge dom="BL11I" id="01" name="GAUGE1" plog_adc_pv="BL11I-VA-ADC-01:CH0"/>
+	<mks937b.mks937bGauge dom="BL11I" id="02" name="GAUGE2" plog_adc_pv="BL11I-VA-ADC-01:CH1"/>
+	<!--<mks937a.mks937aGauge c="50" dom="BL11I" id="01" name="GAUGE1" s="0"/>-->
+	<!--<mks937a.mks937aGauge c="50" dom="BL11I" id="02" name="GAUGE2" s="1"/>-->
 	<mks937a.mks937aGauge c="50" dom="BL11I" id="03" name="GAUGE3" s="2"/>
 	<mks937a.mks937aGauge c="50" dom="BL11I" id="04" name="GAUGE4" s="3"/>
 	<mks937a.mks937aGauge c="50" dom="BL11I" id="05" name="GAUGE5" s="4"/>
 	<mks937a.mks937aGauge c="50" dom="BL11I" id="06" name="GAUGE6" s="5"/>
 	<mks937a.mks937aGauge c="50" dom="BL11I" id="07" name="GAUGE7" s="6"/>
 	<mks937a.mks937aGauge c="50" dom="BL11I" id="08" name="GAUGE8" s="7"/>
+	<mks937b.mks937bHy8401 c="50" device="BL11I-VA-ADC-01:CH0" name="VA-ADC-01:1" s="0"/>
+	<mks937b.mks937bHy8401 c="50" device="BL11I-VA-ADC-01:CH1" name="VA-ADC-01:2" s="1"/>
+	<mks937b.mks937bRelays GAUGE="IMG01" relay_desc="Valve I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-008" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="1" relay_off_desc="Valve I/L Off " relay_off_level="1.10E-006"/>
+	<mks937b.mks937bRelays GAUGE="IMG01" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="2" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="IMG01" relay_desc="MPS I/L 2" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="3" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="IMG01" relay_desc="RGA I/L " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-004" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="4" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="IMG02" relay_desc="Valve I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-008" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="5" relay_off_desc="Valve I/L Off " relay_off_level="1.10E-006"/>
+	<mks937b.mks937bRelays GAUGE="IMG02" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="6" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="IMG02" relay_desc="MPS I/L 2" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="7" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="IMG02" relay_desc="RGA I/L " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-004" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="8" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="PIRG01" relay_desc="Ion Pump I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="9" relay_off_desc="Ion Pump I/L " relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="PIRG01" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="10" relay_off_desc="MPS I/L " relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="PIRG02" relay_desc="Ion Pump I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="11" relay_off_desc="Ion Pump I/L " relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="PIRG02" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="12" relay_off_desc="MPS I/L " relay_off_level="0"/>
+	<mks937b.mks937bFastRelay GAUGE="IMG01" frcsp_desc="Fast Valve I/L" frcsp_level="1.0e-5"/>
+	<mks937b.mks937bFastRelay GAUGE="IMG02" frcsp_desc="Fast Valve I/L" frcsp_level="1.0e-5"/>
 	<rga.rga channel="1" device="BL11I-VA-RGA-02" name="RGA2" port="ty_41_6"/>
 	<rga.rga channel="2" device="BL11I-VA-RGA-03" name="RGA3" port="ty_41_6"/>
 	<cmsIon.cmsIon device="BL11I-RS-RDMON-01" high="60" hihi="80" name="RDMON" port="ty_42_0"/>
 	<cmsIon.RS4hour device="BL11I-VA-EVR-01"/>
 	<cmsIon.cmsIon_CheckReset device="BL11I-RS-RDMON-01" evr="BL11I-VA-EVR-01"/>
 	<vacuumValve.externalValve device="FE11I-VA-VALVE-02" name="FE11I-VA-VALVE-02"/>
-	<vacuumSpace.space device="BL11I-VA-SPACE-01" gauge0="GAUGE1" gauge1="GAUGE2" img0="IMG01" img1="IMG02" ionp0="IONP1" ionp1="IONP2" name="SPACE1" pirg0="PIRG01" pirg1="PIRG02" valve0="FE11I-VA-VALVE-02"/>
+	<vacuumSpace.space_b device="BL11I-VA-SPACE-01" gauge0="GAUGE1" gauge1="GAUGE2" img0="IMG01" img1="IMG02" ionp0="IONP1" ionp1="IONP2" name="SPACE1" pirg0="PIRG01" pirg1="PIRG02" valve0="FE11I-VA-VALVE-02"/>
+	<!--<vacuumSpace.space device="BL11I-VA-SPACE-01" gauge0="GAUGE1" gauge1="GAUGE2" img0="IMG01" img1="IMG02" ionp0="IONP1" ionp1="IONP2" name="SPACE1" pirg0="PIRG01" pirg1="PIRG02" valve0="FE11I-VA-VALVE-02"/>-->
 	<vacuumSpace.space device="BL11I-VA-SPACE-02" gauge0="GAUGE3" img0="IMG03" ionp0="IONP3" name="SPACE2" pirg0="PIRG03" valve0="GV1"/>
 	<vacuumSpace.space device="BL11I-VA-SPACE-03" gauge0="GAUGE4" img0="IMG04" ionp0="IONP4" name="SPACE3" pirg0="PIRG04" valve0="GV2"/>
 	<vacuumSpace.space device="BL11I-VA-SPACE-04" gauge0="GAUGE5" img0="IMG05" ionp0="IONP5" name="SPACE4" pirg0="PIRG05" valve0="GV3"/>

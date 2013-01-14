@@ -3,8 +3,8 @@ DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls4
 UTILITY=    $(SUPPORT)/utility/dls2-13
 AUTOSAVE=   $(SUPPORT)/autosave/4-6dls7
 IPAC=       $(SUPPORT)/ipac/2-8dls4-8
-BUSY=       $(SUPPORT)/busy/1-3dls5
-STREAMS=    $(SUPPORT)/streamDevice/2-5
+BUSY=       $(SUPPORT)/busy/1-4
+STREAMS=    $(SUPPORT)/streamDevice/2-5dls1
 
 # Hardware
 DLS8515=    $(SUPPORT)/DLS8515/0-8
@@ -15,13 +15,14 @@ MRFTIMING=  $(SUPPORT)/mrfTiming/2-4-1dls6
 # Devices
 VACUUMVALVE=$(SUPPORT)/vacuumValve/4-18
 MKS937A=    $(SUPPORT)/mks937a/2-71
-RGA=        $(SUPPORT)/rga/4-2
-DIGITELMPC= $(SUPPORT)/digitelMpc/4-28
+MKS937B=    $(SUPPORT)/mks937b/2-3
+RGA=        $(SUPPORT)/rga/4-5
+DIGITELMPC= $(SUPPORT)/digitelMpc/4-29
 RACKFAN=    $(SUPPORT)/rackFan/2-5
 PRESSARR=   $(SUPPORT)/pressArr_subrec/1-0
 WATER=      $(SUPPORT)/water/1-19
-INTERLOCK=  $(SUPPORT)/interlock/1-23
-TEMPERATURE=$(SUPPORT)/temperature/2-10
-CMSION=     $(SUPPORT)/cmsIon/3-0
+INTERLOCK=  $(SUPPORT)/interlock/1-24
+TEMPERATURE=$(SUPPORT)/temperature/2-11
+CMSION=     $(SUPPORT)/cmsIon/3-2
 VACUUMSPACE=$(SUPPORT)/vacuumSpace/3-22-1
 

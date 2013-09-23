@@ -1,4 +1,6 @@
+UTILITY=    $(SUPPORT)/utility/dls2-14
+AUTOSAVE=$(SUPPORT)/autosave/5-0
 FFMPEGSERVER=$(SUPPORT)/ffmpegServer/1-16-3
 ARAVISGIGE=$(SUPPORT)/aravisGigE/0-1-15dls8
 DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls5
-
+FZOOM=$(SUPPORT)/fzoom/2-2-1

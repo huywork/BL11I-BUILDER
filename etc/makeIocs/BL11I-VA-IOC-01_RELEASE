@@ -1,6 +1,7 @@
 # Core modules
 DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls5
 UTILITY=    $(SUPPORT)/utility/dls2-14
+IOCINFO =       $(SUPPORT)/IOCinfo/2-30
 AUTOSAVE=   $(SUPPORT)/autosave/5-0
 IPAC=       $(SUPPORT)/ipac/2-8dls4-8
 BUSY=       $(SUPPORT)/busy/1-4

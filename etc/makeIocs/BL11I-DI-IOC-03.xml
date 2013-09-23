@@ -1,7 +1,11 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86">
 	<devIocStats.ioc IOCNAME="BL11I-DI-IOC-03" name="DIIOC3"/>
+	<autosave.Autosave bl="True" iocName="BL11I-DI-IOC-03" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
 	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="172.23.111.133" P="BL11I-AL-DCAM-01" PORT="ALCAM1.CAM" R=":CAM:" TIMEOUT="1"/>
+	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="172.23.111.134" P="BL11I-AL-DCAM-02" PORT="ALCAM2.CAM" R=":CAM:" TIMEOUT="1"/>
 	<ffmpegServer.diagnosticPlugins CAM="ALCAM1.CAM" HTTP_PORT="8082" P="BL11I-AL-DCAM-01" PORTPREFIX="ALCAM1"/>
+	<ffmpegServer.diagnosticPlugins CAM="ALCAM2.CAM" HTTP_PORT="8082" P="BL11I-AL-DCAM-02" PORTPREFIX="ALCAM2"/>
 	<EPICS_BASE.StartupCommand command="dbpf BL11I-AL-DCAM-01:CAM:Acquire 1" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf BL11I-AL-DCAM-02:CAM:Acquire 1" post_init="True"/>
 </components>

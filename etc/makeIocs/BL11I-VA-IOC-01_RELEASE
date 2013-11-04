@@ -1,22 +1,23 @@
 # Core modules
-DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls5
+DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-5dls5
 UTILITY=    $(SUPPORT)/utility/dls2-14
-IOCINFO =       $(SUPPORT)/IOCinfo/2-30
+IOCINFO=    $(SUPPORT)/IOCinfo/2-30
 AUTOSAVE=   $(SUPPORT)/autosave/5-0
 IPAC=       $(SUPPORT)/ipac/2-8dls4-8
 BUSY=       $(SUPPORT)/busy/1-4
 STREAMS=    $(SUPPORT)/streamDevice/2-5dls1
 
 # Hardware
-DLS8515=    $(SUPPORT)/DLS8515/0-9
+DLS8515=    $(SUPPORT)/DLS8515/0-10-1
 HY8401=     $(SUPPORT)/Hy8401ip/3-17
 HOSTLINK=   $(SUPPORT)/HostLink/3-1
 MRFTIMING=  $(SUPPORT)/mrfTiming/2-4-1dls7
 
 # Devices
-VACUUMVALVE=$(SUPPORT)/vacuumValve/4-21
-MKS937A=    $(SUPPORT)/mks937a/2-73
-MKS937B=    $(SUPPORT)/mks937b/2-4
+LAUDARE2XX= $(SUPPORT)/laudaRE2xx/1-11-1
+VACUUMVALVE=$(SUPPORT)/vacuumValve/4-22
+MKS937A=    $(SUPPORT)/mks937a/2-75
+MKS937B=    $(SUPPORT)/mks937b/2-7
 RGA=        $(SUPPORT)/rga/4-10
 DIGITELMPC= $(SUPPORT)/digitelMpc/4-30
 RACKFAN=    $(SUPPORT)/rackFan/2-6

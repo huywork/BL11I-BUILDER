@@ -67,6 +67,9 @@
 	<BLfeedback.fast_feedback AUTOPV="BL11I-PS-SHTR-01:STA" AUTOPV2="FE11I-RS-ABSB-02:STA" DRVH="65023" DRVL="512" DT="0.03" HOPR="1000000" ICHAN="0" INPUT="S4BPC" INPUT_DATA="XDATA" INPUT_INTERVAL="SCAN_PERIOD" KD="0" KI="150" KP="0.01" LOPR="-1000000" OCHAN="1" OUTPUT="DAC51" OUTPUT_DATA="DOUBLE_DATA" P="BL11I-OP-DCM-01" PID=":FR:S4FB" PREC="4" SCAN=".1 second" name="DCM.FR.S4FB"/>
 	<BLfeedback.fast_feedback AUTOPV="BL11I-PS-SHTR-01:STA" AUTOPV2="FE11I-RS-ABSB-02:STA" DRVH="65023" DRVL="512" DT="0.03" HOPR="1000000" ICHAN="0" INPUT="QBPM3BPC" INPUT_DATA="XDATA" INPUT_INTERVAL="SCAN_PERIOD" KD="0" KI="150" KP="0.01" LOPR="-1000000" OCHAN="1" OUTPUT="DAC51" OUTPUT_DATA="DOUBLE_DATA" P="BL11I-OP-DCM-01" PID=":FR:QBPM3FB" PREC="4" SCAN=".1 second" name="DCM.FR.QBPM3FB"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-DCM-01:FB:PID.KP&quot;, &quot;0.05&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-DCM-01:FP:S4FB:AUTOCALC.INPE&quot;, &quot;BL11I-AL-SLITS-04:YP:I CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-DCM-01:FP:S4FB:AUTOCALC.INPF&quot;, &quot;BL11I-AL-SLITS-04:YM:I CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-DCM-01:FP:S4FB:AUTOCALC.OCAL&quot;, &quot;(B=1)&amp;(C=1)&amp;(D&gt;5)&amp;(E&gt;1)&amp;(F&gt;1)&quot;)" post_init="True"/>
 	<records.motor DESC="Fine Pitch Motor (piezo)" DHLM="26" DINP="BL11I-OP-DCM-01:FPITCH2:DONE" DLLM="-26" DTYP="Soft Channel" EGU="mdeg" MRES="0.001" NTM="NO" OUT="BL11I-OP-DCM-01:FB:DAC:02 PP" PREC="3" RDBD="0.001" RDBL="BL11I-OP-DCM-01:FPITCH2:RBV" RRES="1" RTRY="0" TWV="0.1" URIP="Yes" VELO="1000" VMAX="1000" record="BL11I-OP-DCM-01:FPITCH2:MOTOR"/>
 	<records.calc CALC="1" PINI="YES" record="BL11I-OP-DCM-01:FPITCH2:DONE"/>
 </components>

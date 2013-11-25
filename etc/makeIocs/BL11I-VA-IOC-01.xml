@@ -2,7 +2,6 @@
 <components arch="vxWorks-ppc604_long">
 	<devIocStats.ioc_vxworks IOCNAME="BL11I-VA-IOC-01" name="IOCS.VA1"/>
 	<EPICS_BASE.StartupCommand command="routeAdd(&quot;172.23.226.211&quot;, &quot;172.23.111.254&quot;)"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-CHILL-01:DISABLE&quot;, &quot;0&quot;)" post_init="True"/>
 	<IOCinfo.IOCinfo device="BL11I-VA-IOC-01"/>
 	<autosave.Autosave bl="True" iocName="BL11I-VA-IOC-01" ip="172.23.111.254" name="IOCS.VA1AS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
 	<mrfTiming.EventReceiverPMC cardid="1"/>
@@ -30,7 +29,6 @@
 	<asyn.AsynSerial name="ty_41_6" port="/ty/41/6"/>
 	<asyn.AsynSerial name="ty_41_7" port="/ty/41/7"/>
 	<asyn.AsynSerial name="ty_42_0" port="/ty/42/0"/>
-	<asyn.AsynIP name="ty_lauda" port="172.23.226.211:7016"/>
 	<!--Valve and temp control crates-->
 	<DLS8515.DLS8515channel baud="57600" card="CARD40" channel="3" data="7" parity="E" stop="2"/>
 	<DLS8515.DLS8515channel baud="57600" card="CARD41" channel="3" data="7" parity="E" stop="2"/>
@@ -200,5 +198,4 @@
 	<vacuumSpace.space device="BL11I-VA-SPACE-05" gauge0="GAUGE6" img0="IMG06" ionp0="IONP6" ionp1="IONP7" name="SPACE5" pirg0="PIRG06" valve0="GV4"/>
 	<vacuumSpace.space device="BL11I-VA-SPACE-06" gauge0="GAUGE7" img0="IMG07" ionp0="IONP8" name="SPACE6" pirg0="PIRG07" valve0="GV5"/>
 	<vacuumSpace.space device="BL11I-VA-SPACE-07" gauge0="GAUGE8" img0="IMG08" ionp0="IONP9" ionp1="IONP10" name="SPACE7" pirg0="PIRG08" valve0="GV6"/>
-	<laudaRE2xx.lRE2xx ADDR="0" HIGH="30" HIHI="30" LOLO="15" LOW="15" P="BL11I-OP-CHILL-01" PORT="ty_lauda" SCAN="1"/>
 </components>

@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-06" name="IOCS.CS6"/>
+	<asyn.AsynIP name="ty_lauda" port="172.23.226.211:7016"/>	
+	<laudaRE2xx.lRE2xx ADDR="0" HIGH="30" HIHI="30" LOLO="15" LOW="15" P="BL11I-OP-CHILL-01" PORT="ty_lauda" SCAN="1"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-CHILL-01:DISABLE&quot;, &quot;0&quot;)" post_init="True"/>
+</components>

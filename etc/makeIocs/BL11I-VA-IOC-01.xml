@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="vxWorks-ppc604_long">
 	<devIocStats.ioc_vxworks IOCNAME="BL11I-VA-IOC-01" name="IOCS.VA1"/>
-	<EPICS_BASE.StartupCommand command="routeAdd(&quot;172.23.226.211&quot;, &quot;172.23.111.254&quot;)"/>
 	<IOCinfo.IOCinfo device="BL11I-VA-IOC-01"/>
 	<autosave.Autosave bl="True" iocName="BL11I-VA-IOC-01" ip="172.23.111.254" name="IOCS.VA1AS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
 	<mrfTiming.EventReceiverPMC cardid="1"/>

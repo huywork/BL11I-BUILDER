@@ -1,0 +1,183 @@
+<?xml version="1.0" ?>
+<components arch="vxWorks-ppc604_long">
+	<devIocStats.defaultIocStats ioc_name="BL11I-EA-IOC-01" name="IOCS.EA"/>
+	<IOCinfo.IOCinfo device="BL11I-EA-IOC-01"/>
+	<autosave.Autosave bl="True" iocName="BL11I-EA-IOC-01" ip="172.23.111.254" name="IOCS.EAAS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
+	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="8000000"/>
+	<mrfTiming.EventReceiverPMC cardid="1"/>
+	<ipac.Hy8002 name="CARD7" slot="7"/>
+	<ipac.Hy8002 name="CARD8" slot="8"/>
+	<Hy8401ip-asyn.Hy8401Asyn carrier="CARD8" ipslot="0" name="ADC1"/>
+	<Hy8401ip-asyn.Hy8401Asyn carrier="CARD8" ipslot="1" name="ADC2"/>
+	<DLS8515.DLS8516 carrier="CARD7" ipslot="0" name="CARD70"/>
+	<DLS8515.DLS8515 carrier="CARD7" ipslot="1" name="CARD71"/>
+	<asyn.AsynSerial name="ty_70_0" port="/ty/70/0"/>
+	<asyn.AsynSerial name="ty_70_1" port="/ty/70/1"/>
+	<asyn.AsynSerial name="ty_70_2" port="/ty/70/2"/>
+	<asyn.AsynSerial name="ty_70_3" port="/ty/70/3"/>
+	<asyn.AsynSerial name="ty_70_4" port="/ty/70/4"/>
+	<asyn.AsynSerial name="ty_70_5" port="/ty/70/5"/>
+	<asyn.AsynSerial name="ty_70_6" port="/ty/70/6"/>
+	<asyn.AsynSerial name="ty_70_7" port="/ty/70/7"/>
+	<asyn.AsynSerial name="ty_71_0" port="/ty/71/0"/>
+	<asyn.AsynSerial name="ty_71_1" port="/ty/71/1"/>
+	<asyn.AsynSerial name="ty_71_2" port="/ty/71/2"/>
+	<asyn.AsynSerial name="ty_71_3" port="/ty/71/3"/>
+	<asyn.AsynSerial name="ty_71_4" port="/ty/71/4"/>
+	<asyn.AsynSerial name="ty_71_5" port="/ty/71/5"/>
+	<asyn.AsynSerial name="ty_71_6" port="/ty/71/6"/>
+	<asyn.AsynSerial name="ty_71_7" port="/ty/71/7"/>
+	<DLS8515.DLS8516channel card="CARD70" channel="0"/>
+	<DLS8515.DLS8516channel card="CARD70" channel="1"/>
+	<DLS8515.DLS8516channel card="CARD70" channel="2"/>
+	<DLS8515.DLS8516channel card="CARD70" channel="3"/>
+	<DLS8515.DLS8516channel card="CARD70" channel="4"/>
+	<DLS8515.DLS8516channel card="CARD70" channel="5"/>
+	<DLS8515.DLS8516channel card="CARD70" channel="6"/>
+	<!--OD Curramps-->
+	<DLS8515.DLS8515channel baud="19200" card="CARD71" channel="0"/>
+	<DLS8515.DLS8515channel baud="19200" card="CARD71" channel="1"/>
+	<DLS8515.DLS8515channel baud="19200" card="CARD71" channel="2"/>
+	<!--ENZ LoCuM4-->
+	<DLS8515.DLS8515channel card="CARD71" channel="3"/>
+	<!--XIA-->
+	<DLS8515.DLS8515channel card="CARD71" channel="4"/>
+	<DLS8515.DLS8515channel card="CARD71" channel="5"/>
+	<!--Strain Gauge-->
+	<DLS8515.DLS8515channel card="CARD71" channel="6" data="7" stop="2"/>
+	<ETLdetector.ETLdetector P="BL11I-DI-IMON-01" Q=":E1" addr="43" gda_desc="I Monitor (OH)" gda_name="IO.E1" name="IO.E1" port="ty_70_5"/>
+	<ETLdetector.ETLdetector P="BL11I-DI-IMON-02" Q=":E1" addr="5" gda_desc="I Monitor (EH)" gda_name="IE.E1" name="IE.E1" port="ty_70_6"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-ENV-01" Q=":E1" addr="0" gda_desc="ENV ETL detector 1" gda_name="ENV.E1" name="ENV.E1" port="ty_70_7"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-ENV-01" Q=":E2" addr="29" gda_desc="ENV ETL detector 2" gda_name="ENV.E2" name="ENV.E2" port="ty_70_7"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-01" Q=":E1" addr="1" gda_desc="ETL detector 1" gda_name="MAC1.E1" name="MAC1.E1" port="ty_70_0"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-01" Q=":E2" addr="2" gda_desc="ETL detector 2" gda_name="MAC1.E2" name="MAC1.E2" port="ty_70_0"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-01" Q=":E3" addr="3" gda_desc="ETL detector 3" gda_name="MAC1.E3" name="MAC1.E3" port="ty_70_0"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-01" Q=":E4" addr="4" gda_desc="ETL detector 4" gda_name="MAC1.E4" name="MAC1.E4" port="ty_70_0"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-01" Q=":E5" addr="5" gda_desc="ETL detector 5" gda_name="MAC1.E5" name="MAC1.E5" port="ty_70_0"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-01" Q=":E6" addr="6" gda_desc="ETL detector 6" gda_name="MAC1.E6" name="MAC1.E6" port="ty_70_0"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-01" Q=":E7" addr="7" gda_desc="ETL detector 7" gda_name="MAC1.E7" name="MAC1.E7" port="ty_70_0"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-01" Q=":E8" addr="8" gda_desc="ETL detector 8" gda_name="MAC1.E8" name="MAC1.E8" port="ty_70_0"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-01" Q=":E9" addr="9" gda_desc="ETL detector 9" gda_name="MAC1.E9" name="MAC1.E9" port="ty_70_0"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-02" Q=":E1" addr="10" gda_desc="ETL detector 1" gda_name="MAC2.E1" name="MAC2.E1" port="ty_70_1"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-02" Q=":E2" addr="11" gda_desc="ETL detector 2" gda_name="MAC2.E2" name="MAC2.E2" port="ty_70_1"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-02" Q=":E3" addr="12" gda_desc="ETL detector 3" gda_name="MAC2.E3" name="MAC2.E3" port="ty_70_1"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-02" Q=":E4" addr="13" gda_desc="ETL detector 4" gda_name="MAC2.E4" name="MAC2.E4" port="ty_70_1"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-02" Q=":E5" addr="14" gda_desc="ETL detector 5" gda_name="MAC2.E5" name="MAC2.E5" port="ty_70_1"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-02" Q=":E6" addr="15" gda_desc="ETL detector 6" gda_name="MAC2.E6" name="MAC2.E6" port="ty_70_1"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-02" Q=":E7" addr="16" gda_desc="ETL detector 7" gda_name="MAC2.E7" name="MAC2.E7" port="ty_70_1"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-02" Q=":E8" addr="17" gda_desc="ETL detector 8" gda_name="MAC2.E8" name="MAC2.E8" port="ty_70_1"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-02" Q=":E9" addr="18" gda_desc="ETL detector 9" gda_name="MAC2.E9" name="MAC2.E9" port="ty_70_1"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-03" Q=":E1" addr="19" gda_desc="ETL detector 1" gda_name="MAC3.E1" name="MAC3.E1" port="ty_70_2"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-03" Q=":E2" addr="20" gda_desc="ETL detector 2" gda_name="MAC3.E2" name="MAC3.E2" port="ty_70_2"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-03" Q=":E3" addr="21" gda_desc="ETL detector 3" gda_name="MAC3.E3" name="MAC3.E3" port="ty_70_2"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-03" Q=":E4" addr="22" gda_desc="ETL detector 4" gda_name="MAC3.E4" name="MAC3.E4" port="ty_70_2"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-03" Q=":E5" addr="23" gda_desc="ETL detector 5" gda_name="MAC3.E5" name="MAC3.E5" port="ty_70_2"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-03" Q=":E6" addr="24" gda_desc="ETL detector 6" gda_name="MAC3.E6" name="MAC3.E6" port="ty_70_2"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-03" Q=":E7" addr="25" gda_desc="ETL detector 7" gda_name="MAC3.E7" name="MAC3.E7" port="ty_70_2"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-03" Q=":E8" addr="26" gda_desc="ETL detector 8" gda_name="MAC3.E8" name="MAC3.E8" port="ty_70_2"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-03" Q=":E9" addr="27" gda_desc="ETL detector 9" gda_name="MAC3.E9" name="MAC3.E9" port="ty_70_2"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-04" Q=":E1" addr="28" gda_desc="ETL detector 1" gda_name="MAC4.E1" name="MAC4.E1" port="ty_70_3"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-04" Q=":E2" addr="58" gda_desc="ETL detector 2" gda_name="MAC4.E2" name="MAC4.E2" port="ty_70_3"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-04" Q=":E3" addr="30" gda_desc="ETL detector 3" gda_name="MAC4.E3" name="MAC4.E3" port="ty_70_3"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-04" Q=":E4" addr="31" gda_desc="ETL detector 4" gda_name="MAC4.E4" name="MAC4.E4" port="ty_70_3"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-04" Q=":E5" addr="32" gda_desc="ETL detector 5" gda_name="MAC4.E5" name="MAC4.E5" port="ty_70_3"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-04" Q=":E6" addr="33" gda_desc="ETL detector 6" gda_name="MAC4.E6" name="MAC4.E6" port="ty_70_3"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-04" Q=":E7" addr="34" gda_desc="ETL detector 7" gda_name="MAC4.E7" name="MAC4.E7" port="ty_70_3"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-04" Q=":E8" addr="35" gda_desc="ETL detector 8" gda_name="MAC4.E8" name="MAC4.E8" port="ty_70_3"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-04" Q=":E9" addr="36" gda_desc="ETL detector 9" gda_name="MAC4.E9" name="MAC4.E9" port="ty_70_3"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-05" Q=":E1" addr="37" gda_desc="ETL detector 1" gda_name="MAC5.E1" name="MAC5.E1" port="ty_70_4"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-05" Q=":E2" addr="38" gda_desc="ETL detector 2" gda_name="MAC5.E2" name="MAC5.E2" port="ty_70_4"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-05" Q=":E3" addr="39" gda_desc="ETL detector 3" gda_name="MAC5.E3" name="MAC5.E3" port="ty_70_4"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-05" Q=":E4" addr="40" gda_desc="ETL detector 4" gda_name="MAC5.E4" name="MAC5.E4" port="ty_70_4"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-05" Q=":E5" addr="41" gda_desc="ETL detector 5" gda_name="MAC5.E5" name="MAC5.E5" port="ty_70_4"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-05" Q=":E6" addr="42" gda_desc="ETL detector 6" gda_name="MAC5.E6" name="MAC5.E6" port="ty_70_4"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-05" Q=":E7" addr="43" gda_desc="ETL detector 7" gda_name="MAC5.E7" name="MAC5.E7" port="ty_70_4"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-05" Q=":E8" addr="44" gda_desc="ETL detector 8" gda_name="MAC5.E8" name="MAC5.E8" port="ty_70_4"/>
+	<ETLdetector.ETLdetector P="BL11I-EA-MAC-05" Q=":E9" addr="45" gda_desc="ETL detector 9" gda_name="MAC5.E9" name="MAC5.E9" port="ty_70_4"/>
+	<TimingTemplates.BL_EVR_PMC card="1" device="BL11I-EA-EVR-01"/>
+	<userIO.auto_dfanout DESC="Start fanout for scalers" DOL="" EGU="" HOPR="" LOPR="" OMSL="supervisory" OUTA="BL11I-EA-COUNT-01:MCA-01:EraseStart PP" OUTB="BL11I-EA-COUNT-02:MCA-01:EraseStart PP" OUTC="" OUTD="" OUTE="" OUTF="" OUTG="" OUTH="" P="BL11I-EA-FAN-01" PREC="" R="" SCAN="Passive" name="DFAN1"/>
+	<userIO.auto_dfanout DESC="Stop fanout for scalers" DOL="" EGU="" HOPR="" LOPR="" OMSL="supervisory" OUTA="BL11I-EA-COUNT-01:MCA-01:StopAll PP" OUTB="BL11I-EA-COUNT-02:MCA-01:StopAll PP" OUTC="" OUTD="" OUTE="" OUTF="" OUTG="" OUTH="" P="BL11I-EA-FAN-02" PREC="" R="" SCAN="Passive" name="DFAN2"/>
+	<userIO.auto_dfanout DESC="Motion stop fanout" DOL="" EGU="" HOPR="" LOPR="" OMSL="supervisory" OUTA="BL11I-MO-IOC-01:allstop" OUTB="BL11I-MO-IOC-02:allstop" OUTC="BL11I-EA-ROBOT-01:HOLD" OUTD="" OUTE="" OUTF="" OUTG="" OUTH="" P="BL11I-EA-FAN-03" PREC="" R="" SCAN="Passive" name="MFAN"/>
+	<mca.sis3820 M=":MCA-01" P="BL11I-EA-COUNT-01" S="" name="SCAL1" nchans="60000" nsignals="32"/>
+	<mca.sis3820 M=":MCA-01" P="BL11I-EA-COUNT-02" S="" baseAddress="0x06000000" name="SCAL2" nchans="60000" nsignals="32"/>
+	<strainGauge.strainGauge P="BL11I-OP-VFM-01:SG" bus="ty_71_6" name="M1"/>
+	<filters.xiaArray DIR="1" F1="0.5 Al" F2="1 Al" F3="1 Al" F4="1 Al" P="BL11I-DI-XIA-01:A1" module="00" name="XIA" port="ty_71_4"/>
+	<filters.xiaArray DIR="1" F1="0.05 Al" F2="0.1 Al" F3="0.2 Al" F4="0.2 Al" P="BL11I-DI-XIA-01:A2" module="00" name="XIA.OB1" port="ty_71_5"/>
+	<filters.combinations ARRAY1="BL11I-DI-XIA-01:A1" ARRAY2="BL11I-DI-XIA-01:A2" ENERGY="" P="BL11I-DI-XIA-01" fileName="LookupFileGenerator/I04EnergyFile" gda_desc="Xia Filter Array" gda_name="XIA" name="XIA.OB2" path="$(FILTERS)"/>
+	<currAmp.YMCS0012 P="BL11I-DI-QBPM-03" addr="0" gda_bpm_desc="BPM3 bpm" gda_bpm_name="BPM3.BPM" gda_curr_name="BPM3.AMP" gda_desc="BPM3 current amp" gda_name="BPM3.AMP" name="BPM3" port="ty_71_2" prec="4"/>
+	<enzLoCuM4.enzLoCuM4 adr="01" device="BL11I-DI-IAMP-04" gda_desc="Slits 4 current amp" gda_name="S4.AMP" name="ENZ" port="ty_71_3"/>
+	<Hy8401ipTemplates.Hy8401AsynControl AVERAGE="100" CLOCKRATE="9" P="BL11I-EA-ADC-01" PORT="ADC1" SAMPLES="100" gda_name="ADC1"/>
+	<Hy8401ipTemplates.Hy8401AsynControl CLOCKRATE="14" P="BL11I-EA-ADC-02" PORT="ADC2" SAMPLES="50000" gda_name="ADC2"/>
+	<Hy8401ip-asyn.Channel_waveform CHAN="0" NELM="50000" P="BL11I-EA-PE-01" PORT="ADC2" Q=":HV" name="PE.HV"/>
+	<Hy8401ip-asyn.Channel_waveform CHAN="1" NELM="50000" P="BL11I-EA-PE-01" PORT="ADC2" Q=":EL" name="PE.EL"/>
+	<Hy8401ip-asyn.Channel_waveform CHAN="2" NELM="50000" P="BL11I-EA-PE-01" PORT="ADC2" Q=":TRIG" name="PE.TRIG"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="0" P="BL11I-EA-PE-01" PORT="ADC2" Q=":HV1" SCAN="1 second" name="PE.HV1"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-EA-PE-01" PORT="ADC2" Q=":EL1" SCAN="1 second" name="PE.EL1"/>
+	<userIO.ai DTYP="asynInt32" EGU="mdeg" EGUF="52.3" EGUL="-52.3" INP="@asyn(ADC1 0) GENDATA" LINR="LINEAR" P="BL11I-OP-DCM-01" PREC="2" R=":FROLL2:RBV" SCAN="I/O Intr" gda_desc="" gda_name="" name="DCM.OB3"/>
+	<userIO.ai DTYP="asynInt32" EGU="mdeg" EGUF="26.93" EGUL="-26.93" INP="@asyn(ADC1 1) GENDATA" LINR="LINEAR" P="BL11I-OP-DCM-01" PREC="2" R=":FPITCH2:RBV" SCAN="I/O Intr" gda_desc="" gda_name="" name="DCM.OB4"/>
+	<userIO.ai DTYP="asynInt32" EGU="mdeg" EGUF="10223" EGUL="-10321" INP="@asyn(ADC1 2) GENDATA" LINR="LINEAR" P="BL11I-OP-DCM-01" PREC="2" R=":ROLL1:LVDT" SCAN="I/O Intr" gda_desc="Roll 1 absolute value" gda_name="DCM.ROLL1LVDT" name="DCM.OB5"/>
+	<userIO.ai DTYP="asynInt32" EGU="mdeg" EGUF="6762.3" EGUL="-6954.3" INP="@asyn(ADC1 3) GENDATA" LINR="LINEAR" P="BL11I-OP-DCM-01" PREC="2" R=":ROLL2:LVDT" SCAN="I/O Intr" gda_desc="Roll 2 absolute value" gda_name="DCM.ROLL2LVDT" name="DCM.OB6"/>
+	<userIO.ai DTYP="asynInt32" EGU="mdeg" EGUF="7931.9" EGUL="-7537.9" INP="@asyn(ADC1 4) GENDATA" LINR="LINEAR" P="BL11I-OP-DCM-01" PREC="2" R=":PITCH2:LVDT" SCAN="I/O Intr" gda_desc="Pitch 2 absolute value" gda_name="DCM.PITCH2LVDT" name="DCM.OB7"/>
+	<userIO.ai DTYP="asynInt32" EGU="mdeg" EGUF="-3000" EGUL="9000" INP="@asyn(ADC1 5) GENDATA" LINR="LINEAR" P="BL11I-OP-VFM-01" PREC="2" R=":M1:PITCH:RBV" SCAN="I/O Intr" gda_desc="" gda_name="" name="M1.OB1"/>
+	<userIO.ai DTYP="asynInt32" EGU="mdeg" EGUF="3000" EGUL="-9000" INP="@asyn(ADC1 6) GENDATA" LINR="LINEAR" P="BL11I-OP-VFM-01" PREC="2" R=":M1:ROLL:RBV" SCAN="I/O Intr" gda_desc="" gda_name="" name="M1.OB2"/>
+	<userIO.ai DTYP="asynInt32" EGU="cts" EGUF="300000" EGUL="-300000" INP="@asyn(ADC1 7) GENDATA" LINR="LINEAR" P="BL11I-DI-IMON-02" PREC="0" R=":E1" SCAN="I/O Intr" gda_desc="" gda_name="" name="IE.OB1"/>
+	<asyn.auto_asynRecord ADDR="" IMAX="1024" OMAX="1024" P="BL11I-EA-ASYN-01" PORT="" R="" name="ASYNEA"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01:AutoCount&quot;,&quot;AutoCount&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02:AutoCount&quot;,&quot;AutoCount&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01:MCA-01:InputMode&quot;, &quot;5&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01:MCA-01:OutputMode&quot;, &quot;1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02:MCA-01:InputMode&quot;, &quot;5&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02:MCA-01:OutputMode&quot;, &quot;1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM2&quot;,&quot;MAC1.E1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM3&quot;,&quot;MAC1.E2&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM4&quot;,&quot;MAC1.E3&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM5&quot;,&quot;MAC1.E4&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM6&quot;,&quot;MAC1.E5&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM7&quot;,&quot;MAC1.E6&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM8&quot;,&quot;MAC1.E7&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM9&quot;,&quot;MAC1.E8&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM10&quot;,&quot;MAC1.E9&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM11&quot;,&quot;MAC2.E1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM12&quot;,&quot;MAC2.E2&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM13&quot;,&quot;MAC2.E3&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM14&quot;,&quot;MAC2.E4&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM15&quot;,&quot;MAC2.E5&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM16&quot;,&quot;MAC2.E6&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM18&quot;,&quot;MAC2.E7&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM19&quot;,&quot;MAC2.E8&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM20&quot;,&quot;MAC2.E9&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM21&quot;,&quot;MAC3.E1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM22&quot;,&quot;MAC3.E2&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM23&quot;,&quot;MAC3.E3&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM24&quot;,&quot;MAC3.E4&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM25&quot;,&quot;MAC3.E5&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM26&quot;,&quot;MAC3.E6&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM27&quot;,&quot;MAC3.E7&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM28&quot;,&quot;MAC3.E8&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM29&quot;,&quot;MAC3.E9&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM30&quot;,&quot;MAC4.E1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM31&quot;,&quot;MAC4.E2&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01.NM32&quot;,&quot;MAC4.E3&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM2&quot;,&quot;MAC4.E4&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM3&quot;,&quot;MAC4.E5&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM4&quot;,&quot;MAC4.E6&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM5&quot;,&quot;MAC4.E7&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM6&quot;,&quot;MAC4.E8&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM7&quot;,&quot;MAC4.E9&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM8&quot;,&quot;MAC5.E1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM9&quot;,&quot;MAC5.E2&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM10&quot;,&quot;MAC5.E3&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM11&quot;,&quot;MAC5.E4&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM12&quot;,&quot;MAC5.E5&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM13&quot;,&quot;MAC5.E6&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM14&quot;,&quot;MAC5.E7&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM15&quot;,&quot;MAC5.E8&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM16&quot;,&quot;MAC5.E9&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM17&quot;,&quot;IO&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM18&quot;,&quot;IE&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM19&quot;,&quot;ENV.E1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02.NM20&quot;,&quot;ENV.E2&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-01:MCA-01:ReadAll.SCAN&quot;,&quot;2 second&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-COUNT-02:MCA-01:ReadAll.SCAN&quot;,&quot;2 second&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-EVR-01:SELECT-FPS2&quot;, &quot;External&quot;)" post_init="True"/>
+</components>

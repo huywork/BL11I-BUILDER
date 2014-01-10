@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-01" name="CSIOC1"/>
+	<autosave.Autosave bl="True" iocName="BL11I-CS-IOC-01" path="/dls_sw/i11/epics/autosave"/>
+	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="3000000"/>
+	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_AUTO_ADDR_LIST" value="NO"/>
+	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_ADDR_LIST" value="172.23.111.255"/>
+	<gda.FE_motion M=":X" P="FE11I-AL-APTR-02" gda_desc="Custom Aperture X" gda_name="CA.X"/>
+	<gda.FE_motion M=":Y" P="FE11I-AL-APTR-02" gda_desc="Custom Aperture Y" gda_name="CA.Y"/>
+	<gda.ID_gap gda_desc="ID" gda_name="ID" prefix="SR11I-MO-" suff1="0"/>
+	<gda.FE_vacuum ABSB="2" BEAMLINE="11I"/>
+	<gda.machine_status BL="11I" NOID="" name="MSTAT"/>
+	<asyn.AsynIP name="BL11I-MO-CMON-01" port="172.23.226.211:7009"/>
+	<asyn.AsynIP name="BL11I-MO-CMON-02" port="172.23.226.211:7015"/>
+	<asyn.AsynIP name="BL11I-VA-CMON-01" port="172.23.226.211:7011"/>
+	<asyn.AsynIP name="BL11I-EA-CMON-01" port="172.23.226.211:7013"/>
+	<CrateMonitor.CrateMonitor device="BL11I-VA-CMON-01" name="VAIOC"/>
+	<CrateMonitor.CrateMonitor device="BL11I-MO-CMON-01" name="MOIOC"/>
+	<CrateMonitor.CrateMonitor device="BL11I-MO-CMON-02" name="MOIOC2"/>
+	<CrateMonitor.CrateMonitor device="BL11I-EA-CMON-01" name="EAIOC"/>
+	<asyn.auto_asynRecord ADDR="" IMAX="1024" OMAX="1024" P="BL11I-CS-ASYN-02" PORT="" R="" name="ASYNCS"/>
+	<BL11I.rebin NELM="65000" NELMALL="150000"/>
+</components>

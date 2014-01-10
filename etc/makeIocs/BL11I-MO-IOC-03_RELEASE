@@ -1,9 +1,9 @@
-DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls4
-TPMAC=      $(SUPPORT)/tpmac/3-10dls9
-PMACCOORD=  $(SUPPORT)/pmacCoord/1-11
-PMACUTIL=   $(SUPPORT)/pmacUtil/4-12
-AUTOSAVE=   $(SUPPORT)/autosave/4-6dls7
-UTILITY=    $(SUPPORT)/utility/dls2-13
+DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls5
+TPMAC=      $(SUPPORT)/tpmac/3-10dls15
+PMACCOORD=  $(SUPPORT)/pmacCoord/1-18
+PMACUTIL=   $(SUPPORT)/pmacUtil/4-24-1
+AUTOSAVE=   $(SUPPORT)/autosave/5-0
+UTILITY=    $(SUPPORT)/utility/dls2-15
 
 
 

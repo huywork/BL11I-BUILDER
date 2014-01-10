@@ -26,8 +26,8 @@
 	<ipac.Hy8002 name="CARD5" slot="5"/>
 	<Hy8401ip-asyn.Hy8401Asyn carrier="CARD5" ipslot="2" name="ADC52"/>
 	<Hy8401ip-asyn.Hy8401Asyn carrier="CARD5" fastADC="0" ipslot="3" name="ADC53"/>
-	<Hy8401ipTemplates.Hy8401AsynControl AVERAGE="5001" CLOCKRATE="11" P="BL11I-OP-DCM-01:FB:ADC" PORT="ADC52" SAMPLES="5001" name="ADC"/>
-	<Hy8401ipTemplates.Hy8401AsynControl CLOCKRATE="9" P="BL11I-MO-IOC-02:ADC2" PORT="ADC53" name="ADC2"/>
+	<Hy8401ipTemplates.Hy8401AsynControl AVERAGE="5001" CLOCKRATE="11" P="BL11I-OP-DCM-01:FB:ADC" PORT="ADC52" SAMPLES="5001" gda_name="ADC52" name="ADC"/>
+	<Hy8401ipTemplates.Hy8401AsynControl CLOCKRATE="9" P="BL11I-MO-IOC-02:ADC2" PORT="ADC53" gda_name="ADC53" name="ADC2"/>
 	<Hy8401ip-asyn.Channel_ai CHAN="0" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:01:AVG" name="DCM.FP.MOD_RBV"/>
 	<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:02:AVG" name="IC4.I_RBV"/>
 	<!--<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-DI-IONC-04" PORT="ADC52" Q=":PHD1:I" SCAN=".1 second" name="IC4.I"/>-->

@@ -1,7 +1,7 @@
-UTILITY=    $(SUPPORT)/utility/dls2-14
+UTILITY=    $(SUPPORT)/utility/dls2-15
 AUTOSAVE=$(SUPPORT)/autosave/5-0
 DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls5
-FIREWIREDCAM=   $(SUPPORT)/firewireDCAM/1-11-2
-FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/1-16-3
+FIREWIREDCAM=   $(SUPPORT)/firewireDCAM/1-14
+FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/2-1-1dls3
 
 

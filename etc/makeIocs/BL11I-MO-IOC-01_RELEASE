@@ -1,0 +1,20 @@
+TPMAC=       $(SUPPORT)/tpmac/3-10dls15
+PMACCOORD=   $(SUPPORT)/pmacCoord/1-18
+PMACUTIL=    $(SUPPORT)/pmacUtil/4-24-1
+POSITIONER=  $(SUPPORT)/positioner/2-10
+IPAC=        $(SUPPORT)/ipac/2-8dls4-8
+IOCINFO=     $(SUPPORT)/IOCinfo/2-30
+UTILITY=     $(SUPPORT)/utility/dls2-15
+AUTOSAVE=    $(SUPPORT)/autosave/5-0
+HY8401_ASYN=     $(SUPPORT)/Hy8401ip-asyn/1-9dls10
+HY8401TEMPLATES= $(SUPPORT)/Hy8401ipTemplates/2-9-1
+HY8402IP=    $(SUPPORT)/Hy8402ip/4-6
+FEMTO=       $(SUPPORT)/femto/4-2
+IP330=       $(SUPPORT)/ip330/2-6dls7
+USERIO=      $(SUPPORT)/userIO/2-19
+GENERIC=     $(SUPPORT)/generic/2-31
+MRFTIMING=   $(SUPPORT)/mrfTiming/2-4-1dls7
+BL11I=       $(SUPPORT)/BL11I/3-0
+TIMINGTEMPLATES=  $(SUPPORT)/TimingTemplates/6-6-5
+DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls5
+

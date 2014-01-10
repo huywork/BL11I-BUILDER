@@ -1,0 +1,11 @@
+STREAMDEVICE=   $(SUPPORT)/streamDevice/2-5dls2
+OXCS700=        $(SUPPORT)/OXCS700/2-3
+LAKESHORE340=   $(SUPPORT)/lakeshore340/1-14
+SYCOSHHOT= 	    $(SUPPORT)/SycosH-Hot/1-5
+EUROTHERM2K=    $(SUPPORT)/eurotherm2k/1-17
+UNIBLITZ=       $(SUPPORT)/uniblitz/2-4
+DEVIOCSTATS=    $(SUPPORT)/devIocStats/3-1-5dls5
+LINKAM=         $(SUPPORT)/linkam/2-7
+AGILENT33220A=  $(SUPPORT)/agilent33220A/1-5
+BRONKHORSTFLOWBUS=$(SUPPORT)/bronkhorstFlowBus/1-0-1
+

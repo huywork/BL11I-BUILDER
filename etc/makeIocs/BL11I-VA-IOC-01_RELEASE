@@ -1,11 +1,11 @@
 # Core modules
 DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-5dls5
-UTILITY=    $(SUPPORT)/utility/dls2-14
+UTILITY=    $(SUPPORT)/utility/dls2-15
 IOCINFO=    $(SUPPORT)/IOCinfo/2-30
 AUTOSAVE=   $(SUPPORT)/autosave/5-0
 IPAC=       $(SUPPORT)/ipac/2-8dls4-8
-BUSY=       $(SUPPORT)/busy/1-4
-STREAMS=    $(SUPPORT)/streamDevice/2-5dls1
+BUSY=       $(SUPPORT)/busy/1-4dls1
+STREAMS=    $(SUPPORT)/streamDevice/2-5dls2
 
 # Hardware
 DLS8515=    $(SUPPORT)/DLS8515/0-10-1
@@ -14,17 +14,16 @@ HOSTLINK=   $(SUPPORT)/HostLink/3-1
 MRFTIMING=  $(SUPPORT)/mrfTiming/2-4-1dls7
 
 # Devices
-LAUDARE2XX= $(SUPPORT)/laudaRE2xx/1-11-1
 VACUUMVALVE=$(SUPPORT)/vacuumValve/4-22
 MKS937A=    $(SUPPORT)/mks937a/2-75
-MKS937B=    $(SUPPORT)/mks937b/2-7
-RGA=        $(SUPPORT)/rga/4-10
+MKS937B=    $(SUPPORT)/mks937b/2-8
+RGA=        $(SUPPORT)/rga/4-12
 DIGITELMPC= $(SUPPORT)/digitelMpc/4-30
 RACKFAN=    $(SUPPORT)/rackFan/2-6
 PRESSARR=   $(SUPPORT)/pressArr_subrec/1-0
 WATER=      $(SUPPORT)/water/1-19
-INTERLOCK=  $(SUPPORT)/interlock/1-24
-TEMPERATURE=$(SUPPORT)/temperature/2-11
-CMSION=     $(SUPPORT)/cmsIon/3-4
+INTERLOCK=  $(SUPPORT)/interlock/1-25
+TEMPERATURE=$(SUPPORT)/temperature/2-12
+CMSION=     $(SUPPORT)/cmsIon/3-5
 VACUUMSPACE=$(SUPPORT)/vacuumSpace/3-22-3
 

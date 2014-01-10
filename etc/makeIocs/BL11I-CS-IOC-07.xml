@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-07" name="IOCS.CS7"/>
+	<asyn.AsynIP name="MFC1port" port="bl11i-ea-tserv-02-bl:7001"/>
+	<asyn.AsynIP name="BPRport" port="bl11i-ea-tserv-02-bl:7002"/>
+	<asyn.AsynIP name="MFC2port" port="bl11i-ea-tserv-02-bl:7003"/>
+	<asyn.AsynIP name="MFC3port" port="bl11i-ea-tserv-02-bl:7004"/>
+	<asyn.AsynIP name="DVPCport" port="bl11i-ea-tserv-02-bl:7005"/>
+	<asyn.AsynIP name="GAUGEport" port="bl11i-ea-tserv-02-bl:7006"/>
+	<asyn.AsynIP name="PLCport" port="bl11i-ea-tserv-02-bl:7007"/>
+	<BLGui.auto_BLGui_device DESCRIPTION="0" MTYPE="0" NCURR="0" NFLOW="0" NTEMP="0" P="BL11I-EA-GIR-01:DUMMY" SHORTNAME="0"/>
+	<alicatGasFlow.alicatMassCtrl HIGH="0" HIHI="0" LOLO="0" LOW="0" MAXF="1" P="BL11I-EA-GIR-01" PORT="MFC1port" Q=":MFC1" name="MFC-1"/>
+	<alicatGasFlow.alicatMassCtrl HIGH="0" HIHI="0" LOLO="0" LOW="0" MAXF="1" P="BL11I-EA-GIR-01" PORT="MFC2port" Q=":MFC2" name="MFC-2"/>
+	<alicatGasFlow.alicatMassCtrl HIGH="0" HIHI="0" LOLO="0" LOW="0" MAXF="1" P="BL11I-EA-GIR-01" PORT="MFC3port" Q=":MFC3" name="MFC-3"/>
+	<alicatGasFlow.alicatPressureCtrl HIGH="7" HIHI="7" LOLO="0" LOW="0" MAXP="7" P="BL11I-EA-GIR-01" PORT="BPRport" Q=":BPR" name="BPR"/>
+	<alicatGasFlow.alicatPressureCtrl HIGH="5" HIHI="5" LOLO="0" LOW="0" MAXP="5" P="BL11I-EA-GIR-01" PORT="DVPCport" Q=":DVPC" name="DVPC"/>
+	<mks9xx.mks9xx P="BL11I-EA-GIR-01:GAUGE" PORT="GAUGE" serialport="GAUGEport"/>
+	<vacuumValve.vacuumValveRead device="BL11I-EA-GIR-01:PLC" name="VLVCC" port="PLCport"/>
+	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:VENT" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="VENT" port="PLCport" valve="01" vlvcc="BL11I-EA-GIR-01:PLC"/>
+	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:ISO" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="ISO" port="PLCport" valve="02" vlvcc="BL11I-EA-GIR-01:PLC"/>
+	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:BACK" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="BACK" port="PLCport" valve="03" vlvcc="BL11I-EA-GIR-01:PLC"/>
+	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:PUMP" ilk0="Vent Valve Open" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="PUMP" port="PLCport" valve="04" vlvcc="BL11I-EA-GIR-01:PLC"/>
+	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:SEQ" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="SEQ" port="PLCport" valve="07" vlvcc="BL11I-EA-GIR-01:PLC"/>
+	<!--<dlsPLC.read100 century="0" device="BL11I-EA-GIR-01:PLC" port="PLCport"/>-->
+	<!--<dlsPLC.vacValve addr="10" device="BL11I-EA-GIR-01:VENT" name="VENT" port="PLCport" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
+	<!--<dlsPLC.vacValve addr="20" device="BL11I-EA-GIR-01:ISO" name="ISO" port="PLCport" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
+	<!--<dlsPLC.vacValve addr="30" device="BL11I-EA-GIR-01:BACK" name="BACK" port="PLCport" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
+	<!--<dlsPLC.vacPump addr="50" device="BL11I-EA-GIR-01:PUMP" name="PUMP" port="PLCport" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
+	<!--<dlsPLC.vacPump addr="70" device="BL11I-EA-GIR-01:SEQ" name="SEQ" port="PLCport" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
+	<gasInjectionRig.auto_I11LowPressure P="BL11I-EA-GIR-01" name="I11"/>
+</components>

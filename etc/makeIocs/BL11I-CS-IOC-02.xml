@@ -9,6 +9,8 @@
 	<asyn.AsynIP name="EADET2port" port="localhost:7012"/>
 	<asyn.AsynIP name="MOIOC3port" port="localhost:7013"/>
 	<asyn.AsynIP name="CSIOC6port" port="localhost:7014"/>
+	<asyn.AsynIP name="CSIOC7port" port="localhost:7015"/>
+	<asyn.AsynIP name="EAIOC3port" port="localhost:7016"/>
 	<procServControl.procServControl P="BL11I-CS-IOC-01" PORT="CSIOC1port" name="CSIOC1"/>
 	<procServControl.procServControl P="BL11I-CS-IOC-04" PORT="CSIOC4port" name="CSIOC4"/>
 	<procServControl.procServControl P="BL11I-BL-IOC-01" PORT="BLIOCport" name="BLIOC"/>
@@ -17,4 +19,6 @@
 	<procServControl.procServControl P="BL11I-EA-DET-02" PORT="EADET2port" name="EADET2"/>
 	<procServControl.procServControl P="BL11I-MO-IOC-03" PORT="MOIOC3port" name="MOIOC3"/>
 	<procServControl.procServControl P="BL11I-CS-IOC-06" PORT="CSIOC6port" name="CSIOC6"/>
+	<procServControl.procServControl P="BL11I-CS-IOC-07" PORT="CSIOC7port" name="CSIOC7"/>
+	<procServControl.procServControl P="BL11I-EA-IOC-03" PORT="EAIOC3port" name="EAIOC3"/>
 </components>

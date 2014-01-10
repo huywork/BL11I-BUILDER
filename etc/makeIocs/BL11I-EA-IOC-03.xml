@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<devIocStats.ioc IOCNAME="BL11I-EA-IOC-03" name="IOCS.EA3"/>
+	<slsDetector.slsDetector ADDR="0" P="BL11I-EA-DET-03" PORT="MYTHEN.DET" R=":DET:" TIMEOUT="1" configFile="/dls_sw/i11/software/mythen/diamond/config/i11-mcs01.config" detectorIndex="0" useReceiver="0"/>
+	<areaDetector.NDStats ADDR="0" HIST_SIZE="256" NCHAN="1360" NDARRAY_ADDR="0" NDARRAY_PORT="MYTHEN.DET" P="BL11I-EA-DET-03" PORT="MYTHEN.STAT" R=":STAT:" TIMEOUT="1" XSIZE="23040" YSIZE="1"/>
+	<areaDetector.NDStdArrays ADDR="0" Enabled="1" FTVL="FLOAT" NDARRAY_ADDR="0" NDARRAY_PORT="MYTHEN.DET" NELEMENTS="23040" P="BL11I-EA-DET-03" PORT="MYTHEN.ARR" R=":ARR:" TIMEOUT="1" TYPE="Float32"/>
+	<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-03:DET:AutoSave &quot;Yes&quot;" post_init="True"/>
+</components>

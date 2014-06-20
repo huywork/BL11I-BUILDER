@@ -1,11 +1,11 @@
 # Place any example specific dependencies here
 DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls5
-GASINJECTIONRIG = $(SUPPORT)/gasInjectionRig/2-5
-ALICATGASFLOW = $(SUPPORT)/alicatGasFlow/1-10-1
-DLSPLC = $(SUPPORT)/dlsPLC/1-9
-MKS9XX = $(SUPPORT)/mks9xx/1-1
+GASINJECTIONRIG = $(SUPPORT)/gasInjectionRig/2-6
+ALICATGASFLOW = $(SUPPORT)/alicatGasFlow/1-11
+DLSPLC = $(SUPPORT)/dlsPLC/1-12
+MKS9XX = $(SUPPORT)/mks9xx/1-2
 HOSTLINK = $(SUPPORT)/HostLink/3-1
 VACUUMVALVE = $(SUPPORT)/vacuumValve/4-22
-VACUUMPUMP = $(SUPPORT)/vacuumPump/1-18
+VACUUMPUMP = $(SUPPORT)/vacuumPump/1-19
 BLGUI = $(SUPPORT)/BLGui/3-0
 

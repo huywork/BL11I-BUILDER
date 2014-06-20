@@ -12,8 +12,8 @@
 	<alicatGasFlow.alicatMassCtrl HIGH="0" HIHI="0" LOLO="0" LOW="0" MAXF="1" P="BL11I-EA-GIR-01" PORT="MFC1port" Q=":MFC1" name="MFC-1"/>
 	<alicatGasFlow.alicatMassCtrl HIGH="0" HIHI="0" LOLO="0" LOW="0" MAXF="1" P="BL11I-EA-GIR-01" PORT="MFC2port" Q=":MFC2" name="MFC-2"/>
 	<alicatGasFlow.alicatMassCtrl HIGH="0" HIHI="0" LOLO="0" LOW="0" MAXF="1" P="BL11I-EA-GIR-01" PORT="MFC3port" Q=":MFC3" name="MFC-3"/>
-	<alicatGasFlow.alicatPressureCtrl HIGH="7" HIHI="7" LOLO="0" LOW="0" MAXP="7" P="BL11I-EA-GIR-01" PORT="BPRport" Q=":BPR" name="BPR"/>
-	<alicatGasFlow.alicatPressureCtrl HIGH="5" HIHI="5" LOLO="0" LOW="0" MAXP="5" P="BL11I-EA-GIR-01" PORT="DVPCport" Q=":DVPC" name="DVPC"/>
+	<alicatGasFlow.alicatPressureCtrl HIGH="7" HIHI="7" LOLO="0" LOW="0" MAXP="7" P="BL11I-EA-GIR-01" PORT="BPRport" Q=":BPR" SCALE="1" name="BPR"/>
+	<alicatGasFlow.alicatPressureCtrl HIGH="5" HIHI="5" LOLO="0" LOW="0" MAXP="5" P="BL11I-EA-GIR-01" PORT="DVPCport" Q=":DVPC" SCALE="1" name="DVPC"/>
 	<mks9xx.mks9xx P="BL11I-EA-GIR-01:GAUGE" PORT="GAUGE" serialport="GAUGEport"/>
 	<vacuumValve.vacuumValveRead device="BL11I-EA-GIR-01:PLC" name="VLVCC" port="PLCport"/>
 	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:VENT" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="VENT" port="PLCport" valve="01" vlvcc="BL11I-EA-GIR-01:PLC"/>

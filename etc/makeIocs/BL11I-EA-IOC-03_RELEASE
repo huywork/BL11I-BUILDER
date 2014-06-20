@@ -1,2 +1,2 @@
-SLSDETECTOR=$(WORK)/slsDetector
+SLSDETECTOR=$(SUPPORT)/slsDetector/1-1dls2
 DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls5

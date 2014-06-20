@@ -10,7 +10,7 @@
 	<pmacUtil.dls_pmac_cs_asyn_motor ACCL="0.5" ADDR="6" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Energy (compound)" DHLM="1500" DIR="0" DLLM="0" DTYP="asynMotor" EGU="keV" ERES="" FOFF="" HLSV="MAJOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":ENERGY" MRES="0.0001" OFF="0" P="BL11I-OP-DCM-01" PORT="PMAC4CS2" PREC="4" RDBD="0.001" RRES="0" SREV="1000" TWV="0.05" UEIP="0" VBAS="0" VELO="0.5" VMAX="0.5" gda_desc="Energy" gda_name="DCM.ENERGY" name="DCM.ENERGY"/>
 	<pmacUtil.dls_pmac_cs_asyn_motor ACCL="0.5" ADDR="7" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Offset (compound)" DHLM="25" DIR="0" DLLM="0" DTYP="asynMotor" EGU="mm" ERES="" FOFF="" HLSV="MAJOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":OFFSET" MRES="0.0001" OFF="0" P="BL11I-OP-DCM-01" PORT="PMAC4CS2" PREC="4" RDBD="0.001" RRES="0" SREV="1000" TWV="0" UEIP="0" VBAS="0" VELO="0.5" VMAX="0.5" gda_desc="Offset" gda_name="DCM.OFFSET" name="DCM.OFFSET"/>
 	<pmacUtil.dls_pmac_asyn_motor ACCL="0.5" ADDR="1" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Horizontal Translation" DHLM="1000" DIR="0" DLLM="-1000" DTYP="asynMotor" EGU="mm" ERES="" FOFF="" HLSV="MAJOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":X" MRES="0.0005" OFF="-0.775" P="BL11I-OP-DCM-01" PMAC="BL11I-MO-PMAC-04" PORT="PMAC4" PREC="4" RDBD="0.002" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="1" VMAX="1" gda_desc="" gda_name="" name="DCM.X"/>
-	<pmacUtil.dls_pmac_asyn_motor ACCL="0.5" ADDR="2" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Bragg Angle" DHLM="1000" DIR="0" DLLM="-1000" DTYP="asynMotor" EGU="deg" ERES="" FOFF="" HLSV="MAJOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":BRAGG" MRES="-0.0000138731" OFF="0.1113" P="BL11I-OP-DCM-01" PMAC="BL11I-MO-PMAC-04" PORT="PMAC4" PREC="4" RDBD="5e-05" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="0.1" VMAX="0.1" gda_desc="Bragg Angle" gda_name="DCM.BRAGG" name="DCM.BRAGG"/>
+	<pmacUtil.dls_pmac_asyn_motor ACCL="0.5" ADDR="2" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Bragg Angle" DHLM="1000" DIR="0" DLLM="-1000" DTYP="asynMotor" EGU="deg" ERES="" FOFF="" HLSV="MAJOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":BRAGG" MRES="-0.0000138731" OFF="0.1036" P="BL11I-OP-DCM-01" PMAC="BL11I-MO-PMAC-04" PORT="PMAC4" PREC="4" RDBD="5e-05" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="0.1" VMAX="0.1" gda_desc="Bragg Angle" gda_name="DCM.BRAGG" name="DCM.BRAGG"/>
 	<pmacUtil.dls_pmac_asyn_motor ACCL="0.5" ADDR="3" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Crystal Gap" DHLM="1000" DIR="0" DLLM="-1000" DTYP="asynMotor" EGU="mm" ERES="" FOFF="" HLSV="MAJOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":T2" MRES="-0.0005" OFF="6.928" P="BL11I-OP-DCM-01" PMAC="BL11I-MO-PMAC-04" PORT="PMAC4" PREC="4" RDBD="0.001" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="0.5" VMAX="0.5" gda_desc="Crystal Gap" gda_name="DCM.T2" name="DCM.T2"/>
 	<pmacUtil.dls_pmac_asyn_motor ACCL="0.5" ADDR="4" ADEL="" BACC="0.3" BDST="0" BVEL="10" DESC="Roll 1" DHLM="10000" DIR="0" DLLM="-10000" DTYP="asynMotor" EGU="mdeg" ERES="" FOFF="" HLSV="MAJOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":ROLL1" MRES="0.0688" OFF="974" P="BL11I-OP-DCM-01" PMAC="BL11I-MO-PMAC-04" PORT="PMAC4" PREC="2" RDBD="" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="10" VMAX="10" gda_desc="Roll 1" gda_name="DCM.ROLL1" name="DCM.ROLL1"/>
 	<pmacUtil.dls_pmac_asyn_motor ACCL="0.5" ADDR="5" ADEL="" BACC="0.3" BDST="0" BVEL="10" DESC="Pitch 2" DHLM="10000" DIR="0" DLLM="-10000" DTYP="asynMotor" EGU="mdeg" ERES="" FOFF="" HLSV="MAJOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":PITCH2" MRES="-0.036" OFF="-850" P="BL11I-OP-DCM-01" PMAC="BL11I-MO-PMAC-04" PORT="PMAC4" PREC="2" RDBD="" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="25" VMAX="25" gda_desc="Pitch 2" gda_name="DCM.PITCH2" name="DCM.PITCH2"/>
@@ -28,20 +28,20 @@
 	<Hy8401ip-asyn.Hy8401Asyn carrier="CARD5" fastADC="0" ipslot="3" name="ADC53"/>
 	<Hy8401ipTemplates.Hy8401AsynControl AVERAGE="5001" CLOCKRATE="11" P="BL11I-OP-DCM-01:FB:ADC" PORT="ADC52" SAMPLES="5001" gda_name="ADC52" name="ADC"/>
 	<Hy8401ipTemplates.Hy8401AsynControl CLOCKRATE="9" P="BL11I-MO-IOC-02:ADC2" PORT="ADC53" gda_name="ADC53" name="ADC2"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="0" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:01:AVG" name="DCM.FP.MOD_RBV"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:02:AVG" name="IC4.I_RBV"/>
-	<!--<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-DI-IONC-04" PORT="ADC52" Q=":PHD1:I" SCAN=".1 second" name="IC4.I"/>-->
-	<Hy8401ip-asyn.Channel_ai CHAN="2" P="BL11I-EA-PE-01" PORT="ADC52" Q=":HV:RBV" SCAN=".1 second" name="PE.HV_RBV"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="3" P="BL11I-EA-PE-01" PORT="ADC52" Q=":EL:RBV" SCAN=".1 second" name="PE.EL_RBV"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="4" P="BL11I-EA-PE-01" PORT="ADC52" Q=":TRIG:RBV" SCAN=".1 second" name="PE.TRIG_RBV"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="3" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":XP:I" SCAN=".1 second" name="S4.XP.I"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":XM:I" SCAN=".1 second" name="S4.XM.I"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="0" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":YP:I" SCAN=".1 second" name="S4.YP.I"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="2" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":YM:I" SCAN=".1 second" name="S4.YM.I"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="4" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I1" SCAN=".1 second" name="QBPM3.I1"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="5" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I2" SCAN=".1 second" name="QBPM3.I2"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="6" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I3" SCAN=".1 second" name="QBPM3.I3"/>
-	<Hy8401ip-asyn.Channel_ai CHAN="7" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I4" SCAN=".1 second" name="QBPM3.I4"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="0" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:01:AVG" archiver="%" name="DCM.FP.MOD_RBV"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:02:AVG" archiver="%" name="IC4.I_RBV"/>
+	<!--<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-DI-IONC-04" PORT="ADC52" Q=":PHD1:I" SCAN=".1 second" archiver="%" name="IC4.I"/>-->
+	<Hy8401ip-asyn.Channel_ai CHAN="2" P="BL11I-EA-PE-01" PORT="ADC52" Q=":HV:RBV" SCAN=".1 second" archiver="%" name="PE.HV_RBV"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="3" P="BL11I-EA-PE-01" PORT="ADC52" Q=":EL:RBV" SCAN=".1 second" archiver="%" name="PE.EL_RBV"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="4" P="BL11I-EA-PE-01" PORT="ADC52" Q=":TRIG:RBV" SCAN=".1 second" archiver="%" name="PE.TRIG_RBV"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="3" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":XP:I" SCAN=".1 second" archiver="%" name="S4.XP.I"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":XM:I" SCAN=".1 second" archiver="%" name="S4.XM.I"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="0" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":YP:I" SCAN=".1 second" archiver="%" name="S4.YP.I"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="2" P="BL11I-AL-SLITS-04" PORT="ADC53" Q=":YM:I" SCAN=".1 second" archiver="%" name="S4.YM.I"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="4" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I1" SCAN=".1 second" archiver="%" name="QBPM3.I1"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="5" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I2" SCAN=".1 second" archiver="%" name="QBPM3.I2"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="6" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I3" SCAN=".1 second" archiver="%" name="QBPM3.I3"/>
+	<Hy8401ip-asyn.Channel_ai CHAN="7" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I4" SCAN=".1 second" archiver="%" name="QBPM3.I4"/>
 	<femto.femto_ai DESC="IC4 Current" DTYPE="asynFloat64" EGU="V" EGUF="10" EGUL="-10" INP="@asyn(ADC52 1) GENDATA" P="BL11I-DI-IONC-04" PREC="3" Q=":PHD1:I" SCAN=".1 second" gda_name="IC4.AMP" name="IC4.I"/>
 	<Hy8401ip-asyn.Channel_waveform CHAN="0" NELM="5000" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:01" name="DCM.FP.MOD_ARBV"/>
 	<Hy8401ip-asyn.Channel_waveform CHAN="1" NELM="5000" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:02" name="IC4.I_ARBV"/>

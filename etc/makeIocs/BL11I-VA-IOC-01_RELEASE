@@ -26,4 +26,5 @@ INTERLOCK=  $(SUPPORT)/interlock/1-25
 TEMPERATURE=$(SUPPORT)/temperature/2-12
 CMSION=     $(SUPPORT)/cmsIon/3-5
 VACUUMSPACE=$(SUPPORT)/vacuumSpace/3-22-3
+PVLOGGING = $(SUPPORT)/pvlogging/1-1-1
 

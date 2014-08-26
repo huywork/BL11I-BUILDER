@@ -1,0 +1,4 @@
+# Place any example specific dependencies here
+DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls5
+ALICATGASFLOW = $(SUPPORT)/alicatGasFlow/1-11
+

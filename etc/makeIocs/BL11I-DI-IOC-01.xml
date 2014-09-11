@@ -2,18 +2,12 @@
 <components arch="linux-x86">
 	<devIocStats.ioc IOCNAME="BL11I-DI-IOC-01" name="DIIOC"/>
 	<autosave.Autosave bl="True" iocName="BL11I-DI-IOC-01" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
-	<!--<firewireDCAM.firewireDCAM ADDR="0" ID="0x00B09D01006BBC56" P="BL11I-DI-PHDGN-01" PORT="D1.CAM.CAM" R=":CAM:" TIMEOUT="1" disableScalable="1"/>-->
-	<!--<firewireDCAM.firewireDCAM ADDR="0" ID="0x00B09D01006BBC43" P="BL11I-DI-PHDGN-02" PORT="D2.CAM.CAM" R=":CAM:" TIMEOUT="1" disableScalable="1"/>-->
-	<!--<firewireDCAM.firewireDCAM ADDR="0" ID="0x00B09D01006BBC3B" P="BL11I-DI-PHDGN-03" PORT="D3.CAM.CAM" R=":CAM:" TIMEOUT="1" disableScalable="1"/>-->
-	<!--<firewireDCAM.firewireDCAM ADDR="0" ID="0x00B09D01006BBC53" P="BL11I-DI-PHDGN-04" PORT="D4.CAM.CAM" R=":CAM:" TIMEOUT="1" disableScalable="1"/>-->
-	<!--<firewireDCAM.firewireDCAM ADDR="0" ID="0x00B09D01008ADB61" P="BL11I-DI-PHDGN-05" PORT="D5.CAM.CAM" R=":CAM:" TIMEOUT="1" disableScalable="1"/>-->
-	<!--<firewireDCAM.firewireDCAM ADDR="0" ID="0x00B09D01008ADB53" P="BL11I-DI-DCAM-02" PORT="CAM2.CAM" R=":CAM:" TIMEOUT="1" disableScalable="1"/>-->
-	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="10.111.6.1" P="BL11I-DI-PHDGN-01" PORT="D1.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
-	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="10.111.6.2" P="BL11I-DI-PHDGN-02" PORT="D2.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
-	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="10.111.6.3" P="BL11I-DI-PHDGN-03" PORT="D3.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
-	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="10.111.6.4" P="BL11I-DI-PHDGN-04" PORT="D4.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
-	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="10.111.6.5" P="BL11I-DI-PHDGN-05" PORT="D5.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
-	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="10.111.6.6" P="BL11I-DI-DCAM-02" PORT="CAM2.CAM" R=":CAM:" TIMEOUT="1"/>
+	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Mako_1_52" ID="10.111.6.1" P="BL11I-DI-PHDGN-01" PORT="D1.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
+	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Mako_1_52" ID="10.111.6.2" P="BL11I-DI-PHDGN-02" PORT="D2.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
+	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Mako_1_52" ID="10.111.6.3" P="BL11I-DI-PHDGN-03" PORT="D3.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
+	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Mako_1_52" ID="10.111.6.4" P="BL11I-DI-PHDGN-04" PORT="D4.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
+	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Mako_1_52" ID="10.111.6.5" P="BL11I-DI-PHDGN-05" PORT="D5.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
+	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Mako_1_52" ID="10.111.6.6" P="BL11I-DI-DCAM-02" PORT="CAM2.CAM" R=":CAM:" TIMEOUT="1"/>
 	<ffmpegServer.ffmpegStream ADDR="0" NDARRAY_ADDR="0" NDARRAY_PORT="D1.CAM.CAM" P="BL11I-DI-PHDGN-01" PORT="D1.CAM.MJPG" R=":MJPG:" TIMEOUT="1"/>
 	<ffmpegServer.ffmpegStream ADDR="0" NDARRAY_ADDR="0" NDARRAY_PORT="D2.CAM.CAM" P="BL11I-DI-PHDGN-02" PORT="D2.CAM.MJPG" R=":MJPG:" TIMEOUT="1"/>
 	<ffmpegServer.ffmpegStream ADDR="0" NDARRAY_ADDR="0" NDARRAY_PORT="D3.CAM.CAM" P="BL11I-DI-PHDGN-03" PORT="D3.CAM.MJPG" R=":MJPG:" TIMEOUT="1"/>

@@ -8,4 +8,4 @@ DEVIOCSTATS=    $(SUPPORT)/devIocStats/3-1-5dls5
 LINKAM=         $(SUPPORT)/linkam/2-7
 AGILENT33220A=  $(SUPPORT)/agilent33220A/1-5
 BRONKHORSTFLOWBUS=$(SUPPORT)/bronkhorstFlowBus/1-0-1
-
+OXINSTCRYOJET=  $(SUPPORT)/OxInstCryojet/2-18-3

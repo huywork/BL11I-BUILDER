@@ -2,7 +2,7 @@
 <components arch="linux-x86">
 	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-06" name="IOCS.CS6"/>
 	<asyn.AsynIP name="ty_lauda" port="172.23.226.211:7016"/>
-	<asyn.AsynIP name="ty_zebra" port="172.23.226.211:7010"/>
+	<asyn.AsynIP baud="115200" name="ty_zebra" port="10.111.4.1:7029 COM"/>
 	<laudaRE2xx.lRE2xx ADDR="0" HIGH="30" HIHI="30" LOLO="15" LOW="15" P="BL11I-OP-CHILL-01" PORT="ty_lauda" SCAN="1"/>
 	<zebra.zebra NELM="1000" P="BL11I-EA-ZEBRA-01" PORT="ZEBRA1" Q="" serialPort="ty_zebra"/>
 	<zebra.zebraLastDivDiff DIV="1" P="BL11I-EA-ZEBRA-01" Q="" name="ZEBRA1.DIV1"/>

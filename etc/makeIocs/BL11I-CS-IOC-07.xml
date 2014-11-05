@@ -15,17 +15,18 @@
 	<alicatGasFlow.alicatPressureCtrl HIGH="7" HIHI="7" LOLO="0" LOW="0" MAXP="7" P="BL11I-EA-GIR-01" PORT="BPRport" Q=":BPR" SCALE="1" name="BPR"/>
 	<alicatGasFlow.alicatPressureCtrl HIGH="5" HIHI="5" LOLO="0" LOW="0" MAXP="5" P="BL11I-EA-GIR-01" PORT="DVPCport" Q=":DVPC" SCALE="1" name="DVPC"/>
 	<mks9xx.mks9xx P="BL11I-EA-GIR-01:GAUGE" PORT="GAUGE" serialport="GAUGEport"/>
-	<vacuumValve.vacuumValveRead device="BL11I-EA-GIR-01:PLC" name="VLVCC" port="PLCport"/>
-	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:VENT" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="VENT" port="PLCport" valve="01" vlvcc="BL11I-EA-GIR-01:PLC"/>
-	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:ISO" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="ISO" port="PLCport" valve="02" vlvcc="BL11I-EA-GIR-01:PLC"/>
-	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:BACK" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="BACK" port="PLCport" valve="03" vlvcc="BL11I-EA-GIR-01:PLC"/>
-	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:PUMP" ilk0="Vent Valve Open" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="PUMP" port="PLCport" valve="04" vlvcc="BL11I-EA-GIR-01:PLC"/>
-	<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:SEQ" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="SEQ" port="PLCport" valve="07" vlvcc="BL11I-EA-GIR-01:PLC"/>
-	<!--<dlsPLC.read100 century="0" device="BL11I-EA-GIR-01:PLC" port="PLCport"/>-->
-	<!--<dlsPLC.vacValve addr="10" device="BL11I-EA-GIR-01:VENT" name="VENT" port="PLCport" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
-	<!--<dlsPLC.vacValve addr="20" device="BL11I-EA-GIR-01:ISO" name="ISO" port="PLCport" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
-	<!--<dlsPLC.vacValve addr="30" device="BL11I-EA-GIR-01:BACK" name="BACK" port="PLCport" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
-	<!--<dlsPLC.vacPump addr="50" device="BL11I-EA-GIR-01:PUMP" name="PUMP" port="PLCport" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
-	<!--<dlsPLC.vacPump addr="70" device="BL11I-EA-GIR-01:SEQ" name="SEQ" port="PLCport" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
-	<gasInjectionRig.auto_I11LowPressure P="BL11I-EA-GIR-01" name="I11"/>
+	<!--<vacuumValve.vacuumValveRead device="BL11I-EA-GIR-01:PLC" name="VLVCC" port="PLCport"/>-->
+	<!--<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:VENT" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="VENT" port="PLCport" valve="01" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
+	<!--<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:ISO" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="ISO" port="PLCport" valve="02" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
+	<!--<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:BACK" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="BACK" port="PLCport" valve="03" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
+	<!--<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:PUMP" ilk0="Vent Valve Open" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="PUMP" port="PLCport" valve="04" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
+	<!--<vacuumPump.auto_vacuumTurboPump device="BL11I-EA-GIR-01:SEQ" ilk0="" ilk1="" ilk10="" ilk11="" ilk12="" ilk13="" ilk14="" ilk15="" ilk2="" ilk3="" ilk4="" ilk5="" ilk6="" ilk7="" ilk8="" ilk9="" name="SEQ" port="PLCport" valve="07" vlvcc="BL11I-EA-GIR-01:PLC"/>-->
+	<FINS.FINSHostlink asyn_port="PLCport" name="FINSport"/>
+	<dlsPLC.read100 century="0" device="BL11I-EA-GIR-01:PLC" port="FINSport"/>
+	<dlsPLC.vacValve addr="10" device="BL11I-EA-GIR-01:VENT" name="VENT" port="FINSport" vlvcc="BL11I-EA-GIR-01:PLC"/>
+	<dlsPLC.vacValve addr="20" device="BL11I-EA-GIR-01:ISO" name="ISO" port="FINSport" vlvcc="BL11I-EA-GIR-01:PLC"/>
+	<dlsPLC.vacValve addr="30" device="BL11I-EA-GIR-01:BACK" name="BACK" port="FINSport" vlvcc="BL11I-EA-GIR-01:PLC"/>
+	<dlsPLC.vacPump addr="40" device="BL11I-EA-GIR-01:PUMP" ilk0="Vent Valve Open" name="PUMP" port="FINSport" vlvcc="BL11I-EA-GIR-01:PLC"/>
+	<dlsPLC.vacPump addr="70" device="BL11I-EA-GIR-01:SEQ" name="SEQ" port="FINSport" vlvcc="BL11I-EA-GIR-01:PLC"/>
+	<gasInjectionRig.auto_I11LowPressure P="BL11I-EA-GIR-01" name="I11" port="FINSport"/>
 </components>

@@ -201,21 +201,21 @@
 	<userIO.bi DTYP="Hy8001" INP="#C80 S6 @" ONAM="Open" P="BL11I-EA-SHTR-01" R=":STA" SCAN=".1 second" ZNAM="Closed"/>
 	<userIO.auto_dfanout DESC="Motion stop fanout" DOL="" EGU="" HOPR="" LOPR="" OMSL="supervisory" OUTA="BL11I-MO-IOC-01:allstop" OUTB="BL11I-MO-IOC-02:allstop" OUTC="BL11I-EA-ROBOT-01:HOLD" OUTD="" OUTE="" OUTF="" OUTG="" OUTH="" P="BL11I-MO-STOP-01" PREC="" R="" SCAN="Passive" name="MFAN"/>
 	<generic.generic_BPM_vert A="BL11I-AL-SLITS-04:YP:I" B="BL11I-AL-SLITS-04:XM:I" C="BL11I-AL-SLITS-04:YM:I" D="BL11I-AL-SLITS-04:XP:I" KX="1" KY="1" P="BL11I-AL-SLITS-04" SCAN=".1 second" gda_curr_name="S4.AMP" gda_desc="Slits 4 BPM" gda_name="S4.BPM" name="S4.OB1"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-TABLE-02:Z:SDIS.INPB&quot;,&quot;BL11I-EA-ROBOT-01:RUNNING CP&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-TABLE-02:X:SDIS.INPB&quot;,&quot;BL11I-EA-ROBOT-01:RUNNING CP&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:THETA:SDIS.INPB&quot;,&quot;BL11I-EA-ROBOT-01:RUNNING CP&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:SPOS:SDIS.INPB&quot;,&quot;BL11I-EA-ROBOT-01:RUNNING CP&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y1:SDIS.INPB&quot;,&quot;BL11I-EA-ROBOT-01:RUNNING CP&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y2:SDIS.INPB&quot;,&quot;BL11I-EA-ROBOT-01:RUNNING CP&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y3:SDIS.INPB&quot;,&quot;BL11I-EA-ROBOT-01:RUNNING CP&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:X:SDIS.INPB&quot;,&quot;BL11I-EA-ROBOT-01:RUNNING CP&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-TABLE-02:Z:SDIS.INPB&quot;,&quot;BL11I-EA-ROBOT-01:RUNNING CP&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-TABLE-02:X:SDIS.INPB&quot;,&quot;BL11I-EA-ROBOT-01:RUNNING CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-TABLE-02:Z:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-TABLE-02:X:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:THETA:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:SPOS:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y1:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y2:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y3:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:X:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-TABLE-02:Z:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-TABLE-02:X:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-DI-IONC-04:PHD1:GAIN&quot;,&quot;5&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-DI-IONC-04:PHD1:ACDC&quot;,&quot;1&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:2THETA.DLY&quot;,&quot;1&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:DELTA.DLY&quot;,&quot;1&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:SPOS.DLY&quot;,&quot;1&quot;)" post_init="True"/>
+	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:SPOS.DLY&quot;,&quot;1&quot;)" post_init="True"/>-->
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-PMAC-02:AXIS23:DESC&quot;,&quot;Carousel position&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-PMAC-02:AXIS16:DESC&quot;,&quot;Cryo rocker&quot;)" post_init="True"/>
 </components>

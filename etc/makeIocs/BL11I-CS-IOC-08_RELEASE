@@ -1,4 +1,4 @@
-# Place any example specific dependencies here
+PVLOGGING=   $(SUPPORT)/pvlogging/1-2
 DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls5
 ALICATGASFLOW = $(SUPPORT)/alicatGasFlow/1-11
 

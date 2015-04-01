@@ -1,3 +1,4 @@
+PVLOGGING=   $(SUPPORT)/pvlogging/1-2
 TPMAC=       $(SUPPORT)/tpmac/3-10dls17
 PMACCOORD=   $(SUPPORT)/pmacCoord/1-20
 PMACUTIL=    $(SUPPORT)/pmacUtil/4-29

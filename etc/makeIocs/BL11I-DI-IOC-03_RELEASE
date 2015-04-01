@@ -1,3 +1,4 @@
+PVLOGGING=   $(SUPPORT)/pvlogging/1-2
 UTILITY=    $(SUPPORT)/utility/dls2-15
 AUTOSAVE=$(SUPPORT)/autosave/5-0dls1
 FFMPEGSERVER=$(SUPPORT)/ffmpegServer/2-1-1dls11

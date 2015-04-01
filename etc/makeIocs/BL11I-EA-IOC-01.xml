@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="vxWorks-ppc604_long">
 	<devIocStats.defaultIocStats ioc_name="BL11I-EA-IOC-01" name="IOCS.EA"/>
+	<pvlogging.PvLogging/>
 	<IOCinfo.IOCinfo device="BL11I-EA-IOC-01"/>
 	<autosave.Autosave bl="True" iocName="BL11I-EA-IOC-01" ip="172.23.111.254" name="IOCS.EAAS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="8000000"/>

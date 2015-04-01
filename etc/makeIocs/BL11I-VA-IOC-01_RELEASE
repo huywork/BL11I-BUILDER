@@ -1,8 +1,9 @@
 # Core modules
-DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-5dls5
-UTILITY=    $(SUPPORT)/utility/dls2-15
-IOCINFO=    $(SUPPORT)/IOCinfo/2-30
-AUTOSAVE=   $(SUPPORT)/autosave/5-0
+PVLOGGING=   $(SUPPORT)/pvlogging/1-2
+DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-5dls7
+UTILITY=    $(SUPPORT)/utility/dls2-17
+IOCINFO=    $(SUPPORT)/IOCinfo/3-4
+AUTOSAVE=   $(SUPPORT)/autosave/5-0dls3
 IPAC=       $(SUPPORT)/ipac/2-8dls4-8
 BUSY=       $(SUPPORT)/busy/1-4dls1
 STREAMS=    $(SUPPORT)/streamDevice/2-5dls2
@@ -11,20 +12,19 @@ STREAMS=    $(SUPPORT)/streamDevice/2-5dls2
 DLS8515=    $(SUPPORT)/DLS8515/0-10-1
 HY8401=     $(SUPPORT)/Hy8401ip/3-17
 HOSTLINK=   $(SUPPORT)/HostLink/3-1
-MRFTIMING=  $(SUPPORT)/mrfTiming/2-4-1dls7
+MRFTIMING=  $(SUPPORT)/mrfTiming/2-4-1dls8
 
 # Devices
 VACUUMVALVE=$(SUPPORT)/vacuumValve/4-22
-MKS937A=    $(SUPPORT)/mks937a/2-75
-MKS937B=    $(SUPPORT)/mks937b/2-8
-RGA=        $(SUPPORT)/rga/4-12
-DIGITELMPC= $(SUPPORT)/digitelMpc/4-30
+MKS937A=    $(SUPPORT)/mks937a/2-78
+MKS937B=    $(SUPPORT)/mks937b/2-13
+RGA=        $(SUPPORT)/rga/4-12-1
+DIGITELMPC= $(SUPPORT)/digitelMpc/4-33
 RACKFAN=    $(SUPPORT)/rackFan/2-6
 PRESSARR=   $(SUPPORT)/pressArr_subrec/1-0
 WATER=      $(SUPPORT)/water/1-19
-INTERLOCK=  $(SUPPORT)/interlock/1-25
-TEMPERATURE=$(SUPPORT)/temperature/2-12
-CMSION=     $(SUPPORT)/cmsIon/3-5
+INTERLOCK=  $(SUPPORT)/interlock/1-26
+TEMPERATURE=$(SUPPORT)/temperature/2-13
+CMSION=     $(SUPPORT)/cmsIon/3-6
 VACUUMSPACE=$(SUPPORT)/vacuumSpace/3-22-3
-PVLOGGING = $(SUPPORT)/pvlogging/1-1-1
 

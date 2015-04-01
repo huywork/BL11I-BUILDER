@@ -139,26 +139,26 @@
 	<mks937a.mks937a device="BL11I-VA-GCTLR-02" name="GCTLR-02" port="ty_40_5"/>
 	<mks937a.mks937a device="BL11I-VA-GCTLR-03" name="GCTLR-03" port="ty_41_4"/>
 	<mks937a.mks937a device="BL11I-VA-GCTLR-04" name="GCTLR-04" port="ty_41_5"/>
-	<mks937b.mks937bImg GCTLR="GCTLR-01" channel="1" device="BL11I-VA-IMG-01" name="IMG01" offwarn="1"/>
-	<mks937b.mks937bImg GCTLR="GCTLR-01" channel="3" ctl_channel="1" device="BL11I-VA-IMG-02" name="IMG02" offwarn="1"/>
-	<!--<mks937a.mks937aImg GCTLR="GCTLR-01" channel="1" device="BL11I-VA-IMG-01" name="IMG01" offwarn="1"/>-->
-	<!--<mks937a.mks937aImg GCTLR="GCTLR-01" channel="2" device="BL11I-VA-IMG-02" name="IMG02" offwarn="1"/>-->
-	<mks937a.mks937aImg GCTLR="GCTLR-02" channel="1" device="BL11I-VA-IMG-03" name="IMG03" offwarn="1"/>
-	<mks937a.mks937aImg GCTLR="GCTLR-02" channel="2" device="BL11I-VA-IMG-04" name="IMG04"/>
-	<mks937a.mks937aImg GCTLR="GCTLR-03" channel="1" device="BL11I-VA-IMG-05" name="IMG05"/>
-	<mks937a.mks937aImg GCTLR="GCTLR-03" channel="2" device="BL11I-VA-IMG-06" name="IMG06"/>
-	<mks937a.mks937aImg GCTLR="GCTLR-04" channel="1" device="BL11I-VA-IMG-07" name="IMG07"/>
-	<mks937a.mks937aImg GCTLR="GCTLR-04" channel="2" device="BL11I-VA-IMG-08" name="IMG08"/>
+	<mks937b.mks937bImg GCTLR="GCTLR-01" channel="1" device="BL11I-VA-IMG-01" ilk_write_access_pv="BL11I-VA-GAUGE-01:ILKSETSP:NOWRITE" name="IMG01" offwarn="1"/>
+	<mks937b.mks937bImg GCTLR="GCTLR-01" channel="3" ctl_channel="1" device="BL11I-VA-IMG-02" ilk_write_access_pv="BL11I-VA-GAUGE-02:ILKSETSP:NOWRITE" name="IMG02" offwarn="1"/>
+	<!--<mks937a.mks937aImg GCTLR="GCTLR-01" channel="1" device="BL11I-VA-IMG-01" ilk_write_access_pv="BL11I-VA-GAUGE-01:ILKSETSP:NOWRITE" name="IMG01" offwarn="1"/>-->
+	<!--<mks937a.mks937aImg GCTLR="GCTLR-01" channel="2" device="BL11I-VA-IMG-02" ilk_write_access_pv="BL11I-VA-GAUGE-02:ILKSETSP:NOWRITE" name="IMG02" offwarn="1"/>-->
+	<mks937a.mks937aImg GCTLR="GCTLR-02" channel="1" device="BL11I-VA-IMG-03" ilk_write_access_pv="BL11I-VA-GAUGE-03:ILKSETSP:NOWRITE" name="IMG03" offwarn="1"/>
+	<mks937a.mks937aImg GCTLR="GCTLR-02" channel="2" device="BL11I-VA-IMG-04" ilk_write_access_pv="BL11I-VA-GAUGE-04:ILKSETSP:NOWRITE" name="IMG04"/>
+	<mks937a.mks937aImg GCTLR="GCTLR-03" channel="1" device="BL11I-VA-IMG-05" ilk_write_access_pv="BL11I-VA-GAUGE-05:ILKSETSP:NOWRITE" name="IMG05"/>
+	<mks937a.mks937aImg GCTLR="GCTLR-03" channel="2" device="BL11I-VA-IMG-06" ilk_write_access_pv="BL11I-VA-GAUGE-06:ILKSETSP:NOWRITE" name="IMG06"/>
+	<mks937a.mks937aImg GCTLR="GCTLR-04" channel="1" device="BL11I-VA-IMG-07" ilk_write_access_pv="BL11I-VA-GAUGE-07:ILKSETSP:NOWRITE" name="IMG07"/>
+	<mks937a.mks937aImg GCTLR="GCTLR-04" channel="2" device="BL11I-VA-IMG-08" ilk_write_access_pv="BL11I-VA-GAUGE-08:ILKSETSP:NOWRITE" name="IMG08"/>
 	<mks937b.mks937bPirg GCTLR="GCTLR-01" channel="5" device="BL11I-VA-PIRG-01" name="PIRG01"/>
 	<mks937b.mks937bPirg GCTLR="GCTLR-01" channel="6" device="BL11I-VA-PIRG-02" name="PIRG02"/>
-	<!--<mks937a.mks937aPirg GCTLR="GCTLR-01" channel="4" device="BL11I-VA-PIRG-01" name="PIRG01"/>-->
-	<!--<mks937a.mks937aPirg GCTLR="GCTLR-01" channel="5" device="BL11I-VA-PIRG-02" name="PIRG02"/>-->
-	<mks937a.mks937aPirg GCTLR="GCTLR-02" channel="4" device="BL11I-VA-PIRG-03" name="PIRG03"/>
-	<mks937a.mks937aPirg GCTLR="GCTLR-02" channel="5" device="BL11I-VA-PIRG-04" name="PIRG04"/>
-	<mks937a.mks937aPirg GCTLR="GCTLR-03" channel="4" device="BL11I-VA-PIRG-05" name="PIRG05"/>
-	<mks937a.mks937aPirg GCTLR="GCTLR-03" channel="5" device="BL11I-VA-PIRG-06" name="PIRG06"/>
-	<mks937a.mks937aPirg GCTLR="GCTLR-04" channel="4" device="BL11I-VA-PIRG-07" name="PIRG07"/>
-	<mks937a.mks937aPirg GCTLR="GCTLR-04" channel="5" device="BL11I-VA-PIRG-08" name="PIRG08"/>
+	<!--<mks937a.mks937aPirg GCTLR="GCTLR-01" channel="4" device="BL11I-VA-PIRG-01" ilk_write_access_pv="BL11I-VA-GAUGE-01:ILKSETSP:NOWRITE" name="PIRG01"/>-->
+	<!--<mks937a.mks937aPirg GCTLR="GCTLR-01" channel="5" device="BL11I-VA-PIRG-02" ilk_write_access_pv="BL11I-VA-GAUGE-02:ILKSETSP:NOWRITE" name="PIRG02"/>-->
+	<mks937a.mks937aPirg GCTLR="GCTLR-02" channel="4" device="BL11I-VA-PIRG-03" ilk_write_access_pv="BL11I-VA-GAUGE-03:ILKSETSP:NOWRITE" name="PIRG03"/>
+	<mks937a.mks937aPirg GCTLR="GCTLR-02" channel="5" device="BL11I-VA-PIRG-04" ilk_write_access_pv="BL11I-VA-GAUGE-04:ILKSETSP:NOWRITE" name="PIRG04"/>
+	<mks937a.mks937aPirg GCTLR="GCTLR-03" channel="4" device="BL11I-VA-PIRG-05" ilk_write_access_pv="BL11I-VA-GAUGE-05:ILKSETSP:NOWRITE" name="PIRG05"/>
+	<mks937a.mks937aPirg GCTLR="GCTLR-03" channel="5" device="BL11I-VA-PIRG-06" ilk_write_access_pv="BL11I-VA-GAUGE-06:ILKSETSP:NOWRITE" name="PIRG06"/>
+	<mks937a.mks937aPirg GCTLR="GCTLR-04" channel="4" device="BL11I-VA-PIRG-07" ilk_write_access_pv="BL11I-VA-GAUGE-07:ILKSETSP:NOWRITE" name="PIRG07"/>
+	<mks937a.mks937aPirg GCTLR="GCTLR-04" channel="5" device="BL11I-VA-PIRG-08" ilk_write_access_pv="BL11I-VA-GAUGE-08:ILKSETSP:NOWRITE" name="PIRG08"/>
 	<mks937b.mks937bGauge dom="BL11I" id="01" name="GAUGE1" plog_adc_pv="BL11I-VA-ADC-01:CH0"/>
 	<mks937b.mks937bGauge dom="BL11I" id="02" name="GAUGE2" plog_adc_pv="BL11I-VA-ADC-01:CH1"/>
 	<!--<mks937a.mks937aGauge c="50" dom="BL11I" id="01" name="GAUGE1" s="0"/>-->
@@ -171,20 +171,20 @@
 	<mks937a.mks937aGauge c="50" dom="BL11I" id="08" name="GAUGE8" s="7"/>
 	<mks937b.mks937bHy8401 c="50" device="BL11I-VA-ADC-01:CH0" name="VA-ADC-01:1" s="0"/>
 	<mks937b.mks937bHy8401 c="50" device="BL11I-VA-ADC-01:CH1" name="VA-ADC-01:2" s="1"/>
-	<mks937b.mks937bRelays GAUGE="IMG01" relay_desc="Valve I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-008" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="1" relay_off_desc="Valve I/L Off " relay_off_level="1.10E-006"/>
-	<mks937b.mks937bRelays GAUGE="IMG01" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="2" relay_off_level="0"/>
-	<mks937b.mks937bRelays GAUGE="IMG01" relay_desc="MPS I/L 2" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="3" relay_off_level="0"/>
-	<mks937b.mks937bRelays GAUGE="IMG01" relay_desc="RGA I/L " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-004" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="4" relay_off_level="0"/>
-	<mks937b.mks937bRelays GAUGE="IMG02" relay_desc="Valve I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-008" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="5" relay_off_desc="Valve I/L Off " relay_off_level="1.10E-006"/>
-	<mks937b.mks937bRelays GAUGE="IMG02" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="6" relay_off_level="0"/>
-	<mks937b.mks937bRelays GAUGE="IMG02" relay_desc="MPS I/L 2" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="7" relay_off_level="0"/>
-	<mks937b.mks937bRelays GAUGE="IMG02" relay_desc="RGA I/L " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-004" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="8" relay_off_level="0"/>
-	<mks937b.mks937bRelays GAUGE="PIRG01" relay_desc="Ion Pump I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="9" relay_off_desc="Ion Pump I/L " relay_off_level="0"/>
-	<mks937b.mks937bRelays GAUGE="PIRG01" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="10" relay_off_desc="MPS I/L " relay_off_level="0"/>
-	<mks937b.mks937bRelays GAUGE="PIRG02" relay_desc="Ion Pump I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="11" relay_off_desc="Ion Pump I/L " relay_off_level="0"/>
-	<mks937b.mks937bRelays GAUGE="PIRG02" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="12" relay_off_desc="MPS I/L " relay_off_level="0"/>
-	<mks937b.mks937bFastRelay GAUGE="IMG01" frcsp_desc="Fast Valve I/L" frcsp_level="1.0e-5"/>
-	<mks937b.mks937bFastRelay GAUGE="IMG02" frcsp_desc="Fast Valve I/L" frcsp_level="1.0e-5"/>
+	<mks937b.mks937bRelays GAUGE="IMG01" ilk_write_access_pv="BL11I-VA-GAUGE-01:ILKSETSP:NOWRITE" relay_desc="Valve I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-008" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="1" relay_off_desc="Valve I/L Off " relay_off_level="1.10E-006"/>
+	<mks937b.mks937bRelays GAUGE="IMG01" ilk_write_access_pv="BL11I-VA-GAUGE-01:ILKSETSP:NOWRITE" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="2" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="IMG01" ilk_write_access_pv="BL11I-VA-GAUGE-01:ILKSETSP:NOWRITE" relay_desc="MPS I/L 2" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="3" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="IMG01" ilk_write_access_pv="BL11I-VA-GAUGE-01:ILKSETSP:NOWRITE" relay_desc="RGA I/L " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-004" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="4" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="IMG02" ilk_write_access_pv="BL11I-VA-GAUGE-02:ILKSETSP:NOWRITE" relay_desc="Valve I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-008" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="5" relay_off_desc="Valve I/L Off " relay_off_level="1.10E-006"/>
+	<mks937b.mks937bRelays GAUGE="IMG02" ilk_write_access_pv="BL11I-VA-GAUGE-02:ILKSETSP:NOWRITE" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="6" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="IMG02" ilk_write_access_pv="BL11I-VA-GAUGE-02:ILKSETSP:NOWRITE" relay_desc="MPS I/L 2" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-007" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="7" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="IMG02" ilk_write_access_pv="BL11I-VA-GAUGE-02:ILKSETSP:NOWRITE" relay_desc="RGA I/L " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-004" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="8" relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="PIRG01" ilk_write_access_pv="BL11I-VA-GAUGE-01:ILKSETSP:NOWRITE" relay_desc="Ion Pump I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="9" relay_off_desc="Ion Pump I/L " relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="PIRG01" ilk_write_access_pv="BL11I-VA-GAUGE-01:ILKSETSP:NOWRITE" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="10" relay_off_desc="MPS I/L " relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="PIRG02" ilk_write_access_pv="BL11I-VA-GAUGE-02:ILKSETSP:NOWRITE" relay_desc="Ion Pump I/L On " relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="11" relay_off_desc="Ion Pump I/L " relay_off_level="0"/>
+	<mks937b.mks937bRelays GAUGE="PIRG02" ilk_write_access_pv="BL11I-VA-GAUGE-02:ILKSETSP:NOWRITE" relay_desc="MPS I/L 1" relay_drvh="1.20E-002" relay_drvl="2.70E-010" relay_high="1.10E-006" relay_hihi="1.30E-002" relay_hopr="1.20E-002" relay_level="1.00E-002" relay_lolo="2.60E-010" relay_lopr="2.70E-010" relay_low="9.00E-007" relay_number="12" relay_off_desc="MPS I/L " relay_off_level="0"/>
+	<mks937b.mks937bFastRelay GAUGE="IMG01" frcsp_desc="Fast Valve I/L" frcsp_level="1.0e-5" ilk_write_access_pv="BL11I-VA-GAUGE-01:ILKSETSP:NOWRITE"/>
+	<mks937b.mks937bFastRelay GAUGE="IMG02" frcsp_desc="Fast Valve I/L" frcsp_level="1.0e-5" ilk_write_access_pv="BL11I-VA-GAUGE-02:ILKSETSP:NOWRITE"/>
 	<rga.rga channel="1" device="BL11I-VA-RGA-02" name="RGA2" port="ty_41_6"/>
 	<rga.rga channel="2" device="BL11I-VA-RGA-03" name="RGA3" port="ty_41_6"/>
 	<cmsIon.cmsIon device="BL11I-RS-RDMON-01" high="60" hihi="80" name="RDMON" port="ty_42_0"/>

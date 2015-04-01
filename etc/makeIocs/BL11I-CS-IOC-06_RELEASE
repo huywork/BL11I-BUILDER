@@ -1,3 +1,4 @@
+PVLOGGING=   $(SUPPORT)/pvlogging/1-2
 DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-5dls5
 STREAMS=    $(SUPPORT)/streamDevice/2-5dls2
 LAUDARE2XX= $(SUPPORT)/laudaRE2xx/1-12

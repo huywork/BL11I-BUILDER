@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86">
 	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-03" name="CSIOC3"/>
+	<pvlogging.PvLogging/>
 	<asyn.AsynIP name="DIIOC1port" port="localhost:7006"/>
 	<asyn.AsynIP name="DIIOC2port" port="localhost:7008"/>
 	<asyn.AsynIP name="DIIOC3port" port="localhost:7009"/>

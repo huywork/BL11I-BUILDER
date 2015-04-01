@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86">
 	<devIocStats.ioc IOCNAME="BL11I-DI-IOC-01" name="DIIOC"/>
+	<pvlogging.PvLogging/>
 	<autosave.Autosave bl="True" iocName="BL11I-DI-IOC-01" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
 	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Mako_1_52" ID="10.111.6.1" P="BL11I-DI-PHDGN-01" PORT="D1.CAM.CAM" R=":CAM:" TIMEOUT="1"/>
 	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Mako_1_52" ID="10.111.6.2" P="BL11I-DI-PHDGN-02" PORT="D2.CAM.CAM" R=":CAM:" TIMEOUT="1"/>

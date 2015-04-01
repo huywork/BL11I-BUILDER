@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86">
 	<devIocStats.ioc IOCNAME="BL11I-MO-IOC-03" name="BL11I-MO-IOC-03.IOC"/>
+	<pvlogging.PvLogging/>
 	<utility.pingWait ip="172.23.111.211"/>
 	<utility.pingWait ip="172.23.111.212"/>
 	<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-03" name="BL11I-MO-IOC-03.AS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>

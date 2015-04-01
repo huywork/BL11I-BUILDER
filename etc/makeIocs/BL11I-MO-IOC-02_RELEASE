@@ -1,3 +1,4 @@
+PVLOGGING=   $(SUPPORT)/pvlogging/1-2
 IOCINFO =       $(SUPPORT)/IOCinfo/3-0
 DEVIOCSTATS=     $(SUPPORT)/devIocStats/3-1-5dls5
 IPAC=            $(SUPPORT)/ipac/2-8dls4-8

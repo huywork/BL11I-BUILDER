@@ -1,3 +1,4 @@
+PVLOGGING=   $(SUPPORT)/pvlogging/1-2
 DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls5
 BUSY=           $(SUPPORT)/busy/1-4dls1
 STREAMDEVICE=   $(SUPPORT)/streamDevice/2-5dls2

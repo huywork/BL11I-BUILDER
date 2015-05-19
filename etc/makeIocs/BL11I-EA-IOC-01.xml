@@ -49,7 +49,7 @@
 	<DLS8515.DLS8515channel card="CARD71" channel="6" data="7" stop="2"/>
 	<ETLdetector.ETLdetector P="BL11I-DI-IMON-01" Q=":E1" addr="43" gda_desc="I Monitor (OH)" gda_name="IO.E1" name="IO.E1" port="ty_70_5"/>
 	<ETLdetector.ETLdetector P="BL11I-DI-IMON-02" Q=":E1" addr="5" gda_desc="I Monitor (EH)" gda_name="IE.E1" name="IE.E1" port="ty_70_6"/>
-	<ETLdetector.ETLdetector P="BL11J-DI-IMON-01" Q=":E1" addr="48" gda_desc="I Monitor (EH2)" gda_name="IE2.E1" name="IE2.E1" port="ty_70_7"/>
+	<ETLdetector.ETLdetector P="BL11J-DI-IMON-01" Q=":E1" addr="33" gda_desc="I Monitor (EH2)" gda_name="IE2.E1" name="IE2.E1" port="ty_70_7"/>
 	<ETLdetector.ETLdetector P="BL11I-EA-ENV-01" Q=":E1" addr="0" gda_desc="ENV ETL detector 1" gda_name="ENV.E1" name="ENV.E1" port="ty_70_7"/>
 	<ETLdetector.ETLdetector P="BL11I-EA-ENV-01" Q=":E2" addr="29" gda_desc="ENV ETL detector 2" gda_name="ENV.E2" name="ENV.E2" port="ty_70_7"/>
 	<ETLdetector.ETLdetector P="BL11I-EA-MAC-01" Q=":E1" addr="1" gda_desc="ETL detector 1" gda_name="MAC1.E1" name="MAC1.E1" port="ty_70_0"/>

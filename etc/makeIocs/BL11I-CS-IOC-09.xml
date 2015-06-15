@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-09" name="CSIOC2"/>
+	<pvlogging.PvLogging/>
+	<asyn.AsynIP name="rgaPort" port="10.111.5.1:5025"/>
+	<!--<hidenRGA.hidenRGA BUFFER_SIZE="100" P="BL11I-EA-RGA-01" PORT="rgaPort" Q="" name="ENV.RGA"/>-->
+	<hidenRGA.hidenRGA_qga BUFFER_SIZE="100" P="BL11I-EA-RGA-01" PORT="rgaPort" Q="" name="ENV.RGA"/>
+</components>

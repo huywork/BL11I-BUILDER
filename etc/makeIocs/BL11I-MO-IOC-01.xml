@@ -150,8 +150,6 @@
 	<pmacUtil.autohome P="BL11I-EA-RAMAN-01" PLC="15" PORT="PMAC_S0" name="RAMAN.HOME"/>
 	<pmacUtil.autohome P="BL11I-CG-CSTAT-03" PLC="16" PORT="PMAC_S0" name="DCS.HOME"/>
 	<BL11I.BL11I_cryo_rocker name="x.OB1"/>
-	<!--<pmacUtil.positionCompare P="BL11I-MO-DIFF-01" PLC="8" PORT="PMAC_S0" Q=":COMP" motor="BL11I-MO-DIFF-01:2THETA" name="DIFF.COMP"/>-->
-	<pmacUtil.positionCompare_nojitter P="BL11I-MO-DIFF-01" PLC="8" PORT="PMAC_S0" Q=":COMP" motor="BL11I-MO-DIFF-01:2THETA" name="DIFF.COMP"/>
 	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-01" NAXES="32" PLC="5" PORT="PMAC_S0" VERSION="0"/>
 	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-02" NAXES="32" PLC="5" PORT="PMAC_S1" VERSION="0"/>
 	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-03" NAXES="32" PLC="5" PORT="PMAC_S2" VERSION="0"/>

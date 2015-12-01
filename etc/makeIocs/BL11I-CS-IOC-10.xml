@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-10" name="CS10"/>
+	<pvlogging.PvLogging/>
+	<asyn.AsynIP name="CG4" port="10.111.8.2:7777"/>
+	<lakeshore336.lakeshore336 ADDR="0" P="BL11I-CG-CSTAT-04" PORT="CG4" SCAN="1" TEMPSCAN="1" lakeshore336Path="/dls_sw/prod/R3.14.12.3/support/lakeshore336/2-6" name="CSTA4"/>
+</components>

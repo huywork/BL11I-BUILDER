@@ -1,3 +1,4 @@
 CALC=$(SUPPORT)/calc/3-1
-HIDENRGA=$(SUPPORT)/hidenRGA/1-2
-
+HIDENRGA=$(SUPPORT)/hidenRGA/1-5
+AUTOSAVE=$(SUPPORT)/autosave/5-0dls3
+UTILITY=$(SUPPORT)/utility/dls2-15

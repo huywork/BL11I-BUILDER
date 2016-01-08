@@ -1,4 +1,4 @@
 PVLOGGING=   $(SUPPORT)/pvlogging/1-2
-DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls5
+DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls7
 ALICATGASFLOW = $(SUPPORT)/alicatGasFlow/2-1
 

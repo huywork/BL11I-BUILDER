@@ -1,4 +1,4 @@
 PVLOGGING=   $(SUPPORT)/pvlogging/1-2
 SLSDETECTOR=$(SUPPORT)/slsDetector/1-1dls3
-DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls5
+DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls7
 PVLOGGING = $(SUPPORT)/pvlogging/1-1-1

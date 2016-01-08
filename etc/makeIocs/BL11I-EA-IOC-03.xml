@@ -9,4 +9,6 @@
 	<areaDetector.NDFileHDF5 ADDR="0" Enabled="0" NDARRAY_ADDR="0" NDARRAY_PORT="MYTHEN.DET" P="BL11I-EA-DET-03" PORT="MYTHEN.HDF" R=":HDF:" TIMEOUT="1"/>
 	<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-03:DET:AutoSave &quot;Yes&quot;" post_init="True"/>
     <EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-03:DET:SizeX &quot;23040&quot;" post_init="True"/>
+    <EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-03:DET:ThresholdEnergy &quot;7500&quot;" post_init="True"/>
+    <EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-03:DET:BeamEnergy &quot;15000&quot;" post_init="True"/>
 </components>

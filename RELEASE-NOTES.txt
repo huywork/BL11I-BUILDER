@@ -1,5 +1,6 @@
 Release notes
-
+3-8 general update of deviocstats to 3-1-5dls7
+    EA3: Fix startup of PSD detector
 3-7 CS1: Update dependency to fix constant velocity scan
     CS2: Added IOC for lakeshore 336 to replace procServControl
          procserv control now uses autoProcServControl on i11-control

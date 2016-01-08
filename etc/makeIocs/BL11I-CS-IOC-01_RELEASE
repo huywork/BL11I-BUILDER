@@ -1,7 +1,7 @@
 STREAMDEVICE=$(SUPPORT)/streamDevice/2-5dls2
 CRATEMONITOR=$(SUPPORT)/CrateMonitor/1-64
 GDA=         $(SUPPORT)/gda/2014-1
-DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls5
+DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls7
 AUTOSAVE=    $(SUPPORT)/autosave/5-0dls3
 BL11I=       $(SUPPORT)/BL11I/3-6
 UTILITY=     $(SUPPORT)/utility/dls2-17

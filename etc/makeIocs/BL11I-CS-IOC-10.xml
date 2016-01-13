@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+  <femto.FluxCalcs name="IC5.FLUX" ENERGY="BL11I-OP-DCM-01:ENERGY.RBV" P="BL11I-DI-PHDGN-05" R=":DIODE" VOLTAGE="BL11I-DI-IONC-05:PHD1:I" GAINSETTING="BL11I-DI-IONC-05:PHD1:GAIN" VAL0="-0.98597" VAL1="0.38357" VAL2="-0.04395" VAL3="0.00242" VAL4="-7.10E-05" VAL5="1.07E-06" VAL6="-6.61E-09" label="Flux D5"/>
+</components>
+

@@ -18,6 +18,7 @@ Notes on IOCS and uses
 | BL11I-CS-IOC-07 | i11-control       | Low Pressure Gas Panel            |
 | BL11I-CS-IOC-08 | i11-control       | Gas Flow Panel                    |
 | BL11I-CS-IOC-09 | i11-control       | Hiden RGA Mass Spectrometer       |
+| BL11I-CS-IOC-10 | i11-control       | Photon flux calculation           |
 | BL11I-EA-DET-02 | i11-control       | mar345 server program             |
 | BL11I-EA-IOC-02 | i11-control       | mar345 EPICS interface            |
 | BL11I-EA-IOC-03 | i11-control       | Mythen, a.k.a. PSD detector       |

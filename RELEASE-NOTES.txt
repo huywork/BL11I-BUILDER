@@ -1,4 +1,5 @@
 Release notes
+3-9 Add CS-10 for photon flux calculation
 3-8 general update of deviocstats to 3-1-5dls7
     EA3: Fix startup of PSD detector
 3-7 CS1: Update dependency to fix constant velocity scan

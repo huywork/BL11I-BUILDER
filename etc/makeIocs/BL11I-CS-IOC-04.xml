@@ -35,7 +35,8 @@
 	<!--Harvard syringe pump 2-->
 	<asyn.AsynIP name="TS_14" port="172.23.111.5:7014"/>
 	<asyn.AsynIP name="DCS" noAutoConnect="True" port="172.23.111.197:7777"/>
-	<!--<asyn.AsynIP name="BHEAT" noProcessEos="True" port="10.111.8.1:502"/>-->
+	<asyn.AsynIP name="BHEAT1" noProcessEos="True" port="10.111.8.1:502"/>
+	<asyn.AsynIP name="BHEAT2" noProcessEos="True" port="10.111.8.3:502"/>
 	<OXCS700.OXCS700 P="BL11I-CG-CSTRM-01" PORT="TS_1" Q="" gda_desc="Oxford Cryostream 1" gda_name="ENV.CSTRM1" name="BL11I-CG-CSTRM-01"/>
 	<OXCS700.OXCS700 P="BL11I-CG-CSTRM-02" PORT="TS_2" Q="" gda_desc="Oxford Cryostream 2" gda_name="ENV.CSTRM2" name="BL11I-CG-CSTRM-02"/>
 	<eurotherm2k.eurotherm2k GAD="0" LAD="1" P="BL11I-EA-BLOW-01" PORT="TS_3" Q="" RRMAX="0.2" SPMAX="1000" gda_desc="Cyberstar Blower" gda_name="ENV.BLOW1" name="BL11I-EA-BLOW-01"/>
@@ -60,6 +61,8 @@
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-CG-CSTAT-03:DISABLE&quot;, &quot;1&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-FGEN-01:DISABLE&quot;, &quot;1&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-FGEN-02:DISABLE&quot;, &quot;1&quot;)" post_init="True"/>
-	<!--<eurotherm2k.eurothermModbus ADDR="1" LINKTYPE="0" P="BL11I-EA-TEMPC-01" PORT="BHEAT" Q="" name="ENV.BHEAT"/>-->
-	<!--<eurotherm2k.eurothermModbusLoop ADDR="1" LOOP="1" P="BL11I-EA-TEMPC-01" PORT="BHEAT" PREC="4" Q="" name="BHEAT.LOOP1"/>-->
+	-<eurotherm2k.eurothermModbus ADDR="1" LINKTYPE="0" P="BL11I-EA-TEMPC-01" PORT="BHEAT1" Q="" name="ENV.BHEAT1"/>
+	-<eurotherm2k.eurothermModbus ADDR="1" LINKTYPE="0" P="BL11I-EA-TEMPC-02" PORT="BHEAT2" Q="" name="ENV.BHEAT1"/>
+	<eurotherm2k.eurothermModbusLoop ADDR="1" LOOP="1" P="BL11I-EA-TEMPC-01" PORT="BHEAT1" PREC="4" Q="" name="BHEAT1.LOOP1"/>
+	<eurotherm2k.eurothermModbusLoop ADDR="1" LOOP="1" P="BL11I-EA-TEMPC-02" PORT="BHEAT2" PREC="4" Q="" name="BHEAT2.LOOP1"/>
 </components>

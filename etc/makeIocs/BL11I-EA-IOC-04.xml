@@ -1,12 +1,11 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<devIocStats.ioc IOCNAME="BL11I-EA-IOC-04" name="EA4"/>
-	<pvlogging.PvLogging/>
-	<ethercat.EthercatMaster master_index="1" max_message="1000000" name="ECATM" socket="/tmp/socket1"/>
-	<ethercat.EthercatSlave master="ECATM" name="DO.1" position="DCS00024021" type_rev="EP2624-0002 rev 0x00110002"/>
-	<userIO.bo DTYP="asynInt32" ONAM="High" OUT="@asyn(DO.1)Channel1.Output" P="BL11I-EA-LAMP-01" R=":ON" SCAN="Passive" ZNAM="Low" name="LAMP.On"/>
-	<userIO.bo DTYP="asynInt32" ONAM="High" OUT="@asyn(DO.1)Channel2.Output" P="BL11I-EA-LAMP-01" R=":OFF" SCAN="Passive" ZNAM="Low" name="LAMP.Off"/>
-	<userIO.bo DTYP="asynInt32" ONAM="Opened" OUT="@asyn(DO.1)Channel3.Output" P="BL11I-EA-LAMP-01" R=":SHUTTER" SCAN="Passive" ZNAM="Closed" name="LAMP.Shutter"/>
-	<EPICS_BASE.dbpf pv="BL11I-EA-LAMP-01:ON.HIGH" value="0.5"/>
-	<EPICS_BASE.dbpf pv="BL11I-EA-LAMP-01:OFF.HIGH" value="0.5"/>
+	<ethercat.EthercatMaster master_index="0" max_message="1000000" name="ECATM" socket="/tmp/socket0"/>
+	<!--slaves 3 link up 1-->
+	<ethercat.EthercatSlave master="ECATM" name="ERIO.0" position="DCS00022015" type_rev="EK1101 rev 0x00110000"/>
+	<ethercat.EthercatSlave master="ECATM" name="ERIO.1" position="DCS00024639" type_rev="EL2024 rev 0x00110000"/>
+	<ethercat.EthercatSlave master="ECATM" name="ERIO.2" position="DCS00023852" type_rev="EL9512 rev 0x00100000"/>
+	<ethercat.auto_EL2024_0010 DEVICE="BL11I-EA-LASER-01:SHUT" PORT="ERIO.1" SCAN="1 second"/>
+	<userIO.bo DTYP="asynInt32" ONAM="Open" OUT="@asyn(ERIO.1)Channel1.Output" P="BL11I-EA-LASER-01" R=":SHUT:CMD" SCAN="@asyn(ERIO.1)Channel1.Output" ZNAM="Closed" name="LSHUTTER"/>
 </components>

@@ -24,5 +24,6 @@ Notes on IOCS and uses
 | BL11I-EA-IOC-03 | i11-control       | Mythen, a.k.a. PSD detector        |
 | BL11I-MO-IOC-03 | i11-control       |                                    |
 | BL11I-EA-IOC-04 | bl11i-ea-rserv-01 | Remote I/O - laser shutter control |
+| BL11I-EA-IOC-05 | bl11i-ea-rserv-01 | Remote I/O - UV lamp control       |
 
 

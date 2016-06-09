@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<devIocStats.ioc IOCNAME="BL11I-EA-IOC-04" name="EA4"/>
+	<pvlogging.PvLogging/>
 	<ethercat.EthercatMaster master_index="0" max_message="1000000" name="ECATM" socket="/tmp/socket0"/>
 	<!--slaves 3 link up 1-->
 	<ethercat.EthercatSlave master="ECATM" name="ERIO.0" position="DCS00022015" type_rev="EK1101 rev 0x00110000"/>

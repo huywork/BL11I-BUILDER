@@ -2,7 +2,7 @@
 PVLOGGING=   $(SUPPORT)/pvlogging/1-2
 DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-5dls7
 UTILITY=    $(SUPPORT)/utility/dls2-17
-IOCINFO=    $(SUPPORT)/IOCinfo/3-4
+IOCINFO=    $(SUPPORT)/IOCinfo/3-5-2
 AUTOSAVE=   $(SUPPORT)/autosave/5-0dls3
 IPAC=       $(SUPPORT)/ipac/2-8dls4-8
 BUSY=       $(SUPPORT)/busy/1-4dls1

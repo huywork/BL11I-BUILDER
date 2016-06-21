@@ -34,6 +34,8 @@
 	<asyn.AsynIP name="TS_13" port="172.23.111.5:7013"/>
 	<!--Harvard syringe pump 2-->
 	<asyn.AsynIP name="TS_14" port="172.23.111.5:7014"/>
+	<!--serial trigger jira i11-23-->
+	<asyn.AsynIP name="trigger" port="172.23.111.5:7015"/>
 	<asyn.AsynIP name="DCS" noAutoConnect="True" port="172.23.111.197:7777"/>
 	<OXCS700.OXCS700 P="BL11I-CG-CSTRM-01" PORT="TS_1" Q="" gda_desc="Oxford Cryostream 1" gda_name="ENV.CSTRM1" name="BL11I-CG-CSTRM-01"/>
 	<OXCS700.OXCS700 P="BL11I-CG-CSTRM-02" PORT="TS_2" Q="" gda_desc="Oxford Cryostream 2" gda_name="ENV.CSTRM2" name="BL11I-CG-CSTRM-02"/>
@@ -59,4 +61,5 @@
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-CG-CSTAT-03:DISABLE&quot;, &quot;1&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-FGEN-01:DISABLE&quot;, &quot;1&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-FGEN-02:DISABLE&quot;, &quot;1&quot;)" post_init="True"/>
+	<BL11I.auto_BL11I_serial_trigger P="BL11I-EA-TRIGR-01" PORT="trigger" name="Trigger1"/>
 </components>

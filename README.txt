@@ -13,6 +13,7 @@ Notes on IOCS and uses
 |                 |                   | Since release 3-7, previously      |
 |                 |                   | used for procServControl           |
 | BL11I-CS-IOC-04 | i11-control       | ENV serial - includes MRI furnace  |
+|                 |                   | and serial trigger (i11-23)        |
 | BL11I-CS-IOC-05 | i11-control       | Robot                              |
 | BL11I-CS-IOC-06 | i11-control       | Chiller, Zebras                    |
 | BL11I-CS-IOC-07 | i11-control       | Low Pressure Gas Panel             |
@@ -25,5 +26,4 @@ Notes on IOCS and uses
 | BL11I-MO-IOC-03 | i11-control       |                                    |
 | BL11I-EA-IOC-04 | bl11i-ea-rserv-01 | Remote I/O - laser shutter control |
 | BL11I-EA-IOC-05 | bl11i-ea-rserv-01 | Remote I/O - UV lamp control       |
-
 

@@ -1,4 +1,5 @@
 Release notes
+3-13 CS4  add serial trigger
 3-12 EA5  added for UV lamp control re jira i11-30
 3-11 EA4: Laser shutter control
 3-10 CS4: Removed battery heaters

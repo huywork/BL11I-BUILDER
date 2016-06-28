@@ -3,6 +3,6 @@ CRATEMONITOR=$(SUPPORT)/CrateMonitor/1-68
 GDA=         $(SUPPORT)/gda/2014-1
 DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-5dls7
 AUTOSAVE=    $(SUPPORT)/autosave/5-0dls3
-BL11I=       $(SUPPORT)/BL11I/3-7
+BL11I=       $(SUPPORT)/BL11I/3-8
 UTILITY=     $(SUPPORT)/utility/dls2-17
 PVLOGGING=   $(SUPPORT)/pvlogging/1-2

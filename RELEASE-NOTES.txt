@@ -1,4 +1,7 @@
 Release notes
+3-15 MO1  Add combined Y jack translation for diffractometer base
+          re jira I11-29
+3-14 CS1  change shutter control re I11-4
 3-13 CS4  add serial trigger
 3-12 EA5  added for UV lamp control re jira i11-30
 3-11 EA4: Laser shutter control

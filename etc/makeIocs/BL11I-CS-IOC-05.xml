@@ -13,5 +13,5 @@
 	<motomanNX100.auto_nx100io DESC0="Sample in Jaws" DESC1="" DESC2="" DESC3="" DESC4="" DESC5="" DESC6="" DESC7="" P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="00020"/>
 	<motomanNX100.auto_BL11I_robot_interlocks DIFF="BL11I-MO-DIFF-01" ROBOT="BL11I-EA-ROBOT-01"/>
 	<!--Fudge the diff pick position Z from EPICS-->
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-ROBOT-01:P010:Y&quot;, &quot;1.0&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-ROBOT-01:P010:Y&quot;, &quot;4.995&quot;)" post_init="True"/>
 </components>

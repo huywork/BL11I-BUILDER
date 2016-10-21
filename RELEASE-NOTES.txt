@@ -1,13 +1,14 @@
 Release notes
-3-15 MO1  Add combined Y jack translation for diffractometer base
-          re jira I11-29
-3-14 CS1  change shutter control re I11-4
-3-13 CS4  add serial trigger
-3-12 EA5  added for UV lamp control re jira i11-30
-3-11 EA4: Laser shutter control
-3-10 CS4: Removed battery heaters
+3-16 CS5 fix robot offsets at start re jira I11-57
+3-15 MO1 Add combined Y jack translation for diffractometer base
+         re jira I11-29
+3-14 CS1 change shutter control re I11-4
+3-13 CS4 add serial trigger
+3-12 EA5 added for UV lamp control re jira i11-30
+3-11 EA4 Laser shutter control
+3-10 CS4 Removed battery heaters
 3-9  CS10 for photon flux calculation
-     CS4: Add second battery heater
+     CS4  Add second battery heater
 3-8  general update of deviocstats to 3-1-5dls7
      EA3: Fix startup of PSD detector
 3-7  CS1: Update dependency to fix constant velocity scan

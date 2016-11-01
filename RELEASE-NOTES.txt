@@ -1,5 +1,6 @@
 Release notes
 3-16 CS5 fix robot offsets at start re jira I11-57
+     VA1 fix alarm handler tags in water module re jira I11-71
 3-15 MO1 Add combined Y jack translation for diffractometer base
          re jira I11-29
 3-14 CS1 change shutter control re I11-4

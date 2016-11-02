@@ -1,4 +1,5 @@
 Release notes
+3-18 CS9 Implemented fixes for hiden QGA re jira I11-42, I11-43
 3-17 CS11 added IOC for bar code reader re jira I11-45
 3-16 CS5 fix robot offsets at start re jira I11-57
      VA1 fix alarm handler tags in water module re jira I11-71

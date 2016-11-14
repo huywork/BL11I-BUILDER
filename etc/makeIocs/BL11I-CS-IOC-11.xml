@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<asyn.AsynIP name="barcodereader" port="172.23.111.5:7025"/>
+	<devIocStats.devIocStatsHelper name="CSIOC11" ioc="BL11I-CS-IOC-11" />
 	<cognexDataMan100.dataman100 P="BL11I-EA-BARCR-01" PORT="barcodereader" R=":DATA"/>
 </components>

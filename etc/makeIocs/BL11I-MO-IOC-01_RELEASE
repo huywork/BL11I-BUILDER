@@ -1,4 +1,4 @@
-PVLOGGING=        $(SUPPORT)/pvlogging/1-2
+PVLOGGING=        $(SUPPORT)/pvlogging/1-3
 TPMAC=            $(SUPPORT)/tpmac/3-11dls8
 PMACCOORD=        $(SUPPORT)/pmacCoord/1-30
 PMACUTIL=         $(SUPPORT)/pmacUtil/4-33
@@ -17,4 +17,4 @@ GENERIC=          $(SUPPORT)/generic/2-34
 MRFTIMING=        $(SUPPORT)/mrfTiming/2-4-1dls9
 BL11I=            $(SUPPORT)/BL11I/3-8
 TIMINGTEMPLATES=  $(SUPPORT)/TimingTemplates/6-9
-DEVIOCSTATS=      $(SUPPORT)/devIocStats/3-1-14dls1-0
+DEVIOCSTATS=      $(SUPPORT)/devIocStats/3-1-14dls1-2

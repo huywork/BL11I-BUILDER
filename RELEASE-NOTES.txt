@@ -1,4 +1,5 @@
 Release notes
+3-21 MO1 remove MAC translation axes re jira I11-72
 3-20 CS11 add devIocStats entry re jira I11-75
 3-19 CS5 add records to control bar code reading job re jira I11-81
 3-18 CS9 Implemented fixes for hiden QGA re jira I11-42, I11-43

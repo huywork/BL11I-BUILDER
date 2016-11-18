@@ -47,20 +47,21 @@
 	<DLS8515.DLS8515channel card="CARD41" channel="1"/>
 	<DLS8515.DLS8515channel card="CARD41" channel="2"/>
 	<DLS8515.DLS8516channel card="CARD42" channel="0" fullduplex="True"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-EA-FANC-01" name="FANC1" s="0"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-PS-FANC-01" name="FANC2" s="1"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-PS-PSU-01" name="FANC3" s="2"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-VA-FANC-01" name="FANC4" s="3"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-MO-FANC-01" name="FANC5" s="4"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-MO-FANC-02" name="FANC6" s="5"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-VA-FANC-02" name="FANC7" s="6"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-NT-FANC-01" name="FANC8" s="7"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-DA-FANC-01" name="FANC9" s="8"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-MO-FANC-03" name="FANC10" s="9"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-EA-FANC-02" name="FANC11" s="10"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-EA-FANC-03" name="FANC12" s="11"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-OP-FANC-01" name="FANC13" s="12"/>
-	<rackFan.auto_rackFan c="60" device="BL11I-EA-ROBOT-01:MOVN" name="ROBOT" s="37"/>
+	<rackFan.rackFan c="60" device="BL11I-EA-FANC-01" name="FANC1" s="0"/>
+	<rackFan.rackFan c="60" device="BL11I-PS-FANC-01" name="FANC2" s="1"/>
+	<rackFan.rackFan c="60" device="BL11I-PS-PSU-01" name="FANC3" s="2"/>
+	<rackFan.rackFan c="60" device="BL11I-VA-FANC-01" name="FANC4" s="3"/>
+	<rackFan.rackFan c="60" device="BL11I-MO-FANC-01" name="FANC5" s="4"/>
+	<rackFan.rackFan c="60" device="BL11I-MO-FANC-02" name="FANC6" s="5"/>
+	<rackFan.rackFan c="60" device="BL11I-VA-FANC-02" name="FANC7" s="6"/>
+	<rackFan.rackFan c="60" device="BL11I-NT-FANC-01" name="FANC8" s="7"/>
+	<rackFan.rackFan c="60" device="BL11I-DA-FANC-01" name="FANC9" s="8"/>
+	<rackFan.rackFan c="60" device="BL11I-MO-FANC-03" name="FANC10" s="9"/>
+	<rackFan.rackFan c="60" device="BL11I-EA-FANC-02" name="FANC11" s="10"/>
+	<rackFan.rackFan c="60" device="BL11I-EA-FANC-03" name="FANC12" s="11"/>
+	<rackFan.rackFan c="60" device="BL11I-OP-FANC-01" name="FANC13" s="12"/>
+	<rackFan.rackFan DESC="Status of duplex PSU" c="60" device="BL11I-VA-RACK-01:PSU-01" s="13"/>
+	<rackFan.rackFan c="60" device="BL11I-EA-ROBOT-01:MOVN" name="ROBOT" s="37"/>
 	<temperature.temperaturePLCRead device="BL11I-VA-TMPCC-01" name="TMPCC" port="ty_40_2"/>
 	<temperature.temperaturePLC addr="1" crate="TMPCC" desc="Temperature 1" device="BL11I-RS-ABSB-01" gda_desc="GBC Temperature 1" gda_name="GBC.TEMP1" high="30" hihi="40" hopr="50" hyst="2" indx="0" llsv="NO_ALARM" lolo="0" lopr="0" low="0" lsv="NO_ALARM" name="GBC" temp=":TEMP1"/>
 	<temperature.temperaturePLC addr="1" crate="TMPCC" desc="Temperature 2" device="BL11I-RS-ABSB-01" gda_desc="GBC Temperature 2" gda_name="GBC.TEMP2" high="30" hihi="40" hopr="50" hyst="2" indx="1" llsv="NO_ALARM" lolo="0" lopr="0" low="0" lsv="NO_ALARM" temp=":TEMP2"/>

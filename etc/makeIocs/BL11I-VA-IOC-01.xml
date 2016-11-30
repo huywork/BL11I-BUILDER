@@ -60,7 +60,7 @@
 	<rackFan.rackFan c="60" device="BL11I-EA-FANC-02" name="FANC11" s="10"/>
 	<rackFan.rackFan c="60" device="BL11I-EA-FANC-03" name="FANC12" s="11"/>
 	<rackFan.rackFan c="60" device="BL11I-OP-FANC-01" name="FANC13" s="12"/>
-	<rackFan.rackFan DESC="Status of duplex PSU" c="60" device="BL11I-VA-RACK-01:PSU-01" s="13"/>
+	<rackFan.rackFan DESC="Status of duplex PSU" c="60" device="BL11I-VA-RACK-01:PSU-01" s="45"/>
 	<rackFan.rackFan c="60" device="BL11I-EA-ROBOT-01:MOVN" name="ROBOT" s="37"/>
 	<temperature.temperaturePLCRead device="BL11I-VA-TMPCC-01" name="TMPCC" port="ty_40_2"/>
 	<temperature.temperaturePLC addr="1" crate="TMPCC" desc="Temperature 1" device="BL11I-RS-ABSB-01" gda_desc="GBC Temperature 1" gda_name="GBC.TEMP1" high="30" hihi="40" hopr="50" hyst="2" indx="0" llsv="NO_ALARM" lolo="0" lopr="0" low="0" lsv="NO_ALARM" name="GBC" temp=":TEMP1"/>

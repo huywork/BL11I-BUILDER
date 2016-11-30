@@ -1,4 +1,6 @@
 Release notes
+3-24 VA1 renumber signal for vacuum rack after troubleshooting
+     re jira I11-91
 3-23 VA1 add signal for vacuum rack psu monitoring re jira i11-91
 3-22 EA1 fix severities for BPM3 re jira I11-89
 3-21 MO1 remove MAC translation axes re jira I11-72

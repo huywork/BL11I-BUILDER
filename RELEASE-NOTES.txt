@@ -1,4 +1,5 @@
 Release notes
+3-25 MO1 update mac arm offsets re jira I11-100
 3-24 VA1 renumber signal for vacuum rack after troubleshooting
      re jira I11-91
 3-23 VA1 add signal for vacuum rack psu monitoring re jira i11-91

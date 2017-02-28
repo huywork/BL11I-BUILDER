@@ -6,7 +6,6 @@ Notes on IOCS and uses
 | BL11I-VA-IOC-01 | VME               | Vacuum                             |
 | BL11I-MO-IOC-01 | VME               | PMAC 1,2,3                         |
 | BL11I-MO-IOC-02 | VME               | DCM motion                         |
-| BL11I-MO-IOC-03 | i11-control       | Mar table motors                   |
 | BL11I-BL-IOC-01 | i11-control       | Beamline Status, Synoptic icons    |
 | BL11I-DI-IOC-01 | BL11I-DI-SERV-01  | GigE cameras                       |
 | BL11I-DI-IOC-02 | BL11I-DI-SERV-01  | OAV camera and zoom                |
@@ -22,9 +21,7 @@ Notes on IOCS and uses
 | BL11I-CS-IOC-09 | i11-control       | Hiden RGA Mass Spectrometer        |
 | BL11I-CS-IOC-10 | i11-control       | Photon flux calculation            |
 | BL11I-CS-IOC-11 | i11-control       | Bar code reader                    |
-| BL11I-EA-DET-02 | i11-control       | mar345 server program              |
 | BL11I-EA-IOC-01 | VME               | Scaler cards                       |
-| BL11I-EA-IOC-02 | i11-control       | mar345 EPICS interface             |
 | BL11I-EA-IOC-03 | i11-control       | Mythen, a.k.a. PSD detector        |
 | BL11I-EA-IOC-04 | bl11i-ea-rserv-01 | Remote I/O - laser shutter control |
 | BL11I-EA-IOC-05 | bl11i-ea-rserv-01 | Remote I/O - UV lamp control       |

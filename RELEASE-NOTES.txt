@@ -1,4 +1,5 @@
 Release notes
+3-28 MO3 and EA2 removed - remove mar detector components jira I11-90
 3-27 MO1 update diffractometer theta VELO after tuning
 3-26 MO1 update mac arm offsets re jira I11-100 and I11-104
 3-25 MO1 update mac arm offsets re jira I11-100

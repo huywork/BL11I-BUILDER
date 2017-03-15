@@ -23,7 +23,8 @@ Notes on IOCS and uses
 | BL11I-CS-IOC-10 | i11-control       | Photon flux calculation             |
 | BL11I-CS-IOC-11 | i11-control       | Bar code reader                     |
 | BL11I-EA-IOC-01 | VME               | Scaler cards                        |
-| BL11I-EA-IOC-02 |                   | * slot available - removed for 3-28 |
+| BL11I-EA-IOC-02 | bl11i-ea-rserv-01 | Remote I/O gas spinner              |
+|                 |                   | (re-purposed, formerly mar345)      |
 | BL11I-EA-IOC-03 | i11-control       | Mythen, a.k.a. PSD detector         |
 | BL11I-EA-IOC-04 | bl11i-ea-rserv-01 | Remote I/O - laser shutter control  |
 | BL11I-EA-IOC-05 | bl11i-ea-rserv-01 | Remote I/O - UV lamp control        |

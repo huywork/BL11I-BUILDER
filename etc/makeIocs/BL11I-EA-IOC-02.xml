@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<ethercat.EthercatMaster master_index="0" name="ECATM" socket="/tmp/socket0"/>
+	<BL11I.auto_BL11I_gas_spinner_gui/>
+	<!--slaves 2 link up 1-->
+	<ethercat.EthercatSlave master="ECATM" name="GSBOX.1" position="DCS00024140" type_rev="EP4174-0002 rev 0x00120002"/>
+	<ethercat.EthercatSlave master="ECATM" name="GSBOX.2" position="DCS00024040" type_rev="EP2624-0002 rev 0x00110002"/>
+	<ethercat.auto_EP4174_0002 DEVICE="BL11I-EA-ENV-02:SPIN:AO" PORT="GSBOX.1" SCAN="1 second" name="GSAO.1"/>
+	<ethercat.auto_EP2624_0002 DEVICE="BL11I-EA-ENV-02:SPIN:DO" PORT="GSBOX.2" SCAN="1 second" name="GS.DO1"/>
+	<userIO.ao DESC="Spinner speed" DRVH="100" DRVL="0" DTYP="asynInt32" EGU="%" EGUF="100" EGUL="-100" LINR="LINEAR" OUT="@asyn(GSBOX.1)AOOutputsChannel1.Analogoutput" P="BL11I-EA-ENV-02" PINI="YES" PREC="2" R=":SPEED" SCAN="1 second" name="GS.SPEED"/>
+	<userIO.bo DESC="Spinner control" DTYP="asynInt32" ONAM="Enabled" OUT="@asyn(GSBOX.2)Channel1.Output" P="BL11I-EA-ENV-02" PINI="YES" R=":SPIN:DISABLE" SCAN="1 second" ZNAM="Disabled" name="GS.DISABLE"/>
+</components>

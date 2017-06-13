@@ -1,4 +1,6 @@
 Release notes
+3-31 CS6 update zebra support to set up zebra position automatically
+     re jira I11-185
 3-30 EA2 add pvlogging and dev ioc stats re jira I11-161
 3-29 EA2 re-purposed for gas spinner ethercat re jira I11-160
 3-28 MO3 and EA2 removed - remove mar detector components jira I11-90

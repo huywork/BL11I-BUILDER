@@ -1,4 +1,6 @@
 Release notes
+3-32 CS4 record changes in "work" area
+     MO1 record changes while testing rock theta additions re jira I11-151
 3-31 CS6 update zebra support to set up zebra position automatically
      re jira I11-185
 3-30 EA2 add pvlogging and dev ioc stats re jira I11-161

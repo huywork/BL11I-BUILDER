@@ -10,6 +10,7 @@
 	<motomanNX100.nx100dvar P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="012"/>
 	<motomanNX100.nx100dvar P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="013"/>
 	<motomanNX100.auto_nx100io DESC0="Gripper" DESC1="VA Spare" DESC2="Table X- allowed" DESC3="Spinner Braked" DESC4="Table Out Req" DESC5="Carousel Advance Req" DESC6="Carousel Reset Req" DESC7="" P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="10020"/>
+    <!-- universal input for i11's robot described here http://confluence.diamond.ac.uk/x/hYQbAw  -->
 	<motomanNX100.auto_nx100io DESC0="Open" DESC1="Close" DESC2="Cube Override" DESC3="Table is Out" DESC4="Carousel DMOV" DESC5="Table DMOV" DESC6="" DESC7="Flat Plate" P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="00010"/>
 	<motomanNX100.auto_nx100io DESC0="Sample in Jaws" DESC1="" DESC2="" DESC3="" DESC4="" DESC5="" DESC6="" DESC7="" P="BL11I-EA-ROBOT-01" PORT="nx100p" Q="" SCAN=".5 second" VAR="00020"/>
 	<motomanNX100.auto_BL11I_barcode ROBOT="BL11I-EA-ROBOT-01"/>

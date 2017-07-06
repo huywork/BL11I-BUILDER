@@ -14,6 +14,6 @@ FEMTO=            $(SUPPORT)/femto/4-5
 USERIO=           $(SUPPORT)/userIO/2-25
 GENERIC=          $(SUPPORT)/generic/2-36-1
 MRFTIMING=        $(SUPPORT)/mrfTiming/2-4-1dls9
-BL11I=            $(SUPPORT)/BL1I/3-14
+BL11I=            $(SUPPORT)/BL11I/3-14
 TIMINGTEMPLATES=  $(SUPPORT)/TimingTemplates/6-9
 DEVIOCSTATS=      $(SUPPORT)/devIocStats/3-1-14dls1-2

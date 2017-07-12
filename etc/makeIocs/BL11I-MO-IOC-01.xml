@@ -20,7 +20,7 @@
 	<pmacCoord.CS CS="5" Controller="PMAC3" MovingPoll="200" name="PMAC3CS5"/>
 	<pmacCoord.CS CS="6" Controller="PMAC3" MovingPoll="200" name="PMAC3CS6"/>
 	<pmacCoord.CS CS="7" Controller="PMAC3" MovingPoll="200" name="PMAC3CS7"/>
-    <pmacCoord.CS_rocking AXIS="31" COORD="6" P="BL11I-MO-DIFF-01:ROCK" PORT="PMAC_S0" PROG="11" name="rock"/>
+    <pmacCoord.CS_rocking AXIS="31" COORD="6" P="BL11I-MO-DIFF-01:ROCK" PORT="PMAC_S0" PROG="11" SPEEDLO="0" SPEEDHI="3" name="rock"/>
 	<IOCinfo.IOCinfo device="BL11I-MO-IOC-01" name="MOIOC.OB1"/>
 	<mrfTiming.EventReceiverPMC cardid="1"/>
 	<ipac.Hy8001 direction="1" intLevel="2" invertin="True" invertout="True" ip_support="True" name="CARD7" scan="100" slot="7"/>

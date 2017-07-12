@@ -1,4 +1,5 @@
 Release notes
+3-33 MO1 add limits to rock theta speed field re jira I11-151
 3-32 CS4 record changes in "work" area
      MO1 record changes while testing rock theta additions re jira I11-151
 3-31 CS6 update zebra support to set up zebra position automatically

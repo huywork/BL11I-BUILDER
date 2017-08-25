@@ -22,6 +22,7 @@ Notes on IOCS and uses
 | BL11I-CS-IOC-09 | i11-control       | Hiden RGA Mass Spectrometer         |
 | BL11I-CS-IOC-10 | i11-control       | Photon flux calculation             |
 | BL11I-CS-IOC-11 | i11-control       | Bar code reader                     |
+| BL11I-CS-IOC-12 | i11-control       | terminal server monitoring          |
 | BL11I-EA-IOC-01 | VME               | Scaler cards                        |
 | BL11I-EA-IOC-02 | bl11i-ea-rserv-01 | Remote I/O gas spinner              |
 |                 |                   | (re-purposed, formerly mar345)      |

@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-CS-IOC-12" name="CSIOC12"/>
-	<terminalServer.Moxa HOST="172.23.111.4" NCHANS="32" P="BL11I-NT-TSERV-03" R="" name="TSERV.NT3"/>
+	<terminalServer.Moxa HOST="172.23.111.4" NCHANS="16" P="BL11I-NT-TSERV-03" R="" name="TSERV.NT3"/>
     <terminalServer.Acs HOST="172.23.226.211" NCHANS="32" P="BL11I-NT-TSERV-01" R="" name="TSERV.NT1"/>
     <terminalServer.Acs HOST="172.23.111.5" NCHANS="32" P="BL11I-EA-TSERV-01" R="" name="TSERV.EA1"/>
 	<autosave.Autosave iocName="BL11I-CS-IOC-12" name="CS12AS" path="/dls_sw/i11/epics/autosave"/>

@@ -1,4 +1,5 @@
 Release notes
+3-35 CS12 fix number of ports for terminal server re jira I11-203
 3-34 CS4 comment out BHEAT components
      CS12 add ioc for terminal server monitoring re jira I11-203
 3-33 MO1 add limits to rock theta speed field re jira I11-151

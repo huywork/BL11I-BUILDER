@@ -1,4 +1,5 @@
 Release notes
+3-36 EA2 fix gas spinner analogue output voltage re jira I11-213
 3-35 CS12 fix number of ports for terminal server re jira I11-203
 3-34 CS4 comment out BHEAT components
      CS12 add ioc for terminal server monitoring re jira I11-203

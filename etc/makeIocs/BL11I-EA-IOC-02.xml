@@ -11,4 +11,9 @@
 	<ethercat.auto_EP2624_0002 DEVICE="BL11I-EA-ENV-02:SPIN:DO" PORT="GSBOX.2" SCAN="1 second" name="GS.DO1"/>
 	<userIO.ao DESC="Spinner speed" DRVH="100" DRVL="0" DTYP="asynInt32" EGU="%" EGUF="200" EGUL="-200" LINR="LINEAR" OUT="@asyn(GSBOX.1)AOOutputsChannel1.Analogoutput" P="BL11I-EA-ENV-02" PINI="YES" PREC="2" R=":SPEED" SCAN="1 second" name="GS.SPEED"/>
 	<userIO.bo DESC="Spinner control" DTYP="asynInt32" ONAM="Enabled" OUT="@asyn(GSBOX.2)Channel1.Output" P="BL11I-EA-ENV-02" PINI="YES" R=":SPIN:DISABLE" SCAN="1 second" ZNAM="Disabled" name="GS.DISABLE"/>
+	<ethercat.EthercatSlave master="ECATM" name="ERIO.0" position="DCS00022015" type_rev="EK1101 rev 0x00110000"/>
+	<ethercat.EthercatSlave master="ECATM" name="ERIO.1" position="DCS00024639" type_rev="EL2024 rev 0x00110000"/>
+	<ethercat.EthercatSlave master="ECATM" name="ERIO.2" position="DCS00023852" type_rev="EL9512 rev 0x00100000"/>
+	<ethercat.auto_EL2024_0010 DEVICE="BL11I-EA-LASER-01:SHUT" PORT="ERIO.1" SCAN="1 second"/>
+	<userIO.bo DTYP="asynInt32" ONAM="Open" OUT="@asyn(ERIO.1)Channel1.Output" P="BL11I-EA-LASER-01" R=":SHUT:CMD" SCAN="Passive" ZNAM="Closed" name="LSHUTTER"/>
 </components>

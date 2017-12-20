@@ -25,9 +25,10 @@ Notes on IOCS and uses
 | BL11I-CS-IOC-12 | i11-control       | terminal server monitoring          |
 | BL11I-EA-IOC-01 | VME               | Scaler cards                        |
 | BL11I-EA-IOC-02 | bl11i-ea-rserv-01 | Remote I/O gas spinner              |
+|                 |                   | and laser shutter control           |
 |                 |                   | (re-purposed, formerly mar345)      |
 | BL11I-EA-IOC-03 | i11-control       | Mythen, a.k.a. PSD detector         |
-| BL11I-EA-IOC-04 | bl11i-ea-rserv-01 | Remote I/O - laser shutter control  |
+| BL11I-EA-IOC-04 |                   | * slot available - removed for 3-37 |
 | BL11I-EA-IOC-05 | bl11i-ea-rserv-01 | Remote I/O - UV lamp control        |
 
 1/ Env serial includes MRI furnace and serial trigger (jira issue i11-23)

@@ -1,4 +1,7 @@
 Release notes
+3-37 EA4 removed - standa shutter ethercat components 
+         now moved to ioc BL11I-EA-IOC-02
+     EA2 add standa shutter control components re jira I11-235
 3-36 EA2 fix gas spinner analogue output voltage re jira I11-213
 3-35 CS12 fix number of ports for terminal server re jira I11-203
 3-34 CS4 comment out BHEAT components

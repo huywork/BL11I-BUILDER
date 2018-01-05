@@ -1,4 +1,6 @@
 Release notes
+3-38 VA1 change temperature warning level DCM temp4
+         re jira I11-238
 3-37 EA4 removed - standa shutter ethercat components 
          now moved to ioc BL11I-EA-IOC-02
      EA2 add standa shutter control components re jira I11-235

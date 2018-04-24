@@ -1,4 +1,5 @@
 Release notes
+3-39 VA1 change temperature warning level DCM temp3. Update temperature dependencies to v2-15 so warning levels are autosaved re jira i22-274
 3-38 VA1 change temperature warning level DCM temp4
          re jira I11-238
 3-37 EA4 removed - standa shutter ethercat components 

@@ -24,7 +24,7 @@ RACKFAN=    $(SUPPORT)/rackFan/2-7
 PRESSARR=   $(SUPPORT)/pressArr_subrec/1-0
 WATER=      $(SUPPORT)/water/1-20
 INTERLOCK=  $(SUPPORT)/interlock/1-26
-TEMPERATURE=$(SUPPORT)/temperature/2-13
+TEMPERATURE=$(SUPPORT)/temperature/2-15
 CMSION=     $(SUPPORT)/cmsIon/3-6
 VACUUMSPACE=$(SUPPORT)/vacuumSpace/3-22-3
 

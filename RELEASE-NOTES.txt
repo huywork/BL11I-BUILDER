@@ -1,5 +1,6 @@
 Release notes
-3-39 MO1 updated MAC alpha and 2-alpha default calibration offsets re jira i11-283
+next CS4 tidy up: removed lakeshore336 of dynaflow crystat re jira i11-288
+     MO1 updated MAC alpha and 2-alpha default calibration offsets re jira i11-283
      VA1 change temperature warning level DCM temp3. Update temperature dependencies to v2-15 so warning levels are autosaved re jira i11-274
 3-38 VA1 change temperature warning level DCM temp4
          re jira I11-238

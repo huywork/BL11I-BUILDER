@@ -1,4 +1,5 @@
 Release notes
+3-41 CS4 eurotherm2k max setpoint is now a setting re jira i11-289
 3-40 VA1 set skip_1 to false so temperature warnings are restored from autosave re jira i11-274
 3-39 CS4 tidy up: removed lakeshore336 of dynaflow cryostat re jira i11-288
      MO1 updated MAC alpha and 2-alpha default calibration offsets re jira i11-283

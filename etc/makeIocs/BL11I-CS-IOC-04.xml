@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-04" name="OB1"/>
+	<devIocStats.devIocStatsHelper ioc="BL11I-CS-IOC-04" name="OB1"/>
 	<pvlogging.PvLogging/>
 	<!--Agilent 33220A function generator-->
 	<asyn.AsynIP name="FGEN" noAutoConnect="True" port="172.23.111.166:5025"/>
@@ -40,9 +40,9 @@
 	<!--<asyn.AsynIP name="BHEAT2" noProcessEos="True" port="10.111.8.3:502"/>-->
 	<OXCS700.OXCS700 P="BL11I-CG-CSTRM-01" PORT="TS_1" Q="" gda_desc="Oxford Cryostream 1" gda_name="ENV.CSTRM1" name="BL11I-CG-CSTRM-01"/>
 	<OXCS700.OXCS700 P="BL11I-CG-CSTRM-02" PORT="TS_2" Q="" gda_desc="Oxford Cryostream 2" gda_name="ENV.CSTRM2" name="BL11I-CG-CSTRM-02"/>
-	<eurotherm2k.eurotherm2k GAD="0" LAD="1" P="BL11I-EA-BLOW-01" PORT="TS_3" Q="" RRMAX="0.2" SPMAX="1000" gda_desc="Cyberstar Blower" gda_name="ENV.BLOW1" name="BL11I-EA-BLOW-01"/>
-	<eurotherm2k.eurotherm2k EGU="C/min" GAD="0" LAD="1" P="BL11I-EA-FURN-01" PORT="TS_8" Q="" RRMAX="150" SPMAX="1600" gda_desc="MRI Furnace" gda_name="ENV.MRIFURN" name="BL11I-EA-FURN-01"/>
-	<eurotherm2k.eurotherm2k EGU="C/min" GAD="0" LAD="1" P="BL11I-EA-FURN-02" PORT="TS_9" Q="" RRMAX="50" SPMAX="1400" gda_desc="Stoe Furnace" gda_name="ENV.STOEFURN" name="BL11I-EA-FURN-02"/>
+	<eurotherm2k.eurotherm2k GAD="0" LAD="1" P="BL11I-EA-BLOW-01" PORT="TS_3" Q="" RRMAX="0.2" gda_desc="Cyberstar Blower" gda_name="ENV.BLOW1" name="BL11I-EA-BLOW-01"/>
+	<eurotherm2k.eurotherm2k EGU="C/min" GAD="0" LAD="1" P="BL11I-EA-FURN-01" PORT="TS_8" Q="" RRMAX="150" gda_desc="MRI Furnace" gda_name="ENV.MRIFURN" name="BL11I-EA-FURN-01"/>
+	<eurotherm2k.eurotherm2k EGU="C/min" GAD="0" LAD="1" P="BL11I-EA-FURN-02" PORT="TS_9" Q="" RRMAX="50" gda_desc="Stoe Furnace" gda_name="ENV.STOEFURN" name="BL11I-EA-FURN-02"/>
 	<OXCS700.OXPH700 P="BL11I-CG-CSTAT-01" PORT="TS_4" Q="" gda_desc="Phenix Cryostat 1" gda_name="ENV.CSTAT1" name="BL11I-CG-CSTAT-01"/>
 	<!--This is the I11 4k Cryostat-->
 	<!--<lakeshore340.lakeshore340 ADDR="12" LOOP="2" P="BL11I-CG-CSTAT-02" PORT="TS_5" SCAN="2" TEMPSCAN=".5" gda_desc="4k Cryostat" gda_name="ENV.CSTAT2" name="BL11I-CG-CSTAT-02"/>-->

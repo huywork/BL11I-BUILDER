@@ -1,6 +1,7 @@
 Release notes
 
-next VA1 added optics hutch temperatures re jira 190
+3-43 VA1 updated cmsIon from 3-6 to 4-5 re jira i11-276
+     VA1 added optics hutch temperatures re jira 190
 3-42 CS4 eurotherm2k max setpoint in the gui moved from main screen to config screen re jira i11-290
 3-41 CS4 eurotherm2k max setpoint is now a setting re jira i11-289
 3-40 VA1 set skip_1 to false so temperature warnings are restored from autosave re jira i11-274

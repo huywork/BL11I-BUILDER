@@ -25,6 +25,6 @@ PRESSARR=   $(SUPPORT)/pressArr_subrec/1-0
 WATER=      $(SUPPORT)/water/1-20
 INTERLOCK=  $(SUPPORT)/interlock/1-27
 TEMPERATURE=$(SUPPORT)/temperature/2-15
-CMSION=     $(SUPPORT)/cmsIon/3-6
+CMSION=     $(SUPPORT)/cmsIon/4-5
 VACUUMSPACE=$(SUPPORT)/vacuumSpace/3-22-3
 

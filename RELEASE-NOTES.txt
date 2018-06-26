@@ -1,5 +1,6 @@
 Release notes
 
+3-44 VA1 removed zone 3 temperature interlocks re jira i11-298
 3-43 VA1 updated cmsIon from 3-6 to 4-5 re jira i11-276
      VA1 added optics hutch temperatures re jira i11-190
 3-42 CS4 eurotherm2k max setpoint in the gui moved from main screen to config screen re jira i11-290

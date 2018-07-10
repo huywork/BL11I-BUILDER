@@ -1,5 +1,6 @@
 Release notes
 
+3-45 VA1 fixed RGA baud rate from 57600 to 38400 re jira i11-297
 3-44 VA1 removed zone 3 temperature interlocks re jira i11-298
 3-43 VA1 updated cmsIon from 3-6 to 4-5 re jira i11-276
      VA1 added optics hutch temperatures re jira i11-190

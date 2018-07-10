@@ -34,7 +34,7 @@
 	<DLS8515.DLS8515channel baud="57600" card="CARD41" channel="3" data="7" parity="E" stop="2"/>
 	<DLS8515.DLS8515channel baud="57600" card="CARD40" channel="2" data="7" parity="E" stop="2"/>
 	<!--RGA PC-->
-	<DLS8515.DLS8515channel baud="57600" card="CARD41" channel="6"/>
+	<DLS8515.DLS8515channel baud="38400" card="CARD41" channel="6"/>
 	<!--MKS gauge controllers-->
 	<DLS8515.DLS8515channel card="CARD40" channel="4" parity="N"/>
 	<DLS8515.DLS8515channel card="CARD40" channel="5" parity="E"/>

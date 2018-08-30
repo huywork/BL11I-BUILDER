@@ -1,5 +1,6 @@
 Release notes
 
+next CS4 updated OXCS700 dependency to v2-11 which should improve setting status packet type
 3-46 EA1 updated dependencies re jira i11-304
      EA1 fixed address of IE2 in EH2 from 33 to 45 re jira i11-304
 3-45 VA1 fixed RGA baud rate from 57600 to 38400 re jira i11-297

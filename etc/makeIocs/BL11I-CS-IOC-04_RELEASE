@@ -1,5 +1,5 @@
 STREAMDEVICE=     $(SUPPORT)/streamDevice/2-5dls5
-OXCS700=          $(SUPPORT)/OXCS700/2-10
+OXCS700=          $(SUPPORT)/OXCS700/2-11
 LAKESHORE336=     $(SUPPORT)/lakeshore336/2-9
 LAKESHORE340=     $(SUPPORT)/lakeshore340/2-3
 SYCOSHHOT=        $(SUPPORT)/SycosH-Hot/1-7

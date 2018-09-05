@@ -36,8 +36,6 @@
 	<asyn.AsynIP name="TS_14" port="172.23.111.5:7014"/>
 	<!--serial trigger jira i11-23-->
 	<asyn.AsynIP name="trigger" port="172.23.111.5:7015"/>
-	<!--Cyberstar Blower 2-->
-	<asyn.AsynIP name="TS_16" port="172.23.111.5:7016"/>
 	<!--<asyn.AsynIP name="BHEAT1" noProcessEos="True" port="10.111.8.1:502"/>-->
 	<!--<asyn.AsynIP name="BHEAT2" noProcessEos="True" port="10.111.8.3:502"/>-->
 	<OXCS700.OXCS700 P="BL11I-CG-CSTRM-01" PORT="TS_1" Q="" gda_desc="Oxford Cryostream 1" gda_name="ENV.CSTRM1" name="BL11I-CG-CSTRM-01"/>
@@ -47,10 +45,8 @@
 	<eurotherm2k.eurotherm2k EGU="C/min" GAD="0" LAD="1" P="BL11I-EA-FURN-02" PORT="TS_9" Q="" RRMAX="50" gda_desc="Stoe Furnace" gda_name="ENV.STOEFURN" name="BL11I-EA-FURN-02"/>
 	<!--<eurotherm2k.eurothermModbus ADDR="1" LINKTYPE="0" P="BL11I-EA-TEMPC-01" PORT="BHEAT1" Q="" name="ENV.BHEAT1"/>-->
 	<!--<eurotherm2k.eurothermModbus ADDR="1" LINKTYPE="0" P="BL11I-EA-TEMPC-02" PORT="BHEAT2" Q="" name="ENV.BHEAT1"/>-->
-	<eurotherm2k.eurothermModbus ADDR="1" MULTILOOP="0" P="BL11I-EA-BLOW-02" PORT="TS_16" Q="" name="BL11I-EA-BLOW-02"/>
 	<!--<eurotherm2k.eurothermModbusLoop ADDR="1" LOOP="1" P="BL11I-EA-TEMPC-01" PORT="BHEAT1" PREC="4" Q="" name="BHEAT1.LOOP1"/>-->
 	<!--<eurotherm2k.eurothermModbusLoop ADDR="1" LOOP="1" P="BL11I-EA-TEMPC-02" PORT="BHEAT2" PREC="4" Q="" name="BHEAT2.LOOP1"/>-->
-	<eurotherm2k.eurothermModbusLoop ADDR="1" P="BL11I-EA-BLOW-02" PORT="TS_16" PREC="2" Q=":LOOP1" RRMAX="0.2" SPMIN="0" gda_desc="Cyberstar Blower 2" gda_name="ENV.BLOW2" name="BL11I-EA-BLOW-02:LOOP1"/>
 	<OXCS700.OXPH700 P="BL11I-CG-CSTAT-01" PORT="TS_4" Q="" gda_desc="Phenix Cryostat 1" gda_name="ENV.CSTAT1" name="BL11I-CG-CSTAT-01"/>
 	<!--This is the I11 4k Cryostat-->
 	<!--<lakeshore340.lakeshore340 ADDR="12" LOOP="2" P="BL11I-CG-CSTAT-02" PORT="TS_5" SCAN="2" TEMPSCAN=".5" gda_desc="4k Cryostat" gda_name="ENV.CSTAT2" name="BL11I-CG-CSTAT-02"/>-->

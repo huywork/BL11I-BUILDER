@@ -1,5 +1,6 @@
 Release notes
 
+3-49 Added CS13 to Makefile, which was forgotten in previous release re jira i11-269
 3-48 CS13 new IOC for new cyberstar hot air blower re jira i11-269
      CS4 removed new cyberstar hot air blower which was moved to CS13 re jira i11-269
 3-47 CS4 added new cyberstart hot air blower as Cyberstar Blower 2 re jira i11-269

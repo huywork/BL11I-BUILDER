@@ -23,7 +23,7 @@ Notes on IOCS and uses
 | BL11I-CS-IOC-10 | i11-control       | Photon flux calculation             |
 | BL11I-CS-IOC-11 | i11-control       | Bar code reader                     |
 | BL11I-CS-IOC-12 | i11-control       | terminal server monitoring          |
-| BL11I-CS-IOC-13 | i11-control       | Cyberstart hot air blower 2         |
+| BL11I-CS-IOC-13 | i11-control       | Cyberstar hot air blower 2          |
 | BL11I-EA-IOC-01 | VME               | Scaler cards                        |
 | BL11I-EA-IOC-02 | bl11i-ea-rserv-01 | Remote I/O gas spinner              |
 |                 |                   | and laser shutter control           |

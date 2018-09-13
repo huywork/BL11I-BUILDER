@@ -1,5 +1,6 @@
 Release notes
 
+next CS15 new ioc for motion plc monitor re jira i11-323
 3-49 Added CS13 to Makefile, which was forgotten in previous release re jira i11-269
 3-48 CS13 new IOC for new cyberstar hot air blower re jira i11-269
      CS4 removed new cyberstar hot air blower which was moved to CS13 re jira i11-269

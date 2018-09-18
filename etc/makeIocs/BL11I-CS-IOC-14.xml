@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<devIocStats.devIocStatsHelper ioc="BL11I-CS-IOC-14" name="IOCS.CS14"/>
+	<pvlogging.PvLogging/>
+	<!--Oxford Cryostream 1-->
+	<asyn.AsynIP name="TS_1" port="172.23.111.5:7001"/>
+	<!--Oxford Cryostream 2-->
+	<asyn.AsynIP name="TS_2" port="172.23.111.5:7002"/>
+	<!--Phenix Cryostat-->
+	<asyn.AsynIP name="TS_4" port="172.23.111.5:7004"/>
+	<OXCS700.OXCS700 P="BL11I-CG-CSTRM-01" PORT="TS_1" Q="" gda_desc="Oxford Cryostream 1" gda_name="ENV.CSTRM1" name="BL11I-CG-CSTRM-01"/>
+	<OXCS700.OXCS700 P="BL11I-CG-CSTRM-02" PORT="TS_2" Q="" gda_desc="Oxford Cryostream 2" gda_name="ENV.CSTRM2" name="BL11I-CG-CSTRM-02"/>
+	<OXCS700.OXPH700 P="BL11I-CG-CSTAT-01" PORT="TS_4" Q="" gda_desc="Phenix Cryostat 1" gda_name="ENV.CSTAT1" name="BL11I-CG-CSTAT-01"/>
+</components>

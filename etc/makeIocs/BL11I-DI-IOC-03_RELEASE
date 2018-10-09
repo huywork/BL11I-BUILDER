@@ -1,6 +1,6 @@
-PVLOGGING=   $(SUPPORT)/pvlogging/1-2
-UTILITY=    $(SUPPORT)/utility/dls2-15
-AUTOSAVE=$(SUPPORT)/autosave/5-0dls1
-FFMPEGSERVER=$(SUPPORT)/ffmpegServer/2-1-1dls11
-ARAVISGIGE=$(SUPPORT)/aravisGigE/0-3-5dls2
-DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls7
+PVLOGGING=    $(SUPPORT)/pvlogging/1-2
+UTILITY=      $(SUPPORT)/utility/dls2-15
+AUTOSAVE=     $(SUPPORT)/autosave/5-0dls1
+FFMPEGSERVER= $(SUPPORT)/ffmpegServer/2-1-1dls11
+ARAVISGIGE=   $(SUPPORT)/aravisGigE/0-3-5dls2
+DEVIOCSTATS=  $(SUPPORT)/devIocStats/3-1-5dls7

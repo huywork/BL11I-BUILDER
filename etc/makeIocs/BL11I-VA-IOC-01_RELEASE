@@ -15,6 +15,7 @@ HOSTLINK=   $(SUPPORT)/HostLink/3-2
 MRFTIMING=  $(SUPPORT)/mrfTiming/2-4-1dls10
 
 # Devices
+DLSPLC=     $(SUPPORT)/dlsPLC/1-52
 VACUUMVALVE=$(SUPPORT)/vacuumValve/4-23
 MKS937A=    $(SUPPORT)/mks937a/2-88
 MKS937B=    $(SUPPORT)/mks937b/2-84

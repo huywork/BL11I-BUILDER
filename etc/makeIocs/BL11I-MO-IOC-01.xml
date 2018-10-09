@@ -171,11 +171,11 @@
 	<positioner.motorpositioner DESC="Position motor" MP="BPM2.OB1" PREC="5" Q=":P" VALA="0.5" VALB="19" VALC="38" VALD="0" VALE="0" VALF="0" VALG="0" VALH="0" VALI="0" VALJ="0" VALK="0" VALL="0" motor="BPM2.POSN" name="BPM2.OB2"/>
 	<positioner.motorpositioner DESC="Position motor" MP="BPM3.OB1" PREC="5" Q=":P" VALA="0.5" VALB="19" VALC="38" VALD="0" VALE="0" VALF="0" VALG="0" VALH="0" VALI="0" VALJ="0" VALK="0" VALL="0" motor="BPM3.POSN" name="BPM3.OB2"/>
 	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-PHDGN-01" Q=":PHD1" SGB0="32" SGB1="33" SGB2="34" SHIS="36" gda_desc="Diagnostic 1 Femto" gda_name="D1.AMP" name="D1.OB3"/>
-	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-IONC-04" Q=":PHD1" SGB0="37" SGB1="38" SGB2="39" SHIS="41" gda_desc="Ion Chamber 4 Femto" gda_name="IC4.AMP" name="IC4"/>
-	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-IONC-01" Q=":PHD1" SGB0="42" SGB1="43" SGB2="44" SHIS="46" gda_desc="Ion Chamber 1 Femto" gda_name="IC1.AMP" name="IC1"/>
-	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-IONC-02" Q=":PHD1" SGB0="48" SGB1="49" SGB2="50" SHIS="52" gda_desc="Ion Chamber 2 Femto" gda_name="IC2.AMP" name="IC2"/>
-	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-IONC-03" Q=":PHD1" SGB0="53" SGB1="54" SGB2="55" SHIS="57" gda_desc="Ion Chamber 3 Femto" gda_name="IC3.AMP" name="IC3"/>
-	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-IONC-05" Q=":PHD1" SGB0="58" SGB1="59" SGB2="60" SHIS="62" gda_desc="Ion Chamber 5 Femto" gda_name="IC5.AMP" name="IC5"/>
+	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-IONC-04" Q=":PHD1" SGB0="37" SGB1="38" SGB2="39" SHIS="41" gda_desc="Ion Chamber 4 Femto" gda_name="IC4.AMP" name="IC4.femto"/>
+	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-IONC-01" Q=":PHD1" SGB0="42" SGB1="43" SGB2="44" SHIS="46" gda_desc="Ion Chamber 1 Femto" gda_name="IC1.AMP" name="IC1.femto"/>
+	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-IONC-02" Q=":PHD1" SGB0="48" SGB1="49" SGB2="50" SHIS="52" gda_desc="Ion Chamber 2 Femto" gda_name="IC2.AMP" name="IC2.femto"/>
+	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-IONC-03" Q=":PHD1" SGB0="53" SGB1="54" SGB2="55" SHIS="57" gda_desc="Ion Chamber 3 Femto" gda_name="IC3.AMP" name="IC3.femto"/>
+	<femto.femto200 CGB0="70" CGB1="70" CGB2="70" CHIS="70" INITGAIN="0" P="BL11I-DI-IONC-05" Q=":PHD1" SGB0="58" SGB1="59" SGB2="60" SHIS="62" gda_desc="Ion Chamber 5 Femto" gda_name="IC5.AMP" name="IC5.femto"/>
 	<femto.femto_acdc200 CAC="70" P="BL11I-DI-PHDGN-01" Q=":PHD1" SAC="35" gda_name="D1.AMP"/>
 	<femto.femto_acdc200 CAC="70" P="BL11I-DI-IONC-04" Q=":PHD1" SAC="40" gda_name="IC4.AMP"/>
 	<femto.femto_acdc200 CAC="70" P="BL11I-DI-IONC-01" Q=":PHD1" SAC="45" gda_name="IC1.AMP"/>

@@ -1,6 +1,0 @@
-PVLOGGING=   $(SUPPORT)/pvlogging/1-3
-ARAVISGIGE=     $(SUPPORT)/aravisGigE/2-1dls5
-FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/3-1dls0-1
-DEVIOCSTATS=    $(SUPPORT)/devIocStats/3-1-5dls5
-AUTOSAVE=       $(SUPPORT)/autosave/5-0dls5
-ADUTIL=         $(SUPPORT)/adUtil/2-13

@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<components arch="linux-x86_64">
-	<devIocStats.ioc IOCNAME="BL11I-DI-IOC-04" name="CAMIOC"/>
-	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" name="EPICS_CA_MAX_ARRAY_BYTES" value="10000000"/>
-	<autosave.Autosave iocName="BL11I-DI-IOC-04" name="Camera IOC" path="/dls_sw/i11/epics/autosave"/>
-    <adUtil.gdaPlugins CAM="XEYE.CAM" P="BL11I-DI-XEYE-01" PORTPREFIX="XEYE" XSIZE="1292" YSIZE="964"/>
-	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="10.111.6.7" P="BL11I-DI-XEYE-01" PORT="XEYE.CAM" R=":CAM:" TIMEOUT="1"/>
-</components>

@@ -1,5 +1,6 @@
 Release notes
 
+next DI4 removed as it was not in use and never released (it was a separate IOC for X-Ray eye cam) re jira bc-835 
 3-50 CS4, CS14 removed Oxford Cryostreams and Phenix Cryostat from CS4 to new IOC CS14. Updated OXCS700 to v2-12 re jira i11-316
      CS15 new ioc for motion plc monitor re jira i11-323
 3-49 Added CS13 to Makefile, which was forgotten in previous release re jira i11-269

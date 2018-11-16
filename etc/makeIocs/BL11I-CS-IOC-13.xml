@@ -2,7 +2,7 @@
 <components arch="linux-x86">
 	<devIocStats.devIocStatsHelper ioc="BL11I-CS-IOC-13" name="IOCS.CS13"/>
 	<pvlogging.PvLogging/>
-	<eurothermModbus.eurotherm2k device="BL11I-EA-BLOW-02" ipaddress="172.23.111.5" modbus_prefix="MB1" port="TS_16" tcpport="7016"/>
+	<eurothermModbus.eurotherm2k device="BL11I-EA-BLOW-02" ipaddress="172.23.111.5" modbus_prefix="MB1" port="TS_18" tcpport="7018"/>
 	<eurothermModbus.eurotherm2kArchive device="BL11I-EA-BLOW-02" name="EUROARCH"/>
 	<eurothermModbus.eurotherm2kGui device="BL11I-EA-BLOW-02" name="EUROGUI"/>
 </components>

@@ -1,5 +1,6 @@
 Release notes
 
+3-52 CS13 updated eurothermModbus dependency to include disable comms PV re jira I11-338
 3-51 DI3 added adPython rotation to alignment cameras re jira i11-324
      DI4 removed as it was not in use and never released (it was a separate IOC for X-Ray eye cam) re jira bc-835 
 3-50 CS4, CS14 removed Oxford Cryostreams and Phenix Cryostat from CS4 to new IOC CS14. Updated OXCS700 to v2-12 re jira i11-316

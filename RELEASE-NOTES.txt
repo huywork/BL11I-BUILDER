@@ -1,5 +1,6 @@
 Release notes
 
+Next CS10 added devIocStats I11-326
 3-52 CS13 updated eurothermModbus dependency to include disable comms PV re jira I11-338
 3-51 DI3 added adPython rotation to alignment cameras re jira i11-324
      DI4 removed as it was not in use and never released (it was a separate IOC for X-Ray eye cam) re jira bc-835 

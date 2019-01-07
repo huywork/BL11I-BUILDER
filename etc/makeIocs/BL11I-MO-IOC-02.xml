@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="vxWorks-ppc604_long">
-	<devIocStats.ioc IOCNAME="BL11I-MO-IOC-02" name="MOIOC2"/>
+	<devIocStats.devIocStatsHelper ioc="BL11I-MO-IOC-02" name="MOIOC2"/>
 	<pvlogging.PvLogging/>
 	<IOCinfo.IOCinfo device="BL11I-MO-IOC-02"/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="300000"/>

@@ -1,5 +1,5 @@
-PVLOGGING=   $(SUPPORT)/pvlogging/1-2
-DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-5dls7
-STREAMS=    $(SUPPORT)/streamDevice/2-5dls2
-LAUDARE2XX= $(SUPPORT)/laudaRE2xx/1-12
-ZEBRA=      $(SUPPORT)/zebra/1-14
+PVLOGGING=   $(SUPPORT)/pvlogging/1-4
+DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-14dls3-0
+STREAMS=    $(SUPPORT)/streamDevice/2-5dls9
+LAUDARE2XX= $(WORK)/laudaRE2xx
+ZEBRA=      $(SUPPORT)/zebra/2-9

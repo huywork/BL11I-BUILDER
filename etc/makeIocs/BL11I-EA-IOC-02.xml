@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<devIocStats.ioc IOCNAME="BL11I-EA-IOC-02" name="IOC.EA2"/>
+	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-02" name="IOC.EA2"/>
 	<pvlogging.PvLogging/>
 	<ethercat.EthercatMaster master_index="0" name="ECATM" socket="/tmp/socket0"/>
 	<BL11I.auto_BL11I_gas_spinner_gui/>

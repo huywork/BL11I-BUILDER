@@ -1,0 +1,7 @@
+# Place any example specific dependencies here
+ARAVISGIGE=     $(SUPPORT)/aravisGigE/2-1dls11
+GDAPLUGINS=     $(SUPPORT)/gdaPlugins/1-1
+FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/3-1dls1-6
+
+DEVIOCSTATS=    $(SUPPORT)/devIocStats/3-1-14dls2-6
+AUTOSAVE=       $(SUPPORT)/autosave/5-0dls6

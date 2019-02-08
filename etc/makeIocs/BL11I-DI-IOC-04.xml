@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86">
+	<devIocStats.devIocStatsHelper ioc="BL11I-DI-IOC-04" name="DCAMIOC"/>
+	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="172.23.111.191" P="BL11I-DI-DCAM-03" PORT="DCAM3.CAM" R=":CAM:" TIMEOUT="1"/>
+	<gdaPlugins.gdaPlugins CAM="DCAM3.CAM" HTTP_PORT="8090" NELEMENTS="1341096" P="BL11I-DI-DCAM-03" PORTPREFIX="DCAM3" XSIZE="1926" YSIZE="1216"/>
+	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" name="EPICS_CA_MAX_ARRAY_BYTES" value="3000000"/>
+</components>

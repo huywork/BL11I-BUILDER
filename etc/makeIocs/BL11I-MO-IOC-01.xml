@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="vxWorks-ppc604_long">
 	<pvlogging.PvLogging/>
+	<BL11I.auto_BL11I_furnace_spinner name="FS1"/>
 	<devIocStats.devIocStatsHelper ioc="BL11I-MO-IOC-01" name="MOIOC1"/>
 	<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-01" ip="172.23.111.254" name="IOCS.MO1AS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
 	<tpmac.pmacVmeConfig name="PMAC_S0"/>

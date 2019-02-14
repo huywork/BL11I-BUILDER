@@ -1,5 +1,6 @@
 Release notes
 
+3-56 DI4 moved XEYE, add CAM rotation re jira I11-368
 3-55 MO1 added furnace spinner (ref. to BL11I/) re jira I11-355
 3-54 VA1 rebuilding re jira I11-364
 3-53 CS10 added devIocStats I11-326

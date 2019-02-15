@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-07" name="IOCS.CS7"/>
+	<devIocStats.devIocStatsHelper ioc="BL11I-CS-IOC-07" name="IOCS.CS7"/>
 	<pvlogging.PvLogging/>
 	<asyn.AsynIP name="MFC1port" port="bl11i-ea-tserv-02-bl:7001"/>
 	<asyn.AsynIP name="BPRport" port="bl11i-ea-tserv-02-bl:7002"/>

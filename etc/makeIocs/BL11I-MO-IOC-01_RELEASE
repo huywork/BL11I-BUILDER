@@ -16,4 +16,4 @@ GENERIC=          $(SUPPORT)/generic/2-39
 MRFTIMING=        $(SUPPORT)/mrfTiming/2-4-1dls10
 BL11I=            $(WORK)/BL11I
 TIMINGTEMPLATES=  $(SUPPORT)/TimingTemplates/6-11
-DEVIOCSTATS=      $(SUPPORT)/devIocStats/3-1-14dls3-0
+DEVIOCSTATS=      $(SUPPORT)/devIocStats/3-1-14dls3-1

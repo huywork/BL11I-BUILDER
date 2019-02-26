@@ -1,5 +1,6 @@
 Release notes
 
+3-58 DI4 fix XEYE and furnace cameras pipeline
 3-57 DI4 fix ports
 3-56 DI4 moved XEYE, add CAM rotation re jira I11-368
 3-55 MO1 added furnace spinner (ref. to BL11I/) re jira I11-355

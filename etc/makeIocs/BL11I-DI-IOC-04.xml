@@ -5,8 +5,8 @@
 	<autosave.Autosave bl="True" iocName="BL11I-DI-IOC-04" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
 	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="172.23.111.191" P="BL11I-DI-DCAM-03" PORT="DCAM3.CAM" R=":CAM:" TIMEOUT="1"/>
 	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="bl11i-di-xeye-01" P="BL11I-DI-XEYE-01" PORT="XEYE.CAM" R=":CAM:" TIMEOUT="1"/>
-	<adUtil.gdaPlugins CAM="DCAM3.CAM" P="BL11I-DI-DCAM-03" PORTPREFIX="DCAM3" XSIZE="1926" YSIZE="1216"/>
-	<adUtil.gdaPlugins CAM="XEYE.CAM" NELEMENTS="1228800" P="BL11I-DI-XEYE-01" PORTPREFIX="XEYE" XSIZE="1280" YSIZE="960"/>
+	<adUtil.gdaPlugins CAM="DCAM3.CAM" HTTP_PORT="8083" P="BL11I-DI-DCAM-03" PORTPREFIX="DCAM3" XSIZE="1926" YSIZE="1216"/>
+	<adUtil.gdaPlugins CAM="XEYE.CAM" HTTP_PORT="8084" NELEMENTS="1228800" P="BL11I-DI-XEYE-01" PORTPREFIX="XEYE" XSIZE="1280" YSIZE="960"/>
 	<adPython.adPythonPlugin ADDR="0" NDARRAY_PORT="DCAM3.CAM" P="BL11I-DI-DCAM-03" PORT="DCAM3.ROT" R=":ROT:" TIMEOUT="1" classname="Rotate"/>
 	<adPython.adPythonPlugin ADDR="0" NDARRAY_PORT="XEYE.CAM" P="BL11I-DI-XEYE-01" PORT="XEYE.ROT" R=":ROT:" TIMEOUT="1" classname="Rotate"/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" name="EPICS_CA_MAX_ARRAY_BYTES" value="3000000"/>

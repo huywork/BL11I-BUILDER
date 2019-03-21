@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86">
-	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-08" name="IOCS.CS8"/>
+	<devIocStats.devIocStatsHelper ioc="BL11I-CS-IOC-08" name="IOCS.CS8"/>
 	<pvlogging.PvLogging/>
 	<asyn.AsynIP baud="19200" name="MFC1port" port="bl11i-ea-tserv-03:7001 COM"/>
 	<asyn.AsynIP baud="19200" name="MFC2port" port="bl11i-ea-tserv-03:7002 COM"/>
@@ -10,4 +10,12 @@
 	<alicatGasFlow.alicatMassCtrl HIGH="0" HIHI="0" LOLO="0" LOW="0" MAXF="1" P="BL11I-EA-GIR-02" PORT="MFC2port" Q=":MFC2" name="MFC-2"/>
 	<alicatGasFlow.alicatMassCtrl HIGH="0" HIHI="0" LOLO="0" LOW="0" MAXF="1" P="BL11I-EA-GIR-02" PORT="MFC3port" Q=":MFC3" name="MFC-3"/>
 	<alicatGasFlow.alicatMassCtrl HIGH="0" HIHI="0" LOLO="0" LOW="0" MAXF="1" P="BL11I-EA-GIR-02" PORT="MFC4port" Q=":MFC4" name="MFC-4"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-GIR-02:MFC1:MASS:FLOW:RD.PREC" value="4"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-GIR-02:MFC1:VOL:FLOW:RD.PREC" value="4"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-GIR-02:MFC2:MASS:FLOW:RD.PREC" value="4"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-GIR-02:MFC2:VOL:FLOW:RD.PREC" value="4"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-GIR-02:MFC3:MASS:FLOW:RD.PREC" value="4"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-GIR-02:MFC3:VOL:FLOW:RD.PREC" value="4"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-GIR-02:MFC4:MASS:FLOW:RD.PREC" value="4"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-GIR-02:MFC4:VOL:FLOW:RD.PREC" value="4"/>
 </components>

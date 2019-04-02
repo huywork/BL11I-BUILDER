@@ -1,5 +1,5 @@
 PVLOGGING=   $(SUPPORT)/pvlogging/1-4
-ETHERCAT = $(WORK)/ethercat
+ETHERCAT = $(SUPPORT)/ethercat/7-0
 USERIO = $(SUPPORT)/userIO/2-28
-DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-14dls3-0
+DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-14dls3-1
 BL11I = $(WORK)/BL11I

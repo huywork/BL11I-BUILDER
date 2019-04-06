@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<components arch="linux-x86">
+<components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-CS-IOC-13" name="IOCS.CS13"/>
 	<eurothermModbus.Eurotherm2K device="BL11I-EA-BLOW-02" ipaddress="172.23.111.5" name="HB2" port="TS_18" tcpport="7018"/>
 	<pvlogging.PvLogging/>

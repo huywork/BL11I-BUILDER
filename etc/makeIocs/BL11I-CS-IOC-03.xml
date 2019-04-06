@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<components arch="linux-x86">
+<components arch="linux-x86_64">
 	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-03" name="CSIOC3"/>
 	<pvlogging.PvLogging/>
 	<asyn.AsynIP name="DIIOC1port" port="localhost:7006"/>

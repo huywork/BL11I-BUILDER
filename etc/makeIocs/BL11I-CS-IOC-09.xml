@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<components arch="linux-x86">
+<components arch="linux-x86_64">
 	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-09" name="CSIOC2"/>
 	<autosave.Autosave bl="True" iocName="BL11I-CS-IOC-09" name="BL11I-CS-IOC-09.AS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
 	<pvlogging.PvLogging/>

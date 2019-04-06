@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<components arch="linux-x86">
+<components arch="linux-x86_64">
 	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-05" name="CSIOC5"/>
 	<pvlogging.PvLogging/>
 	<asyn.AsynIP name="nx100p" port="172.23.111.165:80"/>

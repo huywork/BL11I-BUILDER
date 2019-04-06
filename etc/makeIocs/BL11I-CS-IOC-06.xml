@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<components arch="linux-x86">
+<components arch="linux-x86_64">
 	<devIocStats.ioc IOCNAME="BL11I-CS-IOC-06" name="IOCS.CS6"/>
 	<pvlogging.PvLogging/>
 	<asyn.AsynIP name="ty_lauda" port="172.23.226.211:7016"/>

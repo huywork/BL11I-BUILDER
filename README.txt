@@ -11,6 +11,7 @@ Notes on IOCS and uses
 | BL11I-DI-IOC-01 | BL11I-DI-SERV-01  | GigE cameras                           |
 | BL11I-DI-IOC-02 | BL11I-DI-SERV-01  | OAV camera and zoom                    |
 | BL11I-DI-IOC-03 | BL11I-DI-SERV-01  | GigE cameras for diagnostics (AL)      |
+| BL11I-DI-IOC-04 | BL11I-DI-SERV-01  | GigE cameras XEye and DCam 3           |
 | BL11I-CS-IOC-01 | i11-control       | Rebin program                          |
 | BL11I-CS-IOC-02 | i11-control       | Dynaflow cryostat                      |
 | BL11I-CS-IOC-03 | BL11I-DI-SERV-01  | procServ Control                       |

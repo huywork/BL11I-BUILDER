@@ -3,8 +3,11 @@
 	<pmac.pmacAsynIPPort IP="172.23.111.111" name="BRICK7port"/>
 	<pmac.GeoBrick P="BL21B-MO-DCM-01" Port="BRICK7port" name="Brick7"/>
 	<pmac.dls_pmac_asyn_motor ACCL="1" ADDR="1" DESC="Bragg" DHLM="27" DLLM="-4" EGU="deg" M=":BRAGG" MRES="0.000001" P="BL21B-MO-DCM-01" PORT="Brick7" PREC="4" SPORT="BRICK7port" TWV="0.1" VELO="0.7" name="DCM.BRAGG"/>
-	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="3" DESC="Vertical" DHLM="4.9" DLLM="-5.7" EGU="mm" M=":PERP" MRES="0.0000001" P="BL21B-MO-DCM-01" PORT="Brick7" PREC="4" SPORT="BRICK7port" TWV="0.1" VELO="0.3" name="DCM.PERP"/>
-	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="5" DESC="Pitch" DHLM="-50" DLLM="-2600" EGU="mdeg" M=":PITCH" MRES="0.002" P="BL21B-MO-DCM-01" PORT="Brick7" PREC="2" SPORT="BRICK7port" TWV="0.1" VELO="80" name="DCM.PITCH"/>
-	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="6" DESC="Roll" DHLM="0" DLLM="-2700" EGU="mdeg" M=":ROLL" MRES="0.002" P="BL21B-MO-DCM-01" PORT="Brick7" PREC="2" SPORT="BRICK7port" TWV="0.1" VELO="40" name="DCM.ROLL"/>
-	<pmac.autohome GRP2="Bragg" GRP3="Perpendicular" GRP4="Pitch" GRP5="Roll" P="BL21B-MO-DCM-01" PLC="11" PORT="Brick7" name="DCM"/>
+	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="3" DESC="Vertical" DHLM="4.9" DLLM="-5.7" EGU="mm" M=":PERP" MRES="0.0001" P="BL21B-MO-DCM-01" PORT="Brick7" PREC="4" SPORT="BRICK7port" TWV="0.1" VELO="0.3" name="DCM.PERP"/>
+	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="5" DESC="Pitch" DHLM="5" DLLM="-2605" EGU="mdeg" M=":PITCH" MRES="0.002" P="BL21B-MO-DCM-01" PORT="Brick7" PREC="2" SPORT="BRICK7port" TWV="0.1" VELO="80" name="DCM.PITCH"/>
+	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="6" DESC="Roll" DHLM="2" DLLM="-2700" EGU="mdeg" M=":ROLL" MRES="0.002" P="BL21B-MO-DCM-01" PORT="Brick7" PREC="2" SPORT="BRICK7port" TWV="0.1" VELO="40" name="DCM.ROLL"/>
+	<pmac.CS CS="2" Controller="Brick7" name="BRICK7CS2"/>
+	<pmac.dls_pmac_cs_asyn_motor ADDR="7" DESC="Energy (compound)" DHLM="10000" DLLM="-10000" EGU="keV" M=":ENERGY" MRES="0.0001" P="BL21B-MO-DCM-01" PORT="BRICK7CS2" PREC="4" TWV="1" VELO="0.1"/>
+	<pmac.dls_pmac_cs_asyn_motor ADDR="8" DESC="Offset (compound)" DHLM="10000" DLLM="-10000" EGU="mm" M=":OFFSET" MRES="0.0001" P="BL21B-MO-DCM-01" PORT="BRICK7CS2" PREC="4" TWV="1" VELO="0.2"/>
+	<pmac.autohome GRP2="Bragg" GRP3="Perpendicular" GRP4="Pitch" GRP5="Roll" P="BL21B-MO-DCM-01" PLC="11" PORT="Brick7" name="DCM.HOME"/>
 </components>

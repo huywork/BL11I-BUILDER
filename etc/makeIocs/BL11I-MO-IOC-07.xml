@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
+	<utility.pingWait ip="172.23.111.111"/>
 	<pmac.pmacAsynIPPort IP="172.23.111.111" name="BRICK7port"/>
 	<pmac.GeoBrick P="BL11I-MO-DCM-01" Port="BRICK7port" name="Brick7"/>
 	<pmac.dls_pmac_asyn_motor ACCL="1" ADDR="1" DESC="Bragg" DHLM="27" DLLM="-4" EGU="deg" M=":BRAGG" MRES="0.000001" P="BL11I-MO-DCM-01" PORT="Brick7" PREC="4" SPORT="BRICK7port" TWV="0.1" VELO="0.7" name="DCM.BRAGG"/>

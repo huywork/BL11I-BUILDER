@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<devIocStats.ioc IOCNAME="BL11I-DI-IOC-01" name="DIIOC"/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" name="EPICS_CA_MAX_ARRAY_BYTES" value="10000000"/>
+	<devIocStats.devIocStatsHelper guiTags="True" ioc="BL11I-DI-IOC-01" name="DIIOC" scanMonitor="True" screen="ioc_stats_softdls.edl"/>
 	<pvlogging.PvLogging/>
 	<autosave.Autosave bl="True" iocName="BL11I-DI-IOC-01" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
 	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Mako_1_52" ID="10.111.6.1" P="BL11I-DI-PHDGN-01" PORT="D1.CAM.CAM" R=":CAM:" TIMEOUT="1"/>

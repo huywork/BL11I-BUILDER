@@ -1,7 +1,7 @@
-PVLOGGING=   $(SUPPORT)/pvlogging/1-2
-UTILITY=    $(SUPPORT)/utility/dls2-15
-AUTOSAVE=$(SUPPORT)/autosave/5-0
-FFMPEGSERVER=$(SUPPORT)/ffmpegServer/2-1-1dls1
-ARAVISGIGE=$(SUPPORT)/aravisGigE/0-1-15dls8
-DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-5dls7
-FZOOM=$(SUPPORT)/fzoom/2-2-1
+PVLOGGING=   $(SUPPORT)/pvlogging/1-3
+UTILITY=    $(SUPPORT)/utility/dls2-17
+AUTOSAVE=$(SUPPORT)/autosave/5-0dls6
+FFMPEGSERVER=$(SUPPORT)/ffmpegServer/3-1dls1-9
+ARAVISGIGE=$(SUPPORT)/aravisGigE/2-1dls11-1
+DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-14dls2-6
+FZOOM=$(SUPPORT)/fzoom/2-4

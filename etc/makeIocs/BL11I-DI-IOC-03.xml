@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
+	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="6000000"/>
 	<devIocStats.devIocStatsHelper ioc="BL11I-DI-IOC-03" name="DIIOC3"/>
 	<pvlogging.PvLogging/>
 	<autosave.Autosave bl="True" iocName="BL11I-DI-IOC-03" path="/dls_sw/i11/epics/autosave" skip_1="True"/>

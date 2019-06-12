@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<devIocStats.devIocStatsHelper ioc="BL11I-DI-IOC-05" name="DI5IOC"/>
+	<FINS.FINSUDPInit ip="172.23.111.110" name="fins_VLVCC1"/>
+	<dlsPLC.read100 century="0" device="BL11I-DI-VLVCC-01" name="RD1.0" port="fins_VLVCC1"/>
+	<dlsPLC.read100 century="1" device="BL11I-DI-VLVCC-01" name="RD1.1" port="fins_VLVCC1"/>
+	<dlsPLC.read100 century="2" device="BL11I-DI-VLVCC-01" name="RD1.2" port="fins_VLVCC1"/>
+	<dlsPLC.read100 century="5" device="BL11I-DI-VLVCC-01" name="RD1.5" port="fins_VLVCC1"/>
+	<dlsPLC.temperature desc="Crystal 1 Holder" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-1" offset="10" port="fins_VLVCC1" temp=":PT100-1" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.temperature desc="Crystal 1" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-2" offset="11" port="fins_VLVCC1" temp=":PT100-2" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.temperature desc="Crystal 2" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-3" offset="12" port="fins_VLVCC1" temp=":PT100-3" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.temperature desc="Crystal 2 Holder" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-4" offset="13" port="fins_VLVCC1" temp=":PT100-4" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
+	<!--<dlsPLC.temperature desc="PT100-5" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-5" offset="14" port="fins_VLVCC1" temp=":PT100-5" tmpcc="BL11I-DI-VLVCC-01"/>-->
+	<!--<dlsPLC.temperature desc="PT100-6" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-6" offset="15" port="fins_VLVCC1" temp=":PT100-6" tmpcc="BL11I-DI-VLVCC-01"/>-->
+	<!--<dlsPLC.temperature desc="PT100-7" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-7" offset="16" port="fins_VLVCC1" temp=":PT100-7" tmpcc="BL11I-DI-VLVCC-01"/>-->
+	<!--<dlsPLC.temperature desc="PT100-8" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-8" offset="17" port="fins_VLVCC1" temp=":PT100-8" tmpcc="BL11I-DI-VLVCC-01"/>-->
+	<dlsPLC.temperature desc="Gap Motor" device="BL11I-DI-DCM-01" high="90" hihi="110" hopr="110" lolo="0" lopr="0" low="0" name="TC-1" offset="18" port="fins_VLVCC1" temp=":TC-1" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
+	<!--<dlsPLC.temperature desc="TC-2" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="TC-2" offset="19" port="fins_VLVCC1" temp=":TC-2" tmpcc="BL11I-DI-VLVCC-01"/>-->
+	<!--<dlsPLC.temperature desc="TC-3" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="TC-3" offset="20" port="fins_VLVCC1" temp=":TC-3" tmpcc="BL11I-DI-VLVCC-01"/>-->
+	<!--<dlsPLC.temperature desc="TC-4" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="TC-4" offset="21" port="fins_VLVCC1" temp=":TC-4" tmpcc="BL11I-DI-VLVCC-01"/>-->
+	<dlsPLC.readInt16 P="BL11I-DI-DCM-01" Q=":H1:TTEMP" addr="153" name="D153" vlvcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.readInt16 P="BL11I-DI-DCM-01" Q=":H2:TTEMP" addr="157" name="D157" vlvcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.readInt16 P="BL11I-DI-DCM-01" Q=":H1:OUTP" addr="500" name="D500" vlvcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.readInt16 P="BL11I-DI-DCM-01" Q=":H2:OUTP" addr="501" name="D501" vlvcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H1:SP" addr="14" name="D14" port="fins_VLVCC1"/>
+	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:SP" addr="24" name="D24" port="fins_VLVCC1"/>
+	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H1:UTSP" addr="122" name="D122" port="fins_VLVCC1"/>
+	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:UTSP" addr="123" name="D123" port="fins_VLVCC1"/>
+	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H1:PG" addr="150" name="D150" port="fins_VLVCC1"/>
+	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H1:IG" addr="151" name="D151" port="fins_VLVCC1"/>
+	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H1:DG" addr="152" name="D152" port="fins_VLVCC1"/>
+	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:PG" addr="154" name="D154" port="fins_VLVCC1"/>
+	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:IG" addr="155" name="D155" port="fins_VLVCC1"/>
+	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:DG" addr="156" name="D156" port="fins_VLVCC1"/>
+	<dlsPLC.readEnum P="BL11I-DI-DCM-01" Q=":H1:C:RBV" STR0="Start Heating Loop" STR1="Stop Heating Loop" STR2="Reset Interlocks Request" STR3="PID Autotune Request" STR4="Stop Autotune Request" VAL0="0" VAL1="1" VAL2="2" VAL3="3" VAL4="4" VAL5="5" addr="11" name="D11" vlvcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.readEnum P="BL11I-DI-DCM-01" Q=":H1:OIR" STR0="Loop disabled" STR1="PID Loop Off" STR2="PID Loop On" STR4="" STR5="" VAL0="0" VAL1="1" VAL2="2" VAL3="3" VAL4="4" VAL5="5" addr="12" name="D12" vlvcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.readEnum P="BL11I-DI-DCM-01" Q=":H1:FAIL" STR0="Status OK" STR1="Heater under temperature" STR2="N/A" STR3="Sensor failed" addr="19" name="D19" vlvcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.readEnum P="BL11I-DI-DCM-01" Q=":H2:C:RBV" STR0="Start Heating Loop" STR1="Stop Heating Loop" STR2="Reset Interlocks Request" STR3="PID Autotune Request" STR4="Stop Autotune Request" VAL0="0" VAL1="1" VAL2="2" VAL3="3" VAL4="4" VAL5="5" addr="21" name="D21" vlvcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.readEnum P="BL11I-DI-DCM-01" Q=":H2:OIR" STR0="Loop disabled" STR1="PID Loop Off" STR2="PID Loop On" STR4="" STR5="" VAL0="0" VAL1="1" VAL2="2" VAL3="3" VAL4="4" VAL5="5" addr="22" name="D22" vlvcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.readEnum P="BL11I-DI-DCM-01" Q=":H2:FAIL" STR0="Status OK" STR1="Heater under temperature" STR2="N/A" STR3="Sensor failed" addr="29" name="D29" vlvcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.writeEnum P="BL11I-DI-DCM-01" Q=":H1:C" STR0="Start Heating Loop" STR1="Stop Heating Loop" STR2="Reset Interlocks Request" STR3="PID Autotune Request" STR4="Stop Autotune Request" VAL0="0" VAL1="1" VAL2="2" VAL3="3" VAL4="4" VAL5="5" addr="10" name="D10" port="fins_VLVCC1" timeout="0"/>
+	<dlsPLC.writeEnum P="BL11I-DI-DCM-01" Q=":H2:C" STR0="Start Heating Loop" STR1="Stop Heating Loop" STR2="Reset Interlocks Request" STR3="PID Autotune Request" STR4="Stop Autotune Request" VAL0="0" VAL1="1" VAL2="2" VAL3="3" VAL4="4" VAL5="5" addr="20" name="D20" port="fins_VLVCC1" timeout="0"/>
+	<dlsPLC.interlock addr="10" desc="Crystal 1 Heater" device="BL11I-DI-VLVCC-01" ilk0="Sensor OK" ilk1="Temp High" ilk2="Temp Low" interlock=":INT1" name="VLVCC1.ILK1" port="fins_VLVCC1"/>
+	<dlsPLC.interlock addr="20" desc="Crystal 2 Heater" device="BL11I-DI-VLVCC-01" ilk0="Sensor OK" ilk1="Temp High" ilk2="Temp Low" interlock=":INT2" name="VLVCC1.ILK2" port="fins_VLVCC1"/>
+	<dlsPLC.interlock addr="30" desc="Motion O/T" device="BL11I-DI-VLVCC-01" ilk0="Bragg Positive" ilk1="Bragg Negative" ilk2="Pitch Negative" ilk3="Pitch Positive" ilk4="Gap Positive" ilk5="Gap Negative" ilk6="Roll Positive" ilk7="Roll Negative" ilk8="Vacuum OK" interlock=":INT3" name="VLVCC1.ILK3" port="fins_VLVCC1"/>
+	<dlsPLC.interlock addr="40" desc="Temp &amp; Water" device="BL11I-DI-VLVCC-01" ilk0="C1 Holder Temp OK" ilk1="C1 Temp OK" ilk2="C2 Temp OK" ilk3="C2 Holder Temp OK" interlock=":INT4" name="VLVCC1.ILK4" port="fins_VLVCC1"/>
+</components>

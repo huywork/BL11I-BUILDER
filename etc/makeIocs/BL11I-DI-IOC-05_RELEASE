@@ -1,0 +1,12 @@
+#AJFWORK = /dls_sw/work/R3.14.12.3/support/ajf67
+
+DLSPLC=       $(SUPPORT)/dlsPLC/1-51-1dls5
+#DLSPLC=      $(AJFWORK)/I19DCM/dlsPLC/1-31
+BUSY=         $(SUPPORT)/busy/1-6-1dls1
+ASYN=         $(SUPPORT)/asyn/4-31
+STREAMDEVICE= $(SUPPORT)/streamDevice/2-5dls5
+FINS=         $(SUPPORT)/FINS/3-7-1
+DEVIOCSTATS=  $(SUPPORT)/devIocStats/3-1-14dls2-6
+AUTOSAVE=     $(SUPPORT)/autosave/5-0dls6
+
+#BLGUI=        $(AJFWORK)/BLGui

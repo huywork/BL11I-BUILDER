@@ -15,4 +15,5 @@
 	<pmac.autohome GRP2="Bragg" GRP3="Perpendicular" GRP4="Pitch" GRP5="Roll" P="BL11I-MO-DCM-01" PLC="11" PORT="Brick7" name="DCM.HOME"/>
 	<records.scalcout CALC="PRINTF('enable plc %d', A)" DTYP="Soft Channel" INPA="6" OUT="BL11I-MO-STEP-07:enablePLC.AOUT PP" record="BL11I-MO-STEP-07:enable6:scalcout"/>
 	<records.asyn PORT="BRICK7port" record="BL11I-MO-STEP-07:enablePLC"/>
+	<records.calc ACKT="NO" CALC="(A|B|C|D|E|F|G|H|I|J|K|L)&gt;0?1:0" INPA="BL11I-MO-DCM-01:BRAGG.MOVN MS" INPB="BL19I-MO-DCM-01:PERP.MOVN MS" INPC="BL11I-MO-DCM-01:PITCH.MOVN MS" INPD="BL11I-MO-DCM-01:ROLL.MOVN MS" INPE="BL11I-MO-DCM-01:ENERGY.MOVN MS" INPF="BL11I-MO-DCM-01:OFFSET.MOVN MS" PHAS="2" SCAN="1 second" name="Device Status" record="BL11I-MO-DCM-01:DEVSTA"/>
 </components>

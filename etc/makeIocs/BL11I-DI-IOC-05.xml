@@ -32,8 +32,12 @@
 	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:PG" addr="154" name="D154" port="fins_VLVCC1"/>
 	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:IG" addr="155" name="D155" port="fins_VLVCC1"/>
 	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:DG" addr="156" name="D156" port="fins_VLVCC1"/>
+	<records.ao EGU="C" FLNK="BL11I-DI-DCM-01:H1:UTSP:CALC" PREC="1" record="BL11I-DI-DCM-01:H1:UTSP:IN"/>
+	<records.ao EGU="C" FLNK="BL11I-DI-DCM-01:H2:UTSP:CALC" PREC="1" record="BL11I-DI-DCM-01:H2:UTSP:IN"/>
 	<records.ao EGU="C" FLNK="BL11I-DI-DCM-01:H1:SP:CALC" PREC="1" record="BL11I-DI-DCM-01:H1:SP:IN"/>
 	<records.ao EGU="C" FLNK="BL11I-DI-DCM-01:H2:SP:CALC" PREC="1" record="BL11I-DI-DCM-01:H2:SP:IN"/>
+	<records.calcout CALC="(A+273.1)*10" INPA="BL11I-DI-DCM-01:H1:UTSP:IN" OUT="BL11I-DI-DCM-01:H1:UTSP PP" record="BL11I-DI-DCM-01:H1:UTSP:CALC"/>
+	<records.calcout CALC="(A+273.1)*10" INPA="BL11I-DI-DCM-01:H2:UTSP:IN" OUT="BL11I-DI-DCM-01:H2:UTSP PP" record="BL11I-DI-DCM-01:H2:UTSP:CALC"/>
 	<records.calcout CALC="(A+273.1)*10" INPA="BL11I-DI-DCM-01:H1:SP:IN" OUT="BL11I-DI-DCM-01:H1:SP PP" record="BL11I-DI-DCM-01:H1:SP:CALC"/>
 	<records.calcout CALC="(A+273.1)*10" INPA="BL11I-DI-DCM-01:H2:SP:IN" OUT="BL11I-DI-DCM-01:H2:SP PP" record="BL11I-DI-DCM-01:H2:SP:CALC"/>
 	<records.calc CALC="(A/10.0)-273.1" EGU="C" INPA="BL11I-DI-DCM-01:H1:TTEMP:GET CP MS" PREC="1" record="BL11I-DI-DCM-01:H1:TTEMP:CALC"/>

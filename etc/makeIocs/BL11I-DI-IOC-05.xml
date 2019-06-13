@@ -32,6 +32,12 @@
 	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:PG" addr="154" name="D154" port="fins_VLVCC1"/>
 	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:IG" addr="155" name="D155" port="fins_VLVCC1"/>
 	<dlsPLC.writeInt16 P="BL11I-DI-DCM-01" Q=":H2:DG" addr="156" name="D156" port="fins_VLVCC1"/>
+	<records.ao EGU="C" FLNK="BL11I-DI-DCM-01:H1:SP:CALC" PREC="1" record="BL11I-DI-DCM-01:H1:SP:IN"/>
+	<records.ao EGU="C" FLNK="BL11I-DI-DCM-01:H2:SP:CALC" PREC="1" record="BL11I-DI-DCM-01:H2:SP:IN"/>
+	<records.calcout CALC="(A+273.1)*10" INPA="BL11I-DI-DCM-01:H1:SP:IN" OUT="BL11I-DI-DCM-01:H1:SP PP" record="BL11I-DI-DCM-01:H1:SP:CALC"/>
+	<records.calcout CALC="(A+273.1)*10" INPA="BL11I-DI-DCM-01:H2:SP:IN" OUT="BL11I-DI-DCM-01:H2:SP PP" record="BL11I-DI-DCM-01:H2:SP:CALC"/>
+	<records.calc CALC="(A/10.0)-273.1" EGU="C" INPA="BL11I-DI-DCM-01:H1:TTEMP:GET CP MS" PREC="1" record="BL11I-DI-DCM-01:H1:TTEMP:CALC"/>
+	<records.calc CALC="(A/10.0)-273.1" EGU="C" INPA="BL11I-DI-DCM-01:H2:TTEMP:GET CP MS" PREC="1" record="BL11I-DI-DCM-01:H2:TTEMP:CALC"/>
 	<dlsPLC.readEnum P="BL11I-DI-DCM-01" Q=":H1:C:RBV" STR0="Start Heating Loop" STR1="Stop Heating Loop" STR2="Reset Interlocks Request" STR3="PID Autotune Request" STR4="Stop Autotune Request" VAL0="0" VAL1="1" VAL2="2" VAL3="3" VAL4="4" VAL5="5" addr="11" name="D11" vlvcc="BL11I-DI-VLVCC-01"/>
 	<dlsPLC.readEnum P="BL11I-DI-DCM-01" Q=":H1:OIR" STR0="Loop disabled" STR1="PID Loop Off" STR2="PID Loop On" STR4="" STR5="" VAL0="0" VAL1="1" VAL2="2" VAL3="3" VAL4="4" VAL5="5" addr="12" name="D12" vlvcc="BL11I-DI-VLVCC-01"/>
 	<dlsPLC.readEnum P="BL11I-DI-DCM-01" Q=":H1:FAIL" STR0="Status OK" STR1="Heater under temperature" STR2="N/A" STR3="Sensor failed" addr="19" name="D19" vlvcc="BL11I-DI-VLVCC-01"/>

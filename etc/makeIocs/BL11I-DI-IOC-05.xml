@@ -1,14 +1,14 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-DI-IOC-05" name="DI5IOC"/>
-	<FINS.FINSUDPInit ip="172.23.111.110" name="fins_VLVCC1"/>
+	<FINS.FINSUDPInit ip="172.23.111.110" name="fins_VLVCC1" simulation="None"/>
 	<dlsPLC.read100 century="0" device="BL11I-DI-VLVCC-01" name="RD1.0" port="fins_VLVCC1"/>
 	<dlsPLC.read100 century="1" device="BL11I-DI-VLVCC-01" name="RD1.1" port="fins_VLVCC1"/>
 	<dlsPLC.read100 century="2" device="BL11I-DI-VLVCC-01" name="RD1.2" port="fins_VLVCC1"/>
 	<dlsPLC.read100 century="5" device="BL11I-DI-VLVCC-01" name="RD1.5" port="fins_VLVCC1"/>
 	<dlsPLC.temperature desc="Crystal 1 Holder" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-1" offset="10" port="fins_VLVCC1" temp=":PT100-1" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
-	<dlsPLC.temperature desc="Crystal 1" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-2" offset="11" port="fins_VLVCC1" temp=":PT100-2" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
-	<dlsPLC.temperature desc="Crystal 2" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-3" offset="12" port="fins_VLVCC1" temp=":PT100-3" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.temperature desc="Crystal 1" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-2" offset="11" port="fins_VLVCC1" temp=":PT100-2" tempcal="0" tmpcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.temperature desc="Crystal 2" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-3" offset="12" port="fins_VLVCC1" temp=":PT100-3" tempcal="0" tmpcc="BL11I-DI-VLVCC-01"/>
 	<dlsPLC.temperature desc="Crystal 2 Holder" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-4" offset="13" port="fins_VLVCC1" temp=":PT100-4" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
 	<!--<dlsPLC.temperature desc="PT100-5" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-5" offset="14" port="fins_VLVCC1" temp=":PT100-5" tmpcc="BL11I-DI-VLVCC-01"/>-->
 	<!--<dlsPLC.temperature desc="PT100-6" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-6" offset="15" port="fins_VLVCC1" temp=":PT100-6" tmpcc="BL11I-DI-VLVCC-01"/>-->
@@ -18,6 +18,12 @@
 	<!--<dlsPLC.temperature desc="TC-2" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="TC-2" offset="19" port="fins_VLVCC1" temp=":TC-2" tmpcc="BL11I-DI-VLVCC-01"/>-->
 	<!--<dlsPLC.temperature desc="TC-3" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="TC-3" offset="20" port="fins_VLVCC1" temp=":TC-3" tmpcc="BL11I-DI-VLVCC-01"/>-->
 	<!--<dlsPLC.temperature desc="TC-4" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="TC-4" offset="21" port="fins_VLVCC1" temp=":TC-4" tmpcc="BL11I-DI-VLVCC-01"/>-->
+	<EPICS_BASE.dbpf pv="BL11I-DI-DCM-01:PT100-2.EGU" value="K"/>
+	<EPICS_BASE.dbpf pv="BL11I-DI-DCM-01:PT100-2:GETCALC.EGU" value="K"/>
+	<EPICS_BASE.dbpf pv="BL11I-DI-DCM-01:PT100-2:HIHI.EGU" value="K"/>
+	<EPICS_BASE.dbpf pv="BL11I-DI-DCM-01:PT100-3.EGU" value="K"/>
+	<EPICS_BASE.dbpf pv="BL11I-DI-DCM-01:PT100-3:GETCALC.EGU" value="K"/>
+	<EPICS_BASE.dbpf pv="BL11I-DI-DCM-01:PT100-3:HIHI.EGU" value="K"/>
 	<dlsPLC.readInt16 P="BL11I-DI-DCM-01" Q=":H1:TTEMP" addr="153" name="D153" vlvcc="BL11I-DI-VLVCC-01"/>
 	<dlsPLC.readInt16 P="BL11I-DI-DCM-01" Q=":H2:TTEMP" addr="157" name="D157" vlvcc="BL11I-DI-VLVCC-01"/>
 	<dlsPLC.readInt16 P="BL11I-DI-DCM-01" Q=":H1:OUTP" addr="500" name="D500" vlvcc="BL11I-DI-VLVCC-01"/>

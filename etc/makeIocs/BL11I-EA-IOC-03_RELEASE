@@ -1,3 +1,3 @@
-PVLOGGING=   $(SUPPORT)/pvlogging/1-3
-ADMYTHEN=$(SUPPORT)/ADMythen/0-5
-DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-14dls2-6
+PVLOGGING=   $(SUPPORT)/pvlogging/1-4
+ADMYTHEN=$(WORK)/ADMythen
+DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-14dls3-1

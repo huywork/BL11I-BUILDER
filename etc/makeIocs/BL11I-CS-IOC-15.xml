@@ -8,4 +8,5 @@
 	<deltaTauPLCStat.DTPSController globalHelper="BL11I-PLCSTAT" name="BL11I-PLCSTAT-02" number="2" p03="True" p04="True" p05="True" p07="True" p17="True" p18="True" p29="True" p30="True" type="PMAC"/>
 	<deltaTauPLCStat.DTPSController globalHelper="BL11I-PLCSTAT" name="BL11I-PLCSTAT-03" number="3" p03="True" p04="True" p05="True" p17="True" p18="True" p19="True" p20="True" p21="True" p22="True" type="PMAC"/>
 	<deltaTauPLCStat.DTPSController globalHelper="BL11I-PLCSTAT" name="BL11I-PLCSTAT-04" number="4" p03="True" p04="True" p05="True" p17="True" type="PMAC"/>
+	<deltaTauPLCStat.DTPSController globalHelper="BL11I-PLCSTAT" name="BL11I-PLCSTAT-07" number="7" p04="True" p05="True" p07="True" p17="True" type="STEP"/>
 </components>

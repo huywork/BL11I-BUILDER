@@ -1,18 +1,18 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<devIocStats.devIocStatsHelper ioc="BL11I-MO-IOC-07" name="IOCS.M07"/>
+	<devIocStats.devIocStatsHelper ioc="BL11I-MO-IOC-07" name="IOCS.MO7"/>
 	<utility.pingWait ip="172.23.111.111"/>
 	<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-07" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave"/>
 	<pmac.pmacAsynIPPort IP="172.23.111.111" name="BRICK7port"/>
-	<pmac.GeoBrick P="BL11I-MO-DCM-01" Port="BRICK7port" name="Brick7"/>
+	<pmac.GeoBrick P="BL11I-MO-STEP-07" Port="BRICK7port" name="Brick7"/>
 	<pmac.dls_pmac_asyn_motor ACCL="1" ADDR="1" DESC="Bragg" DHLM="28" DLLM="-4" EGU="deg" M=":BRAGG" MRES="0.000001" OFF="-0.446" P="BL11I-MO-DCM-01" PORT="Brick7" PREC="4" SPORT="BRICK7port" TWV="0.1" VELO="0.7" name="DCM.BRAGG"/>
-	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="3" DESC="Vertical" DHLM="4.8" DLLM="-5.6" EGU="mm" M=":PERP" MRES="0.0001" OFF="53.46" P="BL11I-MO-DCM-01" PORT="Brick7" PREC="4" SPORT="BRICK7port" TWV="0.1" VELO="0.3" name="DCM.PERP"/>
-	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="5" DESC="Pitch" DHLM="210" DLLM="-1350" EGU="mdeg" M=":PITCH" MRES="0.002" OFF="657.6" P="BL11I-MO-DCM-01" PORT="Brick7" PREC="2" SPORT="BRICK7port" TWV="0.1" VELO="40" name="DCM.PITCH"/>
+	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="3" DESC="Gap" DHLM="4.8" DLLM="-5.6" EGU="mm" M=":PERP" MRES="0.0001" OFF="12.9697" P="BL11I-MO-DCM-01" PORT="Brick7" PREC="4" SPORT="BRICK7port" TWV="0.1" VELO="0.3" name="DCM.PERP"/>
+	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="5" DESC="Pitch" DHLM="210" DLLM="-1350" EGU="mdeg" M=":PITCH" MRES="0.002" OFF="522.40" P="BL11I-MO-DCM-01" PORT="Brick7" PREC="2" SPORT="BRICK7port" TWV="0.1" VELO="40" name="DCM.PITCH"/>
 	<pmac.dls_pmac_asyn_motor ACCL="0.1" ADDR="6" DESC="Roll" DHLM="298" DLLM="-1650" EGU="mdeg" M=":ROLL" MRES="0.002" OFF="665.87" P="BL11I-MO-DCM-01" PORT="Brick7" PREC="2" SPORT="BRICK7port" TWV="0.1" VELO="40" name="DCM.ROLL"/>
 	<pmac.CS CS="2" Controller="Brick7" name="BRICK7CS2"/>
 	<pmac.dls_pmac_cs_asyn_motor ADDR="7" DESC="Energy (compound)" DHLM="10000" DLLM="-10000" EGU="keV" M=":ENERGY" MRES="0.0001" P="BL11I-MO-DCM-01" PORT="BRICK7CS2" PREC="4" TWV="1" VELO="0.1"/>
 	<pmac.dls_pmac_cs_asyn_motor ADDR="8" DESC="Offset (compound)" DHLM="10000" DLLM="-10000" EGU="mm" M=":OFFSET" MRES="0.0001" P="BL11I-MO-DCM-01" PORT="BRICK7CS2" PREC="4" TWV="1" VELO="0.2"/>
-	<pmac.autohome GRP2="Bragg" GRP3="Perpendicular" GRP4="Pitch" GRP5="Roll" P="BL11I-MO-DCM-01" PLC="11" PORT="Brick7" name="DCM.HOME"/>
+	<pmac.autohome DESC="I11 DCM Homing" GRP2="Bragg" GRP3="Gap" GRP4="Pitch" GRP5="Roll" P="BL11I-MO-DCM-01" PLC="11" PORT="Brick7" name="DCM.HOME"/>
 	<records.scalcout CALC="PRINTF('enable plc %d', A)" DTYP="Soft Channel" INPA="6" OUT="BL11I-MO-STEP-07:enablePLC.AOUT PP" record="BL11I-MO-STEP-07:enable6:scalcout"/>
 	<records.asyn PORT="BRICK7port" record="BL11I-MO-STEP-07:enablePLC"/>
 	<records.calc ACKT="NO" CALC="(A|B|C|D|E|F|G|H|I|J|K|L)&gt;0?1:0" DESC="I11 DCM" INPA="BL11I-MO-DCM-01:BRAGG.MOVN MS" INPB="BL11I-MO-DCM-01:PERP.MOVN MS" INPC="BL11I-MO-DCM-01:PITCH.MOVN MS" INPD="BL11I-MO-DCM-01:ROLL.MOVN MS" INPE="BL11I-MO-DCM-01:ENERGY.MOVN MS" INPF="BL11I-MO-DCM-01:OFFSET.MOVN MS" PHAS="2" SCAN="1 second" name="Device Status" record="BL11I-MO-DCM-01:DEVSTA"/>

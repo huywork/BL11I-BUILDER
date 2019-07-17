@@ -2,7 +2,7 @@
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-CS-IOC-15" name="IOCS.CS15"/>
 	<pvlogging.PvLogging/>
-	<autosave.Autosave iocName="BL11I-CS-IOC-15" name="CS15AS" path="/dls_sw/i11/epics/autosave"/>
+	<autosave.Autosave bl="True" iocName="BL11I-CS-IOC-15" name="CS15AS" path="/dls_sw/i11/epics/autosave"/>
 	<deltaTauPLCStat.DTPSGlobal dom="BL11I" name="BL11I-PLCSTAT" sendSms="#"/>
 	<deltaTauPLCStat.DTPSController globalHelper="BL11I-PLCSTAT" name="BL11I-PLCSTAT-01" number="1" p03="True" p04="True" p05="True" p08="True" p18="True" p19="True" p20="True" p30="True" type="PMAC"/>
 	<deltaTauPLCStat.DTPSController globalHelper="BL11I-PLCSTAT" name="BL11I-PLCSTAT-02" number="2" p03="True" p04="True" p05="True" p07="True" p17="True" p18="True" p29="True" p30="True" type="PMAC"/>

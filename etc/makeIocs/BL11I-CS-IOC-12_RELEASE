@@ -1,3 +1,4 @@
 DEVIOCSTATS=        $(SUPPORT)/devIocStats/3-1-14dls2-4
 AUTOSAVE=           $(SUPPORT)/autosave/5-0dls4
+UTILITY=            $(SUPPORT)/utility/dls2-17
 TERMINALSERVER=     $(SUPPORT)/terminalServer/2-4

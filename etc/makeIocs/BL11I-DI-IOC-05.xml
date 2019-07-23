@@ -6,15 +6,15 @@
 	<dlsPLC.read100 century="1" device="BL11I-DI-VLVCC-01" name="RD1.1" port="fins_VLVCC1"/>
 	<dlsPLC.read100 century="2" device="BL11I-DI-VLVCC-01" name="RD1.2" port="fins_VLVCC1"/>
 	<dlsPLC.read100 century="5" device="BL11I-DI-VLVCC-01" name="RD1.5" port="fins_VLVCC1"/>
-	<dlsPLC.temperature desc="Crystal 1 Holder" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-1" offset="10" port="fins_VLVCC1" temp=":PT100-1" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
-	<dlsPLC.temperature desc="Crystal 1" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-2" offset="11" port="fins_VLVCC1" temp=":PT100-2" tempcal="0" tmpcc="BL11I-DI-VLVCC-01"/>
-	<dlsPLC.temperature desc="Crystal 2" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-3" offset="12" port="fins_VLVCC1" temp=":PT100-3" tempcal="0" tmpcc="BL11I-DI-VLVCC-01"/>
-	<dlsPLC.temperature desc="Crystal 2 Holder" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-4" offset="13" port="fins_VLVCC1" temp=":PT100-4" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.temperature desc="Crystal 1 Holder" device="BL11I-DI-DCM-01" egu="K" high="305" hihi="315" hopr="300" lolo="0" lopr="0" low="0" name="PT100-1" offset="10" port="fins_VLVCC1" temp=":PT100-1" tmpcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.temperature desc="Crystal 1" device="BL11I-DI-DCM-01" egu="K" high="100" hihi="120" hopr="100" lolo="0" lopr="0" low="0" name="PT100-2" offset="11" port="fins_VLVCC1" temp=":PT100-2" tmpcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.temperature desc="Crystal 2" device="BL11I-DI-DCM-01" egu="K" high="180" hihi="200" hopr="200" lolo="0" lopr="0" low="0" name="PT100-3" offset="12" port="fins_VLVCC1" temp=":PT100-3" tmpcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.temperature desc="Crystal 2 Holder" device="BL11I-DI-DCM-01" egu="K" high="305" hihi="315" hopr="300" lolo="0" lopr="0" low="0" name="PT100-4" offset="13" port="fins_VLVCC1" temp=":PT100-4" tmpcc="BL11I-DI-VLVCC-01"/>
 	<!--<dlsPLC.temperature desc="PT100-5" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-5" offset="14" port="fins_VLVCC1" temp=":PT100-5" tmpcc="BL11I-DI-VLVCC-01"/>-->
 	<!--<dlsPLC.temperature desc="PT100-6" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-6" offset="15" port="fins_VLVCC1" temp=":PT100-6" tmpcc="BL11I-DI-VLVCC-01"/>-->
 	<!--<dlsPLC.temperature desc="PT100-7" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-7" offset="16" port="fins_VLVCC1" temp=":PT100-7" tmpcc="BL11I-DI-VLVCC-01"/>-->
 	<!--<dlsPLC.temperature desc="PT100-8" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="PT100-8" offset="17" port="fins_VLVCC1" temp=":PT100-8" tmpcc="BL11I-DI-VLVCC-01"/>-->
-	<dlsPLC.temperature desc="Gap Motor" device="BL11I-DI-DCM-01" high="90" hihi="110" hopr="110" lolo="0" lopr="0" low="0" name="TC-1" offset="18" port="fins_VLVCC1" temp=":TC-1" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
+	<dlsPLC.temperature desc="Gap Motor" device="BL11I-DI-DCM-01" egu="C" high="90" hihi="110" hopr="110" lolo="0" lopr="0" low="0" name="TC-1" offset="18" port="fins_VLVCC1" temp=":TC-1" tempcal="-273.15" tmpcc="BL11I-DI-VLVCC-01"/>
 	<!--<dlsPLC.temperature desc="TC-2" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="TC-2" offset="19" port="fins_VLVCC1" temp=":TC-2" tmpcc="BL11I-DI-VLVCC-01"/>-->
 	<!--<dlsPLC.temperature desc="TC-3" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="TC-3" offset="20" port="fins_VLVCC1" temp=":TC-3" tmpcc="BL11I-DI-VLVCC-01"/>-->
 	<!--<dlsPLC.temperature desc="TC-4" device="BL11I-DI-DCM-01" high="45" hihi="100" hopr="100" lolo="0" lopr="0" low="0" name="TC-4" offset="21" port="fins_VLVCC1" temp=":TC-4" tmpcc="BL11I-DI-VLVCC-01"/>-->

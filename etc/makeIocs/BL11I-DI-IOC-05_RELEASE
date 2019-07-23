@@ -1,4 +1,4 @@
-DLSPLC=       $(SUPPORT)/dlsPLC/1-51-1dls5
+DLSPLC=       $(SUPPORT)/dlsPLC/2-3
 BUSY=         $(SUPPORT)/busy/1-6-1dls1
 ASYN=         $(SUPPORT)/asyn/4-31
 STREAMDEVICE= $(SUPPORT)/streamDevice/2-5dls5

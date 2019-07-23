@@ -1,0 +1,8 @@
+include:
+  - project: 'controls/reports/ci_templates'
+    ref: 0-5
+    file: 'support/builder_module.yml'
+    
+Test build:
+    extends:
+      -  .builder_module

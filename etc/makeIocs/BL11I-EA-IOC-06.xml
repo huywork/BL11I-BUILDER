@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-06" name="IOC.EA6"/>
-	<!--<autosave.Autosave bl="True" iocName="BL11I-EA-IOC-06" name="EAIOC6AS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>-->
-	<BLfeedback.feedback AUTOPV="" AUTOPV2="" DRVH="854.4" DRVL="-705.5" HOPR="854.4" INP="BL11I-AL-SLITS-04:YPOS" KD="0" KI="0" KP="0" LOPR="-705.5" OROC="0.05" OUT="BL11I-MO-DCM-01:PITCH.VAL" P="BL11I-EA-IOC-06" PID=":Y:S4:FDBK" PREC="6" SCAN="1 second" TITLE="DCM PITCH FDBK FROM S4" name="XFBS4"/>
+	<autosave.Autosave bl="True" iocName="BL11I-EA-IOC-06" name="EAIOC6AS" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
+	<BLfeedback.feedback AUTOPV="" AUTOPV2="" DRVH="854.4" DRVL="-705.5" HOPR="3" INP="BL11I-AL-SLITS-04:YPOS" KD="0" KI="0" KP="0" LOPR="-3" OROC="0.05" OUT="BL11I-MO-DCM-01:PITCH.VAL" P="BL11I-MO-DCM-01" PID=":Y:S4:FDBK" PREC="6" SCAN="1 second" TITLE="DCM PITCH FDBK FROM S4" name="XFBS4"/>
 </components>

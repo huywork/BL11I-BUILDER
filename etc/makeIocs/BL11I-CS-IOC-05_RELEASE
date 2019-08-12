@@ -1,5 +1,5 @@
-PVLOGGING=   $(SUPPORT)/pvlogging/1-4
-DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-14dls3-0
+PVLOGGING=      $(SUPPORT)/pvlogging/1-4
+DEVIOCSTATS =   $(SUPPORT)/devIocStats/3-1-14dls3-1
 BUSY=           $(SUPPORT)/busy/1-7dls1
-STREAMDEVICE=   $(SUPPORT)/streamDevice/2-5dls9
-MOTOMANNX100=   $(SUPPORT)/motomanNX100/1-16
+STREAMDEVICE=   $(SUPPORT)/streamDevice/3-0-beta1
+MOTOMANNX100=   $(SUPPORT)/motomanNX100/1-17

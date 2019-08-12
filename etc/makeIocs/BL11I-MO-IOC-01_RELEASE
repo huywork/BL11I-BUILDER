@@ -1,5 +1,5 @@
 PVLOGGING=        $(SUPPORT)/pvlogging/1-4
-PMAC=             $(SUPPORT)/pmac/2-4-11
+PMAC=             $(SUPPORT)/pmac/2-4-10
 POSITIONER=       $(SUPPORT)/positioner/3-3
 IPAC=             $(SUPPORT)/ipac/2-8dls4-8-1
 IOCINFO=          $(SUPPORT)/IOCinfo/4-2

@@ -1,3 +1,3 @@
 PVLOGGING=       $(SUPPORT)/pvlogging/1-4
-DEVIOCSTATS=     $(SUPPORT)/devIocStats/3-1-14dls3-0
+DEVIOCSTATS=     $(SUPPORT)/devIocStats/3-1-14dls3-1
 EUROTHERMMODBUS= $(SUPPORT)/eurothermModbus/3-1

@@ -127,17 +127,17 @@
 	<digitelMpc.digitelMpc device="BL11I-VA-MPC-03" name="IONPC3" port="ty_41_0" unit="01"/>
 	<digitelMpc.digitelMpc device="BL11I-VA-MPC-04" name="IONPC4" port="ty_41_1" unit="01"/>
 	<digitelMpc.digitelMpc device="BL11I-VA-MPC-05" name="IONPC5" port="ty_41_2" unit="01"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC1" device="BL11I-VA-IONP-01" name="IONP1" pump="1" size="150" spoff="0" spon="0"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC1" device="BL11I-VA-IONP-02" name="IONP2" pump="2" size="190" spoff="0" spon="0"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC1" device="BL11I-VA-IONP-21" name="IONP21" pump="2" size="190" spoff="0" spon="0"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC2" device="BL11I-VA-IONP-03" name="IONP3" pump="1" size="500" spoff="0" spon="0"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC2" device="BL11I-VA-IONP-04" name="IONP4" pump="2" size="500" spoff="0" spon="0"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC3" device="BL11I-VA-IONP-05" name="IONP5" pump="1" size="150" spoff="0" spon="0"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC3" device="BL11I-VA-IONP-06" name="IONP6" pump="2" size="150" spoff="0" spon="0"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC4" device="BL11I-VA-IONP-07" name="IONP7" pump="1" size="150" spoff="0" spon="0"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC4" device="BL11I-VA-IONP-08" name="IONP8" pump="2" size="150" spoff="0" spon="0"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC5" device="BL11I-VA-IONP-09" name="IONP9" pump="1" size="150" spoff="0" spon="0"/>
-	<digitelMpc.digitelMpcIonp MPC="IONPC5" device="BL11I-VA-IONP-10" name="IONP10" pump="2" size="150" spoff="0" spon="0"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC1" device="BL11I-VA-IONP-01" name="IONP1" pump="1" size="150"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC1" device="BL11I-VA-IONP-02" name="IONP2" pump="2" size="190"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC1" device="BL11I-VA-IONP-21" name="IONP21" pump="2" size="190"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC2" device="BL11I-VA-IONP-03" name="IONP3" pump="1" size="500"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC2" device="BL11I-VA-IONP-04" name="IONP4" pump="2" size="500"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC3" device="BL11I-VA-IONP-05" name="IONP5" pump="1" size="150"/>
+        <digitelMpc.digitelMpcIonp MPC="IONPC3" device="BL11I-VA-IONP-06" name="IONP6" pump="2" size="150"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC4" device="BL11I-VA-IONP-07" name="IONP7" pump="1" size="150"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC4" device="BL11I-VA-IONP-08" name="IONP8" pump="2" size="150"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC5" device="BL11I-VA-IONP-09" name="IONP9" pump="1" size="150"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC5" device="BL11I-VA-IONP-10" name="IONP10" pump="2" size="150"/>
 	<mks937b.mks937b address="001" device="BL11I-VA-GCTLR-01" name="GCTLR-01" port="ty_40_4"/>
 	<!--<mks937a.mks937a device="BL11I-VA-GCTLR-01" name="GCTLR-01" port="ty_40_4"/>-->
 	<mks937a.mks937a device="BL11I-VA-GCTLR-02" name="GCTLR-02" port="ty_40_5"/>

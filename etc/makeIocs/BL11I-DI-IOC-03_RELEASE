@@ -1,7 +1,7 @@
 PVLOGGING=    $(SUPPORT)/pvlogging/1-4
 UTILITY=      $(SUPPORT)/utility/dls2-18
 AUTOSAVE=     $(SUPPORT)/autosave/5-9dls1
-DEVIOCSTATS=  $(SUPPORT)/devIocStats/3-1-14dls3-0
-ARAVISGIGE=   $(SUPPORT)/aravisGigE/3-0dls1-2
-ADUTIL=       $(SUPPORT)/adUtil/2-19
-ADPYTHON=     $(SUPPORT)/adPython/1-11
+DEVIOCSTATS=  $(SUPPORT)/devIocStats/3-1-14dls3-1
+ARAVISGIGE=   $(SUPPORT)/aravisGigE/3-0dls1-6
+ADUTIL=       $(SUPPORT)/adUtil/2-21
+ADPYTHON=     $(SUPPORT)/adPython/2-1

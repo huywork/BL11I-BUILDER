@@ -1,8 +1,8 @@
 PVLOGGING=      $(SUPPORT)/pvlogging/1-4
 UTILITY=        $(SUPPORT)/utility/dls2-18
 AUTOSAVE=       $(SUPPORT)/autosave/5-9dls1
-ARAVISGIGE=     $(SUPPORT)/aravisGigE/3-0dls1-5
+ARAVISGIGE=     $(SUPPORT)/aravisGigE/3-0dls1-6
 FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/3-1dls2-3
-ADPYTHON=       $(SUPPORT)/adPython/2-1a2
+ADPYTHON=       $(SUPPORT)/adPython/2-1
 ADUTIL=         $(SUPPORT)/adUtil/2-21
 DEVIOCSTATS=    $(SUPPORT)/devIocStats/3-1-14dls3-1

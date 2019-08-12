@@ -1,9 +1,9 @@
 PVLOGGING=   $(SUPPORT)/pvlogging/1-4
 UTILITY=    $(SUPPORT)/utility/dls2-18
 AUTOSAVE=$(SUPPORT)/autosave/5-9dls1
-ADCORE=$(SUPPORT)/ADCore/3-4dls1
-FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/3-1dls2-2
-GDAPLUGINS=$(WORK)/gdaPlugins
-ARAVISGIGE=$(SUPPORT)/aravisGigE/3-0dls1-2
-DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-14dls3-0
-FZOOM=$(WORK)/fzoom
+ADCORE=$(SUPPORT)/ADCore/3-4dls2
+FFMPEGSERVER=   $(SUPPORT)/ffmpegServer/3-1dls2-3
+GDAPLUGINS=$(SUPPORT)/gdaPlugins/1-2
+ARAVISGIGE=$(SUPPORT)/aravisGigE/3-0dls1-6
+DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-14dls3-1
+FZOOM=$(SUPPORT)/fzoom/4-0

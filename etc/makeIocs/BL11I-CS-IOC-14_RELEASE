@@ -1,3 +1,3 @@
-DEVIOCSTATS=      $(SUPPORT)/devIocStats/3-1-14dls2-5
-PVLOGGING=        $(SUPPORT)/pvlogging/1-3
-OXCS700=          $(SUPPORT)/OXCS700/2-12
+DEVIOCSTATS=      $(SUPPORT)/devIocStats/3-1-14dls3-1
+PVLOGGING=        $(SUPPORT)/pvlogging/1-4
+OXCS700=          $(SUPPORT)/OXCS700/2-14

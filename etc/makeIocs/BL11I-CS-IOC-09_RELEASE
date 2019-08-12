@@ -1,6 +1,6 @@
 DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-14dls3-1
 PVLOGGING=   $(SUPPORT)/pvlogging/1-4
 CALC=$(SUPPORT)/calc/3-7
-HIDENRGA=$(SUPPORT)/hidenRGA/1-9
+HIDENRGA=$(SUPPORT)/hidenRGA/1-10
 AUTOSAVE=$(SUPPORT)/autosave/5-9dls1
 UTILITY=$(SUPPORT)/utility/dls2-18

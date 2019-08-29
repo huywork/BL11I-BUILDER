@@ -2,16 +2,13 @@
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-CS-IOC-06" name="IOCS.CS6"/>
 	<pvlogging.PvLogging/>
-	<asyn.AsynIP name="ty_lauda" port="172.23.226.211:7016"/>
 	<asyn.AsynIP baud="115200" name="ty_zebra1" port="bl11i-nt-tserv-03:7001"/>
 	<asyn.AsynIP baud="115200" name="ty_zebra2" port="bl11i-nt-tserv-03:7002"/>
-	<laudaRE2xx.lRE2xx ADDR="0" HIGH="30" HIHI="30" LOLO="15" LOW="15" P="BL11I-OP-CHILL-01" PORT="ty_lauda" SCAN="1"/>
 	<zebra.zebra NELM="1000" P="BL11I-EA-ZEBRA-01" PORT="ZEBRA1" Q="" serialPort="ty_zebra1"/>
 	<zebra.zebra M1="BL11I-MO-DIFF-01:2THETA" M1DIR=".5*" M2="BL11I-MO-DIFF-01:DELTA" M2DIR="-" M3="BL11I-MO-DIFF-01:THETA" M4="BL11I-MO-DIFF-01:SPOS" P="BL11I-EA-ZEBRA-02" PORT="ZEBRA2" Q="" serialPort="ty_zebra2"/>
 	<zebra.zebraLastDivDiff DIV="1" P="BL11I-EA-ZEBRA-01" Q="" name="ZEBRA1.DIV1"/>
 	<zebra.zebraLastDivDiff DIV="2" P="BL11I-EA-ZEBRA-01" Q="" name="ZEBRA1.DIV2"/>
 	<zebra.zebraLastDivDiff DIV="3" P="BL11I-EA-ZEBRA-01" Q="" name="ZEBRA1.DIV3"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-CHILL-01:DISABLE&quot;, &quot;0&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-ZEBRA-01:PC_DISARM&quot;, &quot;1&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="epicsThreadSleep(5.0)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-ZEBRA-01:PC_ARM&quot;, &quot;1&quot;)" post_init="True"/>

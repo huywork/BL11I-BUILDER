@@ -4,9 +4,10 @@
 	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-03" name="IOC.EA3"/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="800000"/>
 	<asyn.AsynIP name="mythenPort" port="10.111.9.193:1952"/>
-	<ADMythen.mythenDetector IPPORT="mythenPort" P="BL11I-EA-DET-03" PORT="MYTHEN.DET" R=":"/>
-	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="MYTHEN.DET" P="BL11I-EA-DET-03" PORT="MYTHEN.HDF" QUEUE="16" R=":HDF:" TIMEOUT="1"/>
+	<ADMythen.mythenDetector IPPORT="mythenPort" P="BL11I-EA-DET-03" PORT="MYTHEN.DET" R=":DET:"/>
+	<ADCore.NDStats HIST_SIZE="256" NCHANS="1360" NDARRAY_PORT="MYTHEN.DET" P="BL11I-EA-DET-03" PORT="MYTHEN.STAT" R=":STAT:" XSIZE="23040" YSIZE="1"/>
 	<ADCore.NDStdArrays ADDR="0" BLOCK="0" ENABLED="1" FTVL="FLOAT" NDARRAY_PORT="MYTHEN.DET" NELEMENTS="23040" P="BL11I-EA-DET-03" PORT="MYTHEN.ARR" R=":ARR:" TIMEOUT="1" TYPE="Float32"/>
+	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="MYTHEN.DET" P="BL11I-EA-DET-03" PORT="MYTHEN.HDF" R=":HDF:" TIMEOUT="1"/>
 	<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-03:DET:AutoSave &quot;Yes&quot;" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-03:DET:SizeX &quot;23040&quot;" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-03:DET:ThresholdEnergy &quot;7500&quot;" post_init="True"/>

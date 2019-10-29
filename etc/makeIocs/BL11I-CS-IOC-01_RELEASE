@@ -2,6 +2,6 @@ STREAMDEVICE=$(SUPPORT)/streamDevice/3-0-beta1
 CRATEMONITOR=$(SUPPORT)/CrateMonitor/2-2
 DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-14dls3-1
 AUTOSAVE=    $(SUPPORT)/autosave/5-9dls1
-BL11I=       $(WORK)/BL11I
+BL11I=       $(SUPPORT)/BL11I/4-0
 UTILITY=     $(SUPPORT)/utility/dls2-18
 PVLOGGING=   $(SUPPORT)/pvlogging/1-4

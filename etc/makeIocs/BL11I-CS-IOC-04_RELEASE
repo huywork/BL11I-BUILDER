@@ -10,4 +10,4 @@ BRONKHORSTFLOWBUS=$(SUPPORT)/bronkhorstFlowBus/1-1
 OXINSTCRYOJET=    $(SUPPORT)/OxInstCryojet/2-22
 HARVARDSYRINGE=   $(SUPPORT)/harvardSyringe/1-5
 PVLOGGING=        $(SUPPORT)/pvlogging/1-4
-BL11I=            $(WORK)/BL11I
+BL11I=            $(SUPPORT)/BL11I/4-0

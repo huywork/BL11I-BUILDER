@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<pvlogging.PvLogging/>
+	<autosave.Autosave bl="True" iocName="BL11I-EA-IOC-03" path="/dls_sw/i11/epics/autosave"/>
 	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-03" name="IOC.EA3"/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="800000"/>
 	<asyn.AsynIP name="mythenPort" port="10.111.9.193:1952"/>

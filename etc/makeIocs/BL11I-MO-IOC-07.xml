@@ -12,6 +12,7 @@
 	<pmac.CS CS="2" Controller="Brick7" name="BRICK7CS2"/>
 	<pmac.dls_pmac_cs_asyn_motor ADDR="7" DESC="Energy (compound)" DHLM="10000" DLLM="-10000" EGU="keV" M=":ENERGY" MRES="0.0001" P="BL11I-MO-DCM-01" PORT="BRICK7CS2" PREC="4" TWV="1" VELO="0.1"/>
 	<pmac.dls_pmac_cs_asyn_motor ADDR="8" DESC="Offset (compound)" DHLM="10000" DLLM="-10000" EGU="mm" M=":OFFSET" MRES="0.0001" P="BL11I-MO-DCM-01" PORT="BRICK7CS2" PREC="4" TWV="1" VELO="0.2"/>
+	<motor.motorUtil P="BL11I-MO-IOC-07:" name="IOC7"/>
 	<pmac.autohome DESC="I11 DCM Homing" GRP2="Bragg" GRP3="Gap" GRP4="Pitch" GRP5="Roll" P="BL11I-MO-DCM-01" PLC="11" PORT="Brick7" name="DCM.HOME"/>
 	<records.scalcout CALC="PRINTF('enable plc %d', A)" DTYP="Soft Channel" INPA="6" OUT="BL11I-MO-STEP-07:enablePLC.AOUT PP" record="BL11I-MO-STEP-07:enable6:scalcout"/>
 	<records.asyn PORT="BRICK7port" record="BL11I-MO-STEP-07:enablePLC"/>

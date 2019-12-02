@@ -1,3 +1,4 @@
+<?xml version="1.0" ?>
 <components arch="vxWorks-ppc604_long">
 	<devIocStats.devIocStatsHelper ioc="BL11I-VA-IOC-01" name="IOCS.VA1"/>
 	<pvlogging.PvLogging/>
@@ -117,7 +118,7 @@
 	<vacuumValve.vacuumValve_callback crate="VLVCC2" device="BL11I-DI-PHDGN-04" gda_desc="Fluorescent Screen" gda_name="D4.SCREEN" ilk15="Valve Fault" name="D4" valve="04"/>
 	<vacuumValve.vacuumValve_callback crate="VLVCC2" device="BL11I-PS-SHTR-02" gda_desc="EH2 Shutter" gda_name="SHTR2" ilk0="Air press. OK" ilk1="Guardline A" ilk15="Valve Fault" ilk2="Guardline B" name="SHTR2" tclose_hhsv="MAJOR" tclose_high="3.0" tclose_hihi="5.0" tclose_hsv="MINOR" valve="06"/>
 	<interlock.interlock addr="07" desc="Waterflow Interlocks" device="BL11I-VA-VLVCC-01" ilk0="GBC Water" ilk1="S1 Water 1" ilk2="S1 Water 2" ilk3="D1 Water" interlock=":INT1" name="ILK1" port="ty_40_3"/>
-	<interlock.interlock addr="09" desc="Front End Absorber" device="BL11I-VA-VLVCC-01" ilk0="Water OK" ilk1="Valve 1 Open" ilk2="IMG01" ilk3="IMG02 - MPS" ilk4="IMG03 / IonP03" ilk5="Cryo running" ilk6="GBC Temps OK" ilk7="S1 Temps OK" ilk8="DCM Man Valve Closed/Abs Open" ilk9="DCM Temps and Water OK" ilkA="Laser Out" ilkB="V2 Open" ilkC="V3 Open" ilkD="V4 Open" ilkE="V1-4 Air T/2 OK" interlock=":INT2" name="ILK2" port="ty_40_3"/>
+	<interlock.interlock addr="09" desc="Front End Absorber" device="BL11I-VA-VLVCC-01" ilk0="Water OK" ilk1="Valve 1 Open" ilk2="IMG01" ilk3="IMG02 - MPS" ilk4="IMG03 / IonP03" ilk5="Cryo running" ilk6="GBC Temps OK" ilk7="S1 Temps OK" ilk8="DCM Man Valve Closed/Abs Open" ilk9="DCM Temps OK" ilkA="Laser Out" ilkB="V2 Open" ilkC="V3 Open" ilkD="V4 Open" ilkE="V1-4 Air T/2 OK" interlock=":INT2" name="ILK2" port="ty_40_3"/>
 	<interlock.interlock addr="01" desc="Temperatures Zone 1" device="BL11I-VA-TMPCC-01" ilk0="GBC Temp 1" ilk1="GBC Temp 2" ilk2="GBC Temp 3" ilk3="GBC Temp 4" interlock=":INT1" name="ILK3" port="ty_40_2"/>
 	<interlock.interlock addr="02" desc="Temperatures Zone 2" device="BL11I-VA-TMPCC-01" ilk0="S1 ApA Temp 1" ilk1="S1 ApA Temp 2" ilk2="S1 ApA Temp 3" ilk3="S1 ApA Temp 4" ilk4="S1 ApB Temp 1" ilk5="S1 ApB Temp 2" ilk6="S1 ApB Temp 3" ilk7="S1 ApB Temp 4" interlock=":INT2" name="ILK4" port="ty_40_2"/>
 	<!--<interlock.interlock addr="04" desc="Temperatures Zone 4" device="BL11I-VA-TMPCC-01" ilk0="Xtal1 Inboard" ilk1="Xtal1 Outboard" ilk2="Xtal2 Inboard" ilk3="Xtal2 Outboard" ilk4="White Beam Absorber" interlock=":INT4" name="ILK6" port="ty_40_2"/>-->
@@ -133,7 +134,7 @@
 	<digitelMpc.digitelMpcIonp MPC="IONPC2" device="BL11I-VA-IONP-03" name="IONP3" pump="1" size="500"/>
 	<digitelMpc.digitelMpcIonp MPC="IONPC2" device="BL11I-VA-IONP-04" name="IONP4" pump="2" size="500"/>
 	<digitelMpc.digitelMpcIonp MPC="IONPC3" device="BL11I-VA-IONP-05" name="IONP5" pump="1" size="150"/>
-        <digitelMpc.digitelMpcIonp MPC="IONPC3" device="BL11I-VA-IONP-06" name="IONP6" pump="2" size="150"/>
+	<digitelMpc.digitelMpcIonp MPC="IONPC3" device="BL11I-VA-IONP-06" name="IONP6" pump="2" size="150"/>
 	<digitelMpc.digitelMpcIonp MPC="IONPC4" device="BL11I-VA-IONP-07" name="IONP7" pump="1" size="150"/>
 	<digitelMpc.digitelMpcIonp MPC="IONPC4" device="BL11I-VA-IONP-08" name="IONP8" pump="2" size="150"/>
 	<digitelMpc.digitelMpcIonp MPC="IONPC5" device="BL11I-VA-IONP-09" name="IONP9" pump="1" size="150"/>

@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<devIocStats.devIocStatsHelper ioc="BL11I-MO-IOC-21" name="IOCS.MO21"/>
+	<!--<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-21" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave"/>-->
+	<utility.pingWait delay="5" ip="172.23.111.121"/>
+	<pmac.pmacAsynIPPort IP="172.23.111.121" name="BRICK21port"/>
+	<pmac.GeoBrick P="BL11I-MO-STEP-21" Port="BRICK21port" name="BRICK21"/>
+	<pmac.CS CS="2" Controller="BRICK21" name="CSY"/>
+	<pmac.CS CS="3" Controller="BRICK21" name="CSX"/>
+	<pmac.dls_pmac_cs_asyn_motor ADDR="9" DESC="Y (compound)" DHLM="12.55" DLLM="-12.55" EGU="mm" M=":BASE:Y" MRES="0.0001" P="BL11I-MO-DIFF-02" PORT="CSY" PREC="4" TWV="0.025" VELO="0.1" name="DIF2B.Y"/>
+	<pmac.dls_pmac_cs_asyn_motor M=":BASE:X" P="BL11I-MO-DIFF-02" PORT="CSX" name="DIF2B.X"/>
+	<pmac.dls_pmac_asyn_motor ADDR="4" DESC="Y1" DHLM="29.01" DLLM="-0.24" EGU="mm" HLM="14.5" HLSV="MINOR" LLM="-14.5" M=":Y1" MRES="0.00001" OFF="-14.26" P="BL11I-MO-DIFF-02:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.025" VELO="0.1" name="DIF2B.Y1"/>
+	<pmac.dls_pmac_asyn_motor ADDR="5" DESC="Y2" DHLM="28.74" DLLM="-0.16" EGU="mm" HLM="14" HLSV="MINOR" LLM="-14.5" M=":Y2" MRES="0.00001" OFF="-14.62" P="BL11I-MO-DIFF-02:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.025" VELO="0.1" name="DIF2B.Y2"/>
+	<pmac.dls_pmac_asyn_motor ADDR="6" DESC="Y3" DHLM="28.92" DLLM="0.02" EGU="mm" HLM="14.5" HLSV="MINOR" LLM="-14" M=":Y3" MRES="0.00001" OFF="-14.3" P="BL11I-MO-DIFF-02:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.025" VELO="0.1" name="DIF2B.Y3"/>
+	<pmac.dls_pmac_asyn_motor ADDR="7" DESC="X1" DHLM="22.5" DLLM="-3" EGU="mm" HLSV="MINOR" M=":X1" MRES="0.0025" P="BL11I-MO-DIFF-02:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.5" VELO="2.5" name="DIF2B.X1"/>
+	<pmac.dls_pmac_asyn_motor ADDR="8" DESC="X2" DHLM="23" DLLM="-3" EGU="mm" HLSV="MINOR" M=":X2" MRES="0.0025" P="BL11I-MO-DIFF-02:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.5" VELO="2.5" name="DIF2B.X2"/>
+	<pmac.autohome GRP2="Y1" GRP3="Y2" GRP4="Y3" GRP5="X1" GRP6="X2" P="BL11I-MO-DIFF-02" PLC="10" PORT="BRICK21" name="DIF2B.HOME"/>
+</components>

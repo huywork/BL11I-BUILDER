@@ -1,5 +1,5 @@
 STREAMDEVICE=   $(SUPPORT)/streamDevice/2-5dls9
 LAKESHORE336=   $(SUPPORT)/lakeshore336/2-12
 LAKESHORE340=   $(SUPPORT)/lakeshore340/2-4
-DEVIOCSTATS=    $(SUPPORT)/devIocStats/3-1-14dls3-1
+DEVIOCSTATS=    $(SUPPORT)/devIocStats/3-1-14dls3-3
 PVLOGGING=      $(SUPPORT)/pvlogging/1-4

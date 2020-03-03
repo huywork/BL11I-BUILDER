@@ -1,4 +1,4 @@
-DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-14dls3-1
-AUTOSAVE=    $(SUPPORT)/autosave/5-9dls1
+DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-14dls3-3
+AUTOSAVE=    $(SUPPORT)/autosave/5-9dls2
 UTILITY=     $(SUPPORT)/utility/dls2-18
 BLFEEDBACK=  $(SUPPORT)/BLfeedback/2-18

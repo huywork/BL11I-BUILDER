@@ -1,4 +1,4 @@
 PVLOGGING=   $(SUPPORT)/pvlogging/1-4
-DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-14dls3-1
+DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-14dls3-3
 STREAMS=    $(SUPPORT)/streamDevice/2-5dls11
 ZEBRA=      $(SUPPORT)/zebra/2-9

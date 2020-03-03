@@ -1,13 +1,13 @@
 STREAMDEVICE=     $(SUPPORT)/streamDevice/2-5dls9
 LAKESHORE340=     $(SUPPORT)/lakeshore340/2-4
 SYCOSHHOT=        $(SUPPORT)/SycosH-Hot/1-8
-EUROTHERM2K=      $(SUPPORT)/eurotherm2k/2-3
+EUROTHERM2K=      $(SUPPORT)/eurotherm2k/2-4
 UNIBLITZ=         $(SUPPORT)/uniblitz/2-7
-DEVIOCSTATS=      $(SUPPORT)/devIocStats/3-1-14dls3-1
+DEVIOCSTATS=      $(SUPPORT)/devIocStats/3-1-14dls3-3
 LINKAM=           $(SUPPORT)/linkam/2-14
 AGILENT33220A=    $(SUPPORT)/agilent33220A/1-6
 BRONKHORSTFLOWBUS=$(SUPPORT)/bronkhorstFlowBus/1-1
-OXINSTCRYOJET=    $(SUPPORT)/OxInstCryojet/2-22
+OXINSTCRYOJET=    $(SUPPORT)/OxInstCryojet/2-23
 HARVARDSYRINGE=   $(SUPPORT)/harvardSyringe/1-5
 PVLOGGING=        $(SUPPORT)/pvlogging/1-4
 BL11I=            $(SUPPORT)/BL11I/4-0

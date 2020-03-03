@@ -11,7 +11,7 @@ STREAMS=    $(SUPPORT)/streamDevice/2-5dls11
 # Hardware
 DLS8515=    $(SUPPORT)/DLS8515/0-11
 HY8401=     $(SUPPORT)/Hy8401ip/3-20
-HOSTLINK=   $(SUPPORT)/HostLink/3-2
+HOSTLINK=   $(SUPPORT)/HostLink/3-3
 MRFTIMING=  $(SUPPORT)/mrfTiming/2-4-1dls10
 
 # Devices
@@ -20,7 +20,7 @@ VACUUMVALVE=$(SUPPORT)/vacuumValve/4-23
 MKS937A=    $(SUPPORT)/mks937a/2-90
 MKS937B=    $(SUPPORT)/mks937b/2-86
 RGA=        $(SUPPORT)/rga/4-21
-DIGITELMPC= $(SUPPORT)/digitelMpc/6-2
+DIGITELMPC= $(SUPPORT)/digitelMpc/6-4
 RACKFAN=    $(SUPPORT)/rackFan/2-12
 PRESSARR=   $(SUPPORT)/pressArr_subrec/1-1
 WATER=      $(SUPPORT)/water/1-24

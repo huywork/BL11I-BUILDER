@@ -1,17 +1,20 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-MO-IOC-20" name="IOCS.MO20"/>
-	<!--<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-20" ip="172.23.111.120" path="/dls_sw/i11/epics/autosave"/>-->
-	<utility.pingWait delay="5" ip="172.23.111.254"/>
+	<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-20" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave"/>
+	<utility.pingWait delay="5" ip="172.23.111.120"/>
 	<pmac.pmacAsynIPPort IP="172.23.111.120" name="BRICK20port"/>
 	<pmac.GeoBrick P="BL11I-MO-STEP-20" Port="BRICK20port" name="BRICK20"/>
-	<!--<pmac.dls_pmac_asyn_motor ADDR="1" DESC="2a-rotary table" EGU="deg" M=":2A" P="BL11I-EA-MAC-01" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="NMAC1.2A"/>-->
-	<pmac.dls_pmac_asyn_motor ADDR="2" DESC="a-rotary table" DHLM="31" DLLM="-31" EGU="deg" M=":A" MRES="0.0001" P="BL11I-EA-MAC-01" PORT="BRICK20" PREC="4" SPORT="BRICK20port" TWV="0.1" VELO="20" name="NMAC1.A"/>
-	<!--<pmac.dls_pmac_asyn_motor ADDR="3" DESC="2a-rotary table" EGU="deg" M=":2A" P="BL11I-EA-MAC-02" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="NMAC2.2A"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ADDR="4" DESC="a-rotary table" EGU="deg" M=":A" P="BL11I-EA-MAC-02" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="NMAC2.A"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ADDR="5" DESC="2a-rotary table" EGU="deg" M=":2A" P="BL11I-EA-MAC-03" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="NMAC3.2A"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ADDR="6" DESC="a-rotary table" EGU="deg" M=":A" P="BL11I-EA-MAC-03" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="NMAC3.A"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ADDR="7" DESC="2a-rotary table" EGU="deg" M=":2A" P="BL11I-EA-MAC-04" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="NMAC4.2A"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ADDR="8" DESC="a-rotary table" EGU="deg" M=":A" P="BL11I-EA-MAC-04" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="NMAC4.A"/>-->
-	<pmac.autohome GRP2="Alphas" GRP3="2Alphas" P="BL11I-EA-MAC-01" PLC="10" PORT="BRICK20" name="NMACS.HOME"/>
+	<!--<pmac.dls_pmac_asyn_motor ADDR="1" DESC="a-rotary table" DHLM="20" DLLM="-20" EGU="deg" M=":A" MRES="0.0001" P="BL11I-EA-MAC-01" PORT="BRICK20" PREC="4" SPORT="BRICK20port" TWV="0.1" VELO="5" name="MAC1.A"/>-->
+	<!--<pmac.dls_pmac_asyn_motor ADDR="2" DESC="2a-rotary table" EGU="deg" M=":2A" P="BL11I-EA-MAC-01" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="MAC1.2A"/>-->
+	<!--<pmac.dls_pmac_asyn_motor ADDR="3" DESC="a-rotary table" EGU="deg" M=":A" P="BL11I-EA-MAC-02" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="MAC2.A"/>-->
+	<!--<pmac.dls_pmac_asyn_motor ADDR="4" DESC="2a-rotary table" EGU="deg" M=":2A" P="BL11I-EA-MAC-02" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="MAC2.2A"/>-->
+	<!--<pmac.dls_pmac_asyn_motor ADDR="5" DESC="a-rotary table" EGU="deg" M=":A" P="BL11I-EA-MAC-03" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="MAC3.A"/>-->
+	<!--<pmac.dls_pmac_asyn_motor ADDR="6" DESC="2a-rotary table" EGU="deg" M=":2A" P="BL11I-EA-MAC-03" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="MAC3.2A"/>-->
+	<!--<pmac.dls_pmac_asyn_motor ADDR="7" DESC="a-rotary table" EGU="deg" M=":A" P="BL11I-EA-MAC-04" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="MAC4.A"/>-->
+	<!--<pmac.dls_pmac_asyn_motor ADDR="8" DESC="2a-rotary table" EGU="deg" M=":2A" P="BL11I-EA-MAC-04" PORT="BRICK20" PREC="4" SPORT="BRICK20port" name="MAC4.2A"/>-->
+	<pmac.autohome GRP2="2Alpha" GRP3="Alpha" P="BL11I-EA-MAC-01" PLC="10" PORT="BRICK20" name="MAC1.HOME"/>
+	<!--<pmac.autohome GRP2="2Alpha" GRP3="Alpha" P="BL11I-EA-MAC-02" PLC="11" PORT="BRICK20" name="MAC2.HOME"/>-->
+	<!--<pmac.autohome GRP2="2Alpha" GRP3="Alpha" P="BL11I-EA-MAC-03" PLC="12" PORT="BRICK20" name="MAC3.HOME"/>-->
+	<!--<pmac.autohome GRP2="2Alpha" GRP3="Alpha" P="BL11I-EA-MAC-04" PLC="13" PORT="BRICK20" name="MAC4.HOME"/>-->
 </components>

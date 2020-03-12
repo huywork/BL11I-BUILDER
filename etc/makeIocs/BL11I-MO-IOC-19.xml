@@ -1,15 +1,18 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-MO-IOC-19" name="IOCS.MO19"/>
-	<!--<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-19" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave"/>-->
+	<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-19" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave"/>
 	<utility.pingWait delay="5" ip="172.23.111.119"/>
 	<pmac.pmacAsynIPPort IP="172.23.111.119" name="BRICK19port"/>
 	<pmac.GeoBrick P="BL11I-MO-STEP-19" Port="BRICK19port" name="BRICK19"/>
-	<pmac.dls_pmac_asyn_motor ADDR="1" DESC="Theta" DHLM="191" DLLM="-191.5" EGU="deg" HLSV="MINOR" M=":THETA" MRES="0.00003814" OFF="0.25" P="BL11I-MO-DIFF-02" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="3.2" name="DIFF2.TH"/>
+	<pmac.dls_pmac_asyn_motor ADDR="1" DESC="Theta" DHLM="191" DLLM="-191.5" EGU="deg" HLSV="MINOR" M=":THETA" MRES="0.00003814" OFF="0.25" P="BL11I-MO-DIFF-01" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="3.2" name="DIFF.TH"/>
 	<!--Axis 2 Theta ENC 2 Res 0.001-->
-	<pmac.dls_pmac_asyn_motor ADDR="3" DESC="Two Theta" DHLM="38" DLLM="-65.5" EGU="deg" HLSV="MINOR" M=":2THETA" MRES="0.00002" P="BL11I-MO-DIFF-02" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="1.6" name="DIFF2.TTH"/>
+	<pmac.dls_pmac_asyn_motor ADDR="3" DESC="Two Theta" DHLM="38" DLLM="-10" EGU="deg" HLSV="MINOR" M=":2THETA" MRES="0.00002" OFF="13.70" P="BL11I-MO-DIFF-01" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="1.6" name="DIFF.TTH"/>
 	<!--Axis 4 2Theta ENC 2 Res 0.00002-->
-	<pmac.dls_pmac_asyn_motor ADDR="5" DESC="Delta" DHLM="90" DLLM="-89.3" EGU="deg" HLSV="MINOR" M=":DELTA" MRES="0.00001407" P="BL11I-MO-DIFF-02" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="1" name="DIFF2.DELTA"/>
+	<pmac.dls_pmac_asyn_motor ADDR="5" DESC="Delta" DHLM="90" DLLM="-89.3" EGU="deg" HLSV="MINOR" M=":DELTA" MRES="0.00001407" OFF="43.86" P="BL11I-MO-DIFF-01" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="1" name="DIFF.DELTA"/>
 	<!--Axis 6 Delta ENC 2 Res 0.00001314-->
-	<pmac.autohome GRP2="Theta" GRP3="2Theta" GRP4="Delta" P="BL11I-MO-DIFF-02" PLC="10" PORT="BRICK19" name="DIFF2.HOME"/>
+	<pmac.autohome GRP2="Theta" GRP3="2Theta" GRP4="Delta" P="BL11I-MO-DIFF-01" PLC="10" PORT="BRICK19" name="DIFF.HOME"/>
+	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:THETA:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>-->
+	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:2THETA.DLY&quot;,&quot;1&quot;)" post_init="True"/>-->
+	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:DELTA.DLY&quot;,&quot;1&quot;)" post_init="True"/>-->
 </components>

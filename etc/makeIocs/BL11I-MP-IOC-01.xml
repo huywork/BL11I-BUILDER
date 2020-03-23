@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<devIocStats.devIocStatsHelper ioc="BL11I-MP-IOC-01" name="IOCS.MP01"/>
+	<FINS.FINSUDPInit ip="172.23.111.118" name="FINS1" simulation="None"/>
+	<dlsPLC.interlock addr="10" desc="MAC1 2A +ve limit" device="BL11I-MP-PLC-01" ilk0="MAC1 2A +ve limit" interlock=":INT1" name="MTN1" port="FINS1"/>
+	<dlsPLC.interlock addr="20" desc="MAC1 2A -ve limit" device="BL11I-MP-PLC-01" ilk0="MAC1 2A -ve limit" ilk1="PSD -ve OT limit" interlock=":INT2" name="MTN2" port="FINS1"/>
+	<dlsPLC.interlock addr="30" desc="MAC5 2A +ve limit" device="BL11I-MP-PLC-01" ilk0="MAC5 2A +ve limit" ilk1="MAC5 to Beampipe OT limit" interlock=":INT3" name="MTN3" port="FINS1"/>
+	<dlsPLC.interlock addr="40" desc="MAC5 2A -ve limit" device="BL11I-MP-PLC-01" ilk0="MAC5 2A -ve limit" interlock=":INT4" name="MTN4" port="FINS1"/>
+	<dlsPLC.interlock addr="50" desc="2Theta +ve limit" device="BL11I-MP-PLC-01" ilk0="2Theta +ve limit" ilk1="MAC5 to Beampipe OT limit" ilk2="2Theta +ve OT limit" interlock=":INT5" name="MTN5" port="FINS1"/>
+	<dlsPLC.interlock addr="60" desc="2Theta -ve limit" device="BL11I-MP-PLC-01" ilk0="2Theta -ve limit" ilk1="PSD -ve OT limit" interlock=":INT6" name="MTN6" port="FINS1"/>
+	<dlsPLC.interlock addr="70" desc="Delta +ve limit" device="BL11I-MP-PLC-01" ilk0="Delta +ve limit" ilk1="PSD +ve OT limit" interlock=":INT7" name="MTN7" port="FINS1"/>
+	<dlsPLC.interlock addr="80" desc="Delta -ve limit" device="BL11I-MP-PLC-01" ilk0="Delta -ve limit" ilk1="PSD -ve OT limit" interlock=":INT8" name="MTN8" port="FINS1"/>
+	<dlsPLC.interlock addr="90" desc="X1 +ve limit" device="BL11I-MP-PLC-01" ilk0="Yaw switch #1 limit" interlock=":INT9" name="MTN9" port="FINS1"/>
+	<dlsPLC.interlock addr="100" desc="X1 -ve limit" device="BL11I-MP-PLC-01" ilk0="Yaw switch #2 limit" interlock=":INT10" name="MTN10" port="FINS1"/>
+	<dlsPLC.interlock addr="110" desc="X2 +ve limit" device="BL11I-MP-PLC-01" ilk0="Yaw switch #2 limit" interlock=":INT11" name="MTN11" port="FINS1"/>
+	<dlsPLC.interlock addr="120" desc="X2 -ve limit" device="BL11I-MP-PLC-01" ilk0="Yaw switch #1 limit" interlock=":INT12" name="MTN12" port="FINS1"/>
+	<pvlogging.PvLogging/>
+	<autosave.Autosave bl="True" iocName="BL11I-MP-IOC-01" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave"/>
+</components>

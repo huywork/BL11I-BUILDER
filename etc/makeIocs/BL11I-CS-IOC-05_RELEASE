@@ -1,5 +1,7 @@
+
 PVLOGGING=      $(SUPPORT)/pvlogging/1-4
 DEVIOCSTATS =   $(SUPPORT)/devIocStats/3-1-14dls3-3
 BUSY=           $(SUPPORT)/busy/1-7dls1
 STREAMDEVICE=   $(SUPPORT)/streamDevice/3-0-beta1
-MOTOMANNX100=   $(SUPPORT)/motomanNX100/1-17
+#MOTOMANNX100=   $(SUPPORT)/motomanNX100/1-17
+MOTOMANNX100=   $(WORK)/sfx44126/motomanNX100

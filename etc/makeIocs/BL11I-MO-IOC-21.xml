@@ -11,7 +11,7 @@
 	<!--<pmac.dls_pmac_cs_asyn_motor M=":BASE:X" P="BL11I-MO-DIFF-01" PORT="CSX" name="DIFFB.X"/>-->
 	<pmac.dls_pmac_asyn_motor ACCL="0.2" ADDR="1" DESC="a-rotary table" DHLM="46" DLLM="-45" EGU="deg" M=":A" MRES="0.0001" OFF="5.9569" P="BL11I-EA-MAC-05" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.1" VELO="2" VMAX="3" name="MAC5.A"/>
 	<pmac.dls_pmac_asyn_motor ACCL="0.2" ADDR="2" DESC="2a-rotary table" DHLM="5" DLLM="-17" EGU="deg" M=":2A" MRES="0.00007525379" OFF="3.5862" P="BL11I-EA-MAC-05" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.1" VELO="0.90304548" VMAX="1.5" name="MAC5.2A"/>
-	<!--<pmac.dls_pmac_asyn_motor ADDR="3" DESC="Sample Pos" EGU="mm" M=":SPOS" P="BL11I-MO-DIFF-01" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="1" name="DIFF.SPOS"/>-->
+	<pmac.dls_pmac_asyn_motor ADDR="3" DESC="Sample Pos" EGU="mm" M=":SPOS" MRES="0.00003488" P="BL11I-MO-DIFF-01" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="1" VELO="3.487723" VMAX="5" name="DIFF.SPOS"/>
 	<pmac.dls_pmac_asyn_motor ADDR="4" DESC="Y1" DHLM="29" DLLM="0" EGU="mm" HLM="5.5" HLSV="MINOR" LLM="-23.5" M=":Y1" MRES="0.00001" OFF="-23.5" P="BL11I-MO-DIFF-01:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.025" VELO="0.11" name="DIFFB.Y1"/>
 	<pmac.dls_pmac_asyn_motor ADDR="5" DESC="Y2" DHLM="29" DLLM="0" EGU="mm" HLM="7.1" HLSV="MINOR" LLM="-21.9" M=":Y2" MRES="0.00001" OFF="-21.9" P="BL11I-MO-DIFF-01:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.025" VELO="0.11" name="DIFFB.Y2"/>
 	<pmac.dls_pmac_asyn_motor ADDR="6" DESC="Y3" DHLM="29" DLLM="0" EGU="mm" HLM="6.1" HLSV="MINOR" LLM="-22.9" M=":Y3" MRES="0.00001" OFF="-22.9" P="BL11I-MO-DIFF-01:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.025" VELO="0.11" name="DIFFB.Y3"/>
@@ -19,12 +19,12 @@
 	<pmac.dls_pmac_asyn_motor ADDR="8" DESC="X2" DHLM="3" DIR="Neg" DLLM="-23" EGU="mm" HLM="7.7" HLSV="MINOR" LLM="-18.3" M=":X2" MRES="0.0025" OFF="-15.3" P="BL11I-MO-DIFF-01:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.5" VELO="2.5" name="DIFFB.X2"/>
 	<pmac.autohome GRP2="Y1" GRP3="Y2" GRP4="Y3" GRP5="X1" GRP6="X2" P="BL11I-MO-DIFF-01:BASE" PLC="10" PORT="BRICK21" name="DIFFB.HOME"/>
 	<pmac.autohome GRP2="Alpha" GRP3="2Alpha" P="BL11I-EA-MAC-05" PLC="11" PORT="BRICK21" name="MAC5.HOME"/>
-	<pmac.autohome GRP2="SPOS" P="BL11I-MO-DIFF-01" PLC="12" PORT="BRICK21" name="DIFF.HOME"/>
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:SPOS:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y1:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y2:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y3:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:X1:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:X2:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:SPOS.DLY&quot;,&quot;1&quot;)" post_init="True"/>-->
+	<!--<pmac.autohome GRP2="SPOS" P="BL11I-MO-DIFF-01" PLC="12" PORT="BRICK21" name="DIFF.HOME"/>-->
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:SPOS:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y1:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y2:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:Y3:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:X1:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:BASE:X2:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:SPOS.DLY&quot;,&quot;1&quot;)" post_init="True"/>
 </components>

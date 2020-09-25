@@ -13,6 +13,6 @@
 	<!--Axis 6 Delta ENC 2 Res 0.00001314-->
 	<pmac.autohome GRP2="Theta" GRP3="2Theta" GRP4="Delta" P="BL11I-MO-DIFF-01" PLC="10" PORT="BRICK19" name="DIFF.HOME"/>
 	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:THETA:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>-->
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:2THETA.DLY&quot;,&quot;1&quot;)" post_init="True"/>
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:DELTA.DLY&quot;,&quot;1&quot;)" post_init="True"/>
+	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:2THETA.DLY&quot;,&quot;1&quot;)" post_init="True"/>-->
+	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:DELTA.DLY&quot;,&quot;1&quot;)" post_init="True"/>-->
 </components>

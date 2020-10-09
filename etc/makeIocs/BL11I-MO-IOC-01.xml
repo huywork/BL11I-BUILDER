@@ -132,7 +132,7 @@
 	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-01" NAXES="32" PLC="5" PORT="PMAC_S0" VERSION="0"/>
 	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-02" NAXES="32" PLC="5" PORT="PMAC_S1" VERSION="0"/>
 	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-03" NAXES="32" PLC="5" PORT="PMAC_S2" VERSION="0"/>
-	<asyn.auto_asynRecord ADDR="" IMAX="1024" OMAX="1024" P="BL11I-MO-ASYN-01" PORT="" R="" name="ASYNMO"/>
+	<!--<asyn.auto_asynRecord ADDR="" IMAX="1024" OMAX="1024" P="BL11I-MO-ASYN-01" PORT="" R="" name="ASYNMO"/>-->
 	<motor.motorUtil P="BL11I-MO-IOC-01:" name="IOC1"/>
 	<BL11I.maxonDEC505 CAO="71" CBO="70" P="BL11I-EA-ENV-01" Q=":SPIN" SDISABLE="63" SSPEED="2" gda_desc="Sample Spinner" gda_name="SPIN" name="ENV"/>
 	<positioner.multipositioner DESC="Stick A Positioner" MP=":A:MP" P="BL11I-DI-PHDGN-01" STRA="Clear Diamond" STRB="Black Diamond" STRC="Empty" STRD="Empty" STRE="Empty" STRF="" STRG="" STRH="" STRI="" STRJ="" STRK="" STRL="" gda_desc="D1 Stick A Positioner" gda_name="D1.APOSN" name="D1.MP"/>

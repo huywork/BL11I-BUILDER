@@ -129,9 +129,9 @@
 	<pmacUtil.autohome P="BL11I-EA-RAMAN-01" PLC="15" PORT="PMAC_S0" name="RAMAN.HOME"/>
 	<pmacUtil.autohome P="BL11I-CG-CSTAT-03" PLC="16" PORT="PMAC_S0" name="DCS.HOME"/>
 	<BL11I.BL11I_cryo_rocker name="x.OB1"/>
-	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-01" NAXES="32" PLC="5" PORT="PMAC_S0" VERSION="0"/>
-	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-02" NAXES="32" PLC="5" PORT="PMAC_S1" VERSION="0"/>
-	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-03" NAXES="32" PLC="5" PORT="PMAC_S2" VERSION="0"/>
+	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-01" NAXES="32" PLC="5" PORT="PMAC_S0" VERSION="0" name="MO.PMAC1"/>
+	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-02" NAXES="32" PLC="5" PORT="PMAC_S1" VERSION="0" name="MO.PMAC2"/>
+	<pmacUtil.pmacStatus DEVICE="BL11I-MO-PMAC-03" NAXES="32" PLC="5" PORT="PMAC_S2" VERSION="0" name="MO.PMAC3"/>
 	<!--<asyn.auto_asynRecord ADDR="" IMAX="1024" OMAX="1024" P="BL11I-MO-ASYN-01" PORT="" R="" name="ASYNMO"/>-->
 	<motor.motorUtil P="BL11I-MO-IOC-01:" name="IOC1"/>
 	<BL11I.maxonDEC505 CAO="71" CBO="70" P="BL11I-EA-ENV-01" Q=":SPIN" SDISABLE="63" SSPEED="2" gda_desc="Sample Spinner" gda_name="SPIN" name="ENV"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
-	<devIocStats.devIocStatsHelper ioc="BL11I-EA-TEST-01" name="IOCS.TEST1"/>
-	<autosave.Autosave iocName="BL11I-EA-TEST-01" ip="172.23.111.254" name="IOCS.EATESTAS" path="/dls_sw/i11/epics/autosave"/>
+	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-07" name="IOCS.EA7"/>
+	<autosave.Autosave iocName="BL11I-EA-IOC-07" ip="172.23.111.254" name="IOCS.EA7AS" path="/dls_sw/i11/epics/autosave"/>
 	<pvlogging.PvLogging/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="12000000"/>
 	<slsDetector.slsDetector ADDR="0" P="BL11I-EA-DET-99" PORT="MYTHEN3.DET" R=":DET:" TIMEOUT="10" configFileName="/dls_sw/i11/software/mythen/my30module_diamond.config" detectorId="1" name="MYTHEN3.DET"/>

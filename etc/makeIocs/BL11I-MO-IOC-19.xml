@@ -9,10 +9,24 @@
 	<!--Axis 2 Theta ENC 2 Res 0.001-->
 	<pmac.dls_pmac_asyn_motor ADDR="3" DESC="Two Theta" DHLM="37.3" DLLM="-65.5" EGU="deg" ERES="0.000019746" HLM="51" HLSV="MINOR" LLM="-51.8" M=":2THETA" MRES="0.000019746" OFF="13.70" P="BL11I-MO-DIFF-01" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="1.6" name="DIFF.TTH"/>
 	<!--Axis 4 2Theta ENC 2 Res 0.00002-->
-	<pmac.dls_pmac_asyn_motor ADDR="5" DESC="Delta" DHLM="90.14" DLLM="-88.86" EGU="deg" HLM="134" HLSV="MINOR" LLM="-45" M=":DELTA" MRES="0.00001407" OFF="43.86" P="BL11I-MO-DIFF-01" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="1" name="DIFF.DELTA"/>
+	<pmac.dls_pmac_asyn_motor ADDR="5" DESC="Delta" DHLM="90.14" DLLM="-88.86" EGU="deg" ERES="0.0000142358" HLM="134" HLSV="MINOR" LLM="-45" M=":DELTA" MRES="0.0000142358" OFF="43.86" P="BL11I-MO-DIFF-01" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="1" name="DIFF.DELTA"/>
+	<pmac.dls_pmac_asyn_motor ADDR="7" DESC="Sample Position" DHLM="5" DLLM="0.1" EGU="mm" HLM="39" LLM="0" M=":SPOS" MRES="0.00003488" P="BL11I-MO-DIFF-01" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="3.487723" name="DIFF.SPOS"/>
+	<pmac.auto_pmacVariableRead EGU="counts" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":READ2THETA" VAR="m395" VARIABLE_PREC="4" name="diff.read2theta"/>
+	<pmac.auto_pmacVariableRead EGU="counts" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":READDELTA" VAR="m595" VARIABLE_PREC="4" name="diff.readdelta"/>
+	<pmac.pmacVariableWrite EGU="" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":WRITE2THETA" VAR="p902" VARIABLE_PREC="4" name="diff.write2theta"/>
+	<pmac.pmacVariableWrite EGU="" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":WRITEDELTA" VAR="p907" VARIABLE_PREC="4" name="diff.writedelta"/>
+	<records.calcout CALC="A/1024" DESC="Scale following error" INPA="BL11I-MO-DIFF-01:READ2THETA:RBV" name="diff.r2thetascale" record="BL11I-MO-DIFF-01:READ2THETA_CALC"/>
+	<records.calcout CALC="A/1024" DESC="Scale following error" INPA="BL11I-MO-DIFF-01:READDELTA:RBV" name="diff.rdeltascale" record="BL11I-MO-DIFF-01:READDELTA_CALC"/>
 	<!--Axis 6 Delta ENC 2 Res 0.00001314-->
-	<pmac.autohome GRP2="Theta" GRP3="2Theta" GRP4="Delta" P="BL11I-MO-DIFF-01" PLC="10" PORT="BRICK19" name="DIFF.HOME"/>
+	<pmac.autohome GRP2="Theta" GRP3="2Theta" GRP4="Delta" GRP5="SPOS" P="BL11I-MO-DIFF-01" PLC="10" PORT="BRICK19" name="DIFF.HOME"/>
+	<asyn.auto_asynRecord ADDR="" IMAX="1024" OMAX="1024" P="BL11I-MO-ASYN-01" PORT="BRICK19Port" R="" name="ASYNMO"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:THETA:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:2THETA.DLY&quot;,&quot;1&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:DELTA.DLY&quot;,&quot;1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:SPOS:SDIS.INPB&quot;, &quot;BL11I-EA-ROBOT-01:IO10020.B4 CP&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:READ2THETA:RBV.PROC&quot;, &quot;1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:READDELTA:RBV.PROC&quot;, &quot;1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:READ2THETA:RBV.FLNK&quot;, &quot;BL11I-MO-DIFF-01:READ2THETA_CALC&quot;" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:READDELTA:RBV.FLNK&quot;, &quot;BL11I-MO-DIFF-01:READDELTA_CALC&quot;" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-MO-DIFF-01:SPOS.DLY&quot;,&quot;1&quot;)" post_init="True"/>
 </components>

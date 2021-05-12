@@ -2,7 +2,8 @@
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-MO-IOC-21" name="IOCS.MO21"/>
 	<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-21" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave"/>
-	<utility.pingWait delay="5" ip="172.23.111.121"/>
+        <pvlogging.PvLogging/>
+        <utility.pingWait delay="5" ip="172.23.111.121"/>
 	<pmac.pmacAsynIPPort IP="172.23.111.121" name="BRICK21port"/>
 	<pmac.GeoBrick P="BL11I-MO-STEP-21" Port="BRICK21port" name="BRICK21"/>
 	<!--<pmac.CS CS="2" Controller="BRICK21" name="CSY"/>-->

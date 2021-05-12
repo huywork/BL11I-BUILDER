@@ -11,6 +11,7 @@
 	<!--Axis 4 2Theta ENC 2 Res 0.00002-->
 	<pmac.dls_pmac_asyn_motor ADDR="5" DESC="Delta" DHLM="90.14" DLLM="-88.86" EGU="deg" ERES="0.0000142358" HLM="134" HLSV="MINOR" LLM="-45" M=":DELTA" MRES="0.0000142358" OFF="43.86" P="BL11I-MO-DIFF-01" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="1" name="DIFF.DELTA"/>
 	<pmac.dls_pmac_asyn_motor ADDR="7" DESC="Sample Position" DHLM="5" DLLM="0.1" EGU="mm" HLM="39" LLM="0" M=":SPOS" MRES="0.00003488" P="BL11I-MO-DIFF-01" PORT="BRICK19" PREC="4" SPORT="BRICK19port" TWV="1" VELO="3.487723" name="DIFF.SPOS"/>
+	<pvlogging.PvLogging/>
 	<pmac.auto_pmacVariableRead EGU="counts" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":READ2THETA" VAR="m395" VARIABLE_PREC="4" name="diff.read2theta"/>
 	<pmac.auto_pmacVariableRead EGU="counts" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":READDELTA" VAR="m595" VARIABLE_PREC="4" name="diff.readdelta"/>
 	<pmac.pmacVariableWrite EGU="" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":WRITE2THETA" VAR="p902" VARIABLE_PREC="4" name="diff.write2theta"/>

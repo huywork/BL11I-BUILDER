@@ -18,5 +18,5 @@
 	<!--Fudge the diff pick position X from EPICS-->
 	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-ROBOT-01:P010:X&quot;, &quot;-6&quot;)" post_init="True"/>-->
 	<!--Fudge the diff pick position Z from EPICS-->
-	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-ROBOT-01:P010:Y&quot;, &quot;11&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-ROBOT-01:P010:Y&quot;, &quot;10&quot;)" post_init="True"/>
 </components>

@@ -1,7 +1,7 @@
 # Core modules
 PVLOGGING=   $(SUPPORT)/pvlogging/1-4
 DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-14dls3-3
-UTILITY=    $(SUPPORT)/utility/dls2-18
+UTILITY=    $(SUPPORT)/utility/dls2-19
 IOCINFO=    $(SUPPORT)/IOCinfo/4-2
 AUTOSAVE=   $(SUPPORT)/autosave/5-9dls2
 IPAC=       $(SUPPORT)/ipac/2-8dls4-8-1
@@ -15,17 +15,17 @@ HOSTLINK=   $(SUPPORT)/HostLink/3-3
 MRFTIMING=  $(SUPPORT)/mrfTiming/2-4-1dls10
 
 # Devices
-DLSPLC=     $(SUPPORT)/dlsPLC/2-8
+DLSPLC=     $(SUPPORT)/dlsPLC/2-8-3
 VACUUMVALVE=$(SUPPORT)/vacuumValve/4-23
 MKS937A=    $(SUPPORT)/mks937a/2-90
-MKS937B=    $(SUPPORT)/mks937b/2-86
+MKS937B=    $(SUPPORT)/mks937b/2-90
 RGA=        $(SUPPORT)/rga/4-21
-DIGITELMPC= $(SUPPORT)/digitelMpc/6-4
+DIGITELMPC= $(SUPPORT)/digitelMpc/6-8
 RACKFAN=    $(SUPPORT)/rackFan/2-12
 PRESSARR=   $(SUPPORT)/pressArr_subrec/1-1
 WATER=      $(SUPPORT)/water/1-24
 INTERLOCK=  $(SUPPORT)/interlock/1-30
 TEMPERATURE=$(SUPPORT)/temperature/2-18
 CMSION=     $(SUPPORT)/cmsIon/4-9
-VACUUMSPACE=$(SUPPORT)/vacuumSpace/4-6
+VACUUMSPACE=$(SUPPORT)/vacuumSpace/4-10
 

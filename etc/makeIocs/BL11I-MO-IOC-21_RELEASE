@@ -1,5 +1,5 @@
 DEVIOCSTATS=    $(SUPPORT)/devIocStats/3-1-14dls3-3
 PVLOGGING=      $(SUPPORT)/pvlogging/1-4
-PMAC=           $(SUPPORT)/pmac/2-4-17
+PMAC=           $(SUPPORT)/pmac/2-4-27
 AUTOSAVE=       $(SUPPORT)/autosave/5-9dls2
-UTILITY=        $(SUPPORT)/utility/dls2-18
+UTILITY=        $(SUPPORT)/utility/dls2-19

@@ -1,5 +1,7 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
+	<!--to stop cbLow ring buffer full error-->
+	<EPICS_BASE.StartupCommand command="callbackSetQueueSize(10000)" name="AllowMoreIOIntrRecords"/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="6000000"/>
 	<devIocStats.devIocStatsHelper ioc="BL11I-DI-IOC-03" name="DIIOC3"/>
 	<pvlogging.PvLogging/>

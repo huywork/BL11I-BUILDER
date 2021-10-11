@@ -5,3 +5,4 @@ AUTOSAVE=    $(SUPPORT)/autosave/5-9dls2
 BL11I=       $(SUPPORT)/BL11I/21-2
 UTILITY=     $(SUPPORT)/utility/dls2-19
 PVLOGGING=   $(SUPPORT)/pvlogging/1-4
+ALARMMONITOR=$(SUPPORT)/alarmMonitor/1-0

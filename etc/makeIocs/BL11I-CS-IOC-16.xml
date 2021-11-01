@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<devIocStats.devIocStatsHelper ioc="BL11I-CS-IOC-16" name="IOCS.CS16"/>
+	<asyn.AsynIP name="DAWN.PORT" port="localhost:4001"/>
+	<procServControl.procServControl DESCRIPTION="Dawn consumer restarter" P="BL11I-EA-PRCO-01" PORT="DAWN.PORT" name="DAWN.CONTROL"/>
+</components>

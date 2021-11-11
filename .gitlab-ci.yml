@@ -5,4 +5,4 @@ include:
     
 Test build:
     extends:
-      -  .builder_module
+      - builder_module

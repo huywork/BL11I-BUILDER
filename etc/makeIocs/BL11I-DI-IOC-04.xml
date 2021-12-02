@@ -3,15 +3,20 @@
 	<devIocStats.devIocStatsHelper ioc="BL11I-DI-IOC-04" name="DCAMIOC"/>
 	<pvlogging.PvLogging/>
 	<autosave.Autosave bl="True" iocName="BL11I-DI-IOC-04" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
-	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="172.23.111.191" P="BL11I-DI-DCAM-03" PORT="DCAM3.CAM" R=":CAM:" TIMEOUT="1"/>
-	<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="bl11i-di-xeye-01" P="BL11I-DI-XEYE-01" PORT="XEYE.CAM" R=":CAM:" TIMEOUT="1"/>
+	<ADAravis.aravisCamera CLASS="AVT_Manta_1_44" ID="172.23.111.191" P="BL11I-DI-DCAM-03" PORT="DCAM3.CAM" PV_ALIAS="1" R=":CAM:"/>
+	<ADAravis.aravisCamera CLASS="AVT_Manta_1_44" ID="bl11i-di-xeye-01" P="BL11I-DI-XEYE-01" PORT="XEYE.CAM" PV_ALIAS="1" R=":CAM:"/>
+	<!--<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="172.23.111.191" P="BL11I-DI-DCAM-03" PORT="DCAM3.CAM" R=":CAM:" TIMEOUT="1"/>-->
+	<!--<aravisGigE.aravisCamera ADDR="0" CLASS="AVT_Manta_1_44_4" ID="bl11i-di-xeye-01" P="BL11I-DI-XEYE-01" PORT="XEYE.CAM" R=":CAM:" TIMEOUT="1"/>-->
 	<adPython.adPythonPlugin ADDR="0" ENABLED="1" NDARRAY_PORT="DCAM3.CAM" P="BL11I-DI-DCAM-03" PORT="DCAM3.ROT" R=":ROT:" TIMEOUT="1" classname="Rotate"/>
 	<adPython.adPythonPlugin ADDR="0" ENABLED="1" NDARRAY_PORT="XEYE.CAM" P="BL11I-DI-XEYE-01" PORT="XEYE.ROT" R=":ROT:" TIMEOUT="1" classname="Rotate"/>
 	<adUtil.gdaPlugins CAM="DCAM3.CAM" HTTP_PORT="8083" P="BL11I-DI-DCAM-03" PORTPREFIX="DCAM3" XSIZE="1926" YSIZE="1216"/>
 	<adUtil.gdaPlugins CAM="XEYE.CAM" HTTP_PORT="8084" P="BL11I-DI-XEYE-01" PORTPREFIX="XEYE" XSIZE="1280" YSIZE="960"/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" name="EPICS_CA_MAX_ARRAY_BYTES" value="3000000"/>
+	<EPICS_BASE.StartupCommand command="callbackSetQueueSize(10000)"/>
 	<EPICS_BASE.dbpf pv="BL11I-DI-XEYE-01:PROC:NDArrayPort.VAL" value="XEYE.ROT"/>
 	<EPICS_BASE.dbpf pv="BL11I-DI-XEYE-01:ROT:Angle.VAL" value="0"/>
 	<EPICS_BASE.dbpf pv="BL11I-DI-DCAM-03:PROC:NDArrayPort.VAL" value="DCAM3.ROT"/>
 	<EPICS_BASE.dbpf pv="BL11I-DI-DCAM-03:ROT:Angle.VAL" value="0"/>
+	<EPICS_BASE.dbpf pv="BL11I-DI-XEYE-01:PROC:DataTypeOut" value="Automatic"/>
+	<EPICS_BASE.dbpf pv="BL11I-DI-XEYE-01:CAM:GevSCPSPacketSiz" value="1500"/>
 </components>

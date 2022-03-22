@@ -14,10 +14,14 @@
 	<pvlogging.PvLogging/>
 	<pmac.auto_pmacVariableRead EGU="counts" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":READ2THETA" VAR="m395" VARIABLE_PREC="4" name="diff.read2theta"/>
 	<pmac.auto_pmacVariableRead EGU="counts" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":READDELTA" VAR="m595" VARIABLE_PREC="4" name="diff.readdelta"/>
+	<pmac.auto_pmacVariableRead DTYP="asynInt32" EGU="" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":READMODE" TYPE="I" VAR="P902" VARIABLE_PREC="0" name="DIFF.READMODE"/>
 	<pmac.pmacVariableWrite EGU="" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":WRITE2THETA" VAR="p902" VARIABLE_PREC="4" name="diff.write2theta"/>
 	<pmac.pmacVariableWrite EGU="" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":WRITEDELTA" VAR="p907" VARIABLE_PREC="4" name="diff.writedelta"/>
+	<pmac.pmacVariableWrite DTYP="asynInt32" EGU="" P="BL11I-MO-DIFF-01" PORT="BRICK19" Q=":WRITEMODE" TYPE="I" VAR="P902" VARIABLE_PREC="0" name="DIFF.WRITEMODE"/>
 	<records.calcout CALC="A/1024" DESC="Scale following error" INPA="BL11I-MO-DIFF-01:READ2THETA:RBV" name="diff.r2thetascale" record="BL11I-MO-DIFF-01:READ2THETA_CALC"/>
 	<records.calcout CALC="A/1024" DESC="Scale following error" INPA="BL11I-MO-DIFF-01:READDELTA:RBV" name="diff.rdeltascale" record="BL11I-MO-DIFF-01:READDELTA_CALC"/>
+	<records.calcout CALC="A &lt; 2 ? 0 : 1" DESC="Calc scan mode" FLNK="BL11I-MO-DIFF-01:SCANMODE" INPA="BL11I-MO-DIFF-01:READMODE:RBV CP" OUT="BL11I-MO-DIFF-01:SCANMODE" name="DIFF.MODECALC" record="BL11I-MO-DIFF-01:MODECALC"/>
+	<records.bo DESC="Scan Mode" ONAM="Step Scan" ZNAM="CV Scan" name="DIFF.MODE" record="BL11I-MO-DIFF-01:SCANMODE"/>
 	<!--Axis 6 Delta ENC 2 Res 0.00001314-->
 	<pmac.autohome GRP2="Theta" GRP3="2Theta" GRP4="Delta" GRP5="SPOS" P="BL11I-MO-DIFF-01" PLC="10" PORT="BRICK19" name="DIFF.HOME"/>
 	<asyn.auto_asynRecord ADDR="" IMAX="1024" OMAX="1024" P="BL11I-MO-ASYN-01" PORT="BRICK19Port" R="" name="ASYNMO"/>

@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<EPICS_BASE.EpicsEnvSet key="IOCSH_PS1" name="prompt" value="BL11I-EA-IOC-08&gt; "/>
+	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" name="arrayBytes" value="1000000"/>
+	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-08" name="EA20"/>
+	<ADIvium.Ivium P="BL11I-EA-IVIUM-01" R=":INSTR:" host_name="172.23.111.1" host_port="9000" name="IVIUM.DEVICE"/>
+	<ADIvium.IviumPort ivium="IVIUM.DEVICE" port="IVIUM.P1" port_number="1"/>
+	<ADIvium.IviumPort ivium="IVIUM.DEVICE" port="IVIUM.P2" port_number="2"/>
+	<ADIvium.IviumPort ivium="IVIUM.DEVICE" port="IVIUM.P3" port_number="3"/>
+	<ADIvium.IviumPort ivium="IVIUM.DEVICE" port="IVIUM.P4" port_number="4"/>
+	<ADIvium.IviumPort ivium="IVIUM.DEVICE" port="IVIUM.P5" port_number="5"/>
+	<ADIvium.IviumPort ivium="IVIUM.DEVICE" port="IVIUM.P6" port_number="6"/>
+	<ADIvium.IviumPort ivium="IVIUM.DEVICE" port="IVIUM.P7" port_number="7"/>
+	<ADIvium.IviumPort ivium="IVIUM.DEVICE" port="IVIUM.P8" port_number="8"/>
+	<ADIvium.IviumChannel ivium="IVIUM.DEVICE" ivium_port="IVIUM.P1" port="IVIUM.C1"/>
+	<ADIvium.IviumChannel ivium="IVIUM.DEVICE" ivium_port="IVIUM.P2" port="IVIUM.C2"/>
+	<ADIvium.IviumChannel ivium="IVIUM.DEVICE" ivium_port="IVIUM.P3" port="IVIUM.C3"/>
+	<ADIvium.IviumChannel ivium="IVIUM.DEVICE" ivium_port="IVIUM.P4" port="IVIUM.C4"/>
+	<ADIvium.IviumChannel ivium="IVIUM.DEVICE" ivium_port="IVIUM.P5" port="IVIUM.C5"/>
+	<ADIvium.IviumChannel ivium="IVIUM.DEVICE" ivium_port="IVIUM.P6" port="IVIUM.C6"/>
+	<ADIvium.IviumChannel ivium="IVIUM.DEVICE" ivium_port="IVIUM.P7" port="IVIUM.C7"/>
+	<ADIvium.IviumChannel ivium="IVIUM.DEVICE" ivium_port="IVIUM.P8" port="IVIUM.C8"/>
+	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="IVIUM.P1" P="BL11I-EA-IVIUM-01" PORT="Hdfs.1" R=":HDF1:" TIMEOUT="1"/>
+	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="IVIUM.P2" P="BL11I-EA-IVIUM-01" PORT="Hdfs.2" R=":HDF2:" TIMEOUT="1"/>
+	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="IVIUM.P3" P="BL11I-EA-IVIUM-01" PORT="Hdfs.3" R=":HDF3:" TIMEOUT="1"/>
+	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="IVIUM.P4" P="BL11I-EA-IVIUM-01" PORT="Hdfs.4" R=":HDF4:" TIMEOUT="1"/>
+	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="IVIUM.P5" P="BL11I-EA-IVIUM-01" PORT="Hdfs.5" R=":HDF5:" TIMEOUT="1"/>
+	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="IVIUM.P6" P="BL11I-EA-IVIUM-01" PORT="Hdfs.6" R=":HDF6:" TIMEOUT="1"/>
+	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="IVIUM.P7" P="BL11I-EA-IVIUM-01" PORT="Hdfs.7" R=":HDF7:" TIMEOUT="1"/>
+	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="IVIUM.P8" P="BL11I-EA-IVIUM-01" PORT="Hdfs.8" R=":HDF8:" TIMEOUT="1"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-IVIUM-01:CHAN1:AssignedPort" value="IVIUM.P1"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-IVIUM-01:CHAN2:AssignedPort" value="IVIUM.P2"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-IVIUM-01:CHAN3:AssignedPort" value="IVIUM.P3"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-IVIUM-01:CHAN4:AssignedPort" value="IVIUM.P4"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-IVIUM-01:CHAN5:AssignedPort" value="IVIUM.P5"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-IVIUM-01:CHAN6:AssignedPort" value="IVIUM.P6"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-IVIUM-01:CHAN7:AssignedPort" value="IVIUM.P7"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-IVIUM-01:CHAN8:AssignedPort" value="IVIUM.P8"/>
+</components>

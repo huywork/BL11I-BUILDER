@@ -1,6 +1,6 @@
 DEVIOCSTATS=    $(SUPPORT)/devIocStats/3-1-14dls3-3
-FINS=           $(SUPPORT)/FINS/3-10
-DLSPLC=         $(SUPPORT)/dlsPLC/2-8-6
+FINS=           $(SUPPORT)/FINS/3-12
+DLSPLC=         $(SUPPORT)/dlsPLC/3-0-35
 AUTOSAVE=       $(SUPPORT)/autosave/5-9dls2
 UTILITY=        $(SUPPORT)/utility/dls2-19
 PVLOGGING=      $(SUPPORT)/pvlogging/1-4

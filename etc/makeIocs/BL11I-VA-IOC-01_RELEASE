@@ -2,30 +2,30 @@
 PVLOGGING=   $(SUPPORT)/pvlogging/1-4
 DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-14dls3-3
 UTILITY=    $(SUPPORT)/utility/dls2-19
-IOCINFO=    $(SUPPORT)/IOCinfo/4-2
+IOCINFO=    $(SUPPORT)/IOCinfo/4-2-1
 AUTOSAVE=   $(SUPPORT)/autosave/5-9dls2
 IPAC=       $(SUPPORT)/ipac/2-8dls4-8-1
-BUSY=       $(SUPPORT)/busy/1-7dls1
-STREAMS=    $(SUPPORT)/streamDevice/2-5dls11
+BUSY=       $(SUPPORT)/busy/1-7-2dls5
+STREAMS=    $(SUPPORT)/streamDevice/2-5dls13
 
 # Hardware
 DLS8515=    $(SUPPORT)/DLS8515/0-11
-HY8401=     $(SUPPORT)/Hy8401ip/3-20
+HY8401=     $(SUPPORT)/Hy8401ip/3-21
 HOSTLINK=   $(SUPPORT)/HostLink/3-3
 MRFTIMING=  $(SUPPORT)/mrfTiming/2-4-1dls10
 
 # Devices
-DLSPLC=     $(SUPPORT)/dlsPLC/2-8-3
+DLSPLC=     $(SUPPORT)/dlsPLC/3-0-29
 VACUUMVALVE=$(SUPPORT)/vacuumValve/4-23
-MKS937A=    $(SUPPORT)/mks937a/2-90
-MKS937B=    $(SUPPORT)/mks937b/2-90
-RGA=        $(SUPPORT)/rga/4-21
-DIGITELMPC= $(SUPPORT)/digitelMpc/6-8
+MKS937A=    $(SUPPORT)/mks937a/2-93
+MKS937B=    $(SUPPORT)/mks937b/2-93
+RGA=        $(SUPPORT)/rga/4-25
+DIGITELMPC= $(SUPPORT)/digitelMpc/6-18
 RACKFAN=    $(SUPPORT)/rackFan/2-12
 PRESSARR=   $(SUPPORT)/pressArr_subrec/1-1
 WATER=      $(SUPPORT)/water/1-24
-INTERLOCK=  $(SUPPORT)/interlock/1-30
-TEMPERATURE=$(SUPPORT)/temperature/2-18
+INTERLOCK=  $(SUPPORT)/interlock/1-32
+TEMPERATURE=$(SUPPORT)/temperature/2-19
 CMSION=     $(SUPPORT)/cmsIon/4-9
 VACUUMSPACE=$(SUPPORT)/vacuumSpace/4-10
 

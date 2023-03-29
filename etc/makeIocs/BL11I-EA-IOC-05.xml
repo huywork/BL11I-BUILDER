@@ -4,9 +4,7 @@
 	<pvlogging.PvLogging/>
 	<ethercat.EthercatMaster master_index="0" max_message="1000000" name="ECATM" socket="/tmp/socket0"/>
 	<ethercat.EthercatSlave master="ECATM" name="DO.1" position="DCS00024021" type_rev="EP2624-0002 rev 0x00110002"/>
-	<userIO.bo DTYP="asynInt32" ONAM="High" OUT="@asyn(DO.1)Channel1.Output" P="BL11I-EA-LAMP-01" R=":ON" SCAN="Passive" ZNAM="Low" name="LAMP.On"/>
-	<userIO.bo DTYP="asynInt32" ONAM="High" OUT="@asyn(DO.1)Channel2.Output" P="BL11I-EA-LAMP-01" R=":OFF" SCAN="Passive" ZNAM="Low" name="LAMP.Off"/>
-	<userIO.bo DTYP="asynInt32" ONAM="Opened" OUT="@asyn(DO.1)Channel3.Output" P="BL11I-EA-LAMP-01" R=":SHUTTER" SCAN="Passive" ZNAM="Closed" name="LAMP.Shutter"/>
-	<EPICS_BASE.dbpf pv="BL11I-EA-LAMP-01:ON.HIGH" value="0.5"/>
-	<EPICS_BASE.dbpf pv="BL11I-EA-LAMP-01:OFF.HIGH" value="0.5"/>
+	<userIO.bo DTYP="asynInt32" HIGH="0.5" ONAM="High" OUT="@asyn(DO.1)Channel1.Output" P="BL11I-EA-LAMP-01" R=":ON" SCAN="Passive" ZNAM="Low" name="LAMP.On"/>
+	<userIO.bo DTYP="asynInt32" HIGH="0.5" ONAM="High" OUT="@asyn(DO.1)Channel2.Output" P="BL11I-EA-LAMP-01" R=":OFF" SCAN="Passive" ZNAM="Low" name="LAMP.Off"/>
+	<userIO.bo DTYP="asynInt32" HIGH="0.5" ONAM="Opened" OUT="@asyn(DO.1)Channel3.Output" P="BL11I-EA-LAMP-01" R=":SHUTTER" SCAN="Passive" ZNAM="Closed" name="LAMP.Shutter"/>
 </components>

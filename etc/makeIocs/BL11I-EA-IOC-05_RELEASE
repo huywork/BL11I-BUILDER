@@ -1,4 +1,4 @@
 PVLOGGING=   $(SUPPORT)/pvlogging/1-4
-ETHERCAT = $(SUPPORT)/ethercat/7-4-1
-USERIO = $(SUPPORT)/userIO/2-28-4
+ETHERCAT = $(SUPPORT)/ethercat/7-5-3
+USERIO = $(SUPPORT)/userIO/2-29
 DEVIOCSTATS=$(SUPPORT)/devIocStats/3-1-14dls3-3

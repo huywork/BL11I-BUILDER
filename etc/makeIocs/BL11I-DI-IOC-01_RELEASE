@@ -2,7 +2,7 @@ PVLOGGING=   $(SUPPORT)/pvlogging/1-4
 UTILITY=    $(SUPPORT)/utility/dls2-19
 AUTOSAVE=$(SUPPORT)/autosave/5-9dls2
 DEVIOCSTATS = $(SUPPORT)/devIocStats/3-1-14dls3-3
-ADARAVIS= $(SUPPORT)/ADAravis/2-2-1dls4
-ADUTIL=   $(SUPPORT)/adUtil/2-37
+ADARAVIS= $(SUPPORT)/ADAravis/2-2-1dls7
+ADUTIL=   $(SUPPORT)/adUtil/2-40
 
 

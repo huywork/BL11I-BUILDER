@@ -8,6 +8,6 @@ LINKAM=           $(SUPPORT)/linkam/2-14
 AGILENT33220A=    $(SUPPORT)/agilent33220A/1-7
 BRONKHORSTFLOWBUS=$(SUPPORT)/bronkhorstFlowBus/1-1
 OXINSTCRYOJET=    $(SUPPORT)/OxInstCryojet/2-23
-HARVARDSYRINGE=   $(SUPPORT)/harvardSyringe/1-5
+HARVARDSYRINGE=   $(SUPPORT)/harvardSyringe/1-6-1
 PVLOGGING=        $(SUPPORT)/pvlogging/1-4
 BL11I=            $(SUPPORT)/BL11I/4-0

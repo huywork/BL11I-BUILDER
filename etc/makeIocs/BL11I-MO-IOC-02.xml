@@ -5,31 +5,11 @@
 	<IOCinfo.IOCinfo device="BL11I-MO-IOC-02"/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="300000"/>
 	<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-02" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave" skip_1="True"/>
-	<pmac.pmacVmeConfig name="PMAC_S0"/>
-	<!--<pmac.PMAC P="BL11I-MO-PMAC-04" Port="PMAC_S0" name="PMAC4"/>-->
-	<!--<pmac.CS CS="2" Controller="PMAC4" PARENTPORT="PMAC_S0" name="PMAC4CS2"/>-->
-	<!--<pmac.dls_pmac_cs_asyn_motor ACCL="0.5" ADDR="7" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Energy (compound)" DHLM="1500" DIR="0" DLLM="0" DTYP="asynMotor" EGU="keV" ERES="" FOFF="" HLSV="MINOR" INIT="" JAR="1000" M=":ENERGY" MRES="0.0001" OFF="0" P="BL11I-OP-DCM-01" PORT="PMAC4CS2" PREC="4" RDBD="0.001" RRES="0" SREV="1000" TWV="0.05" UEIP="0" VBAS="0" VELO="0.5" VMAX="1.23985" gda_desc="Energy" gda_name="DCM.ENERGY" name="DCM.ENERGY"/>-->
-	<!--<pmac.dls_pmac_cs_asyn_motor ACCL="0.5" ADDR="8" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Offset (compound)" DHLM="25" DIR="0" DLLM="0" DTYP="asynMotor" EGU="mm" ERES="" FOFF="" HLSV="MINOR" INIT="" JAR="1000" M=":OFFSET" MRES="0.0001" OFF="0" P="BL11I-OP-DCM-01" PORT="PMAC4CS2" PREC="4" RDBD="0.001" RRES="0" SREV="1000" TWV="0" UEIP="0" VBAS="0" VELO="0.5" VMAX="0.5" gda_desc="Offset" gda_name="DCM.OFFSET" name="DCM.OFFSET"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ACCL="0.5" ADDR="1" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Horizontal Translation" DHLM="1000" DIR="0" DLLM="-1000" DTYP="asynMotor" EGU="mm" ERES="" FOFF="" HLSV="MINOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":X" MRES="0.0005" OFF="-0.775" P="BL11I-OP-DCM-01" PORT="PMAC4" PREC="4" RDBD="0.002" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="1" VMAX="1" gda_desc="" gda_name="" name="DCM.X"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ACCL="0.5" ADDR="2" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Bragg Angle" DHLM="1000" DIR="0" DLLM="-1000" DTYP="asynMotor" EGU="deg" ERES="" FOFF="" HLSV="MINOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":BRAGG" MRES="-0.0000138731" OFF="0.1036" P="BL11I-OP-DCM-01" PORT="PMAC4" PREC="4" RDBD="5e-05" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="0.1" VMAX="0.1" gda_desc="Bragg Angle" gda_name="DCM.BRAGG" name="DCM.BRAGG"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ACCL="0.5" ADDR="3" ADEL="" BACC="" BDST="0" BVEL="0" DESC="Crystal Gap" DHLM="1000" DIR="0" DLLM="-1000" DTYP="asynMotor" EGU="mm" ERES="" FOFF="" HLSV="MINOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":T2" MRES="-0.0005" OFF="6.928" P="BL11I-OP-DCM-01" PORT="PMAC4" PREC="4" RDBD="0.001" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="0.5" VMAX="0.5" gda_desc="Crystal Gap" gda_name="DCM.T2" name="DCM.T2"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ACCL="0.5" ADDR="4" ADEL="" BACC="0.3" BDST="0" BVEL="10" DESC="Roll 1" DHLM="10000" DIR="0" DLLM="-10000" DTYP="asynMotor" EGU="mdeg" ERES="" FOFF="" HLSV="MINOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":ROLL1" MRES="0.0688" OFF="974" P="BL11I-OP-DCM-01" PORT="PMAC4" PREC="2" RDBD="" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="10" VMAX="10" gda_desc="Roll 1" gda_name="DCM.ROLL1" name="DCM.ROLL1"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ACCL="0.5" ADDR="5" ADEL="" BACC="0.3" BDST="0" BVEL="10" DESC="Pitch 2" DHLM="10000" DIR="0" DLLM="-10000" DTYP="asynMotor" EGU="mdeg" ERES="" FOFF="" HLSV="MINOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":PITCH2" MRES="-0.036" OFF="-850" P="BL11I-OP-DCM-01" PORT="PMAC4" PREC="2" RDBD="" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.1" UEIP="0" VBAS="0" VELO="25" VMAX="25" gda_desc="Pitch 2" gda_name="DCM.PITCH2" name="DCM.PITCH2"/>-->
-	<!--<pmac.dls_pmac_asyn_motor ACCL="0.5" ADDR="6" ADEL="" BACC="0.3" BDST="0" BVEL="10" DESC="Roll 2" DHLM="10000" DIR="0" DLLM="-10000" DTYP="asynMotor" EGU="mdeg" ERES="" FOFF="" HLSV="MINOR" HOME="BL11I-OP-DCM-01" INIT="" JAR="1000" M=":ROLL2" MRES="0.046" OFF="420" P="BL11I-OP-DCM-01" PORT="PMAC4" PREC="2" RDBD="" RRES="0" SPORT="PMAC_S0" SREV="1000" TWV="0.5" UEIP="0" VBAS="0" VELO="25" VMAX="25" gda_desc="Roll 2" gda_name="DCM.ROLL2" name="DCM.ROLL2"/>-->
-	<!--<pmac.auto_translated_motor BWD="12.3985/A" DESC="Wavelength (virtual)" DHLM="" DLLM="" EGU="Ang" FWD="12.3985/A" M=":ENERGY" P="BL11I-OP-DCM-01" PREC="5" SM=":LAMBDA" TWV="0.01" VELO="10" VMAX="10" gda_desc="Wavelength (virtual)" gda_name="DCM.LAMBDA" name="DCM.wavelength"/>-->
-	<!--<pmac.autohome GRP1="All" GRP2="Bragg" GRP3="X" GRP4="T2" GRP5="Pitch2" GRP6="Roll2" P="BL11I-OP-DCM-01" PLC="11" PORT="PMAC4" STATE11="" STATE12="" STATE13="" STATE14="" name="DCM.OB1"/>-->
 	<motor.motorUtil P="BL11I-MO-IOC-02:" name="IOC2"/>
-	<!--<positioner.multipositioner DESC="Crystal Select" MP=":MP" P="BL11I-OP-DCM-01" STRA="Si111" STRB="Si220" STRC="" STRD="" STRE="" STRF="" STRG="" STRH="" STRI="" STRJ="" STRK="" STRL="" gda_desc="DCM Crystal Select" gda_name="DCM.XTAL" name="DCM.OB8"/>-->
-	<!--<positioner.motorpositioner DESC="Position motor" MP="DCM.OB8" PREC="5" Q=":P1" VALA="0" VALB="110" VALC="0" VALD="0" VALE="0" VALF="0" VALG="0" VALH="0" VALI="0" VALJ="0" VALK="0" VALL="0" motor="DCM.X" name="DCM.OB9"/>-->
-	<!--<positioner.positioner DEADBAND="0.001" DESC="Crystal spacing" EGU="A*" MP="DCM.OB8" PREC="5" Q=":P2" READBACK=":XSPACE:RBV" SET=":XSPACE" STOP=":XSPACE.DESC" STOPVAL="Stopped" VALA="3.13492" VALB="1.9201" VALC="0" VALD="0" VALE="0" VALF="0" VALG="0" VALH="0" VALI="0" VALJ="0" VALK="0" VALL="0" name="DCM.OB10"/>-->
 	<ipac.Hy8002 name="CARD5" slot="5"/>
 	<Hy8401ip-asyn.Hy8401Asyn carrier="CARD5" ipslot="2" name="ADC52"/>
 	<Hy8401ip-asyn.Hy8401Asyn carrier="CARD5" fastADC="0" ipslot="3" name="ADC53"/>
-	<!--<Hy8401ipTemplates.Hy8401AsynControl AVERAGE="5001" CLOCKRATE="11" P="BL11I-OP-DCM-01:FB:ADC" PORT="ADC52" SAMPLES="5001" gda_name="ADC52" name="ADC"/>-->
 	<Hy8401ipTemplates.Hy8401AsynControl CLOCKRATE="9" P="BL11I-MO-IOC-02:ADC2" PORT="ADC53" gda_name="ADC53" name="ADC2"/>
-	<!--<Hy8401ip-asyn.Channel_ai CHAN="0" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:01:AVG" name="DCM.FP.MOD_RBV"/>-->
-	<!--<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:02:AVG" name="IC4.I_RBV"/>-->
-	<!--<Hy8401ip-asyn.Channel_ai CHAN="1" P="BL11I-DI-IONC-04" PORT="ADC52" Q=":PHD1:I" SCAN=".1 second" name="IC4.I"/>-->
 	<Hy8401ip-asyn.Channel_ai CHAN="2" P="BL11I-EA-PE-01" PORT="ADC52" Q=":HV:RBV" SCAN=".1 second" name="PE.HV_RBV"/>
 	<Hy8401ip-asyn.Channel_ai CHAN="3" P="BL11I-EA-PE-01" PORT="ADC52" Q=":EL:RBV" SCAN=".1 second" name="PE.EL_RBV"/>
 	<Hy8401ip-asyn.Channel_ai CHAN="4" P="BL11I-EA-PE-01" PORT="ADC52" Q=":TRIG:RBV" SCAN=".1 second" name="PE.TRIG_RBV"/>
@@ -42,13 +22,9 @@
 	<Hy8401ip-asyn.Channel_ai CHAN="6" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I3" SCAN=".1 second" name="QBPM3.I3"/>
 	<Hy8401ip-asyn.Channel_ai CHAN="7" P="BL11I-DI-QBPM-03" PORT="ADC53" Q=":I4" SCAN=".1 second" name="QBPM3.I4"/>
 	<femto.femto_ai DESC="IC4 Current" DTYPE="asynFloat64" EGU="V" EGUF="10" EGUL="-10" INP="@asyn(ADC52 1) GENDATA" P="BL11I-DI-IONC-04" PREC="3" Q=":PHD1:I" SCAN=".1 second" gda_name="IC4.AMP" name="IC4.I"/>
-	<!--<Hy8401ip-asyn.Channel_waveform CHAN="0" NELM="5000" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:01" name="DCM.FP.MOD_ARBV"/>-->
-	<!--<Hy8401ip-asyn.Channel_waveform CHAN="1" NELM="5000" P="BL11I-OP-DCM-01" PORT="ADC52" Q=":FB:ADC:02" name="IC4.I_ARBV"/>-->
 	<Hy8401ip-asyn.Channel_waveform CHAN="2" NELM="5000" P="BL11I-EA-PE-01" PORT="ADC52" Q=":HV:ARBV" name="PE.HV_ARBV"/>
 	<Hy8401ip-asyn.Channel_waveform CHAN="3" NELM="5000" P="BL11I-EA-PE-01" PORT="ADC52" Q=":EL:ARBV" name="PE.EL_ARBV"/>
 	<Hy8401ip-asyn.Channel_waveform CHAN="4" NELM="5000" P="BL11I-EA-PE-01" PORT="ADC52" Q=":TRIG:ARBV" name="PE.TRIG_ARBV"/>
-	<!--<SigProc.fftWaveform INP="BL11I-OP-DCM-01:FB:ADC:01 CP" NELM="2500" P="BL11I-OP-DCM-01:FB:ADC:01:FFT" name="DCM.FP.MOD_FFT"/>-->
-	<!--<SigProc.fftWaveform INP="BL11I-OP-DCM-01:FB:ADC:02 CP" NELM="2500" P="BL11I-OP-DCM-01:FB:ADC:02:FFT" name="IC4.I_FFT"/>-->
 	<BLfeedback.beamPositionCalc ADCPORT="ADC53" C1="3" C2="1" C3="0" C4="2" name="S4BPC"/>
 	<BLfeedback.beamPositionCalc ADCPORT="ADC53" C1="4" C2="5" C3="6" C4="7" geometry="1" name="QBPM3BPC"/>
 	<userIO.ai DTYP="asynInt32" EGU="V" EGUF="10" EGUL="-10" INP="@asyn(S4BPC 0)RAW_XDATA" LINR="LINEAR" P="BL11I-AL-SLITS-04" PREC="3" R=":X:POS" SCAN=".1 second" name="S4.XPOS"/>
@@ -57,18 +33,4 @@
 	<userIO.ai DTYP="asynInt32" EGU="V" EGUF="10" EGUL="-10" INP="@asyn(QBPM3BPC 0)RAW_YDATA" LINR="LINEAR" P="BL11I-DI-QBPM-03" PREC="3" R=":Y:POS" SCAN=".1 second" name="QBPM3.YPOS"/>
 	<Hy8402ip.Hy8402 carrier="CARD5" clockRate="11" doram="1" ipslot="0" name="DAC50"/>
 	<Hy8402ip.Hy8402 carrier="CARD5" clockRate="11" ipslot="1" name="DAC51"/>
-	<!--<Hy8402ipTemplates.funcRecord C="50" CLKRATE="5 kHz" MALM="5000" P="BL11I-OP-DCM-01:FB" name="DCM.FP.MOD"/>-->
-	<!--<userIO.ao DRVH="26.929" DRVL="-26.93" DTYP="asynInt32" EGU="V" EGUF="26.929" EGUL="-26.93" LINR="LINEAR" OUT="@asyn(DAC51 0 1)DATA" P="BL11I-OP-DCM-01" PREC="3" R=":FB:DAC:02" SCAN="Passive" name="DCM.FP.DC"/>-->
-	<!--<userIO.ao DRVH="52.3" DRVL="-52.3" DTYP="asynInt32" EGU="V" EGUF="52.3" EGUL="-52.3" LINR="LINEAR" OUT="@asyn(DAC51 1 1)DATA" P="BL11I-OP-DCM-01" PREC="3" R=":FR" SCAN="Passive" name="DCM.FR.DC"/>-->
-	<!--<BLfeedback.modulationFeedback AMPL="0.05" DCDAC="BL11I-OP-DCM-01:FB:DAC:02" DRVL="-10" FBSIGADC="BL11I-OP-DCM-01:FB:ADC:02" FREQ="111" FUNC="BL11I-OP-DCM-01:FB:FUNC" IOC="BL11I-MO-IOC-02" MAXAMPL="2" MAXFREQ="500" MINFREQ="0.1" MODADC="BL11I-OP-DCM-01:FB:ADC:01" P="BL11I-OP-DCM-01" PREC="4" R=":FB" name="DCM.FP.MFB"/>-->
-	<!--<BLfeedback.fast_feedback AUTOPV="BL11I-PS-SHTR-01:STA" AUTOPV2="FE11I-RS-ABSB-01:STA" DRVH="65023" DRVL="512" DT="0.03" HOPR="1000000" ICHAN="0" INPUT="S4BPC" INPUT_DATA="YDATA" INPUT_INTERVAL="SCAN_PERIOD" KD="0" KI="150" KP="0.01" LOPR="-1000000" OCHAN="0" OUTPUT="DAC51" OUTPUT_DATA="DOUBLE_DATA" P="BL11I-OP-DCM-01" PID=":FP:S4FB" PREC="4" SCAN=".1 second" name="DCM.FP.S4FB"/>-->
-	<!--<BLfeedback.fast_feedback AUTOPV="BL11I-PS-SHTR-01:STA" AUTOPV2="FE11I-RS-ABSB-01:STA" DRVH="65023" DRVL="512" DT="0.03" HOPR="1000000" ICHAN="0" INPUT="QBPM3BPC" INPUT_DATA="YDATA" INPUT_INTERVAL="SCAN_PERIOD" KD="0" KI="150" KP="0.01" LOPR="-1000000" OCHAN="0" OUTPUT="DAC51" OUTPUT_DATA="DOUBLE_DATA" P="BL11I-OP-DCM-01" PID=":FP:QBPM3FB" PREC="4" SCAN=".1 second" name="DCM.FP.QBPM3FB"/>-->
-	<!--<BLfeedback.fast_feedback AUTOPV="BL11I-PS-SHTR-01:STA" AUTOPV2="FE11I-RS-ABSB-01:STA" DRVH="65023" DRVL="512" DT="0.03" HOPR="1000000" ICHAN="0" INPUT="S4BPC" INPUT_DATA="XDATA" INPUT_INTERVAL="SCAN_PERIOD" KD="0" KI="150" KP="0.01" LOPR="-1000000" OCHAN="1" OUTPUT="DAC51" OUTPUT_DATA="DOUBLE_DATA" P="BL11I-OP-DCM-01" PID=":FR:S4FB" PREC="4" SCAN=".1 second" name="DCM.FR.S4FB"/>-->
-	<!--<BLfeedback.fast_feedback AUTOPV="BL11I-PS-SHTR-01:STA" AUTOPV2="FE11I-RS-ABSB-01:STA" DRVH="65023" DRVL="512" DT="0.03" HOPR="1000000" ICHAN="0" INPUT="QBPM3BPC" INPUT_DATA="XDATA" INPUT_INTERVAL="SCAN_PERIOD" KD="0" KI="150" KP="0.01" LOPR="-1000000" OCHAN="1" OUTPUT="DAC51" OUTPUT_DATA="DOUBLE_DATA" P="BL11I-OP-DCM-01" PID=":FR:QBPM3FB" PREC="4" SCAN=".1 second" name="DCM.FR.QBPM3FB"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-DCM-01:FB:PID.KP&quot;, &quot;0.05&quot;)" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-DCM-01:FP:S4FB:AUTOCALC.INPE&quot;, &quot;BL11I-AL-SLITS-04:YP:I CP&quot;)" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-DCM-01:FP:S4FB:AUTOCALC.INPF&quot;, &quot;BL11I-AL-SLITS-04:YM:I CP&quot;)" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-OP-DCM-01:FP:S4FB:AUTOCALC.OCAL&quot;, &quot;(B=1)&amp;(C=1)&amp;(D&gt;5)&amp;(E&gt;1)&amp;(F&gt;1)&quot;)" post_init="True"/>-->
-	<!--<records.motor DESC="Fine Pitch Motor (piezo)" DHLM="26" DINP="BL11I-OP-DCM-01:FPITCH2:DONE" DLLM="-26" DTYP="Soft Channel" EGU="mdeg" MRES="0.001" NTM="NO" OUT="BL11I-OP-DCM-01:FB:DAC:02 PP" PREC="3" RDBD="0.001" RDBL="BL11I-OP-DCM-01:FPITCH2:RBV" RRES="1" RTRY="0" TWV="0.1" URIP="Yes" VELO="1000" VMAX="1000" record="BL11I-OP-DCM-01:FPITCH2:MOTOR"/>-->
-	<!--<records.calc CALC="1" PINI="YES" record="BL11I-OP-DCM-01:FPITCH2:DONE"/>-->
 </components>

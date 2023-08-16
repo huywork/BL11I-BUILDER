@@ -2,16 +2,14 @@
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-MO-IOC-21" name="IOCS.MO21"/>
 	<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-21" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave"/>
-        <pvlogging.PvLogging/>
-        <utility.pingWait delay="5" ip="172.23.111.121"/>
+	<pvlogging.PvLogging/>
+	<utility.pingWait delay="5" ip="172.23.111.121"/>
 	<pmac.pmacAsynIPPort IP="172.23.111.121" name="BRICK21port"/>
 	<pmac.GeoBrick P="BL11I-MO-STEP-21" Port="BRICK21port" name="BRICK21"/>
 	<!--<pmac.CS CS="2" Controller="BRICK21" name="CSY"/>-->
 	<!--<pmac.CS CS="3" Controller="BRICK21" name="CSX"/>-->
 	<!--<pmac.dls_pmac_cs_asyn_motor ADDR="9" DESC="Y (compound)" DHLM="12.55" DLLM="-12.55" EGU="mm" M=":BASE:Y" MRES="0.0001" P="BL11I-MO-DIFF-01" PORT="CSY" PREC="4" TWV="0.025" VELO="0.1" name="DIFFB.Y"/>-->
 	<!--<pmac.dls_pmac_cs_asyn_motor M=":BASE:X" P="BL11I-MO-DIFF-01" PORT="CSX" name="DIFFB.X"/>-->
-	<pmac.dls_pmac_asyn_motor ACCL="0.2" ADDR="1" DESC="a-rotary table" DHLM="46" DLLM="-45" EGU="deg" M=":A" MRES="0.0001" OFF="5.9569" P="BL11I-EA-MAC-05" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.1" VELO="2" VMAX="3" name="MAC5.A"/>
-	<pmac.dls_pmac_asyn_motor ACCL="0.2" ADDR="2" DESC="2a-rotary table" DHLM="5" DLLM="-17" EGU="deg" M=":2A" MRES="0.00007525379" OFF="3.5862" P="BL11I-EA-MAC-05" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.1" VELO="0.7525379" VMAX="0.9" name="MAC5.2A"/>
 	<pmac.dls_pmac_asyn_motor ADDR="4" DESC="Y1" DHLM="29" DLLM="0" EGU="mm" HLM="5.5" HLSV="MINOR" LLM="-23.5" M=":Y1" MRES="0.00001" OFF="-23.5" P="BL11I-MO-DIFF-01:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.025" VELO="0.11" name="DIFFB.Y1"/>
 	<pmac.dls_pmac_asyn_motor ADDR="5" DESC="Y2" DHLM="29" DLLM="0" EGU="mm" HLM="7.1" HLSV="MINOR" LLM="-21.9" M=":Y2" MRES="0.00001" OFF="-21.9" P="BL11I-MO-DIFF-01:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.025" VELO="0.11" name="DIFFB.Y2"/>
 	<pmac.dls_pmac_asyn_motor ADDR="6" DESC="Y3" DHLM="29" DLLM="0" EGU="mm" HLM="6.1" HLSV="MINOR" LLM="-22.9" M=":Y3" MRES="0.00001" OFF="-22.9" P="BL11I-MO-DIFF-01:BASE" PORT="BRICK21" PREC="4" SPORT="BRICK21port" TWV="0.025" VELO="0.11" name="DIFFB.Y3"/>

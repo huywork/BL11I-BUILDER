@@ -17,10 +17,10 @@ MRFTIMING=  $(SUPPORT)/mrfTiming/2-4-1dls10
 # Devices
 DLSPLC=     $(SUPPORT)/dlsPLC/3-0-29
 VACUUMVALVE=$(SUPPORT)/vacuumValve/4-23
-MKS937A=    $(SUPPORT)/mks937a/2-93
-MKS937B=    $(SUPPORT)/mks937b/2-93
+MKS937A=    $(SUPPORT)/mks937a/2-94
+MKS937B=    $(SUPPORT)/mks937b/2-94
 RGA=        $(SUPPORT)/rga/4-25
-DIGITELMPC= $(SUPPORT)/digitelMpc/6-18
+DIGITELMPC= $(SUPPORT)/digitelMpc/6-19
 RACKFAN=    $(SUPPORT)/rackFan/2-12
 PRESSARR=   $(SUPPORT)/pressArr_subrec/1-1
 WATER=      $(SUPPORT)/water/1-24

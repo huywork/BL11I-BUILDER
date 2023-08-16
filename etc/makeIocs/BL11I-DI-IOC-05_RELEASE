@@ -1,7 +1,7 @@
 DLSPLC=       $(SUPPORT)/dlsPLC/2-8-6
 BUSY=         $(SUPPORT)/busy/1-7-2dls5
 ASYN=         $(SUPPORT)/asyn/4-41
-STREAMDEVICE= $(SUPPORT)/streamDevice/2-5dls13
+STREAMDEVICE= $(SUPPORT)/streamDevice/2-5dls14
 FINS=         $(SUPPORT)/FINS/3-10
 DEVIOCSTATS=  $(SUPPORT)/devIocStats/3-1-14dls3-3
 AUTOSAVE=     $(SUPPORT)/autosave/5-9dls2

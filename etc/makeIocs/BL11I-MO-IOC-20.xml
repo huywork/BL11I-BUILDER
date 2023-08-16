@@ -2,8 +2,8 @@
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-MO-IOC-20" name="IOCS.MO20"/>
 	<autosave.Autosave bl="True" iocName="BL11I-MO-IOC-20" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave"/>
-        <pvlogging.PvLogging/>
-        <utility.pingWait delay="5" ip="172.23.111.120"/>
+	<pvlogging.PvLogging/>
+	<utility.pingWait delay="5" ip="172.23.111.120"/>
 	<pmac.pmacAsynIPPort IP="172.23.111.120" name="BRICK20port"/>
 	<pmac.GeoBrick P="BL11I-MO-STEP-20" Port="BRICK20port" name="BRICK20"/>
 	<pmac.dls_pmac_asyn_motor ACCL="0.2" ADDR="1" DESC="a-rotary table" DHLM="45" DLLM="-45" EGU="deg" M=":A" MRES="0.0001" OFF="5.2659" P="BL11I-EA-MAC-01" PORT="BRICK20" PREC="4" SPORT="BRICK20port" TWV="0.1" VELO="2" VMAX="3" name="MAC1.A"/>
@@ -12,8 +12,6 @@
 	<pmac.dls_pmac_asyn_motor ACCL="0.2" ADDR="4" DESC="2a-rotary table" DHLM="5" DLLM="-18" EGU="deg" M=":2A" MRES="0.00007525379" OFF="2.9362" P="BL11I-EA-MAC-02" PORT="BRICK20" PREC="4" SPORT="BRICK20port" TWV="0.1" VELO="0.7525379" VMAX="0.9" name="MAC2.2A"/>
 	<pmac.dls_pmac_asyn_motor ACCL="0.2" ADDR="5" DESC="a-rotary table" DHLM="46" DLLM="-45" EGU="deg" M=":A" MRES="0.0001" OFF="5.5208" P="BL11I-EA-MAC-03" PORT="BRICK20" PREC="4" SPORT="BRICK20port" TWV="0.1" VELO="2" VMAX="3" name="MAC3.A"/>
 	<pmac.dls_pmac_asyn_motor ACCL="0.2" ADDR="6" DESC="2a-rotary table" DHLM="5" DLLM="-18" EGU="deg" M=":2A" MRES="0.00007525379" OFF="3.2622" P="BL11I-EA-MAC-03" PORT="BRICK20" PREC="4" SPORT="BRICK20port" TWV="0.1" VELO="0.7525379" VMAX="0.9" name="MAC3.2A"/>
-	<pmac.dls_pmac_asyn_motor ACCL="0.2" ADDR="7" DESC="a-rotary table" DHLM="45.5" DLLM="-45" EGU="deg" M=":A" MRES="0.0001" OFF="5.9813" P="BL11I-EA-MAC-04" PORT="BRICK20" PREC="4" SPORT="BRICK20port" TWV="0.1" VELO="2" VMAX="3" name="MAC4.A"/>
-	<pmac.dls_pmac_asyn_motor ACCL="0.2" ADDR="8" DESC="2a-rotary table" DHLM="5" DLLM="-22" EGU="deg" M=":2A" MRES="0.00007525379" OFF="3.9972" P="BL11I-EA-MAC-04" PORT="BRICK20" PREC="4" SPORT="BRICK20port" TWV="0.1" VELO="0.7525379" VMAX="0.9" name="MAC4.2A"/>
 	<pmac.autohome GRP2="Alpha" GRP3="2Alpha" P="BL11I-EA-MAC-01" PLC="10" PORT="BRICK20" name="MAC1.HOME"/>
 	<pmac.autohome GRP2="Alpha" GRP3="2Alpha" P="BL11I-EA-MAC-02" PLC="11" PORT="BRICK20" name="MAC2.HOME"/>
 	<pmac.autohome GRP2="Alpha" GRP3="2Alpha" P="BL11I-EA-MAC-03" PLC="12" PORT="BRICK20" name="MAC3.HOME"/>

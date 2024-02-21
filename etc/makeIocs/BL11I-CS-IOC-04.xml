@@ -33,7 +33,7 @@
 	<!--<asyn.AsynIP name="BHEAT1" noProcessEos="True" port="10.111.8.1:502"/>-->
 	<!--<asyn.AsynIP name="BHEAT2" noProcessEos="True" port="10.111.8.3:502"/>-->
 	<eurotherm2k.eurotherm2k GAD="0" LAD="1" P="BL11I-EA-BLOW-01" PORT="TS_3" Q="" RRMAX="0.2" gda_desc="Cyberstar Blower 1" gda_name="ENV.BLOW1" name="BL11I-EA-BLOW-01"/>
-	<eurotherm2k.eurotherm2k EGU="C/min" GAD="0" LAD="1" P="BL11I-EA-FURN-01" PORT="TS_8" Q="" RRMAX="150" gda_desc="MRI Furnace" gda_name="ENV.MRIFURN" name="BL11I-EA-FURN-01"/>
+	<eurotherm2k.eurotherm2k EGU="C/min" GAD="0" LAD="1" P="BL11I-EA-FURN-01" PORT="TS_8" Q="" RRMAX="150" SPMAX="1500" gda_desc="MRI Furnace" gda_name="ENV.MRIFURN" name="BL11I-EA-FURN-01"/>
 	<eurotherm2k.eurotherm2k EGU="C/min" GAD="0" LAD="1" P="BL11I-EA-FURN-02" PORT="TS_9" Q="" RRMAX="50" gda_desc="Stoe Furnace" gda_name="ENV.STOEFURN" name="BL11I-EA-FURN-02"/>
 	<!--<eurotherm2k.eurothermModbus ADDR="1" LINKTYPE="0" P="BL11I-EA-TEMPC-01" PORT="BHEAT1" Q="" name="ENV.BHEAT1"/>-->
 	<!--<eurotherm2k.eurothermModbus ADDR="1" LINKTYPE="0" P="BL11I-EA-TEMPC-02" PORT="BHEAT2" Q="" name="ENV.BHEAT1"/>-->

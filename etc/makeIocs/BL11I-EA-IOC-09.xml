@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-09" name="BL11I-EA-IOC-09.DEVIOCSTATS"/>
+	<asyn.AsynIP name="k6514" port="172.23.111.5:7016"/>
+	<Keithley6514.keithley6514 A="10" P="BL11I-EA-K65-01" PORT="k6514" R=":IAMP:" name="K6514"/>
+	<EPICS_BASE.StartupCommand command="asynSetTraceIOMask(&quot;k6514&quot;, -1, 0x6)"/>
+	<EPICS_BASE.StartupCommand command="asynSetTraceMask(&quot;k6514&quot;, -1, 0x9)"/>
+    <EPICS_BASE.StartupCommand command="dbpf BL11I-EA-K65-01:IAMP:RST.PROC &quot;1&quot;" post_init="True"/>
+    <EPICS_BASE.StartupCommand command="dbpf BL11I-EA-K65-01:IAMP:NPLC &quot;1&quot;" post_init="True"/>
+    <EPICS_BASE.StartupCommand command="dbpf BL11I-EA-K65-01:IAMP:FrequencyMode &quot;1&quot;" post_init="True"/>
+<pvlogging.PvLogging/>
+</components>

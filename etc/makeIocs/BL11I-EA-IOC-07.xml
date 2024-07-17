@@ -1,16 +1,15 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-07" name="IOCS.EA7"/>
-	<autosave.Autosave iocName="BL11I-EA-IOC-07" ip="172.23.111.254" name="IOCS.EA7AS" path="/dls_sw/i11/epics/autosave"/>
+<!--	<autosave.Autosave iocName="BL11I-EA-IOC-07" ip="172.23.111.254" name="IOCS.EA7AS" path="/dls_sw/i11/epics/autosave"/> -->
 	<pvlogging.PvLogging/>
-	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="12000000"/>
-	<slsDetector.slsDetector ADDR="0" P="BL11I-EA-DET-99" PORT="MYTHEN3.DET" R=":DET:" TIMEOUT="10" configFileName="/dls_sw/i11/software/mythen/my30module_diamond.config" detectorId="1" name="MYTHEN3.DET"/>
-	<ADCore.NDStdArrays ADDR="0" FTVL="FLOAT" NDARRAY_ADDR="0" NDARRAY_PORT="MYTHEN3.DET" NELEMENTS="23040" P="BL11I-EA-DET-99" PORT="MYTHEN3.ARR" R=":ARR:" TIMEOUT="1" TYPE="Float32"/>
-	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="MYTHEN3.DET" P="BL11I-EA-DET-99" PORT="MYTHEN3.HDF" QUEUE="16" R=":HDF:" TIMEOUT="1"/>
-	<!--<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-99:DET:FilePath &quot;/dls_sw/i11/software/mythen/testData&quot;" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-99:DET:FileName &quot;testmythenfile&quot;" post_init="True"/>-->
-	<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-99:DET:AutoSave &quot;Yes&quot;" post_init="True"/>
-	<!--<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-99:DET:SizeX &quot;23040&quot;" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-99:DET:ThresholdEnergy &quot;7500&quot;" post_init="True"/>-->
-	<!--<EPICS_BASE.StartupCommand command="dbpf BL11I-EA-DET-99:DET:BeamEnergy &quot;15000&quot;" post_init="True"/>-->
+	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="800000"/>
+	<slsDetector.slsDetector ADDR="0" P="BL11I-EA-DET-07" PORT="MYTHEN3.DET" R=":DET:" TIMEOUT="10" configFile="/dls_sw/i11/software/mythen/mythen3.config" detectorIndex="1" numModules="28" name="MYTHEN3.DET"/>
+	<ADCore.NDStdArrays ADDR="0" FTVL="FLOAT" NDARRAY_ADDR="0" NDARRAY_PORT="MYTHEN3.DET" NELEMENTS="23040" P="BL11I-EA-DET-07" PORT="MYTHEN3.ARR" R=":ARR:" TIMEOUT="1" TYPE="Float32"/>
+	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="MYTHEN3.DET" P="BL11I-EA-DET-07" PORT="MYTHEN3.HDF" QUEUE="16" R=":HDF:" TIMEOUT="1"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:DataType" value="UInt32"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:HDF:EnableCallbacks" value="Enable"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:ARR:EnableCallbacks" value="Enable"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:HDF:LazyOpen" value="Yes"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:HighVoltage" value="200"/>
 </components>

@@ -12,6 +12,8 @@
 	<adPython.adPythonPlugin ADDR="0" ENABLED="1" NDARRAY_PORT="ALCAM2.CAM" P="BL11I-AL-DCAM-02" PORT="ALCAM2.ROT" R=":ROT:" TIMEOUT="1" classname="Rotate"/>
 	<adUtil.gdaPlugins CAM="ALCAM1.CAM" HTTP_PORT="8082" P="BL11I-AL-DCAM-01" PORTPREFIX="ALCAM1" XSIZE="656" YSIZE="492"/>
 	<adUtil.gdaPlugins CAM="ALCAM2.CAM" HTTP_PORT="8082" P="BL11I-AL-DCAM-02" PORTPREFIX="ALCAM2" XSIZE="656" YSIZE="492"/>
+	<EPICS_BASE.StartupCommand command="dbpf BL11I-AL-DCAM-01:CAM:CAM:GC_GevSCPSPacketSize 1500" post_init="True"/>
+	<EPICS_BASE.StartupCommand command="dbpf BL11I-AL-DCAM-02:CAM:CAM:GC_GevSCPSPacketSize 1500" post_init="True"/>
 	<EPICS_BASE.dbpf pv="BL11I-AL-DCAM-01:CAM:Acquire" value="1"/>
 	<EPICS_BASE.dbpf pv="BL11I-AL-DCAM-02:CAM:Acquire" value="1"/>
 </components>

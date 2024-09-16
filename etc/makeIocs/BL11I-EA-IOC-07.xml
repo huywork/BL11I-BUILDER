@@ -12,4 +12,6 @@
 	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:ARR:EnableCallbacks" value="Enable"/>
 	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:HDF:LazyOpen" value="Yes"/>
 	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:HighVoltage" value="200"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:BitDepth" value="32"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:BeamEnergy" value="15000"/>
 </components>

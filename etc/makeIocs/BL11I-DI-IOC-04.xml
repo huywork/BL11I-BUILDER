@@ -16,5 +16,5 @@
 	<EPICS_BASE.dbpf pv="BL11I-DI-DCAM-03:PROC:NDArrayPort.VAL" value="DCAM3.ROT"/>
 	<EPICS_BASE.dbpf pv="BL11I-DI-DCAM-03:ROT:Angle.VAL" value="0"/>
 	<EPICS_BASE.dbpf pv="BL11I-DI-XEYE-01:PROC:DataTypeOut" value="Automatic"/>
-	<EPICS_BASE.dbpf pv="BL11I-DI-XEYE-01:CAM:GevSCPSPacketSize" value="1500"/>
+	<EPICS_BASE.dbpf pv="BL11I-DI-XEYE-01:CAM:GC_GevSCPSPacketSize" value="1500"/>
 </components>

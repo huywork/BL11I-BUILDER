@@ -1,10 +1,12 @@
 <?xml version="1.0" ?>
 <components arch="linux-x86_64">
 	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-07" name="IOCS.EA7"/>
+	<EPICS_BASE.PreBootCommandSet command="export SLSDETNAME=&quot;$USER&quot;"/>
 	<autosave.Autosave bl="True" iocName="BL11I-EA-IOC-07" ip="172.23.111.254" path="/dls_sw/i11/epics/autosave"/>
 	<pvlogging.PvLogging/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="800000"/>
-	<slsDetector.slsDetector ADDR="0" P="BL11I-EA-DET-07" PORT="MYTHEN3.DET" R=":DET:" TIMEOUT="10" configFile="/dls_sw/i11/software/mythen/mythen3.config" detectorIndex="1" numModules="28" name="MYTHEN3.DET"/>
+	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="800000"/>
+	<slsDetector.slsDetector ADDR="0" P="BL11I-EA-DET-07" PORT="MYTHEN3.DET" R=":DET:" TIMEOUT="10" configFile="/dls_sw/i11/software/mythen/mythen3.config" detectorIndex="0" name="MYTHEN3.DET" numModules="28"/>
 	<ADCore.NDStdArrays ADDR="0" FTVL="FLOAT" NDARRAY_ADDR="0" NDARRAY_PORT="MYTHEN3.DET" NELEMENTS="23040" P="BL11I-EA-DET-07" PORT="MYTHEN3.ARR" R=":ARR:" TIMEOUT="1" TYPE="Float32"/>
 	<ADCore.NDFileHDF5 ADDR="0" NDARRAY_PORT="MYTHEN3.DET" P="BL11I-EA-DET-07" PORT="MYTHEN3.HDF" QUEUE="16" R=":HDF:" TIMEOUT="1"/>
 	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:DataType" value="UInt32"/>
@@ -13,5 +15,8 @@
 	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:HDF:LazyOpen" value="Yes"/>
 	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:HighVoltage" value="200"/>
 	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:BitDepth" value="32"/>
-	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:BeamEnergy" value="15000"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:Thr1Only" value="Adjust counter 1 only"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:Counter1Threshold" value="7500"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:Counter2Threshold" value="20000"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-DET-07:DET:Counter3Threshold" value="20000"/>
 </components>

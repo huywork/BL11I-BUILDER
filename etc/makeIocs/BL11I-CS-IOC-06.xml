@@ -14,5 +14,7 @@
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-ZEBRA-01:PC_DISARM&quot;, &quot;1&quot;)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="epicsThreadSleep(5.0)" post_init="True"/>
 	<EPICS_BASE.StartupCommand command="dbpf(&quot;BL11I-EA-ZEBRA-01:PC_ARM&quot;, &quot;1&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand at_end="True" command="dbpf(&quot;BL11I-EA-ZEBRA-01:CONFIG_FILE&quot;, &quot;/dls_sw/work/motion/Backups/BL11I/Zebras/BL11I-EA-ZEBRA-01&quot;)" post_init="True"/>
+	<EPICS_BASE.StartupCommand at_end="True" command="dbpf(&quot;BL11I-EA-ZEBRA-03:CONFIG_FILE&quot;, &quot;/dls_sw/work/motion/Backups/BL11I/Zebras/BL11I-EA-ZEBRA-03&quot;)" post_init="True"/>
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="1000000"/>
 </components>

@@ -1,0 +1,5 @@
+S7NODAVE        = $(SUPPORT)/s7nodave/2-1-1dls3
+CALC            = $(SUPPORT)/calc/3-7-3
+CRYOCOOLERXV	= $(SUPPORT)/CryoCoolerXV/3-0-2dls11
+DEVIOCSTATS     = $(SUPPORT)/devIocStats/3-1-14dls3-3
+

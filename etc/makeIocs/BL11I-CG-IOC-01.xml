@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<devIocStats.devIocStatsHelper ioc="BL11I-CG-IOC-01" name="IOC"/>
+	<s7nodave.s7nodave IPADDRESS="192.168.0.1" PORTNAME="cryoPort"/>
+	<CryoCoolerXV.Cryocooler P="BL11I-CG-CRYO-01" PORT="cryoPort" R=":CCXV:" homefolder="/dls/i11/epics/logs/BL11I-CG-IOC-01" name="CCXV"/>
+	<CryoCoolerXV.CryocoolerLog Q="BL11I-CG-CRYO-01:CCXV" name="CCXVLog"/>
+	<CryoCoolerXV.seqCsvLogger P="BL11I-CG-CRYO-01" Q="BL11I-CG-CRYO-01:CCXV" R=":CCXV:" homefolder="/dls/i11/epics/logs/BL11I-CG-IOC-01" name="CCVXCSV"/>
+</components>

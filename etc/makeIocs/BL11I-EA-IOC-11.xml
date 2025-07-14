@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<components arch="linux-x86_64">
+	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-11" name="BL11I-EA-IOC-11.DEVIOCSTATS"/>
+	<ADPandABlocks.ADPandABlocks ADDR="0" HOST="bl11i-mo-panda-01" P="BL11I-MO-PANDA-01" PORT="PANDA1.DRV" R=":DRV:" TIMEOUT="1"/>
+	<ADCore.NDAttrPlot ADDR="0" ENABLED="1" NDARRAY_PORT="PANDA1.DRV" P="BL11I-MO-PANDA-01" PORT="PANDA1.PLT" R=":PLT:" TIMEOUT="1"/>
+	<ADCore.NDPosPlugin ADDR="0" ENABLED="1" NDARRAY_PORT="PANDA1.DRV" P="BL11I-MO-PANDA-01" PORT="PANDA1.POS" QUEUE="10000" R=":POS:" TIMEOUT="1"/>
+	<ADCore.NDFileHDF5 ADDR="0" ENABLED="1" NDARRAY_PORT="PANDA1.POS" P="BL11I-MO-PANDA-01" PORT="PANDA1.HDF" QUEUE="10000" R=":HDF5:" TIMEOUT="1"/>
+	<pvlogging.PvLogging/>
+</components>

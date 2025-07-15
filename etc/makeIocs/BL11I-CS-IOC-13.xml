@@ -5,4 +5,5 @@
 	<pvlogging.PvLogging/>
 	<EPICS_BASE.dbpf pv="BL11I-EA-BLOW-02:LOOP1:RR.PREC" value="3"/>
 	<EPICS_BASE.dbpf pv="BL11I-EA-BLOW-02:LOOP1:RR:RBV.PREC" value="3"/>
+	<EPICS_BASE.dbpf pv="BL11I-EA-BLOW-02:LOOP1:RR:UNIT" value="C/min"/>
 </components>

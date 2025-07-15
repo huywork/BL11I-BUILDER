@@ -1,2 +1,3 @@
 DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-14dls3-3
 PROCSERVCONTROL= $(SUPPORT)/procServControl/1-24
+PVLOGGING=      $(SUPPORT)/pvlogging/1-4

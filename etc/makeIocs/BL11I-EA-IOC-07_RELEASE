@@ -1,5 +1,6 @@
+MYTHEN_SUPPORT=/dls_sw/i11/epics/mythen/support/2025-Run4
 DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-14dls3-3
-SLSDETECTOR= $(WORK)/slsDetectorPackageDev/slsDetector
+SLSDETECTOR= $(MYTHEN_SUPPORT)/slsDetector
 PVLOGGING= $(SUPPORT)/pvlogging/1-4
 AUTOSAVE= $(SUPPORT)/autosave/5-9dls2
 UTILITY=  $(SUPPORT)/utility/dls2-19

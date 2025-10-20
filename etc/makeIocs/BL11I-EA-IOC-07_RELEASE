@@ -1,4 +1,4 @@
-MYTHEN_SUPPORT=/dls_sw/i11/epics/mythen/support/2025-Run4
+MYTHEN_SUPPORT=/dls_sw/i11/epics/mythen/support/2025-Run4-RHEL7
 DEVIOCSTATS= $(SUPPORT)/devIocStats/3-1-14dls3-3
 SLSDETECTOR= $(MYTHEN_SUPPORT)/slsDetector
 PVLOGGING= $(SUPPORT)/pvlogging/1-4

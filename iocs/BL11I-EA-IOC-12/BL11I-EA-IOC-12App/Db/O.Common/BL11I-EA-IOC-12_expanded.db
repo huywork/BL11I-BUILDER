@@ -1,0 +1,1311 @@
+#% macro, __doc__, Create some records for reading IOC statistics and details.
+#% macro, IOC, Device prefix
+
+# Used by Channel Access Security to determine access to this IOC.
+record(mbbo, "BL11I-EA-IOC-12:ACCESS")
+{
+  field(DESC, "BL11I-EA-IOC-12 Acc Mode")
+  field(PINI, "YES")
+  field(ZRST, "Running")
+  field(ZRSV, "NO_ALARM")
+  field(ONST, "Maintenance")
+  field(ONSV, "MINOR")
+  field(TWST, "Test")
+  field(TWSV, "MINOR")
+  field(THST, "OFFLINE")
+  field(THSV, "MAJOR")
+  info(autosaveFields, "VAL")
+}
+record(stringin, "BL11I-EA-IOC-12:STARTTOD")
+{
+    field(DESC, "Time and date of startup")
+    field(DTYP, "Soft Timestamp")
+    field(PINI, "YES")
+    field(INP, "@%Y-%m-%d %H:%M:%S")
+}
+record(stringin, "BL11I-EA-IOC-12:TOD")
+{
+    field(DESC, "Current time and date")
+    field(DTYP, "Soft Timestamp")
+    field(SCAN, "1 second")
+    field(INP, "@%Y-%m-%d %H:%M:%S")
+}
+record(calcout, "BL11I-EA-IOC-12:HEARTBEAT")
+{
+    field(DESC, "1 Hz counter since startup")
+    field(CALC, "(A<2147483647)?A+1:1")
+    field(SCAN, "1 second")
+    field(INPA, "BL11I-EA-IOC-12:HEARTBEAT")
+}
+# if autosave is working, START_CNT creates a running count of 
+# number of times the IOC was started.
+record(calcout, "BL11I-EA-IOC-12:START_CNT")
+{
+    field(DESC, "Increments at startup")
+    field(CALC, "A+1")
+    field(PINI, "YES")
+    field(INPA, "BL11I-EA-IOC-12:START_CNT")
+    info(autosaveFields_pass0, "VAL")
+}
+#
+# Using an existing internal set of subroutines, this
+# PV updates the Access Security mechanism dynamically.
+# The .acf file is re-read.
+#
+record( sub, "BL11I-EA-IOC-12:READACF")
+{
+    field( DESC, "BL11I-EA-IOC-12 ACF Update")
+    field( INAM, "asSubInit")
+    field( SNAM, "asSubProcess")
+    field( BRSV, "INVALID")
+}
+record(sub, "BL11I-EA-IOC-12:SYSRESET")
+{
+    alias("BL11I-EA-IOC-12:SysReset")
+    field(DESC, "IOC Restart" )
+    field(SNAM, "rebootProc")
+    field(BRSV,"INVALID")
+    field(L,"1")
+}
+
+#% archiver 1 Monitor
+#% alh
+record(ai, "BL11I-EA-IOC-12:CA_CLNT_CNT") {
+  field(DESC, "Number of CA Clients")
+  field(SCAN, "I/O Intr")
+  field(DTYP, "IOC stats")
+  field(INP, "@ca_clients")
+  field(HOPR, "200")
+  field(HIHI, "175")
+  field(HIGH, "100")
+  field(HHSV, "MAJOR")
+  field(HSV, "MINOR")
+  info(autosaveFields_pass0, "HOPR LOPR HIHI HIGH LOW LOLO HHSV HSV LSV LLSV")
+}
+
+#% archiver 1 Monitor
+#% alh
+record(ai, "BL11I-EA-IOC-12:CA_CONN_CNT") {
+  field(DESC, "Number of CA Connections")
+  field(SCAN, "I/O Intr")
+  field(DTYP, "IOC stats")
+  field(INP, "@ca_connections")
+  field(HOPR, "5000")
+  field(HIHI, "4500")
+  field(HIGH, "4000")
+  field(HHSV, "MAJOR")
+  field(HSV, "MINOR")
+  info(autosaveFields_pass0, "HOPR LOPR HIHI HIGH LOW LOLO HHSV HSV LSV LLSV")
+}
+
+record(ai, "BL11I-EA-IOC-12:RECORD_CNT") {
+  field(DESC, "Number of Records")
+  field(PINI, "YES")
+  field(DTYP, "IOC stats")
+  field(INP, "@records")
+}
+
+record(ai, "BL11I-EA-IOC-12:FD_MAX") {
+  field(DESC, "Max File Descriptors")
+  field(PINI, "YES")
+  field(DTYP, "IOC stats")
+  field(INP, "@maxfd")
+}
+
+record(ai, "BL11I-EA-IOC-12:FD_CNT") {
+  field(DESC, "Allocated File Descriptors")
+  field(SCAN, "I/O Intr")
+  field(DTYP, "IOC stats")
+  field(FLNK, "BL11I-EA-IOC-12:FD_FREE  PP MS")
+  field(INP, "@fd")
+}
+
+#% archiver 1 Monitor
+#% alh
+record(calc, "BL11I-EA-IOC-12:FD_FREE") {
+  field(DESC, "Available FDs")
+  field(CALC, "B>0?B-A:C")
+  field(INPA, "BL11I-EA-IOC-12:FD_CNT  NPP MS")
+  field(INPB, "BL11I-EA-IOC-12:FD_MAX  NPP MS")
+  field(INPC, "1000")
+  field(HOPR, "150")
+  field(LOLO, "5")
+  field(LOW, "20")
+  field(LLSV, "MAJOR")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "HOPR LOPR LOW LOLO LSV LLSV")
+}
+
+#% archiver 1 Monitor
+record(ai, "BL11I-EA-IOC-12:SYS_CPU_LOAD") {
+  field(DESC, "System CPU Load")
+  field(SCAN, "I/O Intr")
+  field(DTYP, "IOC stats")
+  field(INP, "@sys_cpuload")
+  field(EGU, "%")
+  field(PREC, "1")
+  field(HOPR, "100")
+  field(HIHI, "80")
+  field(HIGH, "70")
+  field(HHSV, "MAJOR")
+  field(HSV, "MINOR")
+  info(autosaveFields_pass0, "HOPR LOPR HIHI HIGH LOW LOLO HHSV HSV LSV LLSV")
+}
+
+#% archiver 1 Monitor
+#% alh
+record(ai, "BL11I-EA-IOC-12:IOC_CPU_LOAD") {
+  alias("BL11I-EA-IOC-12:LOAD")
+  field(DESC, "IOC CPU Load")
+  field(SCAN, "I/O Intr")
+  field(DTYP, "IOC stats")
+  field(INP, "@ioc_cpuload")
+  field(EGU, "%")
+  field(PREC, "1")
+  field(HOPR, "100")
+  field(HIHI, "80")
+  field(HIGH, "70")
+  field(HHSV, "MAJOR")
+  field(HSV, "MINOR")
+  info(autosaveFields_pass0, "HOPR LOPR HIHI HIGH LOW LOLO HHSV HSV LSV LLSV")
+}
+
+record(ai, "BL11I-EA-IOC-12:CPU_CNT") {
+  field(DESC, "Number of CPUs")
+  field(DTYP, "IOC stats")
+  field(INP, "@no_of_cpus")
+  field(PINI, "YES")
+}
+
+#% archiver 1 Monitor
+#% alh
+record(ai, "BL11I-EA-IOC-12:SUSP_TASK_CNT") {
+  field(DESC, "Number Suspended Tasks")
+  field(SCAN, "I/O Intr")
+  field(DTYP, "IOC stats")
+  field(INP, "@suspended_tasks")
+  field(HIHI, "1")
+  field(HHSV, "MAJOR")
+  info(autosaveFields_pass0, "HOPR LOPR HIHI HIGH LOW LOLO HHSV HSV LSV LLSV")
+}
+
+#% archiver 1 Monitor
+record(ai, "BL11I-EA-IOC-12:MEM_USED") {
+  field(DESC, "Allocated Memory")
+  field(SCAN, "I/O Intr")
+  field(DTYP, "IOC stats")
+  field(INP, "@allocated_bytes")
+  field(EGU, "byte")
+}
+
+#% archiver 1 Monitor
+record(ai, "BL11I-EA-IOC-12:MEM_FREE") {
+  field(DESC, "Free Memory")
+  field(SCAN, "I/O Intr")
+  field(DTYP, "IOC stats")
+  field(INP, "@free_bytes")
+  field(EGU, "byte")
+  field(LLSV, "MAJOR")
+  field(LSV, "MINOR")
+  info(autosaveFields_pass0, "HOPR LOPR LOW LOLO LSV LLSV")
+}
+
+record(ai, "BL11I-EA-IOC-12:MEM_MAX") {
+  field(DESC, "Maximum Memory")
+  field(SCAN, "I/O Intr")
+  field(DTYP, "IOC stats")
+  field(INP, "@total_bytes")
+  field(EGU, "byte")
+}
+
+record(ao, "BL11I-EA-IOC-12:CA_UPD_TIME") {
+  field(DESC, "CA Check Update Period")
+  field(DTYP, "IOC stats")
+  field(OUT, "@ca_scan_rate")
+  field(EGU, "sec")
+  field(DRVH, "60")
+  field(DRVL, "1")
+  field(HOPR, "60")
+  field(VAL, "15")
+  field(PINI, "YES")
+}
+
+record(ao, "BL11I-EA-IOC-12:FD_UPD_TIME") {
+  field(DESC, "FD Check Update Period")
+  field(DTYP, "IOC stats")
+  field(OUT, "@fd_scan_rate")
+  field(EGU, "sec")
+  field(DRVH, "60")
+  field(DRVL, "1")
+  field(HOPR, "60")
+  field(VAL, "20")
+  field(PINI, "YES")
+}
+
+record(ao, "BL11I-EA-IOC-12:LOAD_UPD_TIME") {
+  field(DESC, "CPU Check Update Period")
+  field(DTYP, "IOC stats")
+  field(OUT, "@cpu_scan_rate")
+  field(EGU, "sec")
+  field(DRVH, "60")
+  field(DRVL, "1")
+  field(HOPR, "60")
+  field(VAL, "10")
+  field(PINI, "YES")
+}
+
+record(ao, "BL11I-EA-IOC-12:MEM_UPD_TIME") {
+  field(DESC, "Memory Check Update Period")
+  field(DTYP, "IOC stats")
+  field(OUT, "@memory_scan_rate")
+  field(EGU, "sec")
+  field(DRVH, "60")
+  field(DRVL, "1")
+  field(HOPR, "60")
+  field(VAL, "10")
+  field(PINI, "YES")
+}
+
+record(stringin, "BL11I-EA-IOC-12:ST_SCRIPT1") {
+  field(DESC, "Startup Script Part1")
+  field(DTYP, "IOC stats")
+  field(INP, "@startup_script_1")
+  field(PINI, "YES")
+}
+
+record(stringin, "BL11I-EA-IOC-12:ST_SCRIPT2") {
+  field(DESC, "Startup Script Part2")
+  field(DTYP, "IOC stats")
+  field(INP, "@startup_script_2")
+  field(PINI, "YES")
+}
+
+record(waveform, "BL11I-EA-IOC-12:ST_SCRIPT") {
+  field(DESC, "Startup Script")
+  field(DTYP, "IOC stats")
+  field(INP, "@startup_script")
+  field(NELM, "120")
+  field(FTVL, "CHAR")
+  field(PINI, "YES")
+}
+
+record(stringin, "BL11I-EA-IOC-12:KERNEL_VERS") {
+  field(DESC, "Kernel Version")
+  field(DTYP, "IOC stats")
+  field(INP, "@kernel_ver")
+  field(PINI, "YES")
+}
+
+record(stringin, "BL11I-EA-IOC-12:EPICS_VERS") {
+  field(DESC, "EPICS Version")
+  field(DTYP, "IOC stats")
+  field(INP, "@epics_ver")
+  field(PINI, "YES")
+}
+
+record(waveform, "BL11I-EA-IOC-12:EPICS_VERSION") {
+  field(DESC, "EPICS Version")
+  field(DTYP, "IOC stats")
+  field(INP, "@epics_ver")
+  field(NELM, "120")
+  field(FTVL, "CHAR")
+  field(PINI, "YES")
+}
+
+record(stringin, "BL11I-EA-IOC-12:HOSTNAME") {
+  field(DESC, "Host Name")
+  field(DTYP, "IOC stats")
+  field(INP, "@hostname")
+  field(PINI, "YES")
+}
+
+record(stringin, "BL11I-EA-IOC-12:APP_DIR1") {
+  field(DESC, "Application Directory Part 1")
+  field(DTYP, "IOC stats")
+  field(INP, "@pwd1")
+  field(PINI, "YES")
+}
+
+record(stringin, "BL11I-EA-IOC-12:APP_DIR2") {
+  field(DESC, "Application Directory Part 2")
+  field(DTYP, "IOC stats")
+  field(INP, "@pwd2")
+  field(PINI, "YES")
+}
+
+record(waveform, "BL11I-EA-IOC-12:APP_DIR") {
+  field(DESC, "Application Directory")
+  field(DTYP, "IOC stats")
+  field(INP, "@pwd")
+  field(NELM, "160")
+  field(FTVL, "CHAR")
+  field(PINI, "YES")
+}
+
+record(stringin, "BL11I-EA-IOC-12:UPTIME") {
+  field(DESC, "Elapsed Time since Start")
+  field(SCAN, "1 second")
+  field(DTYP, "IOC stats")
+  field(INP, "@up_time")
+  field(PINI, "YES")
+}
+
+record(stringin, "BL11I-EA-IOC-12:ENGINEER") {
+  field(DESC, "Engineer")
+  field(DTYP, "IOC stats")
+  field(INP, "@engineer")
+  field(PINI, "YES")
+}
+
+record(stringin, "BL11I-EA-IOC-12:LOCATION") {
+  field(DESC, "Location")
+  field(DTYP, "IOC stats")
+  field(INP, "@location")
+  field(PINI, "YES")
+}
+
+record(ai, "BL11I-EA-IOC-12:PROCESS_ID") {
+  field(DESC, "Process ID")
+  field(PINI, "YES")
+  field(DTYP, "IOC stats")
+  field(INP, "@proc_id")
+}
+
+record(ai, "BL11I-EA-IOC-12:PARENT_ID") {
+  field(DESC, "Parent Process ID")
+  field(PINI, "YES")
+  field(DTYP, "IOC stats")
+  field(INP, "@parent_proc_id")
+}
+
+record(stringin, "BL11I-EA-IOC-12:DLSVER") {
+  field(DESC, "IOC version")
+  field(DTYP, "IOC stats")
+  field(INP, "@dlsver")
+  field(PINI, "YES")
+}
+record(ai, "BL11I-EA-IOC-12:GTIM_TIME") {
+  field(DESC, "Gen Time Secs since 1990")
+  field(SCAN, "1 second")
+  field(DTYP, "General Time")
+  field(PREC, "3")
+  field(INP,  "@TIME")
+  field(EGU,  "sec")
+}
+
+record(bo, "BL11I-EA-IOC-12:GTIM_RESET") {
+  field(DESC, "Gen Time Error Reset")
+  field(DTYP, "General Time")
+  field(OUT,  "@RSTERRCNT")
+  field(ZNAM, "Reset")
+  field(ONAM, "Reset")
+}
+
+record(longin, "BL11I-EA-IOC-12:GTIM_ERR_CNT") {
+  field(DESC, "Gen Time Error Count")
+  field(DTYP, "General Time")
+  field(INP,  "@GETERRCNT")
+  field(SCAN, "1 second")
+  field(HIHI, "1")
+  field(HHSV, "MAJOR")
+}
+
+record(stringin, "BL11I-EA-IOC-12:GTIM_CUR_SRC") {
+  field(DESC, "Gen Time Current Provider")
+  field(DTYP, "General Time")
+  field(INP,  "@BESTTCP")
+  field(SCAN, "1 second")
+}
+
+record(stringin, "BL11I-EA-IOC-12:GTIM_EVT_SRC") {
+  field(DESC, "Gen Time Event Provider")
+  field(DTYP, "General Time")
+  field(INP,  "@BESTTEP")
+  field(SCAN, "1 second")
+}
+
+record(stringin, "BL11I-EA-IOC-12:GTIM_HI_SRC") {
+  field(DESC, "Gen Time Highest Provider")
+  field(DTYP, "General Time")
+  field(INP,  "@TOPTCP")
+  field(SCAN, "1 second")
+}
+record(stringin, "BL11I-EA-IOC-12:CA_ADDR_LIST") {
+  field(DESC, "EPICS_CA_ADDR_LIST")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_CA_ADDR_LIST")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:CA_CONN_TIME") {
+  field(DESC, "EPICS_CA_CONN_TMO")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_CA_CONN_TMO")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:CA_AUTO_ADDR") {
+  field(DESC, "EPICS_CA_AUTO_ADDR_LIST")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_CA_AUTO_ADDR_LIST")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:CA_RPTR_PORT") {
+  field(DESC, "EPICS_CA_REPEATER_PORT")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_CA_REPEATER_PORT")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:CA_SRVR_PORT") {
+  field(DESC, "EPICS_CA_SERVER_PORT")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_CA_SERVER_PORT")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:CA_MAX_ARRAY") {
+  field(DESC, "EPICS_CA_MAX_ARRAY_BYTES")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_CA_MAX_ARRAY_BYTES")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:CA_SRCH_TIME") {
+  field(DESC, "EPICS_CA_MAX_SEARCH_PERIOD")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_CA_MAX_SEARCH_PERIOD")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:CA_BEAC_TIME") {
+  field(DESC, "EPICS_CA_BEACON_PERIOD")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_CA_BEACON_PERIOD")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:TIMEZONE") {
+  field(DESC, "EPICS_TIMEZONE")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_TIMEZONE")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:TS_NTP_INET") {
+  field(DESC, "EPICS_TS_NTP_INET")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_TS_NTP_INET")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:IOC_LOG_PORT") {
+  field(DESC, "EPICS_IOC_LOG_PORT")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_IOC_LOG_PORT")
+  field(PINI, "YES")
+}
+record(stringin, "BL11I-EA-IOC-12:IOC_LOG_INET") {
+  field(DESC, "EPICS_IOC_LOG_INET")
+  field(DTYP, "IOC epics var")
+  field(INP, "@EPICS_IOC_LOG_INET")
+  field(PINI, "YES")
+}
+#% macro, __doc__, Create some records for reading IOC statistics and details.
+#% macro, IOC, Device prefix
+
+record(bo, "BL11I-EA-IOC-12:01HZ_MODE") {
+	field(DESC, "01HZ Mode")
+	field(DOL, "1")
+	field(PINI, "YES")
+	field(ZNAM, "Relative")
+	field(ONAM, "Absolute")
+}
+record(sub, "BL11I-EA-IOC-12:01HZ_UPD_TIME") {
+	field(DESC, "01HZ Update Time")
+	field(SCAN, "10 second")
+	field(EGU, "second")
+	field(PREC, "5")
+	field(MDEL, "0.00001")
+	field(HYST, "0.00002")
+	field(INAM, "scanMonInit")
+	field(SNAM, "scanMon")
+	field(HHSV, "MAJOR")
+	field(HSV, "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+	field(BRSV, "INVALID")
+	field(INPA, "BL11I-EA-IOC-12:01HZ_MODE")
+	field(B,    "1.0")
+	field(C,    "5.0")
+}
+#% macro, __doc__, Create some records for reading IOC statistics and details.
+#% macro, IOC, Device prefix
+
+record(bo, "BL11I-EA-IOC-12:02HZ_MODE") {
+	field(DESC, "02HZ Mode")
+	field(DOL, "1")
+	field(PINI, "YES")
+	field(ZNAM, "Relative")
+	field(ONAM, "Absolute")
+}
+record(sub, "BL11I-EA-IOC-12:02HZ_UPD_TIME") {
+	field(DESC, "02HZ Update Time")
+	field(SCAN, "5 second")
+	field(EGU, "second")
+	field(PREC, "5")
+	field(MDEL, "0.00001")
+	field(HYST, "0.00002")
+	field(INAM, "scanMonInit")
+	field(SNAM, "scanMon")
+	field(HHSV, "MAJOR")
+	field(HSV, "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+	field(BRSV, "INVALID")
+	field(INPA, "BL11I-EA-IOC-12:02HZ_MODE")
+	field(B,    "1.0")
+	field(C,    "5.0")
+}
+#% macro, __doc__, Create some records for reading IOC statistics and details.
+#% macro, IOC, Device prefix
+
+record(bo, "BL11I-EA-IOC-12:05HZ_MODE") {
+	field(DESC, "05HZ Mode")
+	field(DOL, "1")
+	field(PINI, "YES")
+	field(ZNAM, "Relative")
+	field(ONAM, "Absolute")
+}
+record(sub, "BL11I-EA-IOC-12:05HZ_UPD_TIME") {
+	field(DESC, "05HZ Update Time")
+	field(SCAN, "2 second")
+	field(EGU, "second")
+	field(PREC, "5")
+	field(MDEL, "0.00001")
+	field(HYST, "0.00002")
+	field(INAM, "scanMonInit")
+	field(SNAM, "scanMon")
+	field(HHSV, "MAJOR")
+	field(HSV, "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+	field(BRSV, "INVALID")
+	field(INPA, "BL11I-EA-IOC-12:05HZ_MODE")
+	field(B,    "1.0")
+	field(C,    "5.0")
+}
+#% macro, __doc__, Create some records for reading IOC statistics and details.
+#% macro, IOC, Device prefix
+
+record(bo, "BL11I-EA-IOC-12:1HZ_MODE") {
+	field(DESC, "1HZ Mode")
+	field(DOL, "1")
+	field(PINI, "YES")
+	field(ZNAM, "Relative")
+	field(ONAM, "Absolute")
+}
+record(sub, "BL11I-EA-IOC-12:1HZ_UPD_TIME") {
+	field(DESC, "1HZ Update Time")
+	field(SCAN, "1 second")
+	field(EGU, "second")
+	field(PREC, "5")
+	field(MDEL, "0.00001")
+	field(HYST, "0.00002")
+	field(INAM, "scanMonInit")
+	field(SNAM, "scanMon")
+	field(HHSV, "MAJOR")
+	field(HSV, "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+	field(BRSV, "INVALID")
+	field(INPA, "BL11I-EA-IOC-12:1HZ_MODE")
+	field(B,    "1.0")
+	field(C,    "5.0")
+}
+#% macro, __doc__, Create some records for reading IOC statistics and details.
+#% macro, IOC, Device prefix
+
+record(bo, "BL11I-EA-IOC-12:2HZ_MODE") {
+	field(DESC, "2HZ Mode")
+	field(DOL, "1")
+	field(PINI, "YES")
+	field(ZNAM, "Relative")
+	field(ONAM, "Absolute")
+}
+record(sub, "BL11I-EA-IOC-12:2HZ_UPD_TIME") {
+	field(DESC, "2HZ Update Time")
+	field(SCAN, ".5 second")
+	field(EGU, "second")
+	field(PREC, "5")
+	field(MDEL, "0.00001")
+	field(HYST, "0.00002")
+	field(INAM, "scanMonInit")
+	field(SNAM, "scanMon")
+	field(HHSV, "MAJOR")
+	field(HSV, "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+	field(BRSV, "INVALID")
+	field(INPA, "BL11I-EA-IOC-12:2HZ_MODE")
+	field(B,    "1.0")
+	field(C,    "5.0")
+}
+#% macro, __doc__, Create some records for reading IOC statistics and details.
+#% macro, IOC, Device prefix
+
+record(bo, "BL11I-EA-IOC-12:5HZ_MODE") {
+	field(DESC, "5HZ Mode")
+	field(DOL, "1")
+	field(PINI, "YES")
+	field(ZNAM, "Relative")
+	field(ONAM, "Absolute")
+}
+record(sub, "BL11I-EA-IOC-12:5HZ_UPD_TIME") {
+	field(DESC, "5HZ Update Time")
+	field(SCAN, ".2 second")
+	field(EGU, "second")
+	field(PREC, "5")
+	field(MDEL, "0.00001")
+	field(HYST, "0.00002")
+	field(INAM, "scanMonInit")
+	field(SNAM, "scanMon")
+	field(HHSV, "MAJOR")
+	field(HSV, "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+	field(BRSV, "INVALID")
+	field(INPA, "BL11I-EA-IOC-12:5HZ_MODE")
+	field(B,    "1.0")
+	field(C,    "5.0")
+}
+#% macro, __doc__, Create some records for reading IOC statistics and details.
+#% macro, IOC, Device prefix
+
+record(bo, "BL11I-EA-IOC-12:10HZ_MODE") {
+	field(DESC, "10HZ Mode")
+	field(DOL, "1")
+	field(PINI, "YES")
+	field(ZNAM, "Relative")
+	field(ONAM, "Absolute")
+}
+record(sub, "BL11I-EA-IOC-12:10HZ_UPD_TIME") {
+	field(DESC, "10HZ Update Time")
+	field(SCAN, ".1 second")
+	field(EGU, "second")
+	field(PREC, "5")
+	field(MDEL, "0.00001")
+	field(HYST, "0.00002")
+	field(INAM, "scanMonInit")
+	field(SNAM, "scanMon")
+	field(HHSV, "MAJOR")
+	field(HSV, "MINOR")
+	field(LSV, "MINOR")
+	field(LLSV, "MAJOR")
+	field(BRSV, "INVALID")
+	field(INPA, "BL11I-EA-IOC-12:10HZ_MODE")
+	field(B,    "1.0")
+	field(C,    "5.0")
+}
+
+record(calc, "BL11I-EA-IOC-12:SCANMON_SEVR") {
+    field(DESC, "ScanMon Max Severity")
+    field(SCAN, "1 second")
+    field(CALC, "0")
+    field(INPA, "BL11I-EA-IOC-12:01HZ_UPD_TIME.SEVR MS")
+    field(INPB, "BL11I-EA-IOC-12:02HZ_UPD_TIME.SEVR MS")
+    field(INPC, "BL11I-EA-IOC-12:05HZ_UPD_TIME.SEVR MS")
+    field(INPD, "BL11I-EA-IOC-12:1HZ_UPD_TIME.SEVR MS")
+    field(INPE, "BL11I-EA-IOC-12:2HZ_UPD_TIME.SEVR MS")
+    field(INPF, "BL11I-EA-IOC-12:5HZ_UPD_TIME.SEVR MS")
+    field(INPG, "BL11I-EA-IOC-12:10HZ_UPD_TIME.SEVR MS")
+}
+
+# % macro, name, name for gui elements
+# % macro, EDM_FILE, edm screen, defaults to ioc_stats_softdls.edl
+# % macro, IOC, ioc name
+
+# % gui, EA12_STATS, edm, ioc_stats_softdls.edl, ioc=BL11I-EA-IOC-12
+# % gui, EA12_STATS, edmembed, ioc_embed.edl, ioc=BL11I-EA-IOC-12,EDM_FILE=ioc_stats_softdls.edl
+
+
+
+# This associates BOY screens with the template
+# % gui, EA12_STATS, boydetail, devIocStatsApp_opi/iocStats_detail.opi, desc=BL11I-EA-IOC-12, IOC=BL11I-EA-IOC-12, name=EA12_STATS
+# % gui, EA12_STATS, boyembed, devIocStatsApp_opi/iocStats_embed.opi, desc=BL11I-EA-IOC-12,  IOC=BL11I-EA-IOC-12, name=EA12_STATS
+# % gui, EA12_STATS, boyembed, devIocStatsApp_opi/iocStats_embed_box.opi, desc=BL11I-EA-IOC-12,  IOC=BL11I-EA-IOC-12, name=EA12_STATS
+
+# These define what PVs a detail screen should contain
+# % gui, EA12_STATS, readback, Startup Time,BL11I-EA-IOC-12:STARTOD
+# % gui, EA12_STATS, readback, Current Time,BL11I-EA-IOC-12:TOD
+# % gui, EA12_STATS, readback, Up Time,BL11I-EA-IOC-12:UPTIME
+# % gui, EA12_STATS, readback, Heartbeat,BL11I-EA-IOC-12:HEARTBEAT
+# % gui, EA12_STATS, readback, Records,BL11I-EA-IOC-12:RECORD_CNT
+# % gui, EA12_STATS, readback, Host Name,BL11I-EA-IOC-12:HOSTNAME
+# % gui, EA12_STATS, readback, User Name,BL11I-EA-IOC-12:ENGINEER
+# % gui, EA12_STATS, readback, Location,BL11I-EA-IOC-12:LOCATION
+# % gui, EA12_STATS, readback, CA Clients,BL11I-EA-IOC-12:CA_CLNT_CNT
+# % gui, EA12_STATS, readback, CA PV Conns,BL11I-EA-IOC-12:CA_CONN_CNT
+# % gui, EA12_STATS, readback, Susp Tasks,BL11I-EA-IOC-12:SUSP_TASK_CNT
+# % gui, EA12_STATS, readback, EPICS Version,BL11I-EA-IOC-12:EPICS_VERS
+# % gui, EA12_STATS, readback, OS Version,BL11I-EA-IOC-12:KERNEL_VERS
+# % gui, EA12_STATS, readback, Application Directory,BL11I-EA-IOC-12:APP_DIR1
+# % gui, EA12_STATS, readback, Startup Script,BL11I-EA-IOC-12:ST_SCRIPT1
+# % gui, EA12_STATS, readback, Memory Free,BL11I-EA-IOC-12:MEM_FREE
+# % gui, EA12_STATS, readback, Memory Used,BL11I-EA-IOC-12:MEM_USED
+# % gui, EA12_STATS, readback, Memory Max,BL11I-EA-IOC-12:MEM_MAX
+# % gui, EA12_STATS, readback, File Handles Free,BL11I-EA-IOC-12:FD_FREE
+# % gui, EA12_STATS, readback, File Handles Max,BL11I-EA-IOC-12:FD_MAX
+# % gui, EA12_STATS, readback, IOC CPU Load,BL11I-EA-IOC-12:IOC_CPU_LOAD
+# % gui, EA12_STATS, readback, All CPUs Load,BL11I-EA-IOC-12:SYS_CPU_LOAD
+# % gui, EA12_STATS, readback, System CPUs,BL11I-EA-IOC-12:CPU_CNT
+
+##################
+# Heater commands
+##################
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_HTR_HVER") {
+  field(DESC, "MB0.H1")
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HTR_HVER(MB0.H1) ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_HTR_FVER") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HTR_FVER(MB0.H1) ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_HTR_SERL") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HTR_SERL(MB0.H1) ITC_CTLR")
+}
+
+record(stringout, "BL11I-EA-TEMPC-03:MERC:SET_HTR_NICK") {
+  field(DTYP, "stream")
+  field(OUT, "@MercuryiTC-SCPI.proto SET_HTR_NICK(MB0.H1) ITC_CTLR")
+  field(MPST, "Always")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_HTR_NICK") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HTR_NICK(MB0.H1) ITC_CTLR")
+}
+
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_HTR_VLIM") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_HTR_VLIM(MB0.H1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_HTR_VLIM") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HTR_VLIM(MB0.H1) ITC_CTLR")
+}
+
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_HTR_RES") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_HTR_RES(MB0.H1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_HTR_RES") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HTR_RES(MB0.H1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_HTR_PMAX") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HTR_PMAX(MB0.H1) ITC_CTLR")
+}
+
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_HTR_SIG_VOLT") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_HTR_SIG_VOLT(MB0.H1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_HTR_SIG_VOLT") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HTR_SIG_VOLT(MB0.H1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_HTR_SIG_CURR") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HTR_SIG_CURR(MB0.H1) ITC_CTLR")
+}
+
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_HTR_SIG_POWR") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_HTR_SIG_POWR(MB0.H1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_HTR_SIG_POWR") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HTR_SIG_POWR(MB0.H1) ITC_CTLR")
+}
+
+########################
+# Control Loop commands
+########################
+
+#################################################################
+record(stringout, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_HTR") {
+  field(DTYP, "stream")
+  field(OUT, "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_HTR(MB1.T1) ITC_CTLR")
+  field(MPST, "Always")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_HTR") {
+  field(DESC, "MB1.T1")
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_HTR(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(stringout, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_AUX") {
+  field(DTYP, "stream")
+  field(OUT, "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_AUX(MB1.T1) ITC_CTLR")
+  field(MPST, "Always")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_AUX") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_AUX(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(stringout, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_LVL") {
+  field(DTYP, "stream")
+  field(OUT, "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_LVL(MB1.T1) ITC_CTLR")
+  field(MPST, "Always")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_LVL") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_LVL(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(mbbi, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_ENAB") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(ZRST, "OFF")
+  field(ONST, "ON")
+  field(INP,  "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_ENAB(MB1.T1) ITC_CTLR")
+}
+
+record(mbbo, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_ENAB") {
+  field(DTYP, "stream")
+  field(ZRST, "OFF")
+  field(ONST, "ON")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_ENAB(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_HSET") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_HSET(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_HSET") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_HSET(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_TSET") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_TSET(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_TSET") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_TSET(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(mbbi, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_PIDT") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(ZRST, "OFF")
+  field(ONST, "ON")
+  field(INP,  "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_PIDT(MB1.T1) ITC_CTLR")
+}
+
+record(mbbo, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_PIDT") {
+  field(DTYP, "stream")
+  field(ZRST, "OFF")
+  field(ONST, "ON")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_PIDT(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_P") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_P(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_P") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_P(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_I") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_I(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_I") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_I(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_D") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_D(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_D") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_D(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(stringout, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_SWFL") {
+  field(DTYP, "stream")
+  field(OUT, "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_SWFL(MB1.T1) ITC_CTLR")
+  field(MPST, "Always")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_SWFL") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_SWFL(MB1.T1) ITC_CTLR")
+}
+##################################################################
+record(mbbi, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_LOOP_SWMD") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(ZRST, "OFF")
+  field(ONST, "ON")
+  field(TWST, "FIX")
+  field(INP,  "@MercuryiTC-SCPI.proto READ_TEMP_LOOP_SWMD(MB1.T1) ITC_CTLR")
+}
+
+record(mbbo, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_LOOP_SWMD") {
+  field(DTYP, "stream")
+  field(ZRST, "OFF")
+  field(ONST, "ON")
+  field(TWST, "FIX")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_LOOP_SWMD(MB1.T1) ITC_CTLR")
+}
+# System commands
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_IDENT") {
+  field(SCAN, "10 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_IDENT ITC_CTLR")
+}
+
+record(stringout, "BL11I-EA-TEMPC-03:MERC:SET_TIME") {
+  field(DTYP, "stream")
+  field(OUT, "@MercuryiTC-SCPI.proto SET_TIME ITC_CTLR")
+  field(MPST, "Always")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TIME") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TIME ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_DATE") {
+  field(SCAN, "10 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_DATE ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_HVER") {
+  field(SCAN, "10 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_HVER ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_FVER") {
+  field(SCAN, "10 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_FVER ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_SERL") {
+  field(SCAN, "10 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_SERL ITC_CTLR")
+}
+
+record(mbbo, "BL11I-EA-TEMPC-03:MERC:SET_MODE") {
+  field(DTYP, "stream")
+  field(ZRST, "NORM")
+  field(ONST, "ENG")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_MODE ITC_CTLR")
+}
+
+record(mbbi, "BL11I-EA-TEMPC-03:MERC:READ_MODE") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(ZRST, "NORM")
+  field(ONST, "ENG")
+  field(TWST, "INVALID")
+  field(INP, "@MercuryiTC-SCPI.proto READ_MODE ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_FLSH") {
+  field(SCAN, "10 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_FLSH ITC_CTLR")
+}
+
+record(mbbo, "BL11I-EA-TEMPC-03:MERC:SET_DIMA") {
+  field(DTYP, "stream")
+  field(ZRST, "OFF")
+  field(ONST, "ON")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_DIMA ITC_CTLR")
+}
+
+record(mbbi, "BL11I-EA-TEMPC-03:MERC:READ_DIMA") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(ZRST, "OFF")
+  field(ONST, "ON")
+  field(TWST, "INVALID")
+  field(INP, "@MercuryiTC-SCPI.proto READ_DIMA ITC_CTLR")
+}
+
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_DIMT") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_DIMT ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_DIMT") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_DIMT ITC_CTLR")
+  field(EGU, "seconds")
+}
+
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_BRIG") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_BRIG ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_BRIG") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_BRIG ITC_CTLR")
+  field(EGU, "%")
+}
+
+record(waveform, "BL11I-EA-TEMPC-03:MERC:READ_CAT") {
+  field(SCAN, "10 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_CAT ITC_CTLR")
+  field(FTVL, "CHAR")
+  field(NELM, "256")
+}
+
+
+##################################################################
+
+record(asyn, "BL11I-EA-TEMPC-03:MERC:ASYN") {
+  field(PORT, "ITC_CTLR")
+}
+
+
+#######################
+# Temperature commands
+#######################
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_HVER") {
+  field(DESC, "MB1.T1")
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_HVER(MB1.T1) ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_FVER") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_FVER(MB1.T1) ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_SERL") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_SERL(MB1.T1) ITC_CTLR")
+}
+
+record(stringout, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_NICK") {
+  field(DTYP, "stream")
+  field(OUT, "@MercuryiTC-SCPI.proto SET_TEMP_NICK(MB1.T1) ITC_CTLR")
+  field(MPST, "Always")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_NICK") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_NICK(MB1.T1) ITC_CTLR")
+}
+
+record(mbbi, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_TYPE") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(ZRST, "PTC")
+  field(ONST, "NTC")
+  field(TWST, "DDE")
+  field(THST, "TCE")
+  field(FRST, "INVALID")
+  field(INP,  "@MercuryiTC-SCPI.proto READ_TEMP_TYPE(MB1.T1) ITC_CTLR")
+}
+
+record(mbbo, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_TYPE") {
+  field(DTYP, "stream")
+  field(ZRST, "PTC")
+  field(ONST, "NTC")
+  field(TWST, "DDE")
+  field(THST, "TCE")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_TYPE(MB1.T1) ITC_CTLR")
+}
+
+record(mbbi, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_EXCT_TYPE") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(ZRST, "UNIP")
+  field(ONST, "BIP")
+  field(TWST, "SOFT")
+  field(THST, "NONE")
+  field(FRST, "INVALID")
+  field(INP,  "@MercuryiTC-SCPI.proto READ_TEMP_EXCT_TYPE(MB1.T1) ITC_CTLR")
+}
+
+record(mbbo, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_EXCT_TYPE") {
+  field(DTYP, "stream")
+  field(ZRST, "UNIP")
+  field(ONST, "BIP")
+  field(TWST, "SOFT")
+  field(THST, "NONE")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_EXCT_TYPE(MB1.T1) ITC_CTLR")
+}
+
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_EXCT_MAG") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_EXCT_MAG(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_EXCT_MAG") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_EXCT_MAG(MB1.T1) ITC_CTLR")
+}
+
+record(stringout, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_CAL_FILE") {
+  field(DTYP, "stream")
+  field(OUT, "@MercuryiTC-SCPI.proto SET_TEMP_CAL_FILE(MB1.T1) ITC_CTLR")
+  field(MPST, "Always")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_CAL_FILE") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_CAL_FILE(MB1.T1) ITC_CTLR")
+}
+
+record(mbbi, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_CAL_INT") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(ZRST, "LIN")
+  field(ONST, "SPL")
+  field(TWST, "LAGR")
+  field(THST, "NON")
+  field(FRST, "INVALID")
+  field(INP,  "@MercuryiTC-SCPI.proto READ_TEMP_CAL_INT(MB1.T1) ITC_CTLR")
+}
+
+record(mbbo, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_CAL_INT") {
+  field(DTYP, "stream")
+  field(ZRST, "LIN")
+  field(ONST, "SPL")
+  field(TWST, "LAGR")
+  field(THST, "NON")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_CAL_INT(MB1.T1) ITC_CTLR")
+}
+
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_CAL_SCAL") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_CAL_SCAL(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_CAL_SCAL") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_CAL_SCAL(MB1.T1) ITC_CTLR")
+}
+
+record(ao, "BL11I-EA-TEMPC-03:MERC:SET_TEMP_CAL_OFFS") {
+  field(DTYP, "stream")
+  field(OUT,  "@MercuryiTC-SCPI.proto SET_TEMP_CAL_OFFS(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_CAL_OFFS") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_CAL_OFFS(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_CAL_HOTL") {
+  field(SCAN, "2 second")
+  field(PREC, "3")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_CAL_HOTL(MB1.T1) ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_CAL_COLD") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_CAL_COLD(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_SIG_VOLT") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_SIG_VOLT(MB1.T1) ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_SIG_CURR") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_SIG_CURR(MB1.T1) ITC_CTLR")
+}
+
+record(stringin, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_SIG_POWR") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_SIG_POWR(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_SIG_RES") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_SIG_RES(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_SIG_TEMP") {
+  field(SCAN, "2 second")
+  field(PREC, "3")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_SIG_TEMP(MB1.T1) ITC_CTLR")
+}
+
+record(ai, "BL11I-EA-TEMPC-03:MERC:READ_TEMP_SIG_SLOP") {
+  field(SCAN, "2 second")
+  field(DTYP, "stream")
+  field(INP, "@MercuryiTC-SCPI.proto READ_TEMP_SIG_SLOP(MB1.T1) ITC_CTLR")
+}
+

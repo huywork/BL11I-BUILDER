@@ -2,6 +2,6 @@
 <components arch="linux-x86_64">
 	<EPICS_BASE.EpicsEnvSet key="EPICS_CA_MAX_ARRAY_BYTES" value="10000000"/>
 	<devIocStats.devIocStatsHelper ioc="BL11I-EA-IOC-12" name="EA12_STATS"/>
-	<asyn.AsynIP name="ITC_CTLR" port="10.111.8.7"/>
+	<asyn.AsynIP name="ITC_CTLR" port="10.111.8.7:7020"/>
 	<OxInstCryojet.MercuryiTC_SCPI P="BL11I-EA-TEMPC-03" PORT="ITC_CTLR" Q=":MERC" name="MERC_ITC"/>
 </components>
